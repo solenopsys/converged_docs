@@ -1,0 +1,5 @@
+[
+  { "slug": "openness", "title": "Открытая платформа", "order": 0 },
+  { "slug": "registry", "title": "Реестр модулей", "order": 1 },
+  { "slug": "contribute", "title": "Как добавить модуль", "order": 2 }
+]
