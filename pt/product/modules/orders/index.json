@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "new-customers",
+    "title": "Atração de novos clientes",
+    "order": 1,
+    "id": "new-customers",
+    "elements": [
+      "platform/marketing/site",
+      "platform/marketing/seo",
+      "platform/marketing/publications",
+      "platform/marketing/tenders",
+      "platform/marketing/tender-monitoring",
+      "platform/marketing/tender-calculation",
+      "platform/ai-functions/ai-agents",
+      "platform/ai-functions/ai-chat",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/sales/request",
+      "platform/tools/files",
+      "platform/tools/events",
+      "platform/tools/import"
+    ],
+    "functions": [
+      "Vitrine de serviços e exemplos de trabalhos (site/landing page)",
+      "Descrição clara de materiais, prazos e condições",
+      "Recebimento de solicitações e arquivos (modelo/desenho) em um único fluxo",
+      "Rascunhos de respostas e propostas comerciais via IA",
+      "Suporte básico de SEO e atualização rápida de conteúdo"
+    ]
+  },
+  {
+    "slug": "inquiries",
+    "title": "Controle de solicitações e contatos",
+    "order": 2,
+    "id": "inquiries",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/ai-functions/ai-chat",
+      "platform/ai-functions/ai-telephony",
+      "platform/ai-functions/conversation",
+      "platform/sales/request",
+      "platform/sales/history",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Todos os contatos em uma única fila (site, e-mail, mensageiros, telefonia)",
+      "Ficha única da conversa: mensagens, arquivos, notas",
+      "Status de processamento e atribuição do responsável",
+      "Lembretes: quem está há muito tempo sem resposta e o que está «travado»",
+      "Respostas automáticas para perguntas frequentes e encaminhamento do complexo para um operador"
+    ]
+  },
+  {
+    "slug": "order-status",
+    "title": "Monitoramento da execução dos pedidos",
+    "order": 3,
+    "id": "order-status",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/sales/orders",
+      "platform/sales/history",
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events",
+      "platform/tools/files",
+      "platform/tools/marking",
+      "platform/store/products"
+    ],
+    "functions": [
+      "Etapas do pedido e status rápidos",
+      "Data prevista de conclusão e indicador de «risco»",
+      "Lista de pedidos problemáticos por semana/dia",
+      "Notificações ao cliente e à equipe na mudança de status",
+      "Link/página de status do pedido para o cliente"
+    ]
+  },
+  {
+    "slug": "repeat-customers",
+    "title": "Trabalho com clientes recorrentes",
+    "order": 4,
+    "id": "repeat-customers",
+    "elements": [
+      "platform/sales/clients",
+      "platform/sales/history",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/integrations/api",
+      "platform/marketing/publications",
+      "platform/marketing/site",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Lista de clientes-chave (VIP/frequentes)",
+      "Histórico de pedidos e acordos sem CRM pesado",
+      "Lembretes de quem está há muito tempo sem fazer pedidos",
+      "Ofertas personalizadas e envios leves",
+      "Visão simples de «quem gera mais receita/margem»"
+    ]
+  }
+]

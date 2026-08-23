@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "clients",
+    "title": "Kunden",
+    "order": 3,
+    "id": "clients",
+    "functions": [
+      "Einheitliche Kundendatenbank mit Karten und Kontaktinformationen",
+      "Speicherung der Historie von Interaktionen, Anfragen und Konditionen",
+      "Vergabe von individuellen Rabatten, Prioritäten und Status",
+      "Integration mit Modulen für Bestellungen, Kommunikation und Finanzen",
+      "Segmentierung der Kundenbasis und Analyse nach Gruppen"
+    ]
+  },
+  {
+    "slug": "delivery",
+    "title": "Lieferung",
+    "order": 1,
+    "id": "delivery",
+    "functions": [
+      "Verwaltung von Logistik und Versand der fertigen Produkte",
+      "Verfolgung des Lieferstatus und Benachrichtigungen an Kunden",
+      "Integration mit Bestellungen, Kunden und Lagern",
+      "Zuweisung von Kurieren, Transportunternehmen und Routen",
+      "Analyse zu Lieferzeiten, Verzögerungen und Logistikkosten"
+    ]
+  },
+  {
+    "slug": "history",
+    "title": "Historie",
+    "order": 2,
+    "id": "history",
+    "functions": [
+      "Chronologie der Interaktionen mit Kunden über alle Kanäle",
+      "Ereignisse: Anrufe, Nachrichten, E-Mails, Besuche, Aufgaben, Status",
+      "Integration mit Chats, E-Mail, Bestellungen und CRM-Logik",
+      "Suche und Filterung nach Ereignissen, Zeit, Mitarbeitern, Kunden",
+      "Audit von Aktionen und Wiederherstellung des Interaktionskontexts"
+    ]
+  },
+  {
+    "slug": "orders",
+    "title": "Bestellungen",
+    "order": 4,
+    "id": "orders",
+    "functions": [
+      "Erstellung, Bearbeitung und Nachverfolgung von Bestellungen",
+      "Verwaltung von Ausführungs- und Zahlungsstatus",
+      "Erfassung der Bestellquellen und zugehörigen Kunden",
+      "Integration mit Modulen für Lieferung, Abrechnung und Historie",
+      "Suche, Filterung und Analyse von Bestellungen"
+    ]
+  },
+  {
+    "slug": "request",
+    "title": "Anfragen",
+    "order": 5,
+    "id": "request",
+    "functions": [
+      "Annahme und Bearbeitung eingehender Anfragen und Leads",
+      "Erstellung von kommerziellen Angeboten",
+      "Verfolgung der Verhandlungsphasen und Anfragestatus",
+      "Integration mit Modulen für Bestellungen, Kunden und Historie",
+      "Umwandlung von Anfragen in vollwertige Bestellungen"
+    ]
+  }
+]

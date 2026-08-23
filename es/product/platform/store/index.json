@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "materials",
+    "title": "Materiales",
+    "order": 1,
+    "id": "materials",
+    "functions": [
+      "Gestión de materias primas y materiales consumibles",
+      "Seguimiento de existencias, movimientos y bajas",
+      "Conexión con las operaciones de producción y el suministro",
+      "Configuración de existencias mínimas y automatización de solicitudes",
+      "Integración con módulos de suministro, planificación y pedidos"
+    ]
+  },
+  {
+    "slug": "products",
+    "title": "Productos",
+    "order": 3,
+    "id": "products",
+    "functions": [
+      "Gestión de productos terminados en almacenes",
+      "Seguimiento del movimiento de productos entre áreas y sucursales",
+      "Generación de albaranes, actas e informes",
+      "Integración con módulos de pedidos, entrega y suministro",
+      "Control de existencias, reservas y fechas de almacenamiento"
+    ]
+  },
+  {
+    "slug": "spare-parts",
+    "title": "Repuestos",
+    "order": 2,
+    "id": "spare-parts",
+    "functions": [
+      "Gestión de repuestos y consumibles para equipos",
+      "Control de existencias y automatización de reposición",
+      "Vinculación con tipos de equipos y planes de mantenimiento",
+      "Integración con módulos de mantenimiento, suministro y almacenes",
+      "Notificaciones sobre existencias críticas y plazos de sustitución"
+    ]
+  }
+]

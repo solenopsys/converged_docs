@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "events",
+    "title": "Événements",
+    "order": 1,
+    "id": "events",
+    "functions": [
+      "Création et automatisation des notifications, des envois d'e-mails et de SMS",
+      "Déclencheurs sur les événements du système (demandes, commandes, statuts)",
+      "Planification et lancement de campagnes marketing par e-mail",
+      "Notifications au personnel concernant les tâches internes et les changements",
+      "Intégration avec les modules clients, commandes, messagerie et chats"
+    ]
+  },
+  {
+    "slug": "files",
+    "title": "Fichiers",
+    "order": 2,
+    "id": "files",
+    "functions": [
+      "Stockage centralisé des plans, modèles et documentation",
+      "Contrôle des versions et historique des modifications",
+      "Gestion des accès et des droits de consultation/modification",
+      "Intégration avec les commandes, les projets et les équipements",
+      "Accès rapide aux fichiers aux étapes appropriées des processus métier"
+    ]
+  },
+  {
+    "slug": "import",
+    "title": "Importation de données",
+    "order": 3,
+    "id": "import",
+    "functions": [
+      "Importation de données depuis des sources externes (par exemple, CAPR, Excel, systèmes ERP)",
+      "Prise en charge des formats structurés : CSV, JSON, XML",
+      "Configuration du mappage des champs et validation automatique",
+      "Intégration avec les modules des commandes, des clients, des matériaux et des équipements",
+      "Contrôle des versions et journalisation de toutes les opérations d'importation"
+    ]
+  },
+  {
+    "slug": "marking",
+    "title": "Marquage",
+    "order": 6,
+    "id": "marking",
+    "functions": [
+      "Génération et impression d'étiquettes pour les produits et les expéditions",
+      "Intégration avec les imprimantes thermiques et les marqueurs industriels",
+      "Configuration des modèles et remplissage automatique des données",
+      "Intégration avec les commandes, les produits et la livraison",
+      "Prise en charge des codes-barres, des codes QR et des systèmes de traçabilité"
+    ]
+  },
+  {
+    "slug": "slicing",
+    "title": "Tranchage",
+    "order": 4,
+    "id": "slicing",
+    "functions": [
+      "Importation et préparation des modèles 3D pour la production",
+      "Génération des programmes de commande (G-code et analogues)",
+      "Optimisation des paramètres d'impression, de fraisage et de traitement",
+      "Intégration avec les équipements et les ordres de fabrication",
+      "Prise en charge de modèles et de profils automatisés pour différents types de machines"
+    ]
+  },
+  {
+    "slug": "video",
+    "title": "Vidéo",
+    "order": 5,
+    "id": "video",
+    "functions": [
+      "Surveillance en temps réel des zones de production",
+      "Enregistrement des processus technologiques et archivage vidéo",
+      "Association des caméras à un équipement et à des opérations spécifiques",
+      "Accès aux enregistrements par événements, commandes ou horodatages",
+      "Intégration avec les modules qualité, maintenance et sécurité"
+    ]
+  }
+]

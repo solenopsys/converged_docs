@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "converged",
+    "title": "Plataforma Converged AI",
+    "order": 0,
+    "id": "converged"
+  },
+  {
+    "slug": "overview",
+    "title": "Qué hace Converged",
+    "order": 1,
+    "id": "overview"
+  },
+  {
+    "slug": "solutions",
+    "title": "Sistema de soluciones",
+    "order": 2,
+    "id": "solutions"
+  },
+  {
+    "slug": "devices",
+    "title": "Equipos y taller",
+    "order": 3,
+    "id": "devices"
+  },
+  {
+    "slug": "dag",
+    "title": "Procesos",
+    "order": 4,
+    "id": "dag"
+  },
+  {
+    "slug": "llm",
+    "title": "Capa de IA",
+    "order": 5,
+    "id": "llm"
+  },
+  {
+    "slug": "architecture",
+    "title": "Arquitectura",
+    "order": 6,
+    "id": "architecture"
+  },
+  {
+    "slug": "deployment",
+    "title": "Despliegue",
+    "order": 7,
+    "id": "deployment"
+  },
+  {
+    "slug": "tehnology",
+    "title": "Tecnologías",
+    "order": 8,
+    "id": "tehnology"
+  },
+  {
+    "slug": "perf",
+    "title": "Rendimiento",
+    "order": 9,
+    "id": "perf"
+  },
+  {
+    "slug": "security",
+    "title": "Seguridad",
+    "order": 10,
+    "id": "security"
+  },
+  {
+    "slug": "licensing",
+    "title": "Licenciamiento",
+    "order": 11,
+    "id": "licensing"
+  },
+  {
+    "slug": "oss",
+    "title": "Comunidad",
+    "order": 12,
+    "id": "oss"
+  },
+  {
+    "slug": "roadmap",
+    "title": "Código fuente",
+    "order": 13,
+    "id": "roadmap"
+  }
+]

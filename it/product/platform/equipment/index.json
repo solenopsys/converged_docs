@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "equipment",
+    "title": "Attrezzature",
+    "order": 1,
+    "id": "equipment",
+    "functions": [
+      "Inventario e registrazione delle attrezzature (stampanti 3D, macchine CNC, robot)",
+      "Monitoraggio online dello stato e del carico delle attrezzature",
+      "Statistiche su tempi di funzionamento, fermi e errori",
+      "Gestione del ciclo di vita: installazione, manutenzione, dismissione",
+      "Integrazione con i moduli di manutenzione e qualità"
+    ]
+  },
+  {
+    "slug": "integration",
+    "title": "Integrazione",
+    "order": 2,
+    "id": "integration",
+    "functions": [
+      "Connessione delle attrezzature: driver, firmware, interfacce",
+      "Integrazione con macchine CNC, stampanti 3D, controller e sensori",
+      "Configurazione dello scambio dati con sistemi ERP/CRM/MES esterni",
+      "Aggiornamento dei firmware e diagnostica remota dei dispositivi",
+      "Gestione centralizzata delle periferiche e dei gateway"
+    ]
+  },
+  {
+    "slug": "logs",
+    "title": "Registri",
+    "order": 4,
+    "id": "logs",
+    "functions": [
+      "Monitoraggio — analisi del carico delle attrezzature e dell'efficienza dei processi",
+      "Analisi AI — rilevamento automatico di guasti ed errori",
+      "Interfaccia di ricerca — ricerca comoda di guasti e report",
+      "Report — generazione periodica di report sui guasti",
+      "Notifiche — avvisi tempestivi sugli eventi critici",
+      "Accesso remoto — controllo da qualsiasi dispositivo da qualsiasi parte del mondo"
+    ]
+  },
+  {
+    "slug": "scheduling",
+    "title": "Pianificazione",
+    "order": 4,
+    "id": "scheduling",
+    "functions": [
+      "Pianificazione del processo produttivo e del carico delle attrezzature",
+      "Distribuzione automatica dei compiti tra macchine e linee",
+      "Gestione di scadenze, priorità e risorse disponibili",
+      "Visualizzazione di grafici e colli di bottiglia nella catena produttiva",
+      "Integrazione con i moduli «Attrezzature» e «Ordini»"
+    ]
+  }
+]

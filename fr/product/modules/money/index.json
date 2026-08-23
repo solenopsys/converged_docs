@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "profit",
+    "title": "Profit par commandes et clients",
+    "order": 1,
+    "id": "profit",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/control/reports",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Marge brute par commande (matériaux + temps machine + main-d’œuvre)",
+      "Comparaison de la rentabilité par client, type de travail et segment",
+      "Mise en évidence des segments déficitaires et très rentables",
+      "Évolution de la rentabilité par période sans comptabilité lourde",
+      "Réponses aux questions du propriétaire via un chat IA"
+    ]
+  },
+  {
+    "slug": "cashflow",
+    "title": "Calendrier des paiements et comptes clients",
+    "order": 2,
+    "id": "cashflow",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/sales/clients",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Flux des encaissements et des paiements clés par jour",
+      "Dates critiques (salaires, loyer, achats) sans surprise",
+      "Comptes clients : qui doit combien et depuis quand",
+      "Rappels et brouillons de messages aux débiteurs",
+      "Scénarios « que se passera-t-il avec la trésorerie si… »"
+    ]
+  },
+  {
+    "slug": "costing",
+    "title": "Coût de revient et tarification",
+    "order": 3,
+    "id": "costing",
+    "elements": [
+      "platform/management/billing",
+      "platform/management/finance",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Estimation du coût horaire des équipements et du travail du personnel",
+      "Modèles de calcul pour les travaux et matériaux types",
+      "Règles de remises/surtaxes (urgence, volume, client régulier)",
+      "Aide sur l’impact des remises sur la marge de la commande",
+      "Recalcul rapide en cas de variation des prix des matériaux"
+    ]
+  },
+  {
+    "slug": "growth",
+    "title": "Planification des investissements et de la croissance",
+    "order": 4,
+    "id": "growth",
+    "elements": [
+      "platform/management/finance",
+      "platform/control/reports",
+      "platform/management/departments",
+      "platform/equipment/equipment",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Évaluation du retour sur investissement pour l’équipement/l’embauche/l’expansion",
+      "Scénarios de croissance (« si on ajoute une imprimante », « si on augmente le prix de X % »)",
+      "Vérification de l’impact des décisions sur la charge et le profit",
+      "Mise en relation des plans avec le calendrier des paiements (« on peut tenir / on ne peut pas tenir »)",
+      "Consignation des décisions et des résultats réels"
+    ]
+  }
+]

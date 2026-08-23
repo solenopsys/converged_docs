@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "new-customers",
+    "title": "Gewinnung neuer Kunden",
+    "order": 1,
+    "id": "new-customers",
+    "elements": [
+      "platform/marketing/site",
+      "platform/marketing/seo",
+      "platform/marketing/publications",
+      "platform/marketing/tenders",
+      "platform/marketing/tender-monitoring",
+      "platform/marketing/tender-calculation",
+      "platform/ai-functions/ai-agents",
+      "platform/ai-functions/ai-chat",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/sales/request",
+      "platform/tools/files",
+      "platform/tools/events",
+      "platform/tools/import"
+    ],
+    "functions": [
+      "Schaufenster für Leistungen und Arbeitsbeispiele (Website/Landingpage)",
+      "Verständliche Beschreibung von Materialien, Fristen und Bedingungen",
+      "Annahme von Anfragen und Dateien (Modell/Zeichnung) in einem gemeinsamen Ablauf",
+      "Entwürfe für Antworten und kommerzielle Angebote per KI",
+      "Grundlegende SEO-Unterstützung und schnelle Content-Aktualisierung"
+    ]
+  },
+  {
+    "slug": "inquiries",
+    "title": "Kontrolle von Anfragen und Rückmeldungen",
+    "order": 2,
+    "id": "inquiries",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/ai-functions/ai-chat",
+      "platform/ai-functions/ai-telephony",
+      "platform/ai-functions/conversation",
+      "platform/sales/request",
+      "platform/sales/history",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Alle Anfragen in einem Feed (Website, E-Mail, Messenger, Telefonie)",
+      "Einheitliche Dialogkarte: Nachrichten, Dateien, Notizen",
+      "Bearbeitungsstatus und Zuweisung eines Verantwortlichen",
+      "Erinnerungen: wem lange nicht geantwortet wurde und was „hängt“",
+      "Autoantworten auf Standardfragen und Weiterleitung komplexer Fälle an einen Mitarbeiter"
+    ]
+  },
+  {
+    "slug": "order-status",
+    "title": "Überwachung der Auftragsabwicklung",
+    "order": 3,
+    "id": "order-status",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/sales/orders",
+      "platform/sales/history",
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events",
+      "platform/tools/files",
+      "platform/tools/marking",
+      "platform/store/products"
+    ],
+    "functions": [
+      "Auftragsphasen und schnelle Status",
+      "Erwartetes Fertigstellungsdatum und Indikator „gefährdet“",
+      "Liste problematischer Aufträge nach Woche/Tag",
+      "Benachrichtigungen an Kunde und Team bei Statusänderung",
+      "Link/Seite zum Auftragsstatus für den Kunden"
+    ]
+  },
+  {
+    "slug": "repeat-customers",
+    "title": "Arbeit mit Bestandskunden",
+    "order": 4,
+    "id": "repeat-customers",
+    "elements": [
+      "platform/sales/clients",
+      "platform/sales/history",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/integrations/api",
+      "platform/marketing/publications",
+      "platform/marketing/site",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Liste wichtiger Kunden (VIP/viele Bestellungen)",
+      "Bestell- und Vereinbarungshistorie ohne schweres CRM",
+      "Erinnerungen „wer schon lange nicht bestellt hat“",
+      "Personalisierte Angebote und einfache Mailings",
+      "Einfache Übersicht „wer mehr Umsatz/Marge bringt“"
+    ]
+  }
+]

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecosystem</title>
+<style>
+:root,
+:host {
+  --radius: var(--hw-radius-md);
+
+  --ui-background: var(--hw-canvas);
+  --ui-foreground: var(--hw-ink);
+  --ui-card: var(--hw-canvas);
+  --ui-card-foreground: var(--hw-ink);
+  --ui-popover: color-mix(in oklab, var(--hw-canvas) 94%, var(--hw-ink));
+  --ui-popover-foreground: var(--hw-ink);
+  --ui-primary: var(--hw-ink);
+  --ui-primary-foreground: var(--hw-canvas);
+  --ui-secondary: color-mix(in oklab, var(--hw-canvas) 92%, var(--hw-ink));
+  --ui-secondary-foreground: var(--hw-ink);
+  --ui-muted: color-mix(in oklab, var(--hw-canvas) 94%, var(--hw-ink));
+  --ui-muted-foreground: var(--hw-ink-muted);
+  --ui-accent: color-mix(in oklab, var(--hw-canvas) 90%, var(--hw-ink));
+  --ui-accent-foreground: var(--hw-ink);
+  --ui-destructive: var(--hw-danger);
+  --ui-destructive-foreground: var(--hw-danger-ink);
+  --ui-success: var(--hw-success);
+  --ui-success-foreground: var(--hw-success-ink);
+  --ui-warning: var(--hw-warning);
+  --ui-warning-foreground: var(--hw-warning-ink);
+  --ui-info: var(--hw-info);
+  --ui-info-foreground: var(--hw-info-ink);
+  --ui-border: var(--hw-panel-border);
+  --ui-input: var(--hw-panel-border);
+  --ui-ring: var(--hw-focus);
+  --ui-sidebar: color-mix(in oklab, var(--hw-canvas) 96%, var(--hw-ink));
+  --ui-sidebar-foreground: var(--hw-ink);
+  --ui-sidebar-primary: var(--hw-ink);
+  --ui-sidebar-primary-foreground: var(--hw-canvas);
+  --ui-sidebar-accent: color-mix(in oklab, var(--hw-canvas) 90%, var(--hw-ink));
+  --ui-sidebar-accent-foreground: var(--hw-ink);
+  --ui-sidebar-border: var(--hw-panel-border);
+  --ui-sidebar-ring: var(--hw-focus);
+
+  --ui-chart-1: var(--hw-chart-1);
+  --ui-chart-2: var(--hw-chart-2);
+  --ui-chart-3: var(--hw-chart-3);
+  --ui-chart-4: var(--hw-chart-4);
+  --ui-chart-5: var(--hw-chart-5);
+  --ui-chart-6: var(--hw-chart-6);
+  --ui-chart-7: var(--hw-chart-7);
+  --ui-chart-8: var(--hw-chart-8);
+}
+
+.surface {
+  color: var(--ui-foreground);
+}
+
+
+html { color-scheme: light; }
+body {
+  margin: 0;
+  background: var(--ui-background);
+  color: var(--ui-foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.docs-layout { display: flex; align-items: flex-start; min-height: 100vh; }
+.docs-menu { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; }
+.docs-section + .docs-section { margin-top: 3rem; }
+
+@page { size: A4; margin: 18mm 16mm; }
+
+@media print {
+  .docs-menu { display: none; }
+  .docs-content { max-width: none; padding: 0; }
+  .docs-section { break-before: page; }
+  .docs-section:first-child { break-before: auto; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  pre, table, blockquote, img { break-inside: avoid; }
+}
+
+/* layer: properties */
+@supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))){*, ::before, ::after, ::backdrop{--un-bg-opacity:100%;--un-border-opacity:100%;--un-leading:initial;--un-space-y-reverse:initial;--un-text-opacity:100%;}}
+@property --un-text-opacity{syntax:"<percentage>";inherits:false;initial-value:100%;}
+@property --un-leading{syntax:"*";inherits:false;}
+@property --un-border-opacity{syntax:"<percentage>";inherits:false;initial-value:100%;}
+@property --un-bg-opacity{syntax:"<percentage>";inherits:false;initial-value:100%;}
+@property --un-space-y-reverse{syntax:"*";inherits:false;initial-value:0;}
+/* layer: theme */
+:root, :host { --spacing: 0.25rem; --fontWeight-semibold: 600; --tracking-tight: -0.025em; --radius-DEFAULT: 0.25rem; --container-3xl: 48rem; --fontWeight-bold: 700; --default-transition-timingFunction: cubic-bezier(0.4, 0, 0.2, 1); --default-transition-duration: 150ms; --font-mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; --text-lg-fontSize: 1.125rem; --text-lg-lineHeight: 1.75rem; --text-sm-fontSize: 0.875rem; --text-sm-lineHeight: 1.25rem; --text-4xl-fontSize: 2.25rem; --text-4xl-lineHeight: 2.5rem; --text-3xl-fontSize: 1.875rem; --text-3xl-lineHeight: 2.25rem; --font-sans: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; --default-font-family: var(--font-sans); --default-monoFont-family: var(--font-mono); }
+/* layer: base */
+ *, ::after, ::before, ::backdrop, ::file-selector-button { box-sizing: border-box;  margin: 0;  padding: 0;  border: 0 solid;  }  html, :host { line-height: 1.5;  -webkit-text-size-adjust: 100%;  tab-size: 4;  font-family: var( --default-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' );  font-feature-settings: var(--default-font-featureSettings, normal);  font-variation-settings: var(--default-font-variationSettings, normal);  -webkit-tap-highlight-color: transparent;  }  hr { height: 0;  color: inherit;  border-top-width: 1px;  }  abbr:where([title]) { -webkit-text-decoration: underline dotted; text-decoration: underline dotted; }  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }  a { color: inherit; -webkit-text-decoration: inherit; text-decoration: inherit; }  b, strong { font-weight: bolder; }  code, kbd, samp, pre { font-family: var( --default-monoFont-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace );  font-feature-settings: var(--default-monoFont-featureSettings, normal);  font-variation-settings: var(--default-monoFont-variationSettings, normal);  font-size: 1em;  }  small { font-size: 80%; }  sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -0.25em; } sup { top: -0.5em; }  table { text-indent: 0;  border-color: inherit;  border-collapse: collapse;  }  :-moz-focusring:where(:not(iframe)) { outline: auto; }  progress { vertical-align: baseline; }  summary { display: list-item; }  ol, ul, menu { list-style: none; }  img, svg, video, canvas, audio, iframe, embed, object { display: block;  vertical-align: middle;  }  img, video { max-width: 100%; height: auto; }  button, input, select, optgroup, textarea, ::file-selector-button { font: inherit;  font-feature-settings: inherit;  font-variation-settings: inherit;  letter-spacing: inherit;  color: inherit;  border-radius: 0;  background-color: transparent;  opacity: 1;  }  :where(select:is([multiple], [size])) optgroup { font-weight: bolder; }  :where(select:is([multiple], [size])) optgroup option { padding-inline-start: 20px; }  ::file-selector-button { margin-inline-end: 4px; }  ::placeholder { opacity: 1; }  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px)  { ::placeholder { color: color-mix(in oklab, currentcolor 50%, transparent); } }  textarea { resize: vertical; }  ::-webkit-search-decoration { -webkit-appearance: none; }  ::-webkit-date-and-time-value { min-height: 1lh;  text-align: inherit;  }  ::-webkit-datetime-edit { display: inline-flex; }  ::-webkit-datetime-edit-fields-wrapper { padding: 0; } ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field { padding-block: 0; }  ::-webkit-calendar-picker-indicator { line-height: 1; }  :-moz-ui-invalid { box-shadow: none; }  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button { appearance: button; }  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }  [hidden]:where(:not([hidden~='until-found'])) { display: none !important; }
+/* layer: default */
+.text-3xl{font-size:var(--text-3xl-fontSize);line-height:var(--un-leading, var(--text-3xl-lineHeight));}
+.text-4xl{font-size:var(--text-4xl-fontSize);line-height:var(--un-leading, var(--text-4xl-lineHeight));}
+.text-lg{font-size:var(--text-lg-fontSize);line-height:var(--un-leading, var(--text-lg-lineHeight));}
+.text-sm{font-size:var(--text-sm-fontSize);line-height:var(--un-leading, var(--text-sm-lineHeight));}
+.text-foreground{color:color-mix(in srgb, var(--ui-foreground) var(--un-text-opacity), transparent);}
+.text-muted-foreground{color:color-mix(in srgb, var(--ui-muted-foreground) var(--un-text-opacity), transparent);}
+.hover\:text-foreground:hover{color:color-mix(in srgb, var(--ui-foreground) var(--un-text-opacity), transparent);}
+.leading-7{--un-leading:calc(var(--spacing) * 7);line-height:calc(var(--spacing) * 7);}
+.tracking-tight{--un-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight);}
+.font-bold{--un-font-weight:var(--fontWeight-bold);font-weight:var(--fontWeight-bold);}
+.font-mono{font-family:var(--font-mono);}
+.font-semibold{--un-font-weight:var(--fontWeight-semibold);font-weight:var(--fontWeight-semibold);}
+.mx-auto{margin-inline:auto;}
+.my-6{margin-block:calc(var(--spacing) * 6);}
+.mb-4{margin-bottom:calc(var(--spacing) * 4);}
+.mb-6{margin-bottom:calc(var(--spacing) * 6);}
+.ml-6{margin-left:calc(var(--spacing) * 6);}
+.mt-10{margin-top:calc(var(--spacing) * 10);}
+.mt-8{margin-top:calc(var(--spacing) * 8);}
+.first\:mt-0:first-child{margin-top:calc(var(--spacing) * 0);}
+.px-\[0\.3rem\]{padding-inline:0.3rem;}
+.px-2{padding-inline:calc(var(--spacing) * 2);}
+.px-4{padding-inline:calc(var(--spacing) * 4);}
+.px-8{padding-inline:calc(var(--spacing) * 8);}
+.py-\[0\.2rem\]{padding-block:0.2rem;}
+.py-1{padding-block:calc(var(--spacing) * 1);}
+.py-10{padding-block:calc(var(--spacing) * 10);}
+.py-8{padding-block:calc(var(--spacing) * 8);}
+.pb-2{padding-bottom:calc(var(--spacing) * 2);}
+.list-decimal{list-style-type:decimal;}
+.border-b{border-bottom-width:1px;}
+.border-r{border-right-width:1px;}
+.border-border{border-color:color-mix(in srgb, var(--ui-border) var(--un-border-opacity), transparent);}
+.rounded{border-radius:var(--radius-DEFAULT);}
+.bg-muted{background-color:color-mix(in srgb, var(--ui-muted) var(--un-bg-opacity), transparent);}
+.hover\:bg-accent:hover{background-color:color-mix(in srgb, var(--ui-accent) var(--un-bg-opacity), transparent);}
+.shrink-0{flex-shrink:0;}
+.grow{flex-grow:1;}
+.max-w-3xl{max-width:var(--container-3xl);}
+.w-64{width:calc(var(--spacing) * 64);}
+.w-full{width:100%;}
+.block{display:block;}
+.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,--un-gradient-from,--un-gradient-via,--un-gradient-to;transition-timing-function:var(--un-ease, var(--default-transition-timingFunction));transition-duration:var(--un-duration, var(--default-transition-duration));}
+.relative{position:relative;}
+.scroll-m-20{scroll-margin:calc(var(--spacing) * 20);}
+.space-y-1{
+:where(&>:not(:last-child)){--un-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 1) * var(--un-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 1) * calc(1 - var(--un-space-y-reverse)));}
+}</style>
+</head>
+<body>
+<div class="docs-layout"><nav class="docs-menu w-64 shrink-0 border-r border-border px-4 py-8"><div class="mb-6 text-lg font-semibold tracking-tight">Ecosystem</div><ul class="space-y-1"><li><a href="#openness" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">An open platform</a></li><li><a href="#registry" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">The module registry</a></li><li><a href="#contribute" class="block rounded px-2 py-1 text-sm text-muted-foreground hover:bg-accent hover:text-foreground">Adding a module</a></li></ul></nav><main class="docs-content mx-auto w-full max-w-3xl px-8 py-10"><section id="openness" class="docs-section"><h1 class="mt-8 scroll-m-20 text-4xl font-bold tracking-tight first:mt-0 mb-6">An open platform</h1><div class="markdown-content"><h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mb-4">An open platform</h2><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">Converged is meant to be an open manufacturing platform, not a sealed SaaS box. The core ships under an open-source licence, and integrations, microservices, microfrontends, workflows and applied solutions grow around it.</p><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">On the manufacturing market this is practical rather than ideological. Shops differ in equipment, materials, quality standards and supply chains. A closed system stops at the boundary of what its vendor anticipated. An open one lets you add an adapter for one specific machine, or an integration with one specific carrier, without waiting for somebody else's release.</p><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">An extension can be small: a machine adapter, an import from an old website, one extra screen, a workflow for an industry-specific process. If it is useful to others, it lands in the shared registry. If it is not, it stays in your deployment and keeps working.</p><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">Open does not mean uncontrolled. A module must declare its area of responsibility, respect the architectural boundaries, and never obtain wider data access than it needs. Trust in the ecosystem rests on the sources, on reproducible builds and on an explicit permission model — not on promises.</p></div></section><section id="registry" class="docs-section"><h1 class="mt-8 scroll-m-20 text-4xl font-bold tracking-tight first:mt-0 mb-6">The module registry</h1><div class="markdown-content"><h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mb-4">The module registry</h2><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">The registry is not a separate document and not a database. It is the source tree itself.</p><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">├── microservices/&lt;domain>/ms-&lt;name>    a data domain and its API</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">├── microfrontends/&lt;domain>/mf-&lt;name>   a screen mounted at runtime</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">├── workflows/wf-&lt;name>                 a process for the DAG runtime</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">├── types/&lt;domain>/                     NRPC contracts</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">└── solutions/                          which modules ship together</code><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+</code></code><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">A module exists because its directory exists. It belongs to a domain because it sits in that domain's folder. It belongs to a solution because <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">solutions/solutions.json</code></code> names it. There is no fourth place where any of this has to be repeated — which is why the ecosystem page on the site is produced by walking the tree rather than by editing a list.</p><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">A module's purpose is taken from its <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">README.md</code></code>: the first paragraph under <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">## Purpose</code></code> (for microfrontends, <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">## UI Purpose</code></code>) and the paragraph under the ownership-boundary heading. Those two paragraphs are the module's contract in plain language, and every module owes them.</p><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">A product layer on top of the base — <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">club</code></code>, for instance — is laid out the same way and may drop the domain level: its modules sit directly in <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/microservices/ms-&lt;name></code></code>. The build understands both layouts.</p></div></section><section id="contribute" class="docs-section"><h1 class="mt-8 scroll-m-20 text-4xl font-bold tracking-tight first:mt-0 mb-6">Adding a module</h1><div class="markdown-content"><h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mb-4">Adding a module</h2><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">The steps are the same for the base platform and for a product layer.</p><ol class="my-6 ml-6 list-decimal [&amp;>li]:mt-2"><li><strong class="font-semibold">Create the directory</strong> by convention: <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/microservices/&lt;domain>/ms-&lt;name></code></code> for a service, <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/microfrontends/&lt;domain>/mf-&lt;name></code></code> for a screen, <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/workflows/wf-&lt;name></code></code> for a process.</li><li><strong class="font-semibold">Declare the contract</strong> in <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/types/&lt;domain>/</code></code> and generate the clients with <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">bun run gen</code></code>. The client appears as a <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">g-&lt;name></code></code> package, usable from the browser, from another process on the bus, and from inside a workflow.</li><li><strong class="font-semibold">Write the README</strong> with a <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">## Purpose</code></code> section and an ownership-boundary section. The first paragraph of each ends up in the registry on the site — write them for a reader, not for yourself.</li><li><strong class="font-semibold">Add the module to a solution</strong> if it does not ship alone: put its short name in <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">modules/solutions/solutions.json</code></code> and declare its dependencies.</li><li><strong class="font-semibold">Rebuild the docs</strong>: <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">bun run docs</code></code> in <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">core/tools/docs</code></code>. The module shows up in the registry and the counters on the ecosystem page recount themselves.</li></ol><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">What you do not have to do: edit module lists in the site data, restate the description in the landing, or register the module anywhere else. Generation runs one way — from sources into data, never back. Anything under <code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground"><code class="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">data/</code></code> is overwritten by the next build.</p><p class="leading-7 [&amp;:not(:first-child)]:mt-4 mb-4">What review asks of a module: it does not reach into another module's storage, does not bypass the bus with direct calls, declares only the permissions it actually uses, and does not quietly widen its area of responsibility.</p></div></section></main></div>
+</body>
+</html>

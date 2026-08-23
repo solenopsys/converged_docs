@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "equipment",
+    "title": "Equipamentos",
+    "order": 1,
+    "id": "equipment",
+    "functions": [
+      "Controle e cadastro de equipamentos (impressoras 3D, máquinas CNC, robôs)",
+      "Monitoramento online do estado e da carga dos equipamentos",
+      "Estatísticas sobre tempo de operação, paradas e erros",
+      "Gestão do ciclo de vida: instalação, manutenção, desativação",
+      "Integração com os módulos de manutenção e qualidade"
+    ]
+  },
+  {
+    "slug": "integration",
+    "title": "Integração",
+    "order": 2,
+    "id": "integration",
+    "functions": [
+      "Conexão de equipamentos: drivers, firmwares, interfaces",
+      "Integração com máquinas CNC, impressoras 3D, controladores e sensores",
+      "Configuração da troca de dados com sistemas ERP/CRM/MES externos",
+      "Atualização de firmwares e diagnóstico remoto de dispositivos",
+      "Gestão centralizada de periféricos e gateways"
+    ]
+  },
+  {
+    "slug": "logs",
+    "title": "Registos",
+    "order": 4,
+    "id": "logs",
+    "functions": [
+      "Monitoramento — análise da carga dos equipamentos e da eficiência dos processos",
+      "Análise por IA — detecção automática de falhas e erros",
+      "Interface de pesquisa — busca conveniente de falhas e relatórios",
+      "Relatórios — geração periódica de relatórios sobre falhas",
+      "Notificações — alerta oportuno sobre eventos críticos",
+      "Acesso remoto — controlo a partir de qualquer dispositivo, de qualquer lugar do mundo"
+    ]
+  },
+  {
+    "slug": "scheduling",
+    "title": "Planejamento",
+    "order": 4,
+    "id": "scheduling",
+    "functions": [
+      "Planejamento do processo produtivo e da carga dos equipamentos",
+      "Distribuição automática de tarefas entre máquinas e linhas",
+      "Controle de prazos, prioridades e recursos disponíveis",
+      "Visualização de cronogramas e gargalos na cadeia de produção",
+      "Integração com os módulos «Equipamentos» e «Pedidos»"
+    ]
+  }
+]

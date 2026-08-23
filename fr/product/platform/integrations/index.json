@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "chats",
+    "title": "Chats",
+    "order": 4,
+    "id": "chats",
+    "functions": [
+      "Intégration avec les messageries : Telegram, WhatsApp, Viber, etc.",
+      "Traitement des messages entrants et des demandes dans une interface unifiée",
+      "Connexion d’agents IA pour les réponses automatiques et un support 24/7",
+      "Connexion aux processus métier internes et aux commandes",
+      "Journalisation des dialogues et analytique des communications"
+    ]
+  },
+  {
+    "slug": "delivery-services",
+    "title": "Services de livraison",
+    "order": 3,
+    "id": "delivery-services",
+    "functions": [
+      "Intégration avec des services logistiques externes (API)",
+      "Calcul automatique du coût et des délais de livraison",
+      "Suivi des envois et notifications aux clients",
+      "Choix du mode de livraison optimal selon les paramètres de la commande",
+      "Intégration avec les commandes, les entrepôts et la gestion documentaire"
+    ]
+  },
+  {
+    "slug": "email",
+    "title": "E-mail",
+    "order": 1,
+    "id": "email",
+    "functions": [
+      "Notifications e-mail automatiques aux clients et aux employés",
+      "Prise en charge des modèles d’e-mails et personnalisation des messages",
+      "Intégration avec les processus métier, les commandes et les événements",
+      "Rapports de livraison et de réaction (ouverture, clics)",
+      "Connexion de vos propres serveurs SMTP ou de fournisseurs de messagerie cloud"
+    ]
+  },
+  {
+    "slug": "services",
+    "title": "Services",
+    "order": 5,
+    "id": "services",
+    "functions": [
+      "Intégration avec des services en ligne tiers (par exemple, Google Docs, Notion, Microsoft 365)",
+      "Travail collaboratif sur des documents, des tableaux et des présentations",
+      "Échange de fichiers et de données entre les employés et les clients",
+      "Synchronisation avec des stockages cloud et des systèmes de messagerie",
+      "Extension des processus métier grâce à la connexion de plateformes externes"
+    ]
+  },
+  {
+    "slug": "sms",
+    "title": "Alertes SMS",
+    "order": 2,
+    "id": "sms",
+    "functions": [
+      "Envoi automatique de SMS aux clients et aux employés",
+      "Configuration de déclencheurs pour les alertes selon les événements (commande, paiement, erreur)",
+      "Prise en charge des modèles et des messages personnalisés",
+      "Intégration avec des passerelles SMS externes (via API)",
+      "Contrôle de la livraison et journalisation des messages envoyés"
+    ]
+  },
+  {
+    "slug": "api",
+    "title": "API propriétaires",
+    "order": 7,
+    "id": "api",
+    "functions": [
+      "Réception des commandes et des demandes des clients réguliers via API",
+      "Intégration avec des ERP/CRM/boutiques et des marketplaces externes",
+      "Création automatique de tâches et lancement de processus métier",
+      "Prise en charge des notifications Webhook et de l’authentification via des jetons",
+      "Échange de données sécurisé avec contrôle d’accès"
+    ]
+  }
+]

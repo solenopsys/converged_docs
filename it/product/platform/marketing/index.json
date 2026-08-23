@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "publications",
+    "title": "Pubblicazioni",
+    "order": 1,
+    "id": "publications",
+    "functions": [
+      "Pianificazione e pubblicazione di contenuti su piattaforme esterne",
+      "Integrazione con i social network e le piattaforme di contenuti",
+      "Automazione del calendario dei post e delle ripubblicazioni",
+      "Analisi della copertura, dell'engagement e dell'efficacia dei contenuti",
+      "Interazione con il pubblico e gestione dei commenti"
+    ]
+  },
+  {
+    "slug": "seo",
+    "title": "Ottimizzazione SEO",
+    "order": 2,
+    "id": "seo",
+    "functions": [
+      "Aumento della visibilità del sito sui motori di ricerca e negli agenti IA",
+      "Aumento del traffico organico",
+      "Adattamento dei contenuti per agenti LLM (ChatGPT, Perplexity e altri)",
+      "Ampliamento della copertura del pubblico target"
+    ]
+  },
+  {
+    "slug": "site",
+    "title": "Sito web",
+    "order": 3,
+    "id": "site",
+    "functions": [
+      "Siti web pronti, landing page e vetrine di prodotti",
+      "Personalizzazione IA di design, testi e immagini",
+      "Integrazione con ordini, chat e pagamenti online",
+      "Adattamento per SEO e aggiornamento automatico dell'assortimento",
+      "Specializzazione per aziende di produzione digitale (CNC, stampa 3D e altri)"
+    ]
+  },
+  {
+    "slug": "tenders",
+    "title": "Gare d'appalto",
+    "order": 4,
+    "id": "tenders",
+    "functions": [
+      "Generazione dell'intero pacchetto di documentazione per gare d'appalto",
+      "Automazione della preparazione dei moduli legali e finanziari",
+      "Verifica della conformità ai requisiti del committente",
+      "Supporto per diversi formati e tipi di gare"
+    ]
+  },
+  {
+    "slug": "tender-monitoring",
+    "title": "Monitoraggio delle gare d'appalto",
+    "order": 5,
+    "id": "tender-monitoring",
+    "functions": [
+      "Monitoraggio automatico delle nuove gare d'appalto",
+      "Filtraggio delle gare pertinenti con l'IA",
+      "Compilazione automatica delle domande di partecipazione"
+    ]
+  },
+  {
+    "slug": "tender-calculation",
+    "title": "Calcolo delle gare d'appalto",
+    "order": 6,
+    "id": "tender-calculation",
+    "functions": [
+      "Calcolo automatico dei costi di produzione e del margine",
+      "Preparazione di offerte commerciali competitive",
+      "Analisi dei requisiti della documentazione di gara"
+    ]
+  }
+]

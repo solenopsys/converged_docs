@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "roles",
+    "title": "Rollen und Verantwortlichkeiten des Teams",
+    "order": 1,
+    "id": "roles",
+    "elements": [
+      "platform/management/staff",
+      "platform/management/departments",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Wer wofür verantwortlich ist: Termine, Qualität, Kunden, Equipment",
+      "Zuordnung von Aufgaben und Bereichen zu konkreten Personen",
+      "Einfache Arbeitsregeln statt schwerfälliger Vorschriften",
+      "Festhalten von Vereinbarungen in Notizen und Karten",
+      "Grundlegendes Bild der Auslastung: Wer überlastet ist und wer Leerlauf hat"
+    ]
+  },
+  {
+    "slug": "shifts",
+    "title": "Skalierung des Teams und der Schichten",
+    "order": 2,
+    "id": "shifts",
+    "elements": [
+      "platform/management/staff",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Schichtplanung und Verteilung der Mitarbeiter auf die Anlagen",
+      "Überblick über die Auslastung nach Schichten/Bereichen",
+      "Typische Organisationsmodelle für eine kleine Werkstatt",
+      "Minimale Kennzahlen pro Schicht (Leerlauf, Aufgabenerfüllung)",
+      "Schnelle Einarbeitung neuer Mitarbeiter ohne Prozessänderungen"
+    ]
+  },
+  {
+    "slug": "knowledge",
+    "title": "Wissensweitergabe und Standards",
+    "order": 3,
+    "id": "knowledge",
+    "elements": [
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/integrations/services",
+      "platform/control/quality",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Einfache Anleitungsbasis (Text/Foto/Video) für Arbeitsabläufe",
+      "Verknüpfung von Anleitungen mit Anlagen, Materialien und Arbeitstypen",
+      "Versionen von Standards ohne aufwendige Abstimmung",
+      "Zentrales Dateirepository (Zeichnungen, Druckprofile, Vorlagen)",
+      "Schneller Zugriff auf Wissen per KI-Chat"
+    ]
+  },
+  {
+    "slug": "onboarding",
+    "title": "Mitarbeiterauswahl und -schulung",
+    "order": 4,
+    "id": "onboarding",
+    "elements": [
+      "platform/management/staff",
+      "platform/tools/files",
+      "platform/integrations/services",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Kurze Rollenbeschreibungen (Bediener, Technologe, Manager)",
+      "Checklisten für Interviews und Auswahl",
+      "Onboarding-Szenarien für die erste Woche/den ersten Monat",
+      "Grobe Schulungspläne nach Rollen ohne „Karrierematrizen“",
+      "Ein-Klick-Zugriff für Neueinsteiger auf aktuelle Standards"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "clients",
+    "title": "Clientes",
+    "order": 3,
+    "id": "clients",
+    "functions": [
+      "Base unificada de clientes con fichas e información de contacto",
+      "Almacenamiento del historial de interacciones, solicitudes y condiciones",
+      "Asignación de descuentos personales, prioridades y estados",
+      "Integración con módulos de pedidos, comunicaciones y finanzas",
+      "Segmentación de la base de clientes y analítica por grupos"
+    ]
+  },
+  {
+    "slug": "delivery",
+    "title": "Entrega",
+    "order": 1,
+    "id": "delivery",
+    "functions": [
+      "Gestión de la logística y expedición de producto terminado",
+      "Seguimiento de estados de entrega y notificaciones a clientes",
+      "Integración con pedidos, clientes y almacenes",
+      "Asignación de mensajeros, empresas de transporte y rutas",
+      "Analítica sobre plazos, retrasos y costos logísticos"
+    ]
+  },
+  {
+    "slug": "history",
+    "title": "Historial",
+    "order": 2,
+    "id": "history",
+    "functions": [
+      "Cronología de interacciones con clientes por todos los canales",
+      "Eventos: llamadas, mensajes, correos, visitas, tareas, estados",
+      "Integración con chats, correo, pedidos y la lógica de CRM",
+      "Búsqueda y filtrado por eventos, tiempo, empleados y clientes",
+      "Auditoría de acciones y recuperación del contexto de las interacciones"
+    ]
+  },
+  {
+    "slug": "orders",
+    "title": "Pedidos",
+    "order": 4,
+    "id": "orders",
+    "functions": [
+      "Creación, edición y seguimiento de pedidos",
+      "Gestión de estados de ejecución y pagos",
+      "Registro de fuentes de pedidos y clientes vinculados",
+      "Integración con módulos de entrega, cálculos e historial",
+      "Búsqueda, filtrado y analítica de pedidos"
+    ]
+  },
+  {
+    "slug": "request",
+    "title": "Solicitudes",
+    "order": 5,
+    "id": "request",
+    "functions": [
+      "Recepción y procesamiento de solicitudes entrantes y leads",
+      "Creación de propuestas comerciales (PC)",
+      "Seguimiento de las etapas de negociación y estados de las solicitudes",
+      "Integración con módulos de pedidos, clientes e historial",
+      "Conversión de solicitudes en pedidos completos"
+    ]
+  }
+]

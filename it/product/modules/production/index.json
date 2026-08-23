@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "equipment-load",
+    "title": "Controllo e caricamento delle attrezzature",
+    "order": 1,
+    "id": "equipment-load",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/equipment/scheduling",
+      "platform/sales/orders",
+      "platform/tools/files",
+      "platform/tools/slicing",
+      "platform/tools/video",
+      "platform/tools/events",
+      "platform/control/maintenance"
+    ],
+    "functions": [
+      "Stati delle macchine e delle stampanti 3D (in funzione/ferma/in attesa)",
+      "Coda delle attività per le attrezzature e collegamento agli ordini",
+      "Piano giornaliero/settimanale senza una MES pesante",
+      "Fermi e colli di bottiglia: cosa è fermo e perché",
+      "Risposta rapida tramite chat AI: «cosa sta facendo questa stampante/macchina?»"
+    ]
+  },
+  {
+    "slug": "inventory",
+    "title": "Gestione delle scorte",
+    "order": 2,
+    "id": "inventory",
+    "elements": [
+      "platform/store/materials",
+      "platform/store/spare-parts",
+      "platform/management/supply",
+      "platform/sales/orders",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Giacenze di materiali, utensili e pezzi di ricambio",
+      "Scorte minime e promemoria «cosa è urgente»",
+      "Riserve per gli ordini correnti",
+      "Elenco delle voci critiche per una specifica attrezzatura",
+      "Bozze di richieste di reintegro (con conferma del proprietario)"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Controllo qualità del prodotto",
+    "order": 3,
+    "id": "quality",
+    "elements": [
+      "platform/control/quality",
+      "platform/control/reports",
+      "platform/equipment/equipment",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Checklist per le operazioni chiave senza burocrazia",
+      "Registrazione di difetti/rifacimenti con collegamento all’ordine e all’attrezzatura",
+      "Statistiche sulle cause e sulla ripetitività (incluso Pareto)",
+      "Collegamento della qualità a materiali, impostazioni e persone",
+      "Foto/video dei casi problematici"
+    ]
+  },
+  {
+    "slug": "incidents",
+    "title": "Registrazione e analisi dei guasti",
+    "order": 4,
+    "id": "incidents",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/control/maintenance",
+      "platform/control/reports",
+      "platform/store/spare-parts",
+      "platform/sales/orders",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Registro eventi per le attrezzature: cosa è successo e quando",
+      "Classificazione delle cause (mancanza di materiale, errore di stampa, guasto, ecc.)",
+      "Notifiche per incidenti critici e lunghi fermi",
+      "Ricerca degli errori ricorrenti e collegamento con le scadenze degli ordini",
+      "Collegamento con la manutenzione e il magazzino dei ricambi"
+    ]
+  },
+  {
+    "slug": "shipping",
+    "title": "Consegna dei prodotti ai clienti",
+    "order": 5,
+    "id": "shipping",
+    "elements": [
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/store/products",
+      "platform/tools/marking",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Elenco delle spedizioni: cosa inviare oggi/questa settimana",
+      "Stati della consegna (pronto/in transito/consegnato)",
+      "Notifiche al cliente al momento della spedizione",
+      "Tracciamento dei servizi di spedizione dove davvero fa risparmiare tempo",
+      "Panoramica rapida di «dove si verificano più spesso i ritardi»"
+    ]
+  }
+]

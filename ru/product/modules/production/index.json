@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "equipment-load",
+    "title": "Контроль и загрузка оборудования",
+    "order": 1,
+    "id": "equipment-load",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/equipment/scheduling",
+      "platform/sales/orders",
+      "platform/tools/files",
+      "platform/tools/slicing",
+      "platform/tools/video",
+      "platform/tools/events",
+      "platform/control/maintenance"
+    ],
+    "functions": [
+      "Статусы станков и 3D‑принтеров (работает/стоит/ожидает)",
+      "Очередь задач по оборудованию и привязка к заказам",
+      "План на день/неделю без тяжёлой MES",
+      "Простои и узкие места: что стоит и почему",
+      "Быстрый ответ через AI‑чат «что делает этот принтер/станок?»"
+    ]
+  },
+  {
+    "slug": "inventory",
+    "title": "Управление запасами",
+    "order": 2,
+    "id": "inventory",
+    "elements": [
+      "platform/store/materials",
+      "platform/store/spare-parts",
+      "platform/management/supply",
+      "platform/sales/orders",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Остатки материалов, инструментов и запчастей",
+      "Минимальные остатки и напоминания «что горит»",
+      "Резервы под текущие заказы",
+      "Список критичных позиций под конкретное оборудование",
+      "Черновики заявок на пополнение (с подтверждением владельца)"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Контроль качества продукции",
+    "order": 3,
+    "id": "quality",
+    "elements": [
+      "platform/control/quality",
+      "platform/control/reports",
+      "platform/equipment/equipment",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Чек‑листы по ключевым операциям без бюрократии",
+      "Фиксация брака/переделок с привязкой к заказу и оборудованию",
+      "Статистика причин и повторяемости (включая Парето)",
+      "Связь качества с материалами, настройками и людьми",
+      "Фото/видео по проблемным случаям"
+    ]
+  },
+  {
+    "slug": "incidents",
+    "title": "Фиксация и анализ сбоев",
+    "order": 4,
+    "id": "incidents",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/control/maintenance",
+      "platform/control/reports",
+      "platform/store/spare-parts",
+      "platform/sales/orders",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Журнал событий по оборудованию: что и когда случилось",
+      "Классификация причин (нет материала, ошибка печати, поломка и т.д.)",
+      "Уведомления о критичных инцидентах и долгих простоях",
+      "Поиск повторяющихся ошибок и связь со сроками заказов",
+      "Связь с обслуживанием и складом запчастей"
+    ]
+  },
+  {
+    "slug": "shipping",
+    "title": "Доставка продукции клиентам",
+    "order": 5,
+    "id": "shipping",
+    "elements": [
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/store/products",
+      "platform/tools/marking",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Список отгрузок: что отправить сегодня/на неделе",
+      "Статусы доставки (готово/в пути/доставлено)",
+      "Уведомления клиенту при отгрузке",
+      "Трекинг служб доставки там, где это реально экономит время",
+      "Быстрый обзор «где чаще всего задержки»"
+    ]
+  }
+]

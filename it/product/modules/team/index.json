@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "roles",
+    "title": "Ruoli e responsabilità del team",
+    "order": 1,
+    "id": "roles",
+    "elements": [
+      "platform/management/staff",
+      "platform/management/departments",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Chi è responsabile di cosa: scadenze, qualità, clienti, attrezzature",
+      "Assegnazione di compiti e aree a persone specifiche",
+      "Regole di lavoro semplici al posto di regolamenti pesanti",
+      "Registrazione degli accordi in note e schede",
+      "Quadro di base del carico di lavoro: chi è sovraccarico e chi è inattivo"
+    ]
+  },
+  {
+    "slug": "shifts",
+    "title": "Scalabilità del team e dei turni",
+    "order": 2,
+    "id": "shifts",
+    "elements": [
+      "platform/management/staff",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Pianificazione dei turni e distribuzione delle persone sulle attrezzature",
+      "Panoramica del carico di lavoro per turni/aree",
+      "Schemi tipici di organizzazione di un piccolo laboratorio",
+      "Metriche minime per i turni (tempi di inattività, completamento dei compiti)",
+      "Inserimento rapido di nuove persone senza riorganizzare i processi"
+    ]
+  },
+  {
+    "slug": "knowledge",
+    "title": "Trasferimento delle conoscenze e standard",
+    "order": 3,
+    "id": "knowledge",
+    "elements": [
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/integrations/services",
+      "platform/control/quality",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Una semplice base di istruzioni (testo/foto/video) per le operazioni",
+      "Collegamento delle istruzioni ad attrezzature, materiali e tipi di lavoro",
+      "Versioni degli standard senza approvazione complessa",
+      "Archivio unico dei file (disegni, profili di stampa, modelli)",
+      "Accesso rapido alle conoscenze tramite chat AI"
+    ]
+  },
+  {
+    "slug": "onboarding",
+    "title": "Selezione e formazione dei dipendenti",
+    "order": 4,
+    "id": "onboarding",
+    "elements": [
+      "platform/management/staff",
+      "platform/tools/files",
+      "platform/integrations/services",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Brevi descrizioni dei ruoli (operatore, tecnico, manager)",
+      "Checklist per i colloqui e la selezione",
+      "Scenari di onboarding per la prima settimana/mese",
+      "Piani di formazione approssimativi per ruolo senza «matrici di carriera»",
+      "Accesso del neoassunto agli standard aggiornati con un clic"
+    ]
+  }
+]

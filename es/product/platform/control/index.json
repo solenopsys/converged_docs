@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "business-processes",
+    "title": "Procesos empresariales de IA",
+    "order": 2,
+    "id": "ai-business-processes",
+    "functions": [
+      "Diseño visual de cadenas de tareas",
+      "Integración de CRM/ERP, correo electrónico, mensajería e modelos de IA",
+      "Autogeneración de documentos e informes por agentes de IA",
+      "Disparadores predictivos y alertas basadas en eventos",
+      "Analítica integral y monitorización en tiempo real"
+    ]
+  },
+  {
+    "slug": "maintenance",
+    "title": "Mantenimiento",
+    "order": 3,
+    "id": "maintenance",
+    "functions": [
+      "Planificación y automatización del mantenimiento de equipos",
+      "Diagnóstico predictivo basado en IA",
+      "Gestión y control de repuestos y materiales consumibles",
+      "Gestión de solicitudes de reparación y su ejecución"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Calidad",
+    "order": 4,
+    "id": "quality",
+    "functions": [
+      "Control digital de calidad en todas las etapas de producción",
+      "Registro de defectos y clasificación automática de productos defectuosos",
+      "Listas de verificación interactivas y estándares visuales",
+      "Analítica de las causas de defectos mediante diagramas de Pareto",
+      "Recomendaciones de IA para resolver los problemas clave"
+    ]
+  },
+  {
+    "slug": "reports",
+    "title": "Informes",
+    "order": 5,
+    "id": "reports",
+    "functions": [
+      "Generación automática de informes de producción, financieros y operativos",
+      "Visualización de datos: gráficos, tablas, diagramas, incluidos Pareto y tendencias",
+      "Plantillas configurables según las necesidades de distintos departamentos",
+      "Envío de informes según un calendario o al ocurrir eventos",
+      "Paneles en tiempo real para la dirección"
+    ]
+  }
+]

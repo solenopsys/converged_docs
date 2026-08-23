@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "equipment",
+    "title": "Ausrüstung",
+    "order": 1,
+    "id": "equipment",
+    "functions": [
+      "Erfassung und Dokumentation von Ausrüstung (3D-Drucker, CNC-Maschinen, Roboter)",
+      "Online-Überwachung des Zustands und der Auslastung der Ausrüstung",
+      "Statistiken zu Betriebszeit, Stillständen und Fehlern",
+      "Verwaltung des Lebenszyklus: Installation, Wartung, Ausmusterung",
+      "Integration mit den Modulen für Wartung und Qualität"
+    ]
+  },
+  {
+    "slug": "integration",
+    "title": "Integration",
+    "order": 2,
+    "id": "integration",
+    "functions": [
+      "Anbindung von Ausrüstung: Treiber, Firmware, Schnittstellen",
+      "Integration mit CNC-Maschinen, 3D-Druckern, Steuerungen und Sensoren",
+      "Einrichtung des Datenaustauschs mit externen ERP/CRM/MES-Systemen",
+      "Aktualisierung von Firmware und Ferndiagnose von Geräten",
+      "Zentrale Verwaltung von Peripheriegeräten und Gateways"
+    ]
+  },
+  {
+    "slug": "logs",
+    "title": "Protokolle",
+    "order": 4,
+    "id": "logs",
+    "functions": [
+      "Überwachung — Analyse der Auslastung der Ausrüstung und der Prozesseffizienz",
+      "KI-Analytik — automatische Erkennung von Ausfällen und Fehlern",
+      "Suchoberfläche — komfortable Suche nach Ausfällen und Berichten",
+      "Berichte — regelmäßige Generierung von Berichten über Ausfälle",
+      "Benachrichtigungen — rechtzeitige Meldung kritischer Ereignisse",
+      "Fernzugriff — Steuerung von jedem Gerät aus von überall auf der Welt"
+    ]
+  },
+  {
+    "slug": "scheduling",
+    "title": "Planung",
+    "order": 4,
+    "id": "scheduling",
+    "functions": [
+      "Planung des Produktionsprozesses und der Auslastung der Ausrüstung",
+      "Automatische Verteilung von Aufgaben zwischen Maschinen und Linien",
+      "Berücksichtigung von Fristen, Prioritäten und verfügbaren Ressourcen",
+      "Visualisierung von Zeitplänen und Engpässen in der Produktionskette",
+      "Integration mit den Modulen „Ausrüstung“ und „Aufträge“"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "clients",
+    "title": "Clients",
+    "order": 3,
+    "id": "clients",
+    "functions": [
+      "Base de clients unifiée avec fiches et coordonnées",
+      "Stockage de l'historique des interactions, des demandes et des conditions",
+      "Attribution de remises, de priorités et de statuts personnalisés",
+      "Intégration avec les modules de commandes, de communication et de finance",
+      "Segmentation de la base clients et analytique par groupes"
+    ]
+  },
+  {
+    "slug": "delivery",
+    "title": "Livraison",
+    "order": 1,
+    "id": "delivery",
+    "functions": [
+      "Gestion de la logistique et de l'expédition des produits finis",
+      "Suivi des statuts de livraison et notifications aux clients",
+      "Intégration avec les commandes, les clients et les entrepôts",
+      "Affectation des coursiers, des transporteurs et des itinéraires",
+      "Analytique sur les délais, les retards et les coûts logistiques"
+    ]
+  },
+  {
+    "slug": "history",
+    "title": "Historique",
+    "order": 2,
+    "id": "history",
+    "functions": [
+      "Chronologie des interactions avec les clients sur tous les canaux",
+      "Événements : appels, messages, e-mails, visites, tâches, statuts",
+      "Intégration avec les chats, la messagerie, les commandes et la logique CRM",
+      "Recherche et filtrage par événements, heure, employés, clients",
+      "Audit des actions et restauration du contexte des interactions"
+    ]
+  },
+  {
+    "slug": "orders",
+    "title": "Commandes",
+    "order": 4,
+    "id": "orders",
+    "functions": [
+      "Création, modification et suivi des commandes",
+      "Gestion des statuts d'exécution et des paiements",
+      "Suivi des sources de commandes et des clients associés",
+      "Intégration avec les modules de livraison, de calculs et d'historique",
+      "Recherche, filtrage et analytique sur les commandes"
+    ]
+  },
+  {
+    "slug": "request",
+    "title": "Demandes",
+    "order": 5,
+    "id": "request",
+    "functions": [
+      "Réception et traitement des demandes entrantes et des leads",
+      "Création de propositions commerciales (PC)",
+      "Suivi des étapes de négociation et des statuts des demandes",
+      "Intégration avec les modules de commandes, de clients et d'historique",
+      "Conversion des demandes en commandes complètes"
+    ]
+  }
+]

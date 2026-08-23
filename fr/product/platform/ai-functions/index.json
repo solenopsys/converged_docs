@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "ai-agents",
+    "title": "Agents IA",
+    "order": 1,
+    "id": "ai-agents",
+    "functions": [
+      "Automatisation des opérations routinières et de la gestion documentaire",
+      "Génération de propositions commerciales, d’instructions et de rapports",
+      "Assistance IA dans les chats, les e-mails et la téléphonie",
+      "Classification et traitement des données entrantes (commandes, demandes, erreurs)",
+      "Prévision, recommandations et optimisation des processus"
+    ]
+  },
+  {
+    "slug": "ai-chat",
+    "title": "Chat IA pour le site web",
+    "order": 1,
+    "id": "chat",
+    "functions": [
+      "Intégration rapide au site web et aux messageries",
+      "Traitement des questions fréquentes (FAQ)",
+      "Transfert des chats à un opérateur si nécessaire",
+      "Prise en charge du contexte (listes d’équipements, téléversement de fichiers)"
+    ]
+  },
+  {
+    "slug": "ai-telephony",
+    "title": "Téléphonie IA",
+    "order": 2,
+    "id": "calls",
+    "functions": [
+      "Enregistrement automatique des conversations",
+      "Sauvegarde des fichiers audio",
+      "Liaison aux fiches clients"
+    ]
+  },
+  {
+    "slug": "conversation",
+    "title": "Analyse des interactions",
+    "order": 3,
+    "id": "conversation",
+    "functions": [
+      "Reconnaissance vocale et détection des conflits",
+      "Analyse du sentiment du client",
+      "Extraction des thèmes et problèmes clés",
+      "Évaluation automatique de la qualité du service"
+    ]
+  }
+]

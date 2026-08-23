@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "business-processes",
+    "title": "KI-Geschäftsprozesse",
+    "order": 2,
+    "id": "ai-business-processes",
+    "functions": [
+      "Visuelle Gestaltung von Aufgabenketten",
+      "Integration von CRM/ERP, E-Mail, Messengern und KI-Modellen",
+      "Automatische Generierung von Dokumenten und Berichten durch KI-Agenten",
+      "Prädiktive Trigger und Alarme für Ereignisse",
+      "Durchgängige Analytik und Echtzeit-Monitoring"
+    ]
+  },
+  {
+    "slug": "maintenance",
+    "title": "Service",
+    "order": 3,
+    "id": "maintenance",
+    "functions": [
+      "Planung und Automatisierung der Anlagenwartung",
+      "Prädiktive Diagnose auf Basis von KI",
+      "Erfassung und Kontrolle von Ersatzteilen und Verbrauchsmaterialien",
+      "Verwaltung von Reparaturaufträgen und deren Ausführung"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Qualität",
+    "order": 4,
+    "id": "quality",
+    "functions": [
+      "Digitale Qualitätskontrolle in allen Produktionsphasen",
+      "Erfassung von Defekten und automatische Klassifizierung von Ausschuss",
+      "Interaktive Checklisten und visuelle Standards",
+      "Analyse der Ausschussursachen mithilfe von Pareto-Diagrammen",
+      "KI-Empfehlungen zur Behebung zentraler Probleme"
+    ]
+  },
+  {
+    "slug": "reports",
+    "title": "Berichte",
+    "order": 5,
+    "id": "reports",
+    "functions": [
+      "Automatische Generierung von Produktions-, Finanz- und Betriebsberichten",
+      "Datenvisualisierung: Diagramme, Tabellen, Grafiken, einschließlich Pareto und Trends",
+      "Anpassbare Vorlagen für die Anforderungen verschiedener Abteilungen",
+      "Versand von Berichten nach Zeitplan oder bei Eintreten von Ereignissen",
+      "Echtzeit-Dashboards für das Management"
+    ]
+  }
+]

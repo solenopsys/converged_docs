@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "profit",
+    "title": "Gewinn nach Aufträgen und Kunden",
+    "order": 1,
+    "id": "profit",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/control/reports",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Bruttomarge pro Auftrag (Material + Maschinenzeit + Arbeit)",
+      "Vergleich der Rentabilität nach Kunden, Arbeitsarten und Bereichen",
+      "Hervorhebung von verlustbringenden und hochprofitablen Segmenten",
+      "Entwicklung der Rentabilität über den Zeitraum ohne aufwändige Buchhaltung",
+      "Antworten auf die Fragen des Eigentümers per KI-Chat"
+    ]
+  },
+  {
+    "slug": "cashflow",
+    "title": "Zahlungsplan und Forderungen",
+    "order": 2,
+    "id": "cashflow",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/sales/clients",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Übersicht der Zahlungseingänge und wichtigsten Zahlungen nach Tagen",
+      "Wichtige Termine (Löhne, Miete, Einkäufe) ohne Überraschungen",
+      "Forderungen: wer, wie viel und seit wann schuldet",
+      "Erinnerungen und Entwürfe von Nachrichten an Schuldner",
+      "Szenarien „Was passiert mit der Kasse, wenn…“"
+    ]
+  },
+  {
+    "slug": "costing",
+    "title": "Selbstkosten und Preisgestaltung",
+    "order": 3,
+    "id": "costing",
+    "elements": [
+      "platform/management/billing",
+      "platform/management/finance",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Kalkulation der Kosten für Maschinenstunde und Personalarbeit",
+      "Berechnungsvorlagen für Standardarbeiten und Materialien",
+      "Regeln für Rabatte/Aufschläge (Dringlichkeit, Umfang, Stammkunde)",
+      "Hinweise zum Einfluss von Rabatten auf die Auftragsmarge",
+      "Schnelle Neuberechnung bei Änderungen der Materialpreise"
+    ]
+  },
+  {
+    "slug": "growth",
+    "title": "Planung von Investitionen und Wachstum",
+    "order": 4,
+    "id": "growth",
+    "elements": [
+      "platform/management/finance",
+      "platform/control/reports",
+      "platform/management/departments",
+      "platform/equipment/equipment",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Bewertung der Amortisation von Ausrüstung/Einstellungen/Erweiterung",
+      "Wachstumsszenarien („wenn wir einen Drucker hinzufügen“, „wenn wir den Preis um X% erhöhen“)",
+      "Prüfung der Auswirkungen von Entscheidungen auf Auslastung und Gewinn",
+      "Abgleich von Plänen mit dem Zahlungsplan („schaffen wir das / schaffen wir das nicht“)",
+      "Festhalten von Entscheidungen und tatsächlichen Ergebnissen"
+    ]
+  }
+]

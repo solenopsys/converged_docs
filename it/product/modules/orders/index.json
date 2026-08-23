@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "new-customers",
+    "title": "Acquisizione di nuovi clienti",
+    "order": 1,
+    "id": "new-customers",
+    "elements": [
+      "platform/marketing/site",
+      "platform/marketing/seo",
+      "platform/marketing/publications",
+      "platform/marketing/tenders",
+      "platform/marketing/tender-monitoring",
+      "platform/marketing/tender-calculation",
+      "platform/ai-functions/ai-agents",
+      "platform/ai-functions/ai-chat",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/sales/request",
+      "platform/tools/files",
+      "platform/tools/events",
+      "platform/tools/import"
+    ],
+    "functions": [
+      "Vetrina dei servizi e degli esempi di lavori (sito/landing page)",
+      "Descrizione chiara dei materiali, dei tempi e delle condizioni",
+      "Ricezione di richieste e file (modello/disegno) in un unico flusso",
+      "Bozze di risposte e offerte commerciali tramite AI",
+      "Supporto SEO di base e aggiornamento rapido dei contenuti"
+    ]
+  },
+  {
+    "slug": "inquiries",
+    "title": "Controllo delle richieste e delle segnalazioni",
+    "order": 2,
+    "id": "inquiries",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/ai-functions/ai-chat",
+      "platform/ai-functions/ai-telephony",
+      "platform/ai-functions/conversation",
+      "platform/sales/request",
+      "platform/sales/history",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Tutte le richieste in un unico flusso (sito, email, messaggistica, telefonia)",
+      "Scheda unificata della conversazione: messaggi, file, note",
+      "Stati di elaborazione e assegnazione del responsabile",
+      "Promemoria: a chi non si è risposto da tempo e cosa è «in sospeso»",
+      "Risposte automatiche alle domande tipiche e passaggio delle richieste complesse a un operatore"
+    ]
+  },
+  {
+    "slug": "order-status",
+    "title": "Monitoraggio dell'evasione degli ordini",
+    "order": 3,
+    "id": "order-status",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/sales/orders",
+      "platform/sales/history",
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events",
+      "platform/tools/files",
+      "platform/tools/marking",
+      "platform/store/products"
+    ],
+    "functions": [
+      "Fasi dell'ordine e stati rapidi",
+      "Data prevista di completamento e indicatore «a rischio»",
+      "Elenco degli ordini problematici per settimana/giorno",
+      "Notifiche al cliente e al team al cambio di stato",
+      "Link/pagina di stato dell'ordine per il cliente"
+    ]
+  },
+  {
+    "slug": "repeat-customers",
+    "title": "Gestione dei clienti abituali",
+    "order": 4,
+    "id": "repeat-customers",
+    "elements": [
+      "platform/sales/clients",
+      "platform/sales/history",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/integrations/api",
+      "platform/marketing/publications",
+      "platform/marketing/site",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Elenco dei clienti chiave (VIP/frequenti)",
+      "Storico degli ordini e degli accordi senza un CRM pesante",
+      "Promemoria «chi non ordina da tempo»",
+      "Offerte personalizzate e invii semplici",
+      "Panoramica semplice di «chi genera più fatturato/margine»"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "billing",
+    "title": "Cálculos",
+    "order": 1,
+    "id": "billing",
+    "functions": [
+      "Cálculo automático do custo de serviços e recursos",
+      "Geração e envio de faturas aos clientes",
+      "Controle de saldo e histórico de transações de cada usuário",
+      "Integração com sistemas de pagamento externos e bancos",
+      "Configuração de tarifas, limites e cobranças recorrentes"
+    ]
+  },
+  {
+    "slug": "departments",
+    "title": "Departamentos",
+    "order": 5,
+    "id": "departments",
+    "functions": [
+      "Gestão de filiais e unidades remotas",
+      "Designação de administradores locais e equipes",
+      "Operação autônoma das filiais dentro de um sistema único",
+      "Controle centralizado e relatórios consolidados",
+      "Escalonamento de processos para novas regiões em poucos dias"
+    ]
+  },
+  {
+    "slug": "finance",
+    "title": "Finanças",
+    "order": 2,
+    "id": "finance",
+    "functions": [
+      "Controle de receitas, despesas e transferências internas",
+      "Análise da rentabilidade de produtos, filiais e projetos",
+      "Planejamento financeiro e controle da execução do orçamento",
+      "Elaboração de relatórios por períodos, áreas e categorias",
+      "Integração com cálculos, pedidos e faturamento"
+    ]
+  },
+  {
+    "slug": "staff",
+    "title": "Pessoal",
+    "order": 3,
+    "id": "staff",
+    "functions": [
+      "Controle do tempo de trabalho e das escalas dos funcionários",
+      "Cálculo de salários, bônus e descontos",
+      "Gestão de férias, licenças médicas e ausências",
+      "Configuração de funções, cargos e áreas de responsabilidade",
+      "Integração com finanças, tarefas e departamentos"
+    ]
+  },
+  {
+    "slug": "supply",
+    "title": "Suprimentos",
+    "order": 4,
+    "id": "supply",
+    "functions": [
+      "Gestão de compras e fornecedores",
+      "Controle de estoque de materiais e componentes",
+      "Geração automática de solicitações de reposição",
+      "Controle dos prazos de entrega e status de expedição",
+      "Integração com produção, finanças e planejamento"
+    ]
+  }
+]

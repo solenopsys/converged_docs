@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "materials",
+    "title": "Materiais",
+    "order": 1,
+    "id": "materials",
+    "functions": [
+      "Controle de matérias-primas e materiais de consumo",
+      "Acompanhamento de saldos, movimentações e baixas",
+      "Integração com operações de produção e suprimentos",
+      "Configuração de estoques mínimos e automação de solicitações",
+      "Integração com módulos de suprimentos, planejamento e pedidos"
+    ]
+  },
+  {
+    "slug": "products",
+    "title": "Produtos",
+    "order": 3,
+    "id": "products",
+    "functions": [
+      "Controle de produtos acabados nos estoques",
+      "Acompanhamento da movimentação de itens entre setores e filiais",
+      "Emissão de notas de remessa, atas e relatórios",
+      "Integração com módulos de pedidos, entrega e suprimentos",
+      "Controle de saldos, reservas e prazos de armazenamento"
+    ]
+  },
+  {
+    "slug": "spare-parts",
+    "title": "Peças de reposição",
+    "order": 2,
+    "id": "spare-parts",
+    "functions": [
+      "Controle de peças de reposição e consumíveis para equipamentos",
+      "Controle de saldos e automação do reabastecimento",
+      "Vinculação aos tipos de equipamentos e aos planos de manutenção",
+      "Integração com módulos de manutenção, suprimentos e almoxarifados",
+      "Notificações sobre níveis críticos de estoque e prazos de substituição"
+    ]
+  }
+]

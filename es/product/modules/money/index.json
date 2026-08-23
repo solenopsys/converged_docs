@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "profit",
+    "title": "Beneficio por pedidos y clientes",
+    "order": 1,
+    "id": "profit",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/control/reports",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Margen bruto por cada pedido (material + tiempo de máquina + mano de obra)",
+      "Comparación de rentabilidad por clientes, tipos de trabajos y líneas",
+      "Resaltado de segmentos deficitarios y altamente rentables",
+      "Evolución de la rentabilidad por período sin contabilidad pesada",
+      "Respuestas a las preguntas del propietario mediante chat de IA"
+    ]
+  },
+  {
+    "slug": "cashflow",
+    "title": "Calendario de pagos y cuentas por cobrar",
+    "order": 2,
+    "id": "cashflow",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/sales/clients",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Flujo de cobros y pagos clave por día",
+      "Fechas críticas (sueldos, alquiler, compras) sin sorpresas",
+      "Cuentas por cobrar: quién debe, cuánto y desde hace cuánto",
+      "Recordatorios y borradores de mensajes para deudores",
+      "Escenarios de «qué pasará con la caja si…»"
+    ]
+  },
+  {
+    "slug": "costing",
+    "title": "Coste de producción y fijación de precios",
+    "order": 3,
+    "id": "costing",
+    "elements": [
+      "platform/management/billing",
+      "platform/management/finance",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Estimación del coste por hora del equipo y del trabajo del personal",
+      "Plantillas de cálculo para trabajos y materiales típicos",
+      "Reglas de descuentos/recargos (urgencia, volumen, cliente habitual)",
+      "Sugerencias sobre el impacto de los descuentos en el margen del pedido",
+      "Recalculo rápido cuando cambian los precios de los materiales"
+    ]
+  },
+  {
+    "slug": "growth",
+    "title": "Planificación de inversiones y crecimiento",
+    "order": 4,
+    "id": "growth",
+    "elements": [
+      "platform/management/finance",
+      "platform/control/reports",
+      "platform/management/departments",
+      "platform/equipment/equipment",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Evaluación del retorno de inversión de equipos/contratación/expansión",
+      "Escenarios de crecimiento («si añadimos una impresora», «si subimos el precio un X%»)",
+      "Comprobación del impacto de las decisiones en la carga de trabajo y el beneficio",
+      "Comparación de planes con el calendario de pagos («¿lo aguantamos / no lo aguantamos?»)",
+      "Registro de decisiones y resultados reales"
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "events",
+    "title": "Ereignisse",
+    "order": 1,
+    "id": "events",
+    "functions": [
+      "Erstellung und Automatisierung von Benachrichtigungen sowie E-Mail- und SMS-Versand",
+      "Trigger für Ereignisse im System (Anfragen, Aufträge, Status)",
+      "Planung und Start von Marketing-E-Mail-Kampagnen",
+      "Benachrichtigungen für Mitarbeiter über interne Aufgaben und Änderungen",
+      "Integration mit Modulen für Kunden, Aufträge, E-Mail und Chats"
+    ]
+  },
+  {
+    "slug": "files",
+    "title": "Dateien",
+    "order": 2,
+    "id": "files",
+    "functions": [
+      "Zentrale Speicherung von Zeichnungen, Modellen und Dokumentation",
+      "Versionskontrolle und Änderungsverlauf",
+      "Verwaltung von Zugriffsrechten und Rechten zum Anzeigen/Bearbeiten",
+      "Integration mit Aufträgen, Projekten und Ausrüstung",
+      "Schneller Zugriff auf Dateien in den passenden Phasen der Geschäftsprozesse"
+    ]
+  },
+  {
+    "slug": "import",
+    "title": "Datenimport",
+    "order": 3,
+    "id": "import",
+    "functions": [
+      "Import von Daten aus externen Quellen (z. B. CAPR, Excel, ERP-Systeme)",
+      "Unterstützung strukturierter Formate: CSV, JSON, XML",
+      "Einrichtung der Feldzuordnung und automatische Validierung",
+      "Integration mit Modulen für Aufträge, Kunden, Materialien und Ausrüstung",
+      "Versionskontrolle und Protokollierung aller Importvorgänge"
+    ]
+  },
+  {
+    "slug": "marking",
+    "title": "Kennzeichnung",
+    "order": 6,
+    "id": "marking",
+    "functions": [
+      "Generierung und Druck von Etiketten für Produkte und Lieferungen",
+      "Integration mit Thermodruckern und industriellen Markierern",
+      "Einrichtung von Vorlagen und automatische Datenausfüllung",
+      "Integration mit Aufträgen, Produkten und Lieferung",
+      "Unterstützung von Barcodes, QR-Codes und Rückverfolgbarkeitssystemen"
+    ]
+  },
+  {
+    "slug": "slicing",
+    "title": "Slicing",
+    "order": 4,
+    "id": "slicing",
+    "functions": [
+      "Import und Vorbereitung von 3D-Modellen für die Produktion",
+      "Generierung von Steuerungsprogrammen (G-Code und Analoga)",
+      "Optimierung von Parametern für Druck, Fräsen und Bearbeitung",
+      "Integration mit Ausrüstung und Produktionsaufträgen",
+      "Unterstützung von Vorlagen und automatisierten Profilen für verschiedene Maschinentypen"
+    ]
+  },
+  {
+    "slug": "video",
+    "title": "Video",
+    "order": 5,
+    "id": "video",
+    "functions": [
+      "Videoüberwachung von Produktionsbereichen in Echtzeit",
+      "Aufzeichnung technologischer Prozesse und Archivierung von Videos",
+      "Zuordnung von Kameras zu bestimmter Ausrüstung und Operationen",
+      "Zugriff auf Aufzeichnungen nach Ereignissen, Aufträgen oder Zeitstempeln",
+      "Integration mit Modulen für Qualität, Wartung und Sicherheit"
+    ]
+  }
+]

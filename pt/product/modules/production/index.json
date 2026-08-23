@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "equipment-load",
+    "title": "Controle e carregamento de equipamentos",
+    "order": 1,
+    "id": "equipment-load",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/equipment/scheduling",
+      "platform/sales/orders",
+      "platform/tools/files",
+      "platform/tools/slicing",
+      "platform/tools/video",
+      "platform/tools/events",
+      "platform/control/maintenance"
+    ],
+    "functions": [
+      "Status de máquinas e impressoras 3D (operando/parado/aguardando)",
+      "Fila de tarefas por equipamento e vinculação aos pedidos",
+      "Plano diário/semanal sem MES pesado",
+      "Paradas e gargalos: o que está parado e por quê",
+      "Resposta rápida via chat de IA: «o que esta impressora/máquina está fazendo?»"
+    ]
+  },
+  {
+    "slug": "inventory",
+    "title": "Gestão de estoques",
+    "order": 2,
+    "id": "inventory",
+    "elements": [
+      "platform/store/materials",
+      "platform/store/spare-parts",
+      "platform/management/supply",
+      "platform/sales/orders",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Saldos de materiais, ferramentas e peças de reposição",
+      "Estoques mínimos e lembretes do que está crítico",
+      "Reservas para os pedidos em andamento",
+      "Lista de itens críticos para equipamentos específicos",
+      "Rascunhos de solicitações de reposição (com confirmação do responsável)"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Controle de qualidade do produto",
+    "order": 3,
+    "id": "quality",
+    "elements": [
+      "platform/control/quality",
+      "platform/control/reports",
+      "platform/equipment/equipment",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Checklists das operações-chave sem burocracia",
+      "Registro de defeitos/retrabalho com vínculo ao pedido e ao equipamento",
+      "Estatísticas de causas e recorrência (incluindo Pareto)",
+      "Relação da qualidade com materiais, configurações e pessoas",
+      "Fotos/vídeos dos casos problemáticos"
+    ]
+  },
+  {
+    "slug": "incidents",
+    "title": "Registro e análise de falhas",
+    "order": 4,
+    "id": "incidents",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/control/maintenance",
+      "platform/control/reports",
+      "platform/store/spare-parts",
+      "platform/sales/orders",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Registro de eventos por equipamento: o que aconteceu e quando",
+      "Classificação das causas (falta de material, erro de impressão, quebra etc.)",
+      "Notificações de incidentes críticos e longas paradas",
+      "Busca de erros recorrentes e relação com os prazos dos pedidos",
+      "Integração com manutenção e estoque de peças de reposição"
+    ]
+  },
+  {
+    "slug": "shipping",
+    "title": "Entrega de produtos aos clientes",
+    "order": 5,
+    "id": "shipping",
+    "elements": [
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/store/products",
+      "platform/tools/marking",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Lista de expedições: o que enviar hoje/na semana",
+      "Status da entrega (pronto/em trânsito/entregue)",
+      "Notificação ao cliente no momento da expedição",
+      "Rastreamento por transportadoras onde isso realmente economiza tempo",
+      "Visão rápida de onde ocorrem mais atrasos"
+    ]
+  }
+]

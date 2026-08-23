@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "billing",
+    "title": "Cálculos",
+    "order": 1,
+    "id": "billing",
+    "functions": [
+      "Cálculo automático del coste de servicios y recursos",
+      "Generación y envío de facturas a los clientes",
+      "Registro del saldo e historial de operaciones de cada usuario",
+      "Integración con sistemas de pago externos y bancos",
+      "Configuración de tarifas, límites y cargos periódicos"
+    ]
+  },
+  {
+    "slug": "departments",
+    "title": "Divisiones",
+    "order": 5,
+    "id": "departments",
+    "functions": [
+      "Gestión de sucursales y divisiones remotas",
+      "Asignación de administradores locales y equipos",
+      "Funcionamiento autónomo de las sucursales dentro de un sistema unificado",
+      "Control centralizado e informes consolidados",
+      "Escalado de procesos a nuevas regiones en cuestión de días"
+    ]
+  },
+  {
+    "slug": "finance",
+    "title": "Finanzas",
+    "order": 2,
+    "id": "finance",
+    "functions": [
+      "Registro de ingresos, gastos y transferencias internas",
+      "Análisis de la rentabilidad de productos, sucursales y proyectos",
+      "Planificación financiera y control de la ejecución del presupuesto",
+      "Elaboración de informes por periodos, áreas y categorías",
+      "Integración con cálculos, pedidos y facturación"
+    ]
+  },
+  {
+    "slug": "staff",
+    "title": "Personal",
+    "order": 3,
+    "id": "staff",
+    "functions": [
+      "Registro del tiempo de trabajo y horarios de los empleados",
+      "Cálculo de salarios, primas y deducciones",
+      "Gestión de vacaciones, bajas por enfermedad y ausencias",
+      "Configuración de roles, puestos y áreas de responsabilidad",
+      "Integración con finanzas, tareas y divisiones"
+    ]
+  },
+  {
+    "slug": "supply",
+    "title": "Abastecimiento",
+    "order": 4,
+    "id": "supply",
+    "functions": [
+      "Gestión de compras y proveedores",
+      "Registro de inventarios de materiales y componentes",
+      "Generación automática de solicitudes de reposición",
+      "Control de plazos de entrega y estados de envío",
+      "Integración con producción, finanzas y planificación"
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "equipment",
+    "title": "Équipement",
+    "order": 1,
+    "id": "equipment",
+    "functions": [
+      "Suivi et identification des équipements (imprimantes 3D, machines CNC, robots)",
+      "Suivi en ligne de l’état et de la charge des équipements",
+      "Statistiques sur le temps de fonctionnement, les arrêts et les erreurs",
+      "Gestion du cycle de vie : installation, maintenance, mise au rebut",
+      "Intégration avec les modules de maintenance et de qualité"
+    ]
+  },
+  {
+    "slug": "integration",
+    "title": "Intégration",
+    "order": 2,
+    "id": "integration",
+    "functions": [
+      "Connexion des équipements : pilotes, micrologiciels, interfaces",
+      "Intégration avec les machines CNC, les imprimantes 3D, les contrôleurs et les capteurs",
+      "Configuration de l’échange de données avec des systèmes externes ERP/CRM/MES",
+      "Mise à jour des micrologiciels et diagnostic à distance des appareils",
+      "Gestion centralisée des périphériques et des passerelles"
+    ]
+  },
+  {
+    "slug": "logs",
+    "title": "Journaux",
+    "order": 4,
+    "id": "logs",
+    "functions": [
+      "Surveillance — analyse de la charge des équipements et de l’efficacité des processus",
+      "Analytique IA — détection automatique des pannes et des erreurs",
+      "Interface de recherche — recherche pratique des pannes et des rapports",
+      "Rapports — génération périodique de rapports sur les pannes",
+      "Notifications — alertes en temps voulu sur les événements critiques",
+      "Accès à distance — contrôle depuis n’importe quel appareil, partout dans le monde"
+    ]
+  },
+  {
+    "slug": "scheduling",
+    "title": "Planification",
+    "order": 4,
+    "id": "scheduling",
+    "functions": [
+      "Planification du processus de production et de la charge des équipements",
+      "Répartition automatique des tâches entre les machines et les lignes",
+      "Prise en compte des délais, des priorités et des ressources disponibles",
+      "Visualisation des plannings et des goulots d’étranglement dans la chaîne de production",
+      "Intégration avec les modules « Équipement » et « Commandes »"
+    ]
+  }
+]

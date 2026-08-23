@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "clients",
+    "title": "Clienti",
+    "order": 3,
+    "id": "clients",
+    "functions": [
+      "Database unificato dei clienti con schede e informazioni di contatto",
+      "Archiviazione della cronologia delle interazioni, richieste e condizioni",
+      "Assegnazione di sconti personali, priorità e stati",
+      "Integrazione con i moduli di ordini, comunicazioni e finanza",
+      "Segmentazione della base clienti e analisi per gruppi"
+    ]
+  },
+  {
+    "slug": "delivery",
+    "title": "Consegna",
+    "order": 1,
+    "id": "delivery",
+    "functions": [
+      "Gestione della logistica e della spedizione del prodotto finito",
+      "Tracciamento degli stati di consegna e notifiche ai clienti",
+      "Integrazione con ordini, clienti e magazzini",
+      "Assegnazione di corrieri, società di trasporto e percorsi",
+      "Analisi sui tempi, ritardi e costi logistici"
+    ]
+  },
+  {
+    "slug": "history",
+    "title": "Cronologia",
+    "order": 2,
+    "id": "history",
+    "functions": [
+      "Cronologia delle interazioni con i clienti su tutti i canali",
+      "Eventi: chiamate, messaggi, email, visite, attività, stati",
+      "Integrazione con chat, posta elettronica, ordini e logiche CRM",
+      "Ricerca e filtraggio per eventi, tempo, dipendenti, clienti",
+      "Audit delle azioni e ripristino del contesto delle interazioni"
+    ]
+  },
+  {
+    "slug": "orders",
+    "title": "Ordini",
+    "order": 4,
+    "id": "orders",
+    "functions": [
+      "Creazione, modifica e monitoraggio degli ordini",
+      "Gestione degli stati di evasione e dei pagamenti",
+      "Registrazione delle fonti degli ordini e dei clienti associati",
+      "Integrazione con i moduli di consegna, calcoli e cronologia",
+      "Ricerca, filtraggio e analisi degli ordini"
+    ]
+  },
+  {
+    "slug": "request",
+    "title": "Richieste",
+    "order": 5,
+    "id": "request",
+    "functions": [
+      "Ricezione ed elaborazione di richieste in entrata e lead",
+      "Creazione di offerte commerciali (OC)",
+      "Monitoraggio delle fasi di negoziazione e degli stati delle richieste",
+      "Integrazione con i moduli di ordini, clienti e cronologia",
+      "Conversione delle richieste in ordini completi"
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "clients",
+    "title": "Clientes",
+    "order": 3,
+    "id": "clients",
+    "functions": [
+      "Base unificada de clientes com fichas e informações de contato",
+      "Armazenamento do histórico de interações, solicitações e condições",
+      "Definição de descontos pessoais, prioridades e status",
+      "Integração com módulos de pedidos, comunicações e finanças",
+      "Segmentação da base de clientes e análise por grupos"
+    ]
+  },
+  {
+    "slug": "delivery",
+    "title": "Entrega",
+    "order": 1,
+    "id": "delivery",
+    "functions": [
+      "Gestão da logística e expedição de produtos acabados",
+      "Acompanhamento dos status de entrega e notificações aos clientes",
+      "Integração com pedidos, clientes e armazéns",
+      "Atribuição de entregadores, transportadoras e rotas",
+      "Análise de prazos, atrasos e custos logísticos"
+    ]
+  },
+  {
+    "slug": "history",
+    "title": "Histórico",
+    "order": 2,
+    "id": "history",
+    "functions": [
+      "Cronologia das interações com clientes em todos os canais",
+      "Eventos: chamadas, mensagens, e-mails, visitas, tarefas, status",
+      "Integração com chats, e-mail, pedidos e a lógica de CRM",
+      "Busca e filtragem por eventos, tempo, funcionários e clientes",
+      "Auditoria de ações e restauração do contexto das interações"
+    ]
+  },
+  {
+    "slug": "orders",
+    "title": "Pedidos",
+    "order": 4,
+    "id": "orders",
+    "functions": [
+      "Criação, edição e acompanhamento de pedidos",
+      "Gestão de status de execução e pagamentos",
+      "Registro das origens dos pedidos e dos clientes relacionados",
+      "Integração com módulos de entrega, cálculos e histórico",
+      "Busca, filtragem e análise de pedidos"
+    ]
+  },
+  {
+    "slug": "request",
+    "title": "Solicitações",
+    "order": 5,
+    "id": "request",
+    "functions": [
+      "Recebimento e processamento de solicitações e leads de entrada",
+      "Criação de propostas comerciais (PC)",
+      "Acompanhamento das etapas de negociação e dos status das solicitações",
+      "Integração com módulos de pedidos, clientes e histórico",
+      "Conversão de solicitações em pedidos completos"
+    ]
+  }
+]

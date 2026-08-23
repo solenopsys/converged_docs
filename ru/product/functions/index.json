@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "directions",
+    "title": "Решения Converged AI",
+    "order": 1,
+    "id": "directions"
+  },
+  {
+    "slug": "functions",
+    "title": "Как устроено решение",
+    "order": 2,
+    "id": "functions"
+  },
+  {
+    "slug": "principles",
+    "title": "Как подключать решения",
+    "order": 3,
+    "id": "principles"
+  },
+  {
+    "slug": "spending",
+    "title": "Оплата без цен за модули",
+    "order": 4,
+    "id": "spending"
+  },
+  {
+    "slug": "details",
+    "title": "Подробно по решениям",
+    "order": 5,
+    "id": "details"
+  }
+]

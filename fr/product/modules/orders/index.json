@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "new-customers",
+    "title": "Attirer de nouveaux clients",
+    "order": 1,
+    "id": "new-customers",
+    "elements": [
+      "platform/marketing/site",
+      "platform/marketing/seo",
+      "platform/marketing/publications",
+      "platform/marketing/tenders",
+      "platform/marketing/tender-monitoring",
+      "platform/marketing/tender-calculation",
+      "platform/ai-functions/ai-agents",
+      "platform/ai-functions/ai-chat",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/sales/request",
+      "platform/tools/files",
+      "platform/tools/events",
+      "platform/tools/import"
+    ],
+    "functions": [
+      "Vitrine des services et exemples de réalisations (site/landing page)",
+      "Description claire des matériaux, des délais et des conditions",
+      "Réception des demandes et des fichiers (modèle/dessin technique) dans un seul flux",
+      "Brouillons de réponses et d’offres commerciales grâce à l’IA",
+      "Support SEO de base et mise à jour rapide du contenu"
+    ]
+  },
+  {
+    "slug": "inquiries",
+    "title": "Suivi des demandes et des sollicitations",
+    "order": 2,
+    "id": "inquiries",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/ai-functions/ai-chat",
+      "platform/ai-functions/ai-telephony",
+      "platform/ai-functions/conversation",
+      "platform/sales/request",
+      "platform/sales/history",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Toutes les sollicitations dans un seul fil (site, e-mail, messageries, téléphonie)",
+      "Fiche unique de dialogue : messages, fichiers, notes",
+      "Statuts de traitement et désignation du responsable",
+      "Rappels : à qui on n’a pas répondu depuis longtemps et ce qui est « bloqué »",
+      "Réponses automatiques aux questions types et transfert des cas complexes à un opérateur"
+    ]
+  },
+  {
+    "slug": "order-status",
+    "title": "Suivi de l’exécution des commandes",
+    "order": 3,
+    "id": "order-status",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/sales/orders",
+      "platform/sales/history",
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events",
+      "platform/tools/files",
+      "platform/tools/marking",
+      "platform/store/products"
+    ],
+    "functions": [
+      "Étapes de la commande et statuts rapides",
+      "Date de disponibilité prévue et indicateur « à risque »",
+      "Liste des commandes problématiques par semaine/jour",
+      "Notifications au client et à l’équipe lors du changement de statut",
+      "Lien/page de statut de commande pour le client"
+    ]
+  },
+  {
+    "slug": "repeat-customers",
+    "title": "Gestion des clients réguliers",
+    "order": 4,
+    "id": "repeat-customers",
+    "elements": [
+      "platform/sales/clients",
+      "platform/sales/history",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/integrations/api",
+      "platform/marketing/publications",
+      "platform/marketing/site",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Liste des clients clés (VIP/commandes fréquentes)",
+      "Historique des commandes et des accords sans CRM lourd",
+      "Rappels « qui n’a pas commandé depuis longtemps »",
+      "Offres personnalisées et envois légers",
+      "Aperçu simple de « qui génère le plus de chiffre d’affaires/marge »"
+    ]
+  }
+]

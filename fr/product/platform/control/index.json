@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "business-processes",
+    "title": "Processus métiers IA",
+    "order": 2,
+    "id": "ai-business-processes",
+    "functions": [
+      "Conception visuelle des chaînes de tâches",
+      "Intégration de CRM/ERP, de la messagerie, des messageries instantanées, des modèles IA",
+      "Génération automatique de documents et de rapports par des agents IA",
+      "Déclencheurs prédictifs et alertes basés sur les événements",
+      "Analytique de bout en bout et surveillance en temps réel"
+    ]
+  },
+  {
+    "slug": "maintenance",
+    "title": "Maintenance",
+    "order": 3,
+    "id": "maintenance",
+    "functions": [
+      "Planification et automatisation de la maintenance des équipements",
+      "Diagnostic prédictif basé sur l’IA",
+      "Suivi et contrôle des pièces détachées et des consommables",
+      "Gestion des demandes de réparation et de leur exécution"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Qualité",
+    "order": 4,
+    "id": "quality",
+    "functions": [
+      "Contrôle qualité numérique à toutes les étapes de la production",
+      "Enregistrement des défauts et classification automatique des rebuts",
+      "Listes de contrôle interactives et standards visuels",
+      "Analyse des causes des rebuts à l’aide des diagrammes de Pareto",
+      "Recommandations IA pour résoudre les principaux problèmes"
+    ]
+  },
+  {
+    "slug": "reports",
+    "title": "Rapports",
+    "order": 5,
+    "id": "reports",
+    "functions": [
+      "Génération automatique de rapports de production, financiers et opérationnels",
+      "Visualisation des données : graphiques, tableaux, diagrammes, y compris Pareto et tendances",
+      "Modèles personnalisables selon les besoins des différents services",
+      "Envoi des rapports selon un planning ou lors de la survenue d’événements",
+      "Tableaux de bord en temps réel pour la direction"
+    ]
+  }
+]

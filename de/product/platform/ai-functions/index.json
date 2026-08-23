@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "ai-agents",
+    "title": "KI-Agenten",
+    "order": 1,
+    "id": "ai-agents",
+    "functions": [
+      "Automatisierung routinemäßiger Abläufe und des Dokumentenverkehrs",
+      "Erstellung von kommerziellen Angeboten, Anleitungen und Berichten",
+      "KI-Unterstützung in Chats, E-Mail und Telefonie",
+      "Klassifizierung und Verarbeitung eingehender Daten (Bestellungen, Anfragen, Fehler)",
+      "Prognose, Empfehlungen und Prozessoptimierung"
+    ]
+  },
+  {
+    "slug": "ai-chat",
+    "title": "KI-Chat für die Website",
+    "order": 1,
+    "id": "chat",
+    "functions": [
+      "Schnelle Integration in Website und Messenger",
+      "Bearbeitung häufig gestellter Fragen (FAQ)",
+      "Weiterleitung von Chats an einen Operator bei Bedarf",
+      "Unterstützung von Kontexten (Gerätelisten, Dateiupload)"
+    ]
+  },
+  {
+    "slug": "ai-telephony",
+    "title": "KI-Telefonie",
+    "order": 2,
+    "id": "calls",
+    "functions": [
+      "Automatische Aufzeichnung von Gesprächen",
+      "Speicherung von Audiodateien",
+      "Verknüpfung mit Kundenkarten"
+    ]
+  },
+  {
+    "slug": "conversation",
+    "title": "Analyse von Interaktionen",
+    "order": 3,
+    "id": "conversation",
+    "functions": [
+      "Spracherkennung und Erkennung von Konflikten",
+      "Analyse der Stimmung des Kunden",
+      "Hervorhebung zentraler Themen und Probleme",
+      "Automatische Bewertung der Servicequalität"
+    ]
+  }
+]

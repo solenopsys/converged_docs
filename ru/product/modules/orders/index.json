@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "new-customers",
+    "title": "Привлечение новых клиентов",
+    "order": 1,
+    "id": "new-customers",
+    "elements": [
+      "platform/marketing/site",
+      "platform/marketing/seo",
+      "platform/marketing/publications",
+      "platform/marketing/tenders",
+      "platform/marketing/tender-monitoring",
+      "platform/marketing/tender-calculation",
+      "platform/ai-functions/ai-agents",
+      "platform/ai-functions/ai-chat",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/sales/request",
+      "platform/tools/files",
+      "platform/tools/events",
+      "platform/tools/import"
+    ],
+    "functions": [
+      "Витрина услуг и примеров работ (сайт/лендинг)",
+      "Понятное описание материалов, сроков и условий",
+      "Приём заявок и файлов (модель/чертёж) в один поток",
+      "Черновики ответов и коммерческих предложений через AI",
+      "Базовая SEO‑поддержка и быстрое обновление контента"
+    ]
+  },
+  {
+    "slug": "inquiries",
+    "title": "Контроль заявок и обращений",
+    "order": 2,
+    "id": "inquiries",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/ai-functions/ai-chat",
+      "platform/ai-functions/ai-telephony",
+      "platform/ai-functions/conversation",
+      "platform/sales/request",
+      "platform/sales/history",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Все обращения в одной ленте (сайт, почта, мессенджеры, телефония)",
+      "Единая карточка диалога: сообщения, файлы, заметки",
+      "Статусы обработки и назначение ответственного",
+      "Напоминания: кому давно не ответили и что «зависло»",
+      "Автоответы на типовые вопросы и передача сложного оператору"
+    ]
+  },
+  {
+    "slug": "order-status",
+    "title": "Мониторинг исполнения заказов",
+    "order": 3,
+    "id": "order-status",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/sales/orders",
+      "platform/sales/history",
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events",
+      "platform/tools/files",
+      "platform/tools/marking",
+      "platform/store/products"
+    ],
+    "functions": [
+      "Этапы заказа и быстрые статусы",
+      "Ожидаемая дата готовности и индикатор «под риском»",
+      "Список проблемных заказов по неделе/дню",
+      "Уведомления клиенту и команде при смене статуса",
+      "Ссылка/страница статуса заказа для клиента"
+    ]
+  },
+  {
+    "slug": "repeat-customers",
+    "title": "Работа с постоянными клиентами",
+    "order": 4,
+    "id": "repeat-customers",
+    "elements": [
+      "platform/sales/clients",
+      "platform/sales/history",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/integrations/api",
+      "platform/marketing/publications",
+      "platform/marketing/site",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Список ключевых клиентов (VIP/часто заказывает)",
+      "История заказов и договорённостей без тяжёлой CRM",
+      "Напоминания «кто давно не заказывал»",
+      "Персональные предложения и лёгкие рассылки",
+      "Простой обзор «кто даёт больше выручки/маржи»"
+    ]
+  }
+]

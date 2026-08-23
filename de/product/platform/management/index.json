@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "billing",
+    "title": "Abrechnung",
+    "order": 1,
+    "id": "billing",
+    "functions": [
+      "Automatische Berechnung der Kosten für Dienstleistungen und Ressourcen",
+      "Erstellung und Versand von Rechnungen an Kunden",
+      "Kontostandsverwaltung und Transaktionshistorie für jeden Benutzer",
+      "Integration mit externen Zahlungssystemen und Banken",
+      "Einrichtung von Tarifen, Limits und periodischen Abbuchungen"
+    ]
+  },
+  {
+    "slug": "departments",
+    "title": "Abteilungen",
+    "order": 5,
+    "id": "departments",
+    "functions": [
+      "Verwaltung von Niederlassungen und entfernten Abteilungen",
+      "Zuweisung lokaler Administratoren und Teams",
+      "Autonomer Betrieb von Niederlassungen innerhalb eines einheitlichen Systems",
+      "Zentrale Kontrolle und konsolidierte Berichterstattung",
+      "Skalierung von Prozessen auf neue Regionen innerhalb weniger Tage"
+    ]
+  },
+  {
+    "slug": "finance",
+    "title": "Finanzen",
+    "order": 2,
+    "id": "finance",
+    "functions": [
+      "Erfassung von Einnahmen, Ausgaben und internen Überweisungen",
+      "Analyse der Rentabilität von Produkten, Niederlassungen und Projekten",
+      "Finanzplanung und Kontrolle der Budgetausführung",
+      "Erstellung von Berichten nach Zeiträumen, Bereichen und Kategorien",
+      "Integration mit Abrechnung, Bestellungen und Billing"
+    ]
+  },
+  {
+    "slug": "staff",
+    "title": "Personal",
+    "order": 3,
+    "id": "staff",
+    "functions": [
+      "Erfassung von Arbeitszeiten und Mitarbeiterplänen",
+      "Berechnung von Gehältern, Prämien und Abzügen",
+      "Verwaltung von Urlaub, Krankmeldungen und Abwesenheiten",
+      "Einrichtung von Rollen, Positionen und Verantwortungsbereichen",
+      "Integration mit Finanzen, Aufgaben und Abteilungen"
+    ]
+  },
+  {
+    "slug": "supply",
+    "title": "Beschaffung",
+    "order": 4,
+    "id": "supply",
+    "functions": [
+      "Verwaltung von Einkäufen und Lieferanten",
+      "Erfassung von Lagerbeständen an Materialien und Komponenten",
+      "Automatische Erstellung von Nachschubanforderungen",
+      "Kontrolle von Lieferfristen und Versandstatus",
+      "Integration mit Produktion, Finanzen und Planung"
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "publications",
+    "title": "Publicaciones",
+    "order": 1,
+    "id": "publications",
+    "functions": [
+      "Planificación y publicación de contenido en plataformas externas",
+      "Integración con redes sociales y plataformas de contenido",
+      "Automatización del calendario de publicaciones y republicaciones",
+      "Análisis del alcance, la interacción y la eficacia del contenido",
+      "Interacción con la audiencia y gestión de comentarios"
+    ]
+  },
+  {
+    "slug": "seo",
+    "title": "Optimización SEO",
+    "order": 2,
+    "id": "seo",
+    "functions": [
+      "Aumento de la visibilidad del sitio web en motores de búsqueda y agentes de IA",
+      "Incremento del tráfico orgánico",
+      "Adaptación del contenido para agentes LLM (ChatGPT, Perplexity, etc.)",
+      "Expansión del alcance de la audiencia objetivo"
+    ]
+  },
+  {
+    "slug": "site",
+    "title": "Sitio web",
+    "order": 3,
+    "id": "site",
+    "functions": [
+      "Sitios web listos, landing pages y escaparates de productos",
+      "Personalización con IA de diseño, textos e imágenes",
+      "Integración con pedidos, chats y pagos en línea",
+      "Adaptación para SEO y actualización automática del catálogo",
+      "Especialización para empresas de fabricación digital (CNC, impresión 3D, etc.)"
+    ]
+  },
+  {
+    "slug": "tenders",
+    "title": "Licitaciones",
+    "order": 4,
+    "id": "tenders",
+    "functions": [
+      "Generación del paquete completo de documentación para licitaciones",
+      "Automatización de la preparación de formularios legales y financieros",
+      "Verificación del cumplimiento de los requisitos del cliente",
+      "Compatibilidad con distintos formatos y tipos de subastas"
+    ]
+  },
+  {
+    "slug": "tender-monitoring",
+    "title": "Monitoreo de licitaciones",
+    "order": 5,
+    "id": "tender-monitoring",
+    "functions": [
+      "Monitoreo automático de nuevas licitaciones",
+      "Filtrado de licitaciones relevantes mediante IA",
+      "Rellenado automático de solicitudes de participación"
+    ]
+  },
+  {
+    "slug": "tender-calculation",
+    "title": "Cálculo de licitaciones",
+    "order": 6,
+    "id": "tender-calculation",
+    "functions": [
+      "Cálculo automático del costo y del margen",
+      "Preparación de propuestas comerciales competitivas",
+      "Análisis de los requisitos de la documentación de licitación"
+    ]
+  }
+]

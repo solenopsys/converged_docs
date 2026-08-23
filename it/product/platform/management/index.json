@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "billing",
+    "title": "Calcoli",
+    "order": 1,
+    "id": "billing",
+    "functions": [
+      "Calcolo automatico dei costi dei servizi e delle risorse",
+      "Generazione e invio di fatture ai clienti",
+      "Gestione del saldo e storico delle operazioni per ciascun utente",
+      "Integrazione con sistemi di pagamento esterni e banche",
+      "Configurazione di tariffe, limiti e addebiti periodici"
+    ]
+  },
+  {
+    "slug": "departments",
+    "title": "Unità",
+    "order": 5,
+    "id": "departments",
+    "functions": [
+      "Gestione di filiali e unità remote",
+      "Assegnazione di amministratori locali e team",
+      "Funzionamento autonomo delle filiali all'interno di un unico sistema",
+      "Controllo centralizzato e reportistica consolidata",
+      "Scalabilità dei processi in nuove regioni in pochi giorni"
+    ]
+  },
+  {
+    "slug": "finance",
+    "title": "Finanze",
+    "order": 2,
+    "id": "finance",
+    "functions": [
+      "Gestione di ricavi, costi e trasferimenti interni",
+      "Analisi della redditività di prodotti, filiali e progetti",
+      "Pianificazione finanziaria e controllo dell'esecuzione del budget",
+      "Creazione di report per periodi, aree e categorie",
+      "Integrazione con calcoli, ordini e billing"
+    ]
+  },
+  {
+    "slug": "staff",
+    "title": "Personale",
+    "order": 3,
+    "id": "staff",
+    "functions": [
+      "Gestione del tempo di lavoro e dei turni dei dipendenti",
+      "Calcolo di stipendi, bonus e trattenute",
+      "Gestione di ferie, malattie e assenze",
+      "Configurazione di ruoli, posizioni e aree di responsabilità",
+      "Integrazione con finanze, attività e unità organizzative"
+    ]
+  },
+  {
+    "slug": "supply",
+    "title": "Approvvigionamento",
+    "order": 4,
+    "id": "supply",
+    "functions": [
+      "Gestione degli acquisti e dei fornitori",
+      "Gestione delle scorte di materiali e componenti",
+      "Generazione automatica delle richieste di reintegro",
+      "Controllo dei tempi di consegna e dello stato delle spedizioni",
+      "Integrazione con produzione, finanze e pianificazione"
+    ]
+  }
+]

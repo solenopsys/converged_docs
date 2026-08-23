@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "chats",
+    "title": "Chats",
+    "order": 4,
+    "id": "chats",
+    "functions": [
+      "Integration mit Messengern: Telegram, WhatsApp, Viber und anderen.",
+      "Bearbeitung eingehender Nachrichten und Anfragen in einer einheitlichen Oberfläche",
+      "Anbindung von KI-Agenten für Autoantworten und 24/7-Support",
+      "Verknüpfung mit internen Geschäftsprozessen und Aufträgen",
+      "Protokollierung von Dialogen und Kommunikationsanalytik"
+    ]
+  },
+  {
+    "slug": "delivery-services",
+    "title": "Lieferdienste",
+    "order": 3,
+    "id": "delivery-services",
+    "functions": [
+      "Integration mit externen Logistikdiensten (API)",
+      "Automatische Berechnung von Lieferkosten und Lieferzeiten",
+      "Sendungsverfolgung und Benachrichtigungen an Kunden",
+      "Auswahl der optimalen Liefermethode nach Auftragsparametern",
+      "Integration mit Aufträgen, Lagerbeständen und Dokumentenfluss"
+    ]
+  },
+  {
+    "slug": "email",
+    "title": "E-Mail",
+    "order": 1,
+    "id": "email",
+    "functions": [
+      "Automatische E-Mail-Benachrichtigungen an Kunden und Mitarbeiter",
+      "Unterstützung von E-Mail-Vorlagen und Personalisierung von Nachrichten",
+      "Integration mit Geschäftsprozessen, Aufträgen und Ereignissen",
+      "Berichte über Zustellung und Reaktionen (Öffnungen, Klicks)",
+      "Anbindung eigener SMTP-Server oder Cloud-E-Mail-Anbieter"
+    ]
+  },
+  {
+    "slug": "services",
+    "title": "Dienste",
+    "order": 5,
+    "id": "services",
+    "functions": [
+      "Integration mit Drittanbieter-Online-Diensten (z. B. Google Docs, Notion, Microsoft 365)",
+      "Gemeinsame Arbeit mit Dokumenten, Tabellen und Präsentationen",
+      "Austausch von Dateien und Daten zwischen Mitarbeitern und Kunden",
+      "Synchronisierung mit Cloud-Speichern und E-Mail-Systemen",
+      "Erweiterung der Geschäftsprozesse durch Anbindung externer Plattformen"
+    ]
+  },
+  {
+    "slug": "sms",
+    "title": "SMS-Benachrichtigung",
+    "order": 2,
+    "id": "sms",
+    "functions": [
+      "Automatischer Versand von SMS-Nachrichten an Kunden und Mitarbeiter",
+      "Einrichtung von Triggern für Benachrichtigungen bei Ereignissen (Bestellung, Zahlung, Fehler)",
+      "Unterstützung von Vorlagen und personalisierten Nachrichten",
+      "Integration mit externen SMS-Gateways (über API)",
+      "Kontrolle der Zustellung und Protokollierung gesendeter Nachrichten"
+    ]
+  },
+  {
+    "slug": "api",
+    "title": "Eigene APIs",
+    "order": 7,
+    "id": "api",
+    "functions": [
+      "Entgegennahme von Bestellungen und Anfragen von Bestandskunden per API",
+      "Integration mit externen ERP/CRM/Onlineshops und Marktplätzen",
+      "Automatische Erstellung von Aufgaben und Start von Geschäftsprozessen",
+      "Unterstützung von Webhook-Benachrichtigungen und Authentifizierung über Token",
+      "Sicherer Datenaustausch mit Zugriffskontrolle"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "materials",
+    "title": "Materiali",
+    "order": 1,
+    "id": "materials",
+    "functions": [
+      "Contabilità delle materie prime e dei materiali di consumo",
+      "Monitoraggio delle giacenze, dei movimenti e degli scarichi",
+      "Collegamento con le operazioni di produzione e l’approvvigionamento",
+      "Impostazione delle giacenze minime e automazione delle richieste",
+      "Integrazione con i moduli di approvvigionamento, pianificazione e ordini"
+    ]
+  },
+  {
+    "slug": "products",
+    "title": "Prodotti",
+    "order": 3,
+    "id": "products",
+    "functions": [
+      "Contabilità dei prodotti finiti nei magazzini",
+      "Tracciamento del movimento dei prodotti tra reparti e filiali",
+      "Generazione di documenti di trasporto, verbali e reportistica",
+      "Integrazione con i moduli di ordini, consegne e approvvigionamento",
+      "Controllo delle giacenze, delle riserve e dei tempi di conservazione"
+    ]
+  },
+  {
+    "slug": "spare-parts",
+    "title": "Ricambi",
+    "order": 2,
+    "id": "spare-parts",
+    "functions": [
+      "Contabilità dei ricambi e dei materiali di consumo per le apparecchiature",
+      "Controllo delle giacenze e automazione del reintegro",
+      "Associazione ai tipi di apparecchiature e ai piani di manutenzione",
+      "Integrazione con i moduli di manutenzione, approvvigionamento e magazzini",
+      "Notifiche sulle giacenze critiche e sulle scadenze di sostituzione"
+    ]
+  }
+]

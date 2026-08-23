@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "business-processes",
+    "title": "Processos de negócios com IA",
+    "order": 2,
+    "id": "ai-business-processes",
+    "functions": [
+      "Projeto visual de cadeias de tarefas",
+      "Integração de CRM/ERP, e-mail, mensageiros e modelos de IA",
+      "Geração automática de documentos e relatórios por agentes de IA",
+      "Gatilhos preditivos e alertas baseados em eventos",
+      "Análise ponta a ponta e monitoramento em tempo real"
+    ]
+  },
+  {
+    "slug": "maintenance",
+    "title": "Manutenção",
+    "order": 3,
+    "id": "maintenance",
+    "functions": [
+      "Planejamento e automação da manutenção de equipamentos",
+      "Diagnóstico preditivo com base em IA",
+      "Controle e gestão de peças sobressalentes e materiais de consumo",
+      "Gestão de solicitações de reparo e sua execução"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Qualidade",
+    "order": 4,
+    "id": "quality",
+    "functions": [
+      "Controle de qualidade digital em todas as etapas da produção",
+      "Registro de defeitos e classificação automática de não conformidades",
+      "Checklists interativos e padrões visuais",
+      "Análise das causas das não conformidades usando diagramas de Pareto",
+      "Recomendações de IA para eliminar os principais problemas"
+    ]
+  },
+  {
+    "slug": "reports",
+    "title": "Relatórios",
+    "order": 5,
+    "id": "reports",
+    "functions": [
+      "Geração automática de relatórios de produção, financeiros e operacionais",
+      "Visualização de dados: gráficos, tabelas, diagramas, incluindo Pareto e tendências",
+      "Modelos personalizáveis para as necessidades de diferentes departamentos",
+      "Envio de relatórios por agendamento ou mediante وقوعência de eventos",
+      "Painéis em tempo real para a liderança"
+    ]
+  }
+]

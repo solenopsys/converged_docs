@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "publications",
+    "title": "Veröffentlichungen",
+    "order": 1,
+    "id": "publications",
+    "functions": [
+      "Planung und Veröffentlichung von Inhalten auf externen Plattformen",
+      "Integration mit sozialen Netzwerken und Content-Plattformen",
+      "Automatisierung des Post-Zeitplans und von Wiederveröffentlichungen",
+      "Analyse von Reichweite, Engagement und Content-Effektivität",
+      "Interaktion mit dem Publikum und Verwaltung von Kommentaren"
+    ]
+  },
+  {
+    "slug": "seo",
+    "title": "SEO-Optimierung",
+    "order": 2,
+    "id": "seo",
+    "functions": [
+      "Steigerung der Sichtbarkeit der Website in Suchmaschinen und KI-Agenten",
+      "Erhöhung des organischen Traffics",
+      "Anpassung von Inhalten für LLM-Agenten (ChatGPT, Perplexity usw.)",
+      "Erweiterung der Reichweite der Zielgruppe"
+    ]
+  },
+  {
+    "slug": "site",
+    "title": "Website",
+    "order": 3,
+    "id": "site",
+    "functions": [
+      "Fertige Websites, Landingpages und Produktpräsentationen",
+      "KI-Anpassung von Design, Texten und Bildern",
+      "Integration mit Bestellungen, Chats und Online-Zahlung",
+      "Anpassung für SEO und automatische Aktualisierung des Sortiments",
+      "Spezialisierung auf Unternehmen der digitalen Fertigung (CNC, 3D-Druck usw.)"
+    ]
+  },
+  {
+    "slug": "tenders",
+    "title": "Ausschreibungen",
+    "order": 4,
+    "id": "tenders",
+    "functions": [
+      "Erstellung des vollständigen Pakets an Ausschreibungsunterlagen",
+      "Automatisierung der Erstellung rechtlicher und finanzieller Formulare",
+      "Prüfung der Einhaltung der Anforderungen des Auftraggebers",
+      "Unterstützung verschiedener Formate und Ausschreibungstypen"
+    ]
+  },
+  {
+    "slug": "tender-monitoring",
+    "title": "Ausschreibungsmonitoring",
+    "order": 5,
+    "id": "tender-monitoring",
+    "functions": [
+      "Automatische Überwachung neuer Ausschreibungen",
+      "Filterung relevanter Ausschreibungen mithilfe von KI",
+      "Automatisches Ausfüllen von Teilnahmeformularen"
+    ]
+  },
+  {
+    "slug": "tender-calculation",
+    "title": "Kalkulation von Ausschreibungen",
+    "order": 6,
+    "id": "tender-calculation",
+    "functions": [
+      "Automatische Berechnung von Selbstkosten und Marge",
+      "Erstellung wettbewerbsfähiger kommerzieller Angebote",
+      "Analyse der Anforderungen in den Ausschreibungsunterlagen"
+    ]
+  }
+]

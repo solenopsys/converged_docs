@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "materials",
+    "title": "Materialien",
+    "order": 1,
+    "id": "materials",
+    "functions": [
+      "Bestandsführung für Rohstoffe und Verbrauchsmaterialien",
+      "Verfolgung von Beständen, Bewegungen und Abschreibungen",
+      "Anbindung an Produktionsabläufe und Beschaffung",
+      "Einrichtung von Mindestbeständen und Automatisierung von Anforderungen",
+      "Integration mit den Modulen für Beschaffung, Planung und Bestellungen"
+    ]
+  },
+  {
+    "slug": "products",
+    "title": "Produkte",
+    "order": 3,
+    "id": "products",
+    "functions": [
+      "Bestandsführung für Fertigprodukte in Lagern",
+      "Verfolgung der Warenbewegungen zwischen Standorten und Niederlassungen",
+      "Erstellung von Lieferscheinen, Protokollen und Berichten",
+      "Integration mit den Modulen für Bestellungen, Lieferung und Beschaffung",
+      "Kontrolle von Beständen, Reservierungen und Lagerfristen"
+    ]
+  },
+  {
+    "slug": "spare-parts",
+    "title": "Ersatzteile",
+    "order": 2,
+    "id": "spare-parts",
+    "functions": [
+      "Bestandsführung von Ersatzteilen und Verbrauchsmaterialien für Geräte",
+      "Kontrolle der Bestände und Automatisierung der Nachfüllung",
+      "Zuordnung zu Gerätetypen und Wartungsvorschriften",
+      "Integration mit den Modulen für Wartung, Beschaffung und Lager",
+      "Benachrichtigungen über kritische Bestände und Austauschfristen"
+    ]
+  }
+]

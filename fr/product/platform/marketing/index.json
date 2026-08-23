@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "publications",
+    "title": "Publications",
+    "order": 1,
+    "id": "publications",
+    "functions": [
+      "Planification et publication de contenu sur des plateformes externes",
+      "Intégration avec les réseaux sociaux et les plateformes de contenu",
+      "Automatisation du calendrier des publications et des republications",
+      "Analyse de la portée, de l’engagement et de l’efficacité du contenu",
+      "Interaction avec l’audience et gestion des commentaires"
+    ]
+  },
+  {
+    "slug": "seo",
+    "title": "Optimisation SEO",
+    "order": 2,
+    "id": "seo",
+    "functions": [
+      "Amélioration de la visibilité du site dans les moteurs de recherche et auprès des agents IA",
+      "Augmentation du trafic organique",
+      "Adaptation du contenu pour les agents LLM (ChatGPT, Perplexity, etc.)",
+      "Élargissement de la portée du public cible"
+    ]
+  },
+  {
+    "slug": "site",
+    "title": "Site web",
+    "order": 3,
+    "id": "site",
+    "functions": [
+      "Sites prêts à l’emploi, landing pages et vitrines de produits",
+      "Personnalisation par IA du design, des textes et des images",
+      "Intégration des commandes, des chats et du paiement en ligne",
+      "Adaptation au SEO et mise à jour automatique de l’assortiment",
+      "Spécialisation pour les entreprises de fabrication numérique (CNC, impression 3D, etc.)"
+    ]
+  },
+  {
+    "slug": "tenders",
+    "title": "Appels d’offres",
+    "order": 4,
+    "id": "tenders",
+    "functions": [
+      "Génération d’un dossier complet de documentation pour appels d’offres",
+      "Automatisation de la préparation des formulaires juridiques et financiers",
+      "Vérification de la conformité aux exigences du client",
+      "Prise en charge de différents formats et types de marchés"
+    ]
+  },
+  {
+    "slug": "tender-monitoring",
+    "title": "Veille des appels d’offres",
+    "order": 5,
+    "id": "tender-monitoring",
+    "functions": [
+      "Surveillance automatique des nouveaux appels d’offres",
+      "Filtrage des appels d’offres pertinents à l’aide de l’IA",
+      "Remplissage automatique des demandes de participation"
+    ]
+  },
+  {
+    "slug": "tender-calculation",
+    "title": "Calcul des appels d’offres",
+    "order": 6,
+    "id": "tender-calculation",
+    "functions": [
+      "Calcul automatique du coût de revient et de la marge",
+      "Préparation de propositions commerciales compétitives",
+      "Analyse des exigences de la documentation d’appel d’offres"
+    ]
+  }
+]

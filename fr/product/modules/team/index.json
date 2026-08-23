@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "roles",
+    "title": "Rôles et responsabilités de l’équipe",
+    "order": 1,
+    "id": "roles",
+    "elements": [
+      "platform/management/staff",
+      "platform/management/departments",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Qui est responsable de quoi : délais, qualité, clients, équipements",
+      "Attribution des tâches et des domaines à des personnes précises",
+      "Des règles de travail simples plutôt que des procédures lourdes",
+      "Consignation des accords dans des notes et des cartes",
+      "Vue de base de la charge de travail : qui est surchargé et qui est sous-utilisé"
+    ]
+  },
+  {
+    "slug": "shifts",
+    "title": "Mise à l’échelle de l’équipe et des équipes de travail",
+    "order": 2,
+    "id": "shifts",
+    "elements": [
+      "platform/management/staff",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Planification des équipes de travail et répartition des personnes sur les équipements",
+      "Vue d’ensemble de la charge par équipe/atelier",
+      "Schémas types d’organisation d’un petit atelier",
+      "Indicateurs minimaux par équipe (temps d’arrêt, exécution des tâches)",
+      "Intégration rapide de nouvelles personnes sans refonte des processus"
+    ]
+  },
+  {
+    "slug": "knowledge",
+    "title": "Transmission des connaissances et standards",
+    "order": 3,
+    "id": "knowledge",
+    "elements": [
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/integrations/services",
+      "platform/control/quality",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Base légère d’instructions (texte/photo/vidéo) par opération",
+      "Association des instructions aux équipements, matériaux et types de travaux",
+      "Versions des standards sans validation lourde",
+      "Dépôt unique de fichiers (plans, profils d’impression, modèles)",
+      "Accès rapide aux connaissances via un chat IA"
+    ]
+  },
+  {
+    "slug": "onboarding",
+    "title": "Recrutement et formation des employés",
+    "order": 4,
+    "id": "onboarding",
+    "elements": [
+      "platform/management/staff",
+      "platform/tools/files",
+      "platform/integrations/services",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Descriptions courtes des rôles (opérateur, technologue, manager)",
+      "Check-lists pour les entretiens et la sélection",
+      "Scénarios d’intégration pour la première semaine/le premier mois",
+      "Plans de formation sommaires par rôle sans « matrices de carrière »",
+      "Accès en un clic du nouvel arrivant aux standards à jour"
+    ]
+  }
+]

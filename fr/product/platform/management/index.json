@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "billing",
+    "title": "Calculs",
+    "order": 1,
+    "id": "billing",
+    "functions": [
+      "Calcul automatique du coût des services et des ressources",
+      "Génération et envoi de factures aux clients",
+      "Suivi du solde et historique des opérations pour chaque utilisateur",
+      "Intégration avec des systèmes de paiement externes et des banques",
+      "Paramétrage des tarifs, des limites et des prélèvements périodiques"
+    ]
+  },
+  {
+    "slug": "departments",
+    "title": "Filiales",
+    "order": 5,
+    "id": "departments",
+    "functions": [
+      "Gestion des agences et des filiales distantes",
+      "Attribution d’administrateurs locaux et d’équipes",
+      "Fonctionnement autonome des filiales au sein d’un système unifié",
+      "Contrôle centralisé et reporting consolidé",
+      "Déploiement des processus sur de nouvelles régions en quelques jours"
+    ]
+  },
+  {
+    "slug": "finance",
+    "title": "Finances",
+    "order": 2,
+    "id": "finance",
+    "functions": [
+      "Suivi des revenus, des dépenses et des transferts internes",
+      "Analyse de la rentabilité des produits, des filiales et des projets",
+      "Planification financière et suivi de l’exécution du budget",
+      "Élaboration de rapports par périodes, domaines et catégories",
+      "Intégration avec les calculs, les commandes et la facturation"
+    ]
+  },
+  {
+    "slug": "staff",
+    "title": "Personnel",
+    "order": 3,
+    "id": "staff",
+    "functions": [
+      "Suivi du temps de travail et des plannings des employés",
+      "Calcul des salaires, primes et retenues",
+      "Gestion des congés, arrêts maladie et absences",
+      "Paramétrage des rôles, des postes et des zones de responsabilité",
+      "Intégration avec les finances, les tâches et les filiales"
+    ]
+  },
+  {
+    "slug": "supply",
+    "title": "Approvisionnement",
+    "order": 4,
+    "id": "supply",
+    "functions": [
+      "Gestion des achats et des fournisseurs",
+      "Suivi des stocks de matériaux et de composants",
+      "Génération automatique des demandes de réapprovisionnement",
+      "Contrôle des délais de livraison et des statuts d’expédition",
+      "Intégration avec la production, les finances et la planification"
+    ]
+  }
+]

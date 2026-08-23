@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "materials",
+    "title": "Matériaux",
+    "order": 1,
+    "id": "materials",
+    "functions": [
+      "Gestion des matières premières et des consommables",
+      "Suivi des stocks, des mouvements et des sorties",
+      "Lien avec les opérations de production et l’approvisionnement",
+      "Paramétrage des stocks minimums et automatisation des demandes",
+      "Intégration avec les modules d’approvisionnement, de planification et de commandes"
+    ]
+  },
+  {
+    "slug": "products",
+    "title": "Produits",
+    "order": 3,
+    "id": "products",
+    "functions": [
+      "Gestion des produits finis en entrepôt",
+      "Suivi des transferts de produits entre sites et succursales",
+      "Établissement des bons de livraison, des procès-verbaux et des rapports",
+      "Intégration avec les modules de commandes, de livraison et d’approvisionnement",
+      "Contrôle des stocks, des réservations et des durées de stockage"
+    ]
+  },
+  {
+    "slug": "spare-parts",
+    "title": "Pièces détachées",
+    "order": 2,
+    "id": "spare-parts",
+    "functions": [
+      "Gestion des pièces de rechange et des consommables pour les équipements",
+      "Contrôle des stocks et automatisation du réapprovisionnement",
+      "Rattachement aux types d’équipements et aux procédures de maintenance",
+      "Intégration avec les modules de maintenance, d’approvisionnement et de gestion des stocks",
+      "Notifications concernant les stocks critiques et les délais de remplacement"
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "equipment",
+    "title": "Equipamiento",
+    "order": 1,
+    "id": "equipment",
+    "functions": [
+      "Registro y documentación técnica del equipamiento (impresoras 3D, máquinas CNC, robots)",
+      "Monitorización en línea del estado y la carga del equipamiento",
+      "Estadísticas sobre tiempo de funcionamiento, tiempos de inactividad y errores",
+      "Gestión del ciclo de vida: instalación, mantenimiento, baja",
+      "Integración con módulos de mantenimiento y calidad"
+    ]
+  },
+  {
+    "slug": "integration",
+    "title": "Integración",
+    "order": 2,
+    "id": "integration",
+    "functions": [
+      "Conexión del equipamiento: controladores, firmware, interfaces",
+      "Integración con máquinas CNC, impresoras 3D, controladores y sensores",
+      "Configuración del intercambio de datos con sistemas ERP/CRM/MES externos",
+      "Actualización de firmware y diagnóstico remoto de dispositivos",
+      "Gestión centralizada de periféricos y pasarelas"
+    ]
+  },
+  {
+    "slug": "logs",
+    "title": "Registros",
+    "order": 4,
+    "id": "logs",
+    "functions": [
+      "Monitorización — análisis de la carga del equipamiento y la eficiencia de los procesos",
+      "Analítica de IA — detección automática de fallos y errores",
+      "Interfaz de búsqueda — búsqueda cómoda de fallos e informes",
+      "Informes — generación periódica de informes sobre fallos",
+      "Notificaciones — aviso oportuno de eventos críticos",
+      "Acceso remoto — control desde cualquier dispositivo en cualquier parte del mundo"
+    ]
+  },
+  {
+    "slug": "scheduling",
+    "title": "Planificación",
+    "order": 4,
+    "id": "scheduling",
+    "functions": [
+      "Planificación del proceso de producción y la carga del equipamiento",
+      "Distribución automática de tareas entre máquinas y líneas",
+      "Gestión de plazos, prioridades y recursos disponibles",
+      "Visualización de cronogramas y cuellos de botella en la cadena de producción",
+      "Integración con los módulos «Equipamiento» y «Pedidos»"
+    ]
+  }
+]

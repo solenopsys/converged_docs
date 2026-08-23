@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "equipment-load",
+    "title": "Kontrolle und Auslastung der Anlagen",
+    "order": 1,
+    "id": "equipment-load",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/equipment/scheduling",
+      "platform/sales/orders",
+      "platform/tools/files",
+      "platform/tools/slicing",
+      "platform/tools/video",
+      "platform/tools/events",
+      "platform/control/maintenance"
+    ],
+    "functions": [
+      "Status von Maschinen und 3D-Druckern (läuft/steht/wartet)",
+      "Auftragswarteschlange für Anlagen und Zuordnung zu Bestellungen",
+      "Tages-/Wochenplan ohne schweres MES",
+      "Stillstände und Engpässe: was steht und warum",
+      "Schnelle Antwort per KI-Chat: „Was macht dieser Drucker/diese Maschine?“"
+    ]
+  },
+  {
+    "slug": "inventory",
+    "title": "Bestandsverwaltung",
+    "order": 2,
+    "id": "inventory",
+    "elements": [
+      "platform/store/materials",
+      "platform/store/spare-parts",
+      "platform/management/supply",
+      "platform/sales/orders",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Bestände an Materialien, Werkzeugen und Ersatzteilen",
+      "Mindestbestände und Erinnerungen an „kritische“ Posten",
+      "Reservierungen für laufende Aufträge",
+      "Liste kritischer Positionen für bestimmte Anlagen",
+      "Entwürfe für Nachschubanforderungen (mit Bestätigung des Eigentümers)"
+    ]
+  },
+  {
+    "slug": "quality",
+    "title": "Qualitätskontrolle der Produkte",
+    "order": 3,
+    "id": "quality",
+    "elements": [
+      "platform/control/quality",
+      "platform/control/reports",
+      "platform/equipment/equipment",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Checklisten für Schlüsselschritte ohne Bürokratie",
+      "Erfassung von Ausschuss/Nacharbeit mit Zuordnung zu Auftrag und Anlage",
+      "Statistik zu Ursachen und Wiederholungen (einschließlich Pareto)",
+      "Verknüpfung der Qualität mit Materialien, Einstellungen und Mitarbeitern",
+      "Fotos/Videos zu Problemfällen"
+    ]
+  },
+  {
+    "slug": "incidents",
+    "title": "Erfassung und Analyse von Störungen",
+    "order": 4,
+    "id": "incidents",
+    "elements": [
+      "platform/equipment/equipment",
+      "platform/equipment/integration",
+      "platform/equipment/logs",
+      "platform/control/maintenance",
+      "platform/control/reports",
+      "platform/store/spare-parts",
+      "platform/sales/orders",
+      "platform/tools/video",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Ereignisprotokoll für Anlagen: was und wann passiert ist",
+      "Klassifizierung der Ursachen (kein Material, Druckfehler, Defekt usw.)",
+      "Benachrichtigungen über kritische Vorfälle und lange Stillstände",
+      "Suche nach wiederkehrenden Fehlern und Zusammenhang mit Lieferterminen",
+      "Verknüpfung mit Wartung und Ersatzteillager"
+    ]
+  },
+  {
+    "slug": "shipping",
+    "title": "Auslieferung von Produkten an Kunden",
+    "order": 5,
+    "id": "shipping",
+    "elements": [
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/store/products",
+      "platform/tools/marking",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Versandliste: was heute/in dieser Woche versendet werden soll",
+      "Lieferstatus (bereit/unterwegs/zugestellt)",
+      "Kundenbenachrichtigung beim Versand",
+      "Tracking von Lieferdiensten dort, wo es wirklich Zeit spart",
+      "Schneller Überblick, „wo es am häufigsten zu Verzögerungen kommt“"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "profit",
+    "title": "Прибыль по заказам и клиентам",
+    "order": 1,
+    "id": "profit",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/control/reports",
+      "platform/sales/orders",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Грубая маржа по каждому заказу (материал + машинное время + труд)",
+      "Сравнение прибыльности по клиентам, типам работ и направлениям",
+      "Подсветка убыточных и сверхприбыльных сегментов",
+      "Динамика прибыльности по периоду без тяжёлой бухгалтерии",
+      "Ответы на вопросы владельца через AI‑чат"
+    ]
+  },
+  {
+    "slug": "cashflow",
+    "title": "Платёжный календарь и дебиторка",
+    "order": 2,
+    "id": "cashflow",
+    "elements": [
+      "platform/management/finance",
+      "platform/management/billing",
+      "platform/sales/clients",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Лента поступлений и ключевых платежей по дням",
+      "Критичные даты (зарплаты, аренда, закупки) без сюрпризов",
+      "Дебиторка: кто, сколько и как давно должен",
+      "Напоминания и черновики сообщений должникам",
+      "Сценарии «что будет с кассой, если…»"
+    ]
+  },
+  {
+    "slug": "costing",
+    "title": "Себестоимость и ценообразование",
+    "order": 3,
+    "id": "costing",
+    "elements": [
+      "platform/management/billing",
+      "platform/management/finance",
+      "platform/store/materials",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Прикидка стоимости часа оборудования и работы персонала",
+      "Шаблоны расчёта для типовых работ и материалов",
+      "Правила скидок/наценок (срочность, объём, постоянный клиент)",
+      "Подсказки по влиянию скидок на маржу заказа",
+      "Быстрый пересчёт при изменении цен на материалы"
+    ]
+  },
+  {
+    "slug": "growth",
+    "title": "Планирование инвестиций и роста",
+    "order": 4,
+    "id": "growth",
+    "elements": [
+      "platform/management/finance",
+      "platform/control/reports",
+      "platform/management/departments",
+      "platform/equipment/equipment",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Оценка окупаемости оборудования/найма/расширения",
+      "Сценарии роста («если добавим принтер», «если поднимем цену на X%»)",
+      "Проверка влияния решений на загрузку и прибыль",
+      "Сопоставление планов с платёжным календарём («потянем/не потянем»)",
+      "Фиксация решений и фактических результатов"
+    ]
+  }
+]

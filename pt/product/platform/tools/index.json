@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "events",
+    "title": "Eventos",
+    "order": 1,
+    "id": "events",
+    "functions": [
+      "Criação e automação de notificações, e-mails e campanhas de SMS",
+      "Acionadores para eventos no sistema (solicitações, pedidos, status)",
+      "Planejamento e lançamento de campanhas de e-mail de marketing",
+      "Notificações para o pessoal sobre tarefas internas e alterações",
+      "Integração com módulos de clientes, pedidos, e-mail e chats"
+    ]
+  },
+  {
+    "slug": "files",
+    "title": "Arquivos",
+    "order": 2,
+    "id": "files",
+    "functions": [
+      "Armazenamento centralizado de desenhos, modelos e documentação",
+      "Controle de versões e histórico de alterações",
+      "Gestão de acesso e permissões de visualização/edição",
+      "Integração com pedidos, projetos e equipamentos",
+      "Acesso rápido aos arquivos nas etapas necessárias dos processos de negócio"
+    ]
+  },
+  {
+    "slug": "import",
+    "title": "Importação de dados",
+    "order": 3,
+    "id": "import",
+    "functions": [
+      "Importação de dados de fontes externas (por exemplo, CAPR, Excel, sistemas ERP)",
+      "Suporte a formatos estruturados: CSV, JSON, XML",
+      "Configuração do mapeamento de campos e validação automática",
+      "Integração com módulos de pedidos, clientes, materiais e equipamentos",
+      "Controle de versões e registro de todas as operações de importação"
+    ]
+  },
+  {
+    "slug": "marking",
+    "title": "Marcação",
+    "order": 6,
+    "id": "marking",
+    "functions": [
+      "Geração e impressão de etiquetas para produtos e expedições",
+      "Integração com impressoras térmicas e marcadores industriais",
+      "Configuração de modelos e preenchimento automático de dados",
+      "Integração com pedidos, produtos e entregas",
+      "Suporte a códigos de barras, códigos QR e sistemas de rastreabilidade"
+    ]
+  },
+  {
+    "slug": "slicing",
+    "title": "Slicing",
+    "order": 4,
+    "id": "slicing",
+    "functions": [
+      "Importação e preparação de modelos 3D para a produção",
+      "Geração de programas de controle (G-code e equivalentes)",
+      "Otimização de parâmetros de impressão, fresagem e usinagem",
+      "Integração com equipamentos e ordens de produção",
+      "Suporte a modelos e perfis automatizados para diferentes tipos de máquinas"
+    ]
+  },
+  {
+    "slug": "video",
+    "title": "Vídeo",
+    "order": 5,
+    "id": "video",
+    "functions": [
+      "Videomonitoramento em tempo real das áreas de produção",
+      "Gravação de processos tecnológicos e arquivamento de vídeo",
+      "Vinculação de câmeras a equipamentos e operações específicas",
+      "Acesso às gravações por eventos, pedidos ou marcas de tempo",
+      "Integração com módulos de qualidade, manutenção e segurança"
+    ]
+  }
+]

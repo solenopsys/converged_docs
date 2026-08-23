@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "roles",
+    "title": "Roles y responsabilidades del equipo",
+    "order": 1,
+    "id": "roles",
+    "elements": [
+      "platform/management/staff",
+      "platform/management/departments",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Quién es responsable de qué: plazos, calidad, clientes, equipos",
+      "Asignación de tareas y áreas a personas concretas",
+      "Reglas de trabajo sencillas en lugar de procedimientos pesados",
+      "Registro de acuerdos en notas y tarjetas",
+      "Vista básica de la carga de trabajo: quién está sobrecargado y quién está ocioso"
+    ]
+  },
+  {
+    "slug": "shifts",
+    "title": "Escalado del equipo y de los turnos",
+    "order": 2,
+    "id": "shifts",
+    "elements": [
+      "platform/management/staff",
+      "platform/equipment/scheduling",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Planificación de turnos y distribución de personas por equipos",
+      "Visión general de la carga por turnos/áreas",
+      "Esquemas típicos de organización de un pequeño taller",
+      "Métricas básicas por turno (tiempos de inactividad, cumplimiento de tareas)",
+      "Incorporación rápida de nuevas personas sin rehacer procesos"
+    ]
+  },
+  {
+    "slug": "knowledge",
+    "title": "Transferencia de conocimiento y estándares",
+    "order": 3,
+    "id": "knowledge",
+    "elements": [
+      "platform/tools/files",
+      "platform/tools/video",
+      "platform/integrations/services",
+      "platform/control/quality",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Base ligera de instrucciones (texto/foto/video) por operaciones",
+      "Vinculación de las instrucciones con equipos, materiales y tipos de trabajo",
+      "Versiones de estándares sin una aprobación pesada",
+      "Repositorio único de archivos (planos, perfiles de impresión, plantillas)",
+      "Acceso rápido al conocimiento mediante un chat de IA"
+    ]
+  },
+  {
+    "slug": "onboarding",
+    "title": "Selección y formación de empleados",
+    "order": 4,
+    "id": "onboarding",
+    "elements": [
+      "platform/management/staff",
+      "platform/tools/files",
+      "platform/integrations/services",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Descripciones breves de roles (operador, tecnólogo, gerente)",
+      "Listas de verificación para entrevistas y selección",
+      "Escenarios de incorporación para la primera semana/mes",
+      "Planes básicos de formación por rol sin «matrices de carrera»",
+      "Acceso del nuevo empleado a los estándares actuales con un solo clic"
+    ]
+  }
+]

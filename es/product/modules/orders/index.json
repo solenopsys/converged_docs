@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "new-customers",
+    "title": "Captación de nuevos clientes",
+    "order": 1,
+    "id": "new-customers",
+    "elements": [
+      "platform/marketing/site",
+      "platform/marketing/seo",
+      "platform/marketing/publications",
+      "platform/marketing/tenders",
+      "platform/marketing/tender-monitoring",
+      "platform/marketing/tender-calculation",
+      "platform/ai-functions/ai-agents",
+      "platform/ai-functions/ai-chat",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/sales/request",
+      "platform/tools/files",
+      "platform/tools/events",
+      "platform/tools/import"
+    ],
+    "functions": [
+      "Escaparate de servicios y ejemplos de trabajos (sitio web/landing)",
+      "Descripción clara de materiales, plazos y condiciones",
+      "Recepción de solicitudes y archivos (modelo/dibujo) en un solo flujo",
+      "Borradores de respuestas y propuestas comerciales mediante IA",
+      "Soporte SEO básico y actualización rápida de contenidos"
+    ]
+  },
+  {
+    "slug": "inquiries",
+    "title": "Control de solicitudes y consultas",
+    "order": 2,
+    "id": "inquiries",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/integrations/chats",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/ai-functions/ai-chat",
+      "platform/ai-functions/ai-telephony",
+      "platform/ai-functions/conversation",
+      "platform/sales/request",
+      "platform/sales/history",
+      "platform/tools/files",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Todas las consultas en una sola bandeja (sitio web, correo, mensajería, telefonía)",
+      "Ficha única de la conversación: mensajes, archivos, notas",
+      "Estados de procesamiento y asignación de responsable",
+      "Recordatorios: a quién no han respondido hace tiempo y qué quedó “atascado”",
+      "Respuestas automáticas a preguntas típicas y derivación de casos complejos a un operador"
+    ]
+  },
+  {
+    "slug": "order-status",
+    "title": "Seguimiento del cumplimiento de pedidos",
+    "order": 3,
+    "id": "order-status",
+    "elements": [
+      "platform/control/business-processes",
+      "platform/sales/orders",
+      "platform/sales/history",
+      "platform/sales/delivery",
+      "platform/integrations/delivery-services",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/tools/events",
+      "platform/tools/files",
+      "platform/tools/marking",
+      "platform/store/products"
+    ],
+    "functions": [
+      "Etapas del pedido y estados rápidos",
+      "Fecha prevista de finalización e indicador de “en riesgo”",
+      "Lista de pedidos problemáticos por semana/día",
+      "Notificaciones al cliente y al equipo al cambiar el estado",
+      "Enlace/página del estado del pedido para el cliente"
+    ]
+  },
+  {
+    "slug": "repeat-customers",
+    "title": "Gestión de clientes habituales",
+    "order": 4,
+    "id": "repeat-customers",
+    "elements": [
+      "platform/sales/clients",
+      "platform/sales/history",
+      "platform/integrations/email",
+      "platform/integrations/sms",
+      "platform/integrations/api",
+      "platform/marketing/publications",
+      "platform/marketing/site",
+      "platform/tools/events"
+    ],
+    "functions": [
+      "Lista de clientes clave (VIP / que piden con frecuencia)",
+      "Historial de pedidos y acuerdos sin una CRM pesada",
+      "Recordatorios de “quién no ha pedido hace tiempo”",
+      "Ofertas personalizadas y envíos masivos ligeros",
+      "Resumen simple de “quién aporta más ingresos/margen”"
+    ]
+  }
+]
