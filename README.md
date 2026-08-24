@@ -21,6 +21,8 @@ Which files are current is not guessed from timestamps. `core/tools/translation`
 records the hash of the English text each translation was made from, so an
 edited source marks its translations stale until they are redone — see
 [`core/tools/translation/README.md`](https://github.com/solenopsys/converged/blob/master/core/tools/translation/README.md).
+The durable ledger is `.translation/converged.ledger.json`; scan state and
+reports are build artefacts outside this repository.
 
 Do not edit the English sources here; they are not here. Generation runs one
 way, from sources into stores.
