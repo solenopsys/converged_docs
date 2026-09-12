@@ -1,5 +1,5 @@
-La telefonia AI registra le chiamate e le collega a clienti e ordini.
+AI telephony records calls and links them to customers and orders.
 
-- Registrazione delle chiamate in entrata e in uscita
-- Archiviazione dei file audio e ricerca rapida
-- Collegamento alla scheda del cliente e alla cronologia delle interazioni
+- Recording incoming and outgoing calls
+- Storing audio files and fast search
+- Linking to the customer profile and interaction history

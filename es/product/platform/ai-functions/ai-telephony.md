@@ -1,5 +1,5 @@
-La telefonía con IA graba llamadas y las vincula a clientes y pedidos.
+AI telephony records calls and links them to customers and orders.
 
-- Grabación de llamadas entrantes y salientes
-- Almacenamiento de archivos de audio y búsqueda rápida
-- Vinculación con la ficha del cliente y el historial de interacciones
+- Recording incoming and outgoing calls
+- Storing audio files and fast search
+- Linking to the customer profile and interaction history

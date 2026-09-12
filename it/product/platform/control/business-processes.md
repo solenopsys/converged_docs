@@ -1,5 +1,5 @@
-I processi aziendali collegano tutto in un’unica catena: richiesta → ordine → produzione → pagamento.
+Business processes connect everything into one chain: request → order → production → payment.
 
-- Scenari senza codice: stati, notifiche, approvazioni e attività
-- Regole e trigger sugli eventi nel sistema
-- Trasparenza: chi ha compiuto il passo e dove è sorto il ritardo
+- No-code scenarios: statuses, notifications, approvals, and tasks
+- Rules and triggers for events in the system
+- Transparency: who took the step and where the delay occurred

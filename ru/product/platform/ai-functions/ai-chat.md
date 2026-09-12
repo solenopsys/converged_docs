@@ -1,5 +1,5 @@
-AI‑чат отвечает клиентам на сайте и в мессенджерах и помогает быстро превратить диалог в заявку.
+AI chat responds to customers on the website and in messengers and helps quickly turn a conversation into a lead.
 
-- Автоматически закрывает частые вопросы (FAQ) и собирает вводные по заказу
-- Передаёт переписку оператору, когда нужен человек
-- Принимает файлы и сохраняет контекст разговора
+- Automatically handles common questions (FAQ) and collects initial order details
+- Transfers the conversation to an operator when a human is needed
+- Accepts files and preserves the conversation context

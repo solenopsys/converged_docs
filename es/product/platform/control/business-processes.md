@@ -1,5 +1,5 @@
-Los procesos de negocio conectan todo en una sola cadena: solicitud → pedido → producción → pago.
+Business processes connect everything into one chain: request → order → production → payment.
 
-- Escenarios sin código: estados, notificaciones, aprobaciones y tareas
-- Reglas y desencadenadores sobre eventos en el sistema
-- Transparencia: quién realizó el paso y dónde surgió la demora
+- No-code scenarios: statuses, notifications, approvals, and tasks
+- Rules and triggers for events in the system
+- Transparency: who took the step and where the delay occurred

@@ -1,5 +1,5 @@
-La téléphonie IA enregistre les appels et les associe aux clients et aux commandes.
+AI telephony records calls and links them to customers and orders.
 
-- Enregistrement des appels entrants et sortants
-- Stockage des fichiers audio et recherche rapide
-- Association à la fiche client et à l’historique des interactions
+- Recording incoming and outgoing calls
+- Storing audio files and fast search
+- Linking to the customer profile and interaction history

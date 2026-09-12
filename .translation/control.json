@@ -1,0 +1,2204 @@
+{
+  "projects": [
+    {
+      "name": "behemoth",
+      "root": "../../../core/native/apps/behemoth/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/behemoth.md"
+      ]
+    },
+    {
+      "name": "centimanus",
+      "root": "../../../core/native/apps/centimanus/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/centimanus.md"
+      ]
+    },
+    {
+      "name": "cli",
+      "root": "../../../tools/cli/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/cli.md"
+      ]
+    },
+    {
+      "name": "converged",
+      "root": "../../../docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "ecosystem/contribute.md",
+        "ecosystem/openness.md",
+        "ecosystem/registry.md",
+        "product/architecture.md",
+        "product/converged.md",
+        "product/dag.md",
+        "product/deployment.md",
+        "product/devices.md",
+        "product/licensing.md",
+        "product/llm.md",
+        "product/oss.md",
+        "product/overview.md",
+        "product/perf.md",
+        "product/roadmap.md",
+        "product/security.md",
+        "product/solutions.md",
+        "product/tehnology.md",
+        "system/architecture.md",
+        "system/module-catalog.md"
+      ]
+    },
+    {
+      "name": "fujin",
+      "root": "../../../core/native/apps/fujin/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/fujin.md"
+      ]
+    },
+    {
+      "name": "lm-compressors",
+      "root": "../../../modules/lambdas/data/lm-compressors/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-compressors",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-compressors.md"
+      ]
+    },
+    {
+      "name": "lm-kubernetes",
+      "root": "../../../modules/lambdas/automation/lm-kubernetes/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-kubernetes",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-kubernetes.md"
+      ]
+    },
+    {
+      "name": "lm-modelconvertor",
+      "root": "../../../modules/lambdas/convertors/lm-modelconvertor/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-modelconvertor",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-modelconvertor.md"
+      ]
+    },
+    {
+      "name": "lm-push",
+      "root": "../../../modules/lambdas/providers/lm-push/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-push",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-push.md"
+      ]
+    },
+    {
+      "name": "lm-scraping",
+      "root": "../../../../club/modules/lambdas/lm-scraping/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/lm-scraping",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-scraping.md"
+      ]
+    },
+    {
+      "name": "lm-secrets",
+      "root": "../../../modules/lambdas/sequrity/lm-secrets/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-secrets",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-secrets.md"
+      ]
+    },
+    {
+      "name": "lm-ses",
+      "root": "../../../modules/lambdas/providers/lm-ses/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-ses",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-ses.md"
+      ]
+    },
+    {
+      "name": "lm-sms",
+      "root": "../../../modules/lambdas/providers/lm-sms/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-sms",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-sms.md"
+      ]
+    },
+    {
+      "name": "lm-smtp",
+      "root": "../../../modules/lambdas/providers/lm-smtp/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/lm-smtp",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "lm-smtp.md"
+      ]
+    },
+    {
+      "name": "nrpc",
+      "root": "../../../tools/nrpc/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/nrpc.md"
+      ]
+    },
+    {
+      "name": "ptah",
+      "root": "../../../core/native/apps/ptah/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/ptah.md"
+      ]
+    },
+    {
+      "name": "resonus",
+      "root": "../../../core/native/apps/resonus/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "system/resonus.md"
+      ]
+    },
+    {
+      "name": "rp-access",
+      "root": "../../../modules/repositories/sequrity/rp-access/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-access",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "object-access.md",
+        "rp-access.md"
+      ]
+    },
+    {
+      "name": "rp-assistant",
+      "root": "../../../modules/repositories/ai/rp-assistant/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-assistant",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-assistant.md"
+      ]
+    },
+    {
+      "name": "rp-audit",
+      "root": "../../../../club/modules/repositories/rp-audit/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-audit",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-audit.md"
+      ]
+    },
+    {
+      "name": "rp-auth",
+      "root": "../../../modules/repositories/sequrity/rp-auth/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-auth",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-auth.md"
+      ]
+    },
+    {
+      "name": "rp-billing",
+      "root": "../../../modules/repositories/business/rp-billing/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-billing",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-billing.md"
+      ]
+    },
+    {
+      "name": "rp-calls",
+      "root": "../../../modules/repositories/communications/rp-calls/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-calls",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-calls.md"
+      ]
+    },
+    {
+      "name": "rp-chats",
+      "root": "../../../modules/repositories/communications/rp-chats/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-chats",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-chats.md"
+      ]
+    },
+    {
+      "name": "rp-classifier",
+      "root": "../../../modules/repositories/content/rp-classifier/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-classifier",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-classifier.md"
+      ]
+    },
+    {
+      "name": "rp-community",
+      "root": "../../../modules/repositories/communications/rp-community/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-community",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-community.md"
+      ]
+    },
+    {
+      "name": "rp-companies",
+      "root": "../../../../club/modules/repositories/rp-companies/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-companies",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-companies.md"
+      ]
+    },
+    {
+      "name": "rp-contexts",
+      "root": "../../../modules/repositories/ai/rp-contexts/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-contexts",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-contexts.md"
+      ]
+    },
+    {
+      "name": "rp-counters",
+      "root": "../../../modules/repositories/analytics/rp-counters/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-counters",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-counters.md"
+      ]
+    },
+    {
+      "name": "rp-dag",
+      "root": "../../../modules/repositories/automation/rp-dag/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-dag",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-dag.md"
+      ]
+    },
+    {
+      "name": "rp-dashboard",
+      "root": "../../../modules/repositories/analytics/rp-dashboard/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-dashboard",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-dashboard.md"
+      ]
+    },
+    {
+      "name": "rp-dumps",
+      "root": "../../../modules/repositories/data/rp-dumps/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-dumps",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-dumps.md"
+      ]
+    },
+    {
+      "name": "rp-environment",
+      "root": "../../../modules/repositories/sequrity/rp-environment/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-environment",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-environment.md"
+      ]
+    },
+    {
+      "name": "rp-equipment",
+      "root": "../../../modules/repositories/business/rp-equipment/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-equipment",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-equipment.md"
+      ]
+    },
+    {
+      "name": "rp-events",
+      "root": "../../../modules/repositories/business/rp-events/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-events",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-events.md"
+      ]
+    },
+    {
+      "name": "rp-files",
+      "root": "../../../modules/repositories/data/rp-files/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-files",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-files.md"
+      ]
+    },
+    {
+      "name": "rp-finance",
+      "root": "../../../modules/repositories/business/rp-finance/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-finance",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-finance.md"
+      ]
+    },
+    {
+      "name": "rp-galery",
+      "root": "../../../modules/repositories/content/rp-galery/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-galery",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-galery.md"
+      ]
+    },
+    {
+      "name": "rp-geo",
+      "root": "../../../../club/modules/repositories/rp-geo/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-geo",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-geo.md"
+      ]
+    },
+    {
+      "name": "rp-identity",
+      "root": "../../../modules/repositories/sequrity/rp-identity/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-identity",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-identity.md"
+      ]
+    },
+    {
+      "name": "rp-install",
+      "root": "../../../../club/modules/repositories/rp-install/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-install",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-install.md"
+      ]
+    },
+    {
+      "name": "rp-logs",
+      "root": "../../../modules/repositories/analytics/rp-logs/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-logs",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-logs.md"
+      ]
+    },
+    {
+      "name": "rp-mailing",
+      "root": "../../../../club/modules/repositories/rp-mailing/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-mailing",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-mailing.md"
+      ]
+    },
+    {
+      "name": "rp-markdown",
+      "root": "../../../modules/repositories/content/rp-markdown/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-markdown",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-markdown.md"
+      ]
+    },
+    {
+      "name": "rp-marker",
+      "root": "../../../../club/modules/repositories/rp-marker/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-marker",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-marker.md"
+      ]
+    },
+    {
+      "name": "rp-notify",
+      "root": "../../../modules/repositories/communications/rp-notify/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-notify",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-notify.md"
+      ]
+    },
+    {
+      "name": "rp-oauth",
+      "root": "../../../modules/repositories/sequrity/rp-oauth/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-oauth",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-oauth.md"
+      ]
+    },
+    {
+      "name": "rp-orders",
+      "root": "../../../modules/repositories/business/rp-orders/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-orders",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-orders.md"
+      ]
+    },
+    {
+      "name": "rp-parameters",
+      "root": "../../../../club/modules/repositories/rp-parameters/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-parameters",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-parameters.md"
+      ]
+    },
+    {
+      "name": "rp-places",
+      "root": "../../../../club/modules/repositories/rp-places/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-places",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-places.md"
+      ]
+    },
+    {
+      "name": "rp-requests",
+      "root": "../../../modules/repositories/business/rp-requests/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-requests",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-requests.md"
+      ]
+    },
+    {
+      "name": "rp-resonus",
+      "root": "../../../modules/repositories/communications/rp-resonus/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-resonus",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-resonus.md"
+      ]
+    },
+    {
+      "name": "rp-reviews",
+      "root": "../../../modules/repositories/business/rp-reviews/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-reviews",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-reviews.md"
+      ]
+    },
+    {
+      "name": "rp-sales",
+      "root": "../../../modules/repositories/business/rp-sales/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-sales",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-sales.md"
+      ]
+    },
+    {
+      "name": "rp-scripts",
+      "root": "../../../modules/repositories/content/rp-scripts/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-scripts",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-scripts.md"
+      ]
+    },
+    {
+      "name": "rp-sheduller",
+      "root": "../../../modules/repositories/automation/rp-sheduller/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-sheduller",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-sheduller.md"
+      ]
+    },
+    {
+      "name": "rp-staff",
+      "root": "../../../modules/repositories/business/rp-staff/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-staff",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-staff.md"
+      ]
+    },
+    {
+      "name": "rp-static",
+      "root": "../../../modules/repositories/content/rp-static/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-static",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-static.md"
+      ]
+    },
+    {
+      "name": "rp-store",
+      "root": "../../../modules/repositories/data/rp-store/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-store",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-store.md"
+      ]
+    },
+    {
+      "name": "rp-struct",
+      "root": "../../../modules/repositories/content/rp-struct/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-struct",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-struct.md"
+      ]
+    },
+    {
+      "name": "rp-telemetry",
+      "root": "../../../modules/repositories/analytics/rp-telemetry/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-telemetry",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-telemetry.md"
+      ]
+    },
+    {
+      "name": "rp-threads",
+      "root": "../../../modules/repositories/communications/rp-threads/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-threads",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-threads.md"
+      ]
+    },
+    {
+      "name": "rp-usage",
+      "root": "../../../modules/repositories/analytics/rp-usage/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-usage",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-usage.md"
+      ]
+    },
+    {
+      "name": "rp-webhooks",
+      "root": "../../../modules/repositories/automation/rp-webhooks/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-webhooks",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-webhooks.md"
+      ]
+    },
+    {
+      "name": "sf-assistants",
+      "root": "../../../modules/surfaces/ai/sf-assistants/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-assistants",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-assistants.md"
+      ]
+    },
+    {
+      "name": "sf-audit",
+      "root": "../../../../club/modules/surfaces/sf-audit/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/sf-audit",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-audit.md"
+      ]
+    },
+    {
+      "name": "sf-auth",
+      "root": "../../../modules/surfaces/sequrity/sf-auth/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-auth",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-auth.md"
+      ]
+    },
+    {
+      "name": "sf-automation",
+      "root": "../../../modules/surfaces/automation/sf-automation/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-automation",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "automation.md"
+      ]
+    },
+    {
+      "name": "sf-calls",
+      "root": "../../../modules/surfaces/communications/sf-calls/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-calls",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-calls.md"
+      ]
+    },
+    {
+      "name": "sf-chats",
+      "root": "../../../modules/surfaces/communications/sf-chats/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-chats",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-chats.md"
+      ]
+    },
+    {
+      "name": "sf-classifier",
+      "root": "../../../modules/surfaces/content/sf-classifier/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-classifier",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-classifier.md"
+      ]
+    },
+    {
+      "name": "sf-community",
+      "root": "../../../modules/surfaces/communications/sf-community/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-community",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-community.md"
+      ]
+    },
+    {
+      "name": "sf-companies",
+      "root": "../../../../club/modules/surfaces/sf-companies/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/sf-companies",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-companies.md"
+      ]
+    },
+    {
+      "name": "sf-contexts",
+      "root": "../../../modules/surfaces/ai/sf-contexts/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-contexts",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-contexts.md"
+      ]
+    },
+    {
+      "name": "sf-dasboards",
+      "root": "../../../modules/surfaces/analytics/sf-dasboards/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-dasboards",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-dasboards.md"
+      ]
+    },
+    {
+      "name": "sf-docs",
+      "root": "../../../modules/surfaces/content/sf-docs/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-docs",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-docs.md"
+      ]
+    },
+    {
+      "name": "sf-dumps",
+      "root": "../../../modules/surfaces/data/sf-dumps/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-dumps",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-dumps.md"
+      ]
+    },
+    {
+      "name": "sf-enrichment",
+      "root": "../../../../club/modules/surfaces/sf-enrichment/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/sf-enrichment",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-enrichment.md"
+      ]
+    },
+    {
+      "name": "sf-equipment",
+      "root": "../../../modules/surfaces/business/sf-equipment/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-equipment",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-equipment.md"
+      ]
+    },
+    {
+      "name": "sf-files",
+      "root": "../../../modules/surfaces/data/sf-files/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-files",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-files.md"
+      ]
+    },
+    {
+      "name": "sf-galery",
+      "root": "../../../modules/surfaces/content/sf-galery/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-galery",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-galery.md"
+      ]
+    },
+    {
+      "name": "sf-geo",
+      "root": "../../../../club/modules/surfaces/sf-geo/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/sf-geo",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-geo.md"
+      ]
+    },
+    {
+      "name": "sf-landing",
+      "root": "../../../modules/surfaces/content/sf-landing/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-landing",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-landing.md"
+      ]
+    },
+    {
+      "name": "sf-logs",
+      "root": "../../../modules/surfaces/analytics/sf-logs/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-logs",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-logs.md"
+      ]
+    },
+    {
+      "name": "sf-mailing",
+      "root": "../../../../club/modules/surfaces/sf-mailing/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/sf-mailing",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-mailing.md"
+      ]
+    },
+    {
+      "name": "sf-markdown",
+      "root": "../../../modules/surfaces/content/sf-markdown/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-markdown",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-markdown.md"
+      ]
+    },
+    {
+      "name": "sf-orders",
+      "root": "../../../modules/surfaces/business/sf-orders/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-orders",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-orders.md"
+      ]
+    },
+    {
+      "name": "sf-requests",
+      "root": "../../../modules/surfaces/business/sf-requests/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-requests",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-requests.md"
+      ]
+    },
+    {
+      "name": "sf-sales",
+      "root": "../../../../club/modules/surfaces/sf-sales/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/sf-sales",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-sales.md"
+      ]
+    },
+    {
+      "name": "sf-secrets",
+      "root": "../../../modules/surfaces/sequrity/sf-secrets/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-secrets",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-secrets.md"
+      ]
+    },
+    {
+      "name": "sf-static",
+      "root": "../../../modules/surfaces/content/sf-static/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-static",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-static.md"
+      ]
+    },
+    {
+      "name": "sf-struct",
+      "root": "../../../modules/surfaces/content/sf-struct/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-struct",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-struct.md"
+      ]
+    },
+    {
+      "name": "sf-telemetry",
+      "root": "../../../modules/surfaces/analytics/sf-telemetry/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-telemetry",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-telemetry.md"
+      ]
+    },
+    {
+      "name": "sf-threads",
+      "root": "../../../modules/surfaces/communications/sf-threads/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-threads",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-threads.md"
+      ]
+    },
+    {
+      "name": "sf-usage",
+      "root": "../../../modules/surfaces/analytics/sf-usage/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-usage",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-usage.md"
+      ]
+    },
+    {
+      "name": "wf-dialogue-summary",
+      "root": "../../../modules/workflows/wf-dialogue-summary/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-dialogue-summary",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-dialogue-summary.md"
+      ]
+    },
+    {
+      "name": "wf-file-analyze",
+      "root": "../../../modules/workflows/wf-file-analyze/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-file-analyze",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-file-analyze.md"
+      ]
+    },
+    {
+      "name": "wf-file-unpack",
+      "root": "../../../modules/workflows/wf-file-unpack/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-file-unpack",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-file-unpack.md"
+      ]
+    },
+    {
+      "name": "wf-files-analyze",
+      "root": "../../../modules/workflows/wf-files-analyze/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-files-analyze",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-files-analyze.md"
+      ]
+    },
+    {
+      "name": "wf-files-process",
+      "root": "../../../modules/workflows/wf-files-process/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-files-process",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-files-process.md"
+      ]
+    },
+    {
+      "name": "wf-request-analyze",
+      "root": "../../../modules/workflows/wf-request-analyze/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-request-analyze",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-request-analyze.md"
+      ]
+    },
+    {
+      "name": "wf-sales-import",
+      "root": "../../../modules/workflows/wf-sales-import/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-sales-import",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-sales-import.md"
+      ]
+    },
+    {
+      "name": "wf-sales-review-outreach",
+      "root": "../../../modules/workflows/wf-sales-review-outreach/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-sales-review-outreach",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-sales-review-outreach.md"
+      ]
+    },
+    {
+      "name": "club-struct",
+      "root": "../../../../club/content/struct",
+      "targetRoot": "../../../../club/content/docs-cache/struct",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pdf",
+        "pt",
+        "ru"
+      ],
+      "include": []
+    },
+    {
+      "name": "club-markdown",
+      "root": "../../../../club/content/markdown",
+      "targetRoot": "../../../../club/content/docs-cache/markdown",
+      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pdf",
+        "pt",
+        "ru"
+      ],
+      "include": []
+    }
+  ]
+}

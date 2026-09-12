@@ -1,5 +1,5 @@
-AI‑телефония записывает звонки и привязывает их к клиентам и заказам.
+AI telephony records calls and links them to customers and orders.
 
-- Запись входящих и исходящих звонков
-- Хранение аудиофайлов и быстрый поиск
-- Привязка к карточке клиента и истории взаимодействий
+- Recording incoming and outgoing calls
+- Storing audio files and fast search
+- Linking to the customer profile and interaction history

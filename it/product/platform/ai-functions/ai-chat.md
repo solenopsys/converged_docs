@@ -1,5 +1,5 @@
-La chat AI risponde ai clienti sul sito e nei messenger e aiuta a trasformare rapidamente una conversazione in una richiesta.
+AI chat responds to customers on the website and in messengers and helps quickly turn a conversation into a lead.
 
-- Chiude automaticamente le domande frequenti (FAQ) e raccoglie le informazioni iniziali sull’ordine
-- Trasferisce la conversazione a un operatore quando serve una persona
-- Accetta file e salva il contesto della conversazione
+- Automatically handles common questions (FAQ) and collects initial order details
+- Transfers the conversation to an operator when a human is needed
+- Accepts files and preserves the conversation context

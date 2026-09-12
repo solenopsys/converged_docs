@@ -1,5 +1,5 @@
-Les processus métier relient tout en une seule chaîne : demande → commande → production → paiement.
+Business processes connect everything into one chain: request → order → production → payment.
 
-- Scénarios sans code : statuts, notifications, approbations et tâches
-- Règles et déclencheurs sur les événements du système
-- Transparence : qui a effectué l’étape et où le retard est survenu
+- No-code scenarios: statuses, notifications, approvals, and tasks
+- Rules and triggers for events in the system
+- Transparency: who took the step and where the delay occurred

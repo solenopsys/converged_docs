@@ -1,5 +1,5 @@
-Бизнес‑процессы связывают всё в одну цепочку: заявка → заказ → производство → оплата.
+Business processes connect everything into one chain: request → order → production → payment.
 
-- Сценарии без кода: статусы, уведомления, согласования и задачи
-- Правила и триггеры на события в системе
-- Прозрачность: кто сделал шаг и где возникла задержка
+- No-code scenarios: statuses, notifications, approvals, and tasks
+- Rules and triggers for events in the system
+- Transparency: who took the step and where the delay occurred

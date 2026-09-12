@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceHash": "b384cabb5f2dec5f2f59c1a57a1a96278efba762bc8ec1ac43b84f810f69289a",
+  "translations": {
+    "de": [
+      "5d096ee430860b2aefd1b5041f1fe17febfd88f522c981f69ccd00777e59183e"
+    ],
+    "es": [
+      "aa46c865309222367ce0d5ef6783dcb6c868c2a574c77c4e99ba510f549f2294"
+    ],
+    "fr": [
+      "4edd222fadef780e8baadd0324bd1092c595e04eb1f5f6901502cd1133e0d74f"
+    ],
+    "it": [
+      "e6838492342a4a0cf28b6f58fec96880decb68bbfa9c4e10a811ac7ee325c028"
+    ],
+    "pt": [
+      "6c45c1271918226e9a4916ed49958056235f9350bafd4c5eacb41edf13dd8468"
+    ],
+    "ru": [
+      "551c658dd39dae79ed0398fbb12c75baf312ee6f019b4298500605722f630640"
+    ]
+  }
+}

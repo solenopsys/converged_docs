@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "sourceHash": "663243172563ae4f67e7ff97c4ae1bfedf8834c4db957b62aa1398cdd50b2679",
+  "translations": {
+    "de": [
+      "91e617f8475478fb1f6672c719e553d8aa9eb3ed46aa61e6ed323af74409ccfe"
+    ],
+    "es": [
+      "8e98f41901979fc300b6f850d8ecd587e4e8e4e0da547640e463b60d12525980"
+    ],
+    "fr": [
+      "11cc8d0275a048739f5dceaa70d7d0e1ee359dbe76f1a4aa2f8e4c68e957f1e2"
+    ],
+    "it": [
+      "40dcb09219aad5d58a54465fc7aecbf48c97d0a57ee4ea9ca180f277f178d19e"
+    ],
+    "pt": [
+      "0d1b2339d0888906a70311477e22633af3777d1df70fa4368e8c5a7d4ba19c0d"
+    ],
+    "ru": [
+      "d36765b4987ce92d100b75f1df41765e36bf5547805c868ec1bb09f074f46a77"
+    ]
+  }
+}
