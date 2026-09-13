@@ -1,20 +1,20 @@
 # lm-smtp
 
-## Purpose
+## Objectif
 
-Provider adapter for SMTP-based email delivery.
+Adaptateur de fournisseur pour la livraison d’e-mails basée sur SMTP.
 
-## Responsibility boundary
+## Limites des responsabilités
 
-Owns SMTP transport and protocol-level delivery handling; does not own high-level notification orchestration.
+Gère le transport SMTP et le traitement de la livraison au niveau du protocole ; ne prend pas en charge l’orchestration des notifications de haut niveau.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

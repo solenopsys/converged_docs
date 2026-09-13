@@ -1,21 +1,21 @@
 # sf-landing
 
-## Purpose
+## Назначение
 
-Owns Landing UI: landing pages, hero/section composition, and public-facing content presentation blocks.
+Отвечает за интерфейс лендинга: целевые страницы, композицию героев/секций и блоки представления общедоступного контента.
 
-## Responsibility boundary
+## Граница ответственности
 
-Controls landing-page layouts and interaction behavior; does not own authenticated admin panels or analytics data collection internals.
+Управляет макетами целевых страниц и поведением взаимодействия; не отвечает за аутентифицированные административные панели или внутренние механизмы сбора аналитических данных.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Входит в состав решения
 
 - `content`
 
-## Source
+## Источник
 
 `modules/surfaces/content/sf-landing`

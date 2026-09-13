@@ -1,21 +1,21 @@
 # sf-secrets
 
-## Purpose
+## Objetivo
 
-Provides the administration interface for creating, viewing, updating, and deleting named secret records.
+Fornece a interface de administração para criar, visualizar, atualizar e excluir registros de segredos nomeados.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-The module boundary is defined by its public contracts and implementation directory.
+O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Inclusão na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Origem
 
 `modules/surfaces/sequrity/sf-secrets`

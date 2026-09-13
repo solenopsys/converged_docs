@@ -1,21 +1,21 @@
 # rp-static
 
-## Purpose
+## Scopo
 
-Provides the service contract for static content and SSR cache metadata.
+Fornisce il contratto del servizio per i contenuti statici e i metadati della cache SSR.
 
-## Responsibility boundary
+## Ambito di responsabilità
 
-The module boundary is defined by its public contracts and implementation directory.
+Il perimetro del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Sorgente
 
 `modules/repositories/content/rp-static`

@@ -1,586 +1,586 @@
-# Module catalogue
+# Catalogo dei moduli
 
-This index is generated from the Converged module registry. Every entry links to documentation owned by that module; dependencies are taken from its workspace package manifest, and solution membership comes from `modules/solutions`.
+Questo indice viene generato dal registro dei moduli di Converged. Ogni voce rimanda alla documentazione posseduta dal modulo; le dipendenze vengono prese dal manifest del pacchetto workspace e l'appartenenza alle soluzioni proviene da `modules/solutions`.
 
-## Access and security
+## Accesso e sicurezza
 
 ### [lm-secrets](/en/docs/modules/lm-secrets)
 
-Provides the service contract for storing, retrieving, and deleting named secret values.
+Fornisce il contratto di servizio per archiviare, recuperare ed eliminare valori di segreti nominati.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-access](/en/docs/modules/rp-access)
 
-rp-access is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-access è un repository nel dominio sequrity. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Dipendenze dirette: nessuna
+- Soluzioni: `security`
 
 ### [rp-auth](/en/docs/modules/rp-auth)
 
-rp-auth is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-auth è un repository nel dominio sequrity. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Dipendenze dirette: nessuna
+- Soluzioni: `security`
 
 ### [rp-environment](/en/docs/modules/rp-environment)
 
-Stores and retrieves environment configuration associated with platform users.
+Archivia e recupera la configurazione dell'ambiente associata agli utenti della piattaforma.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-identity](/en/docs/modules/rp-identity)
 
-rp-identity is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-identity è un repository nel dominio sequrity. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Dipendenze dirette: nessuna
+- Soluzioni: `security`
 
 ### [rp-oauth](/en/docs/modules/rp-oauth)
 
-rp-oauth is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-oauth è un repository nel dominio sequrity. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-auth](/en/docs/modules/sf-auth)
 
-sf-auth is a surface in the sequrity domain. Its detailed purpose is maintained with the module source.
+sf-auth è una superficie nel dominio sequrity. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Dipendenze dirette: nessuna
+- Soluzioni: `security`
 
 ### [sf-secrets](/en/docs/modules/sf-secrets)
 
-Provides the administration interface for creating, viewing, updating, and deleting named secret records.
+Fornisce l'interfaccia di amministrazione per creare, visualizzare, aggiornare ed eliminare record di segreti nominati.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
-## AI and agents
+## AI e agenti
 
 ### [rp-assistant](/en/docs/modules/rp-assistant)
 
-rp-assistant is a repository in the ai domain. Its detailed purpose is maintained with the module source.
+rp-assistant è un repository nel dominio ai. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
 ### [rp-contexts](/en/docs/modules/rp-contexts)
 
-Provides storage and retrieval of named AI contexts, including their language variants.
+Fornisce l'archiviazione e il recupero di contesti AI nominati, comprese le loro varianti linguistiche.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
 ### [sf-assistants](/en/docs/modules/sf-assistants)
 
-sf-assistants is a surface in the ai domain. Its detailed purpose is maintained with the module source.
+sf-assistants è una superficie nel dominio ai. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: `sf-requests`
-- Solutions: `ai`
+- Dipendenze dirette: `sf-requests`
+- Soluzioni: `ai`
 
 ### [sf-contexts](/en/docs/modules/sf-contexts)
 
-Provides the AI workspace for listing, editing, and saving named contexts in multiple languages.
+Fornisce l'area di lavoro AI per elencare, modificare e salvare contesti nominati in più lingue.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
-## Analytics and telemetry
+## Analisi e telemetria
 
 ### [rp-counters](/en/docs/modules/rp-counters)
 
-Provides the service contract for collecting and querying analytical counters.
+Fornisce il contratto di servizio per raccogliere e interrogare contatori analitici.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [rp-dashboard](/en/docs/modules/rp-dashboard)
 
-Provides dashboard data and analytical views for platform metrics.
+Fornisce dati di dashboard e viste analitiche per le metriche della piattaforma.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [rp-logs](/en/docs/modules/rp-logs)
 
-rp-logs is a repository in the analytics domain. Its detailed purpose is maintained with the module source.
+rp-logs è un repository nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [rp-telemetry](/en/docs/modules/rp-telemetry)
 
-rp-telemetry is a repository in the analytics domain. Its detailed purpose is maintained with the module source.
+rp-telemetry è un repository nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [rp-usage](/en/docs/modules/rp-usage)
 
-rp-usage is a repository in the analytics domain. Its detailed purpose is maintained with the module source.
+rp-usage è un repository nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [sf-dasboards](/en/docs/modules/sf-dasboards)
 
-sf-dasboards is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-dasboards è una superficie nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [sf-logs](/en/docs/modules/sf-logs)
 
-sf-logs is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-logs è una superficie nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [sf-telemetry](/en/docs/modules/sf-telemetry)
 
-sf-telemetry is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-telemetry è una superficie nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
 ### [sf-usage](/en/docs/modules/sf-usage)
 
-sf-usage is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-usage è una superficie nel dominio analytics. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Dipendenze dirette: nessuna
+- Soluzioni: `analitycs`
 
-## Automation and orchestration
+## Automazione e orchestrazione
 
 ### [lm-kubernetes](/en/docs/modules/lm-kubernetes)
 
-Integrates platform automation with Kubernetes resources through a dedicated client and service contract.
+Integra l'automazione della piattaforma con le risorse Kubernetes tramite un client dedicato e un contratto di servizio.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-dag](/en/docs/modules/rp-dag)
 
-rp-dag is a repository in the automation domain. Its detailed purpose is maintained with the module source.
+rp-dag è un repository nel dominio automation. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [rp-sheduller](/en/docs/modules/rp-sheduller)
 
-rp-sheduller is a repository in the automation domain. Its detailed purpose is maintained with the module source.
+rp-sheduller è un repository nel dominio automation. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-webhooks](/en/docs/modules/rp-webhooks)
 
-rp-webhooks is a repository in the automation domain. Its detailed purpose is maintained with the module source.
+rp-webhooks è un repository nel dominio automation. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-automation](/en/docs/modules/sf-automation)
 
-sf-automation is the surface in the automation domain for workflows, schedules, webhook endpoints, and their execution history.
+sf-automation è la superficie nel dominio automation per workflow, pianificazioni, endpoint webhook e cronologia delle esecuzioni.
 
-- Direct dependencies: none
-- Solutions: `automation`
+- Dipendenze dirette: nessuna
+- Soluzioni: `automation`
 
-## Business domain
+## Dominio aziendale
 
 ### [rp-billing](/en/docs/modules/rp-billing)
 
-rp-billing is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-billing è un repository nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-equipment](/en/docs/modules/rp-equipment)
 
-rp-equipment is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-equipment è un repository nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-events](/en/docs/modules/rp-events)
 
-Provides creation, storage, and retrieval of business events.
+Fornisce la creazione, l'archiviazione e il recupero degli eventi aziendali.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-finance](/en/docs/modules/rp-finance)
 
-Provides finance operations for transactions, period summaries, cashflow, receivables, and payables.
+Fornisce operazioni finanziarie per transazioni, riepiloghi periodici, flusso di cassa, crediti e debiti.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-orders](/en/docs/modules/rp-orders)
 
-Provides the service contract for creating, updating, listing, and tracking business orders.
+Fornisce il contratto di servizio per creare, aggiornare, elencare e monitorare gli ordini aziendali.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-requests](/en/docs/modules/rp-requests)
 
-rp-requests is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-requests è un repository nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [rp-reviews](/en/docs/modules/rp-reviews)
 
-rp-reviews is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-reviews è un repository nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-sales](/en/docs/modules/rp-sales)
 
-rp-sales is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-sales è un repository nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-staff](/en/docs/modules/rp-staff)
 
-rp-staff is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-staff è un repository nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-orders](/en/docs/modules/sf-orders)
 
-Provides the sales interface for order and request lists, order details, status filtering, and operational dashboards.
+Fornisce l'interfaccia commerciale per gli elenchi di ordini e richieste, i dettagli degli ordini, il filtraggio dello stato e le dashboard operative.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-requests](/en/docs/modules/sf-requests)
 
-sf-requests is a surface in the business domain. Its detailed purpose is maintained with the module source.
+sf-requests è una superficie nel dominio business. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
-## Communications
+## Comunicazioni
 
 ### [rp-calls](/en/docs/modules/rp-calls)
 
-rp-calls is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-calls è un repository nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
 ### [rp-chats](/en/docs/modules/rp-chats)
 
-rp-chats is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-chats è un repository nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-community](/en/docs/modules/rp-community)
 
-rp-community is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-community è un repository nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-notify](/en/docs/modules/rp-notify)
 
-rp-notify is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-notify è un repository nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-resonus](/en/docs/modules/rp-resonus)
 
-Provides communication configuration for managed phone numbers and LLM gate settings.
+Fornisce la configurazione delle comunicazioni per numeri di telefono gestiti e impostazioni del gateway LLM.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-threads](/en/docs/modules/rp-threads)
 
-rp-threads is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-threads è un repository nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
 ### [sf-calls](/en/docs/modules/sf-calls)
 
-sf-calls is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-calls è una superficie nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
 ### [sf-chats](/en/docs/modules/sf-chats)
 
-sf-chats is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-chats è una superficie nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-community](/en/docs/modules/sf-community)
 
-sf-community is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-community è una superficie nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-threads](/en/docs/modules/sf-threads)
 
-sf-threads is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-threads è una superficie nel dominio communications. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Dipendenze dirette: nessuna
+- Soluzioni: `ai`
 
-## Content and documents
+## Contenuti e documenti
 
 ### [rp-classifier](/en/docs/modules/rp-classifier)
 
-rp-classifier is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-classifier è un repository nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-galery](/en/docs/modules/rp-galery)
 
-rp-galery is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-galery è un repository nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `content`
+- Dipendenze dirette: nessuna
+- Soluzioni: `content`
 
 ### [rp-markdown](/en/docs/modules/rp-markdown)
 
-rp-markdown is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-markdown è un repository nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `content`
+- Dipendenze dirette: nessuna
+- Soluzioni: `content`
 
 ### [rp-scripts](/en/docs/modules/rp-scripts)
 
-Provides storage operations for script files, including reading, saving, hashing, and deletion.
+Fornisce operazioni di archiviazione per file di script, inclusi lettura, salvataggio, hashing ed eliminazione.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-static](/en/docs/modules/rp-static)
 
-Provides the service contract for static content and SSR cache metadata.
+Fornisce il contratto di servizio per i contenuti statici e i metadati della cache SSR.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-struct](/en/docs/modules/rp-struct)
 
-rp-struct is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-struct è un repository nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `content`
+- Dipendenze dirette: nessuna
+- Soluzioni: `content`
 
 ### [sf-classifier](/en/docs/modules/sf-classifier)
 
-Provides the classifier interface for navigating entities, mappings, and tree structures.
+Fornisce l'interfaccia del classificatore per esplorare entità, mappature e strutture ad albero.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-docs](/en/docs/modules/sf-docs)
 
-sf-docs is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-docs è una superficie nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-galery](/en/docs/modules/sf-galery)
 
-sf-galery is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-galery è una superficie nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-landing](/en/docs/modules/sf-landing)
 
-sf-landing is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-landing è una superficie nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-markdown](/en/docs/modules/sf-markdown)
 
-sf-markdown is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-markdown è una superficie nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-static](/en/docs/modules/sf-static)
 
-Provides the operations interface for inspecting and clearing static SSR cache entries.
+Fornisce l'interfaccia operativa per ispezionare e svuotare le voci della cache SSR statica.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-struct](/en/docs/modules/sf-struct)
 
-sf-struct is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-struct è una superficie nel dominio content. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
-## Files and storage
+## File e storage
 
 ### [lm-compressors](/en/docs/modules/lm-compressors)
 
-lm-compressors is a lambda in the data domain. Its detailed purpose is maintained with the module source.
+lm-compressors è una lambda nel dominio data. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [rp-dumps](/en/docs/modules/rp-dumps)
 
-rp-dumps is a repository in the data domain. Its detailed purpose is maintained with the module source.
+rp-dumps è un repository nel dominio data. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [rp-files](/en/docs/modules/rp-files)
 
-rp-files is a repository in the data domain. Its detailed purpose is maintained with the module source.
+rp-files è un repository nel dominio data. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [rp-store](/en/docs/modules/rp-store)
 
-rp-store is a repository in the data domain. Its detailed purpose is maintained with the module source.
+rp-store è un repository nel dominio data. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [sf-dumps](/en/docs/modules/sf-dumps)
 
-sf-dumps is a surface in the data domain. Its detailed purpose is maintained with the module source.
+sf-dumps è una superficie nel dominio data. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [sf-files](/en/docs/modules/sf-files)
 
-sf-files is a surface in the data domain. Its detailed purpose is maintained with the module source.
+sf-files è una superficie nel dominio data. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
-## Message delivery providers
+## Provider per la consegna dei messaggi
 
 ### [lm-push](/en/docs/modules/lm-push)
 
-lm-push is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-push è una lambda nel dominio providers. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [lm-ses](/en/docs/modules/lm-ses)
 
-lm-ses is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-ses è una lambda nel dominio providers. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Dipendenze dirette: nessuna
+- Soluzioni: `security`
 
 ### [lm-sms](/en/docs/modules/lm-sms)
 
-lm-sms is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-sms è una lambda nel dominio providers. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [lm-smtp](/en/docs/modules/lm-smtp)
 
-lm-smtp is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-smtp è una lambda nel dominio providers. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
-## Model conversion
+## Conversione dei modelli
 
 ### [lm-modelconvertor](/en/docs/modules/lm-modelconvertor)
 
-lm-modelconvertor is a lambda in the convertors domain. Its detailed purpose is maintained with the module source.
+lm-modelconvertor è una lambda nel dominio convertors. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
-## Workflows
+## Workflow
 
 ### [wf-dialogue-summary](/en/docs/modules/wf-dialogue-summary)
 
-Summarizes unprocessed chat and call dialogues with an LLM, then stores titles, descriptions, and noise classification.
+Riassume con un LLM i dialoghi non elaborati di chat e chiamate, quindi archivia titoli, descrizioni e classificazione del rumore.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [wf-file-analyze](/en/docs/modules/wf-file-analyze)
 
-Analyzes one stored non-archive file, producing model previews and CNC or 3D-print estimates when supported.
+Analizza un file archiviato non compresso, producendo anteprime del modello e stime CNC o di stampa 3D quando supportate.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [wf-file-unpack](/en/docs/modules/wf-file-unpack)
 
-Expands one uploaded archive into a collection of stored files for subsequent analysis.
+Espande un archivio caricato in una raccolta di file archiviati per l'analisi successiva.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [wf-files-analyze](/en/docs/modules/wf-files-analyze)
 
-wf-files-analyze is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-files-analyze è un workflow nel dominio platform. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [wf-files-process](/en/docs/modules/wf-files-process)
 
-Processes uploaded files in batches: it expands archives, identifies model files, and creates a manufacturing request from them.
+Elabora i file caricati in batch: espande gli archivi, identifica i file dei modelli e crea una richiesta di produzione a partire da essi.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [wf-request-analyze](/en/docs/modules/wf-request-analyze)
 
-wf-request-analyze is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-request-analyze è un workflow nel dominio platform. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Dipendenze dirette: nessuna
+- Soluzioni: `requests`
 
 ### [wf-sales-import](/en/docs/modules/wf-sales-import)
 
-wf-sales-import is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-sales-import è un workflow nel dominio platform. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
 ### [wf-sales-review-outreach](/en/docs/modules/wf-sales-review-outreach)
 
-wf-sales-review-outreach is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-sales-review-outreach è un workflow nel dominio platform. Il suo scopo dettagliato è mantenuto insieme al codice sorgente del modulo.
 
-- Direct dependencies: none
-- Solutions: none
+- Dipendenze dirette: nessuna
+- Soluzioni: nessuna
 
-## Solution dependencies
+## Dipendenze delle soluzioni
 
 - `ai`: `security`
 - `analitycs`: `security`
 - `content`: `security`
-- `requests`: no solution dependencies
-- `security`: no solution dependencies
+- `requests`: nessuna dipendenza da soluzioni
+- `security`: nessuna dipendenza da soluzioni

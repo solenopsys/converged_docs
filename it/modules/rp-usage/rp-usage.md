@@ -1,21 +1,21 @@
 # rp-usage
 
-## Purpose
+## Scopo
 
-Tracks usage counters and consumption metrics for product features.
+Tiene traccia dei contatori di utilizzo e delle metriche di consumo per le funzionalità del prodotto.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns usage measurement and aggregation; does not own invoicing or payment execution.
+Gestisce la misurazione e l'aggregazione dell'utilizzo; non gestisce la fatturazione né l'esecuzione dei pagamenti.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `analitycs`
 
-## Source
+## Origine
 
 `modules/repositories/analytics/rp-usage`

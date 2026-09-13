@@ -1,21 +1,21 @@
 # rp-dumps
 
-## Purpose
+## Zweck
 
-Creates and manages data dumps/export snapshots.
+Erstellt und verwaltet Daten-Dumps/Export-Snapshots.
 
-## Responsibility boundary
+## Verantwortungsbereich
 
-Owns dump generation, packaging, and retrieval metadata; does not own long-term archival platform.
+Ist für die Erstellung und Paketierung von Dumps sowie für Abrufmetadaten zuständig; die Plattform für die langfristige Archivierung gehört nicht zum Verantwortungsbereich.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zu einer Lösung
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Lösung enthalten
 
-## Source
+## Quelle
 
 `modules/repositories/data/rp-dumps`

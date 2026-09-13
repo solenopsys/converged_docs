@@ -1,21 +1,21 @@
 # rp-reviews
 
-## Purpose
+## Scopo
 
-Stores and manages user or partner reviews and moderation-related metadata.
+Archivia e gestisce le recensioni degli utenti o dei partner e i metadati relativi alla moderazione.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns review entities and review state; does not own community thread infrastructure.
+Gestisce le entità delle recensioni e il loro stato; non gestisce l'infrastruttura dei thread della community.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Origine
 
 `modules/repositories/business/rp-reviews`

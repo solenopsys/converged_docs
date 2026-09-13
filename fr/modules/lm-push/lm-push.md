@@ -1,20 +1,20 @@
 # lm-push
 
-## Purpose
+## Objectif
 
-Provider adapter for push-notification delivery.
+Adaptateur de fournisseur pour la diffusion de notifications push.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-Owns push provider integration details; does not own notification business targeting logic.
+Prend en charge les détails de l’intégration avec le fournisseur de notifications push ; ne prend pas en charge la logique métier de ciblage des notifications.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

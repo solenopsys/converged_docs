@@ -1,18 +1,18 @@
-## The module registry
+## Le registre des modules
 
-The registry is not a separate document and not a database. It is the source tree itself.
+Le registre n’est ni un document séparé ni une base de données. C’est l’arborescence des sources elle-même.
 
 ```text
 modules/
-├── microservices/<domain>/ms-<name>    a data domain and its API
-├── surfaces/<domain>/sf-<name>   a screen mounted at runtime
-├── workflows/wf-<name>                 a process for the DAG runtime
-├── types/<domain>/                     NRPC contracts
-└── solutions/                          which modules ship together
+├── microservices/<domain>/ms-<name>    un domaine de données et son API
+├── surfaces/<domain>/sf-<name>   un écran monté à l’exécution
+├── workflows/wf-<name>                 un processus pour le moteur DAG
+├── types/<domain>/                     des contrats NRPC
+└── solutions/                          les modules livrés ensemble
 ```
 
-A module exists because its directory exists. It belongs to a domain because it sits in that domain's folder. It belongs to a solution because `solutions/solutions.json` names it. There is no fourth place where any of this has to be repeated — which is why the ecosystem page on the site is produced by walking the tree rather than by editing a list.
+Un module existe parce que son répertoire existe. Il appartient à un domaine parce qu’il se trouve dans le dossier de ce domaine. Il appartient à une solution parce que `solutions/solutions.json` le nomme. Il n’existe pas de quatrième endroit où tout cela devrait être répété — c’est pourquoi la page de l’écosystème du site est produite en parcourant l’arborescence plutôt qu’en modifiant une liste.
 
-A module's purpose is taken from its `README.md`: the first paragraph under `## Purpose` (for surfaces, `## UI Purpose`) and the paragraph under the ownership-boundary heading. Those two paragraphs are the module's contract in plain language, and every module owes them.
+Le but d’un module est tiré de son `README.md` : le premier paragraphe sous `## Purpose` (pour les surfaces, `## UI Purpose`) et le paragraphe sous le titre délimitant la responsabilité. Ces deux paragraphes constituent le contrat du module en langage courant, et chaque module les doit.
 
-A product layer on top of the base — `club`, for instance — is laid out the same way and may drop the domain level: its modules sit directly in `modules/microservices/ms-<name>`. The build understands both layouts.
+Une couche produit au-dessus de la base — `club`, par exemple — est structurée de la même manière et peut supprimer le niveau de domaine : ses modules se trouvent directement dans `modules/microservices/ms-<name>`. La compilation comprend les deux structures.

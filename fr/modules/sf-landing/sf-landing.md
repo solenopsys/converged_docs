@@ -1,18 +1,18 @@
 # sf-landing
 
-## Purpose
+## Objectif
 
-Owns Landing UI: landing pages, hero/section composition, and public-facing content presentation blocks.
+Gère l’interface des pages d’atterrissage : les pages d’atterrissage, la composition des bannières principales et des sections, ainsi que les blocs de présentation de contenu destinés au public.
 
-## Responsibility boundary
+## Limites de responsabilité
 
-Controls landing-page layouts and interaction behavior; does not own authenticated admin panels or analytics data collection internals.
+Contrôle les mises en page des pages d’atterrissage et le comportement des interactions ; ne gère pas les panneaux d’administration authentifiés ni les mécanismes internes de collecte de données analytiques.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `content`
 

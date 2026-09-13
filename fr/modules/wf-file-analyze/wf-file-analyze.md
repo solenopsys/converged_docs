@@ -1,20 +1,20 @@
 # wf-file-analyze
 
-## Purpose
+## Objectif
 
-Analyzes one stored non-archive file, producing model previews and CNC or 3D-print estimates when supported.
+Analyse un fichier non-archive stocké, en produisant des aperçus de modèle ainsi que des estimations pour la CNC ou l’impression 3D lorsque cela est pris en charge.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

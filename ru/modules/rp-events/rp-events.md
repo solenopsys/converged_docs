@@ -1,21 +1,21 @@
 # rp-events
 
-## Purpose
+## Назначение
 
-Provides creation, storage, and retrieval of business events.
+Обеспечивает создание, хранение и получение бизнес-событий.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/repositories/business/rp-events`

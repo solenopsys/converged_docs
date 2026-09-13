@@ -1,21 +1,16 @@
-# System architecture
+# Systemarchitektur
 
-Converged is a modular operating layer for manufacturing businesses. Its user
-interfaces, domain services, workflow engine, storage, media gateway and
-industrial processors form one system without becoming one application.
+Converged ist eine modulare Betriebsschicht für Fertigungsunternehmen. Die Benutzeroberflächen, Domänendienste, Workflow-Engine, Speicherung, Medien-Gateway und industriellen Prozessoren bilden ein System, ohne zu einer Anwendung zu werden.
 
-The architecture separates three kinds of work:
+Die Architektur trennt drei Arten von Arbeit:
 
-- domain modules own business data and user-facing capabilities;
-- native runtime services move messages, execute workflows, store data and
-  handle real-time media;
-- the control plane decides which parts run for each platform and tenant.
+- Domänenmodule besitzen Geschäftsdaten und benutzerorientierte Funktionen;
+- native Laufzeitdienste übertragen Nachrichten, führen Workflows aus, speichern Daten und verarbeiten Echtzeitmedien;
+- die Steuerungsebene entscheidet, welche Teile für jede Plattform und jeden Mandanten ausgeführt werden.
 
-## One message bus
+## Ein Nachrichtenbus
 
-Runtime components communicate through Fujin. Every process opens one
-connection, registers a target and sends messages to logical destinations.
-The sender does not need the address or deployment location of the receiver.
+Laufzeitkomponenten kommunizieren über Fujin. Jeder Prozess öffnet eine Verbindung, registriert ein Ziel und sendet Nachrichten an logische Ziele. Der Absender benötigt weder die Adresse noch den Bereitstellungsort des Empfängers.
 
 ```text
 browser and mobile clients
@@ -28,58 +23,41 @@ browser and mobile clients
                \  Behemoth /
 ```
 
-This removes the HTTP call graph and service mesh from the application layer.
-Routing, request correlation and trusted tenant context travel in the common
-message envelope. A receiving process then selects the requested service or
-handler inside its own boundary.
+Dadurch werden der HTTP-Aufrufgraph und das Servicenetz aus der Anwendungsebene entfernt. Routing, Anfragekorrelation und vertrauenswürdiger Mandantenkontext werden im gemeinsamen Nachrichtenumschlag übertragen. Ein empfangender Prozess wählt anschließend den angeforderten Service oder Handler innerhalb seiner eigenen Grenze aus.
 
-## Core runtime
+## Kernlaufzeit
 
-| Component | Responsibility |
+| Komponente | Verantwortung |
 | --- | --- |
-| Fujin | Connects runtime peers and routes messages to the live owner of a target. |
-| Behemoth | Provides isolated SQL, key-value, column, vector, graph and file storage. |
-| Centimanus | Executes multi-step business workflows as replayable graphs. |
-| Resonus | Handles real-time media, calls, transcription and AI sessions. |
-| Ptah | Reconciles the desired platform, solutions and tenants into Kubernetes resources. |
+| Fujin | Verbindet Laufzeit-Peers und leitet Nachrichten an den aktiven Besitzer eines Ziels weiter. |
+| Behemoth | Stellt isolierten SQL-, Schlüssel-Wert-, Spalten-, Vektor-, Graph- und Dateispeicher bereit. |
+| Centimanus | Führt mehrstufige Geschäftsworkflows als wiedergabefähige Graphen aus. |
+| Resonus | Verarbeitet Echtzeitmedien, Anrufe, Transkription und KI-Sitzungen. |
+| Ptah | Gleicht die gewünschte Plattform, Lösungen und Mandanten mit Kubernetes-Ressourcen ab. |
 
-The components are deliberately narrow. Fujin does not understand business
-services. Behemoth does not orchestrate business operations. Centimanus does
-not own domain data. Resonus does not decide tenant identity. Ptah creates and
-configures workloads but does not participate in runtime messaging.
+Die Komponenten sind bewusst eng gefasst. Fujin versteht keine Geschäftsdienste. Behemoth orchestriert keine Geschäftsabläufe. Centimanus besitzt keine Domänendaten. Resonus entscheidet nicht über die Mandantenidentität. Ptah erstellt und konfiguriert Workloads, nimmt aber nicht an der Laufzeitkommunikation teil.
 
-## Modules and solutions
+## Module und Lösungen
 
-Business capabilities are delivered as microservices, surfaces and
-workflows. A solution is a declarative selection of those modules for a
-particular operating scenario, such as order handling, production planning or
-equipment monitoring.
+Geschäftsfunktionen werden als Microservices, Oberflächen und Workflows bereitgestellt. Eine Lösung ist eine deklarative Auswahl dieser Module für ein bestimmtes Betriebsszenario, etwa Auftragsabwicklung, Produktionsplanung oder Anlagenüberwachung.
 
-Microservices own their data and expose typed contracts. They do not call one
-another to coordinate a process. Cross-domain sequences belong to workflows,
-which Centimanus executes one durable step at a time. This keeps domain modules
-small and allows a solution to combine them without creating hidden coupling.
+Microservices besitzen ihre Daten und stellen typisierte Verträge bereit. Sie rufen einander nicht auf, um einen Prozess zu koordinieren. Sequenzen über mehrere Domänen hinweg gehören in Workflows, die Centimanus jeweils einen dauerhaften Schritt ausführt. So bleiben Domänenmodule klein und eine Lösung kann sie kombinieren, ohne versteckte Kopplung zu erzeugen.
 
-## Data isolation
+## Datenisolierung
 
-Each microservice has its own physical storage root. Behemoth can serve many
-roots from one process, but it preserves their ownership boundaries and refuses
-to create data outside the configured mounts.
+Jeder Microservice besitzt eine eigene physische Speicherwurzel. Behemoth kann viele Wurzeln aus einem Prozess bedienen, bewahrt jedoch deren Eigentumsgrenzen und verweigert das Erstellen von Daten außerhalb der konfigurierten Einbindungen.
 
-The same model scales across deployment profiles:
+Dasselbe Modell skaliert über verschiedene Bereitstellungsprofile hinweg:
 
-- an edge installation can run one Behemoth instance for the platform;
-- a larger installation can divide scopes across storage shards;
-- a cloud installation can run an isolated storage instance per tenant.
+- eine Edge-Installation kann eine Behemoth-Instanz für die Plattform ausführen;
+- eine größere Installation kann Bereiche über Speicher-Shards aufteilen;
+- eine Cloud-Installation kann eine isolierte Speicherinstanz pro Mandant ausführen.
 
-Changing the topology does not change application code because peers continue
-to address logical targets and storage boundaries.
+Eine Änderung der Topologie verändert den Anwendungscode nicht, weil Peers weiterhin logische Ziele und Speichergrenzen adressieren.
 
-## Control plane
+## Steuerungsebene
 
-Ptah is the control plane and is not connected to Fujin. It observes the
-declared Platform, Solution and Tenant resources, calculates the desired
-workloads and reconciles them with Kubernetes.
+Ptah ist die Steuerungsebene und nicht mit Fujin verbunden. Ptah beobachtet die deklarierten Ressourcen für Plattform, Lösung und Mandant, berechnet die gewünschten Workloads und gleicht sie mit Kubernetes ab.
 
 ```text
 Platform + Solutions + Tenants
@@ -91,18 +69,10 @@ Platform + Solutions + Tenants
 Deployments, Services, volumes, configuration and routes
 ```
 
-This separation lets the runtime stay focused on business traffic while the
-deployment model handles placement, storage topology, tenant routes and
-lifecycle. The same application images can therefore run on a compact edge
-cluster or in a multi-tenant cloud environment.
+Diese Trennung ermöglicht es der Laufzeit, sich auf den Geschäftsverkehr zu konzentrieren, während das Bereitstellungsmodell Platzierung, Speichertopologie, Mandantenrouten und Lebenszyklus behandelt. Dadurch können dieselben Anwendungs-Images in einem kompakten Edge-Cluster oder in einer mandantenfähigen Cloud-Umgebung ausgeführt werden.
 
-## Trusted context
+## Vertrauenswürdiger Kontext
 
-Tenant scope is established at the platform edge and carried in the message
-envelope. Runtime services consume that trusted context instead of deriving a
-tenant from application payloads. Storage placement, service calls and media
-sessions all preserve the same scope boundary.
+Der Mandantenbereich wird am Plattformrand festgelegt und im Nachrichtenumschlag übertragen. Laufzeitdienste verwenden diesen vertrauenswürdigen Kontext, anstatt einen Mandanten aus Anwendungspayloads abzuleiten. Speicherplatzierung, Serviceaufrufe und Mediensitzungen bewahren dieselbe Bereichsgrenze.
 
-Together, logical messaging, isolated storage, replayable workflows and a
-separate control plane allow Converged to remain modular without pushing
-distributed-system complexity into every business module.
+Zusammen ermöglichen logische Nachrichtenübertragung, isolierter Speicher, wiedergabefähige Workflows und eine separate Steuerungsebene, dass Converged modular bleibt, ohne die Komplexität verteilter Systeme in jedes Geschäftsmodul zu verlagern.

@@ -1,21 +1,21 @@
 # rp-orders
 
-## Purpose
+## Scopo
 
-Provides the service contract for creating, updating, listing, and tracking business orders.
+Fornisce il contratto di servizio per la creazione, l'aggiornamento, l'elenco e il monitoraggio degli ordini aziendali.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-The module boundary is defined by its public contracts and implementation directory.
+Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Origine
 
 `modules/repositories/business/rp-orders`

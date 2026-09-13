@@ -1,94 +1,66 @@
 # rp-dag
 
-## Purpose
+## Zweck
 
-Owns the workflow triggers and the execution log. It executes nothing.
+Verantwortet die Workflow-Trigger und das Ausführungsprotokoll. Führt selbst nichts aus.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-Two things belong here and nothing else:
+Hierher gehören genau zwei Dinge und nichts anderes:
 
-- **Triggers** — "when this bus topic appears, run that workflow". System
-  configuration: tens of rows an operator maintains, held whole in the
-  runtime's memory rather than queried.
-- **The execution log** — a tree of what a run did. The runtime writes it while
-  the script runs: a node is opened before its body executes and closed when it
-  finishes, so a run in flight shows the node it is sitting on.
+- **Trigger** — „wenn dieses Bus-Thema erscheint, führe jenen Workflow aus“. Systemkonfiguration: Dutzende von Zeilen, die ein Operator pflegt und die vollständig im Speicher der Laufzeit gehalten werden, statt abgefragt zu werden.
+- **Das Ausführungsprotokoll** — ein Baum dessen, was ein Lauf getan hat. Die Laufzeit schreibt ihn, während das Skript läuft: Ein Knoten wird geöffnet, bevor sein Inhalt ausgeführt wird, und geschlossen, wenn er fertig ist, sodass ein laufender Lauf den Knoten zeigt, bei dem er gerade steht.
 
-The workflow catalogue is not owned here. Ptah puts the active Solution's
-descriptors into this service's environment (`WORKFLOWS`, `WORKFLOW_DIGESTS`,
-`MODULE_PROXY`) and `listAvailableWorkflows` republishes them for the runtime
-and the UI. Source bytes stay behind Ptah-proxy.
+Der Workflow-Katalog wird hier nicht verwaltet. Ptah legt die Deskriptoren der aktiven Solution in die Umgebung dieses Dienstes (`WORKFLOWS`, `WORKFLOW_DIGESTS`, `MODULE_PROXY`) und `listAvailableWorkflows` veröffentlicht sie für die Laufzeit und die UI erneut. Die Quelldaten bleiben hinter Ptah-proxy.
 
-## The log is written by the runtime, not by this service
+## Das Protokoll wird von der Laufzeit geschrieben, nicht von diesem Dienst
 
-Nothing here writes a log entry. The runtime formats it, puts it in Valkey under
-a key it composes itself, and later hands over the keys — never the entries.
-`commitLog` turns each key into a store location and tells storage to pick the
-entry up; storage reads the cache directly, so an entry crosses the transport
-once, as bytes nobody re-encodes.
+Nichts hier schreibt einen Protokolleintrag. Die Laufzeit formatiert ihn, legt ihn unter einem selbst zusammengesetzten Schlüssel in Valkey ab und übergibt später die Schlüssel — niemals die Einträge.
+`commitLog` wandelt jeden Schlüssel in einen Speicherort um und weist den Speicher an, den Eintrag abzuholen; der Speicher liest den Cache direkt, sodass ein Eintrag den Transport genau einmal durchquert, als Bytes, die niemand erneut kodiert.
 
 ```text
-workflow thread ─► queue ─► log writer ─► valkey
-                                 │
-                                 └─ commitLog([keys]) ─► rp-dag ─► storage reads valkey
-                                                                        │
-                                 ◄──── committed ────────────────────────┘
-                                 └─ delete the committed keys
+Workflow-Thread ─► Warteschlange ─► Protokollschreiber ─► Valkey
+                                      │
+                                      └─ commitLog([keys]) ─► rp-dag ─► Speicher liest Valkey
+                                                                                 │
+                                      ◄──── übernommen ──────────────────────────┘
+                                      └─ die übernommenen Schlüssel löschen
 ```
 
-That is what keeps logging off the workflow's critical path: a node costs the
-runtime a queue append and nothing else. It also means the log is best effort by
-construction — an entry may be dropped under backpressure, and a batch may be
-committed twice after a crash. Keys are derived from the run and the node's
-sequence, so the second commit is a rewrite rather than a duplicate.
+Das hält die Protokollierung vom kritischen Pfad des Workflows fern: Ein Knoten kostet die Laufzeit einen Eintrag in die Warteschlange und sonst nichts. Es bedeutet außerdem, dass das Protokoll konstruktionsbedingt nach bestem Bemühen geführt wird — ein Eintrag kann bei Rückstau verloren gehen, und ein Stapel kann nach einem Absturz zweimal übernommen werden. Schlüssel werden aus dem Lauf und der Sequenz des Knotens abgeleitet, sodass die zweite Übernahme eine Überschreibung statt eines Duplikats ist.
 
-Keys come from the runtime for that reason: a number handed out by this service
-would cost a round trip per node and would not be reproducible after a restart.
+Aus diesem Grund kommen die Schlüssel von der Laufzeit: Eine von diesem Dienst vergebene Nummer würde pro Knoten eine Hin- und Rückfahrt kosten und wäre nach einem Neustart nicht reproduzierbar.
 
-- `dag:log:<executionId>:exec` — the run
-- `dag:log:<executionId>:n:<seq>` — one of its nodes, zero-padded to six digits
+- `dag:log:<executionId>:exec` — der Lauf
+- `dag:log:<executionId>:n:<seq>` — einer seiner Knoten, auf sechs Stellen mit Nullen aufgefüllt
 
-`commitLog` derives the store location from the key and refuses anything outside
-the `dag:log:` prefix, so a key is the whole of the authority the call carries.
+`commitLog` leitet den Speicherort aus dem Schlüssel ab und lehnt alles außerhalb des Präfixes `dag:log:` ab, sodass ein Schlüssel die gesamte Autorität darstellt, die der Aufruf mit sich führt.
 
-## The log is a tree
+## Das Protokoll ist ein Baum
 
 ```text
-exec:<id>              the run
-node:<id>:<seq>        its nodes, in the order they opened
+exec:<id>              der Lauf
+node:<id>:<seq>        seine Knoten in der Reihenfolge, in der sie geöffnet wurden
 ```
 
-A node that delegated through `rt.sub` carries the child run's id, and the
-child is an ordinary run with nodes of its own. `executionTree` walks that link
-depth-first and returns the result flat, each row tagged with its `depth` — so
-a client renders the tree by indenting and nothing else. No parent index is
-needed: the link is the node that made it.
+Ein Knoten, der über `rt.sub` delegiert hat, enthält die ID des untergeordneten Laufs, und das untergeordnete Element ist ein gewöhnlicher Lauf mit eigenen Knoten. `executionTree` folgt diesem Verweis in Tiefensuche und gibt das Ergebnis flach zurück, wobei jede Zeile mit ihrer `depth` gekennzeichnet ist — ein Client stellt den Baum dar, indem er nur einrückt. Ein übergeordneter Index ist nicht erforderlich: Der Verweis ist der Knoten, der ihn erstellt hat.
 
-Sequences are zero-padded in the key, because the KV store returns a prefix
-range in lexicographic order and that order has to be the order the nodes ran.
-The runtime pads to the same width when it composes the cache key; the two
-widths are one contract.
+Sequenzen werden im Schlüssel mit Nullen aufgefüllt, weil der KV-Speicher einen Präfixbereich in lexikografischer Reihenfolge zurückgibt und diese Reihenfolge der Reihenfolge entsprechen muss, in der die Knoten ausgeführt wurden. Die Laufzeit füllt beim Zusammensetzen des Cache-Schlüssels auf dieselbe Breite auf; die beiden Breiten sind ein Vertrag.
 
-Retention is a cap on runs (`5000` by default), enforced every hundredth open.
-The log is diagnostics, not an archive.
+Die Aufbewahrung ist auf Läufe begrenzt (`5000` standardmäßig) und wird bei jedem hundertsten Öffnen durchgesetzt. Das Protokoll dient der Diagnose, nicht der Archivierung.
 
-## Trigger changes reach the runtime over the bus
+## Trigger-Änderungen erreichen die Laufzeit über den Bus
 
-Creating, changing or deleting a trigger publishes `dag.triggers.changed`. The
-runtime subscribes to that topic alongside the triggers' own, so an edit is live
-for the next event instead of waiting out a polling interval. Publishing is best
-effort — a bus that is down must not fail an operator's edit — and the runtime's
-periodic refresh remains the backstop.
+Beim Erstellen, Ändern oder Löschen eines Triggers wird `dag.triggers.changed` veröffentlicht. Die Laufzeit abonniert dieses Thema zusätzlich zu den eigenen Themen der Trigger, sodass eine Änderung für das nächste Ereignis aktiv ist, statt ein Abfrageintervall abzuwarten. Die Veröffentlichung erfolgt nach bestem Bemühen — ein ausgefallener Bus darf die Änderung durch einen Operator nicht fehlschlagen lassen — und die regelmäßige Aktualisierung der Laufzeit bleibt die Rückfallebene.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- g-bus — to announce a trigger change
+- g-bus — um eine Trigger-Änderung anzukündigen
 
-## Solution membership
+## Solution-Zugehörigkeit
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Solution enthalten
 
-## Source
+## Quelle
 
 `modules/repositories/automation/rp-dag`

@@ -1,21 +1,21 @@
 # sf-assistants
 
-## Purpose
+## Propósito
 
-Owns Assistants UI: assistant chat/workspace views, assistant configuration panels, and assistant session interaction components.
+Es propietario de la interfaz de usuario de Assistants: vistas de chat/espacio de trabajo del asistente, paneles de configuración del asistente y componentes de interacción con las sesiones del asistente.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Controls assistant user experience and assistant-scoped state; does not own shared identity/profile UI or infrastructure telemetry pages.
+Controla la experiencia del usuario del asistente y el estado específico del asistente; no es propietario de la interfaz de usuario compartida de identidad/perfil ni de las páginas de telemetría de infraestructura.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
 - `sf-requests`
 
-## Solution membership
+## Pertenencia a la solución
 
 - `ai`
 
-## Source
+## Fuente
 
 `modules/surfaces/ai/sf-assistants`

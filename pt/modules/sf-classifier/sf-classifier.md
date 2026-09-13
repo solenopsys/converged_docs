@@ -1,21 +1,21 @@
 # sf-classifier
 
-## Purpose
+## Objetivo
 
-Provides the classifier interface for navigating entities, mappings, and tree structures.
+Fornece a interface do classificador para navegar por entidades, mapeamentos e estruturas de árvore.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-The module boundary is defined by its public contracts and implementation directory.
+O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Fonte
 
 `modules/surfaces/content/sf-classifier`

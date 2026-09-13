@@ -1,43 +1,44 @@
 # rp-chats
 
-## Purpose
+## Назначение
 
-Chat rooms, their membership and their per-room contexts. The conversation
-itself is not here: a room carries a `threadId` and the messages live in
+Комнаты чатов, их участники и контексты для каждой комнаты. Самой переписки
+здесь нет: комната содержит `threadId`, а сообщения находятся в
 `rp-threads`.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns rooms, roles and contexts. Calls no other repository — `createRoom` mints
-the `threadId` and returns it, and the caller registers the thread.
+Отвечает за комнаты, роли и контексты. Не вызывает другие репозитории —
+`createRoom` создаёт `threadId` и возвращает его, а вызывающий код регистрирует
+тред.
 
-## Identity and access
+## Идентификация и доступ
 
-The caller comes from the verified token, never from a parameter. Two
-consequences worth naming:
+Вызывающий код получает идентификатор из проверенного токена, а не из
+параметра. Стоит отметить два следствия:
 
-- `listRooms` is scoped to the caller inside the query, so substituting another
-  user's id no longer reads their rooms, and `totalCount` cannot leak the number
-  of rooms it hid;
-- anything addressing one room by id checks membership first.
+- `listRooms` ограничивает область выборки вызывающим кодом внутри запроса, поэтому подстановка идентификатора другого
+  пользователя больше не позволяет прочитать его комнаты, а `totalCount` не может раскрыть количество комнат,
+  которые были скрыты;
+- любой запрос к одной комнате по идентификатору сначала проверяет членство.
 
-`chart_room_users` stays even after `access_tags` arrives: a tag expresses
-membership but not `owner` versus `admin` versus `member`.
+`chart_room_users` сохраняется и после появления `access_tags`: тег выражает
+членство, но не различает `owner`, `admin` и `member`.
 
-## Note on table names
+## Примечание об именах таблиц
 
-The tables are spelled `chart_rooms` / `chart_room_users`. The typo is
-consistent across migrations, entities and queries, so the code works; renaming
-is a migration, not an edit.
+Таблицы называются `chart_rooms` / `chart_room_users`. Опечатка
+последовательно воспроизводится в миграциях, сущностях и запросах, поэтому код
+работает; переименование — это миграция, а не редактирование.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
 - `back-core`, `nrpc`, `g-chats`
 
-## Solution membership
+## Принадлежность к решению
 
 - `communications`
 
-## Source
+## Исходный код
 
 `modules/repositories/communications/rp-chats`

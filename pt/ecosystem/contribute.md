@@ -1,13 +1,13 @@
-## Adding a module
+## Adicionando um módulo
 
-The steps are the same for the base platform and for a product layer.
+As etapas são as mesmas para a plataforma base e para uma camada de produto.
 
-1. **Create the directory** by convention: `modules/microservices/<domain>/ms-<name>` for a service, `modules/surfaces/<domain>/sf-<name>` for a screen, `modules/workflows/wf-<name>` for a process.
-2. **Declare the contract** in `modules/types/<domain>/` and generate the clients with `bun run gen`. The client appears as a `g-<name>` package, usable from the browser, from another process on the bus, and from inside a workflow.
-3. **Write the README** with a `## Purpose` section and an ownership-boundary section. The first paragraph of each ends up in the registry on the site — write them for a reader, not for yourself.
-4. **Add the module to a solution** if it does not ship alone: put its short name in `modules/solutions/solutions.json` and declare its dependencies.
-5. **Rebuild the docs**: `bun run build:doc` at the repository root. The module shows up in the registry and the counters on the ecosystem page recount themselves.
+1. **Crie o diretório** por convenção: `modules/microservices/<domain>/ms-<name>` para um serviço, `modules/surfaces/<domain>/sf-<name>` para uma tela, `modules/workflows/wf-<name>` para um processo.
+2. **Declare o contrato** em `modules/types/<domain>/` e gere os clientes com `bun run gen`. O cliente aparece como um pacote `g-<name>`, utilizável no navegador, a partir de outro processo no barramento e de dentro de um fluxo de trabalho.
+3. **Escreva o README** com uma seção `## Purpose` e uma seção sobre o limite de responsabilidade. O primeiro parágrafo de cada uma acaba no registro do site — escreva para um leitor, não para você mesmo.
+4. **Adicione o módulo a uma solução** se ele não for distribuído sozinho: coloque seu nome curto em `modules/solutions/solutions.json` e declare suas dependências.
+5. **Reconstrua a documentação**: `bun run build:doc` na raiz do repositório. O módulo aparecerá no registro, e os contadores da página do ecossistema serão recalculados automaticamente.
 
-What you do not have to do: edit module lists in the site data, restate the description in the landing, or register the module anywhere else. Generation runs one way — from sources into data, never back. Anything under `data/` is overwritten by the next build.
+O que você não precisa fazer: editar listas de módulos nos dados do site, repetir a descrição na página inicial ou registrar o módulo em qualquer outro lugar. A geração ocorre em uma única direção — das fontes para os dados, nunca no sentido contrário. Tudo em `data/` é sobrescrito pela próxima compilação.
 
-What review asks of a module: it does not reach into another module's storage, does not bypass the bus with direct calls, declares only the permissions it actually uses, and does not quietly widen its area of responsibility.
+O que a revisão exige de um módulo: ele não acessa o armazenamento de outro módulo, não contorna o barramento com chamadas diretas, declara apenas as permissões que realmente utiliza e não amplia silenciosamente sua área de responsabilidade.

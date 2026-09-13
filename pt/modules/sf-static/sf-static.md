@@ -1,21 +1,21 @@
 # sf-static
 
-## Purpose
+## Finalidade
 
-Provides the operations interface for inspecting and clearing static SSR cache entries.
+Fornece a interface de operações para inspecionar e limpar entradas de cache SSR estático.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-The module boundary is defined by its public contracts and implementation directory.
+O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Fonte
 
 `modules/surfaces/content/sf-static`

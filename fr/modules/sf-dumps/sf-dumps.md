@@ -1,20 +1,20 @@
 # sf-dumps
 
-## Purpose
+## Objectif
 
-Owns Data Dumps UI: export/dump creation forms, dump history tables, download actions, and dump status/progress indicators.
+Gère l’interface utilisateur des vidages de données : formulaires de création d’export/vidage, tableaux d’historique des vidages, actions de téléchargement et indicateurs d’état/de progression des vidages.
 
-## Responsibility boundary
+## Limite des responsabilités
 
-Controls user-facing dump/export workflows and status presentation; does not own storage/archive backend execution internals.
+Contrôle les flux de travail d’export/vidage destinés aux utilisateurs et la présentation de leur état ; ne gère pas les composants internes d’exécution du stockage/de l’archivage côté backend.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

@@ -1,21 +1,21 @@
 # rp-equipment
 
-## Purpose
+## Scopo
 
-Manages equipment entities, metadata, and related lifecycle operations.
+Gestisce le entità delle apparecchiature, i metadati e le relative operazioni del ciclo di vita.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns equipment catalog and state transitions; does not own logistics carrier execution.
+È responsabile del catalogo delle apparecchiature e delle transizioni di stato; non è responsabile dell'esecuzione da parte dei vettori logistici.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Origine
 
 `modules/repositories/business/rp-equipment`

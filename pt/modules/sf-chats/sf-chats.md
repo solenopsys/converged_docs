@@ -1,37 +1,37 @@
 # sf-chats
 
-## Purpose
+## Objetivo
 
-Chat rooms, as three separate tabs: the room list, one room's conversation, and
-one room's membership. Managing who is in a room and reading what they said are
-two jobs and therefore two tabs.
+Salas de bate-papo, como três abas separadas: a lista de salas, a conversa de uma sala e
+os membros de uma sala. Gerenciar quem está em uma sala e ler o que disseram são
+duas tarefas e, portanto, duas abas.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Owns room navigation, the conversation screen and membership editing. Messages
-belong to `rp-threads`, read directly from the browser; files belong to
-`rp-files` through a `link` message.
+É responsável pela navegação das salas, pela tela de conversa e pela edição dos membros. As mensagens
+pertencem a `rp-threads`, lidas diretamente pelo navegador; os arquivos pertencem a
+`rp-files` por meio de uma mensagem `link`.
 
-## How a room is created
+## Como uma sala é criada
 
-`createRoom` on `rp-chats` mints the room id and the thread id and records the
-creator from the token as `owner`; this surface then registers the thread with
-`rp-threads`. `rp-chats` never calls another repository.
+`createRoom` em `rp-chats` gera o id da sala e o id da thread e registra o
+criador do token como `owner`; esta superfície então registra a thread em
+`rp-threads`. `rp-chats` nunca chama outro repositório.
 
-## Live updates
+## Atualizações em tempo real
 
-A new message is published to each member by name over Fujin's `pushrouter`,
-never to the whole tenant: a private room's existence is not public even when
-its contents stay behind the read predicate. The push carries identifiers only.
+Uma nova mensagem é publicada para cada membro nominalmente por meio do `pushrouter` do Fujin,
+nunca para todo o tenant: a existência de uma sala privada não é pública, mesmo quando
+seu conteúdo permanece protegido pelo predicado de leitura. O push transporta apenas identificadores.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
 - `effector`, `front-core`, `g-chats`, `g-threads`, `signal-channel`, `threads-state`
 
-## Solution membership
+## Associação à solução
 
 - `communications`
 
-## Source
+## Fonte
 
 `modules/surfaces/communications/sf-chats`

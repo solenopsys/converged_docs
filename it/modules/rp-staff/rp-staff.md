@@ -1,21 +1,21 @@
 # rp-staff
 
-## Purpose
+## Scopo
 
-Manages staff records, roles, and staff-centric domain operations.
+Gestisce i record del personale, i ruoli e le operazioni di dominio incentrate sul personale.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns staff domain data and workflows; does not own authentication credential issuance.
+Gestisce i dati e i flussi di lavoro del dominio del personale; non gestisce l'emissione delle credenziali di autenticazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Origine
 
 `modules/repositories/business/rp-staff`

@@ -1,21 +1,21 @@
 # sf-markdown
 
-## Purpose
+## Scopo
 
-Owns Markdown UI: markdown editor surfaces, live preview panels, markdown content formatting controls, and publish-ready views.
+Gestisce l'interfaccia utente Markdown: superfici dell'editor Markdown, pannelli di anteprima in tempo reale, controlli di formattazione dei contenuti Markdown e viste pronte per la pubblicazione.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Controls markdown authoring/presentation UX; does not own document permissions/auth or media conversion infrastructure.
+Gestisce l'esperienza utente di creazione e presentazione in Markdown; non gestisce le autorizzazioni dei documenti, l'autenticazione o l'infrastruttura di conversione dei media.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `content`
 
-## Source
+## Origine
 
 `modules/surfaces/content/sf-markdown`

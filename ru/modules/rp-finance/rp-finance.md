@@ -1,21 +1,21 @@
 # rp-finance
 
-## Purpose
+## Назначение
 
-Provides finance operations for transactions, period summaries, cashflow, receivables, and payables.
+Предоставляет операции с финансами для транзакций, сводок за периоды, движения денежных средств, дебиторской и кредиторской задолженности.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его общедоступными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включён в заранее определённое решение
 
-## Source
+## Исходный код
 
 `modules/repositories/business/rp-finance`

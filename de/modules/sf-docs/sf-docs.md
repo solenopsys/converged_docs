@@ -1,21 +1,21 @@
 # sf-docs
 
-## Purpose
+## Zweck
 
-Owns Docs UI: document browsing, document detail views, editing/preview interfaces, and documentation navigation components.
+Verantwortet die Benutzeroberfläche für Dokumente: das Durchsuchen von Dokumenten, Detailansichten von Dokumenten, Bearbeitungs-/Vorschauoberflächen und Navigationskomponenten für die Dokumentation.
 
-## Responsibility boundary
+## Zuständigkeitsbereich
 
-Controls document-centered frontend workflows and UI states; does not own markdown engine internals or binary media storage tooling.
+Steuert frontendseitige Workflows und UI-Zustände rund um Dokumente; ist nicht für die Interna der Markdown-Engine oder Werkzeuge zur Speicherung binärer Medien zuständig.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `content`
 
-## Source
+## Quelle
 
 `modules/surfaces/content/sf-docs`

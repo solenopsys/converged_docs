@@ -1,21 +1,21 @@
 # wf-files-analyze
 
-## Purpose
+## Назначение
 
-wf-files-analyze is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-files-analyze — это рабочий процесс в предметной области платформы. Его подробное назначение описывается вместе с исходным кодом модуля.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Принадлежность к решению
 
 - `requests`
 
-## Source
+## Исходный код
 
 `modules/workflows/wf-files-analyze`

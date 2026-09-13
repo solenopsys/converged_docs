@@ -1,43 +1,43 @@
 # rp-chats
 
-## Purpose
+## Propósito
 
-Chat rooms, their membership and their per-room contexts. The conversation
-itself is not here: a room carries a `threadId` and the messages live in
+Salas de chat, sus miembros y sus contextos por sala. La conversación
+en sí no está aquí: una sala contiene un `threadId` y los mensajes viven en
 `rp-threads`.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns rooms, roles and contexts. Calls no other repository — `createRoom` mints
-the `threadId` and returns it, and the caller registers the thread.
+Gestiona las salas, los roles y los contextos. No llama a ningún otro repositorio — `createRoom` genera el
+`threadId` y lo devuelve, y el llamador registra el hilo.
 
-## Identity and access
+## Identidad y acceso
 
-The caller comes from the verified token, never from a parameter. Two
-consequences worth naming:
+El llamador proviene del token verificado, nunca de un parámetro. Dos
+consecuencias que vale la pena mencionar:
 
-- `listRooms` is scoped to the caller inside the query, so substituting another
-  user's id no longer reads their rooms, and `totalCount` cannot leak the number
-  of rooms it hid;
-- anything addressing one room by id checks membership first.
+- `listRooms` está limitado al llamador dentro de la consulta, por lo que sustituir el id de
+otro usuario ya no permite leer sus salas, y `totalCount` no puede filtrar el número
+de salas que ocultó;
+- cualquier operación que acceda a una sala por su id comprueba primero la pertenencia.
 
-`chart_room_users` stays even after `access_tags` arrives: a tag expresses
-membership but not `owner` versus `admin` versus `member`.
+`chart_room_users` permanece incluso después de que llegue `access_tags`: una etiqueta expresa
+la pertenencia, pero no distingue entre `owner`, `admin` y `member`.
 
-## Note on table names
+## Nota sobre los nombres de las tablas
 
-The tables are spelled `chart_rooms` / `chart_room_users`. The typo is
-consistent across migrations, entities and queries, so the code works; renaming
-is a migration, not an edit.
+Las tablas se escriben `chart_rooms` / `chart_room_users`. El error tipográfico es
+coherente en todas las migraciones, entidades y consultas, por lo que el código funciona; cambiar el nombre
+requiere una migración, no una edición.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
 - `back-core`, `nrpc`, `g-chats`
 
-## Solution membership
+## Pertenencia a la solución
 
 - `communications`
 
-## Source
+## Fuente
 
 `modules/repositories/communications/rp-chats`

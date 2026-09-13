@@ -1,21 +1,21 @@
 # wf-files-process
 
-## Purpose
+## Propósito
 
-Intake for uploaded files: it expands archives and classifies everything that came out, reporting which files are production models. It does not create a request and does not analyse anything — that is the assistant's decision followed by `wf-request-analyze`.
+Recepción de archivos cargados: expande los archivos comprimidos y clasifica todo lo que contienen, indicando qué archivos son modelos de producción. No crea una solicitud ni analiza nada; esa es la decisión del asistente, seguida de `wf-request-analyze`.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-The module boundary is defined by its public contracts and implementation directory.
+El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `requests`
 
-## Source
+## Fuente
 
 `modules/workflows/wf-files-process`

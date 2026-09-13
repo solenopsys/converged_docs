@@ -1,21 +1,21 @@
 # rp-threads
 
-## Purpose
+## Назначение
 
-Manages threaded conversations and related message context.
+Управляет ветками обсуждений и связанным контекстом сообщений.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns thread lifecycle and thread-level metadata; does not own transport gateways for email/SMS/push.
+Отвечает за жизненный цикл веток и метаданные уровня ветки; не отвечает за транспортные шлюзы электронной почты/SMS/push.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Входит в состав решения
 
 - `ai`
 
-## Source
+## Исходный код
 
 `modules/repositories/communications/rp-threads`

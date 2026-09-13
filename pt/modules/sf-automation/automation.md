@@ -1,43 +1,45 @@
-# Automation
+# Automação
 
-## Purpose
+## Objetivo
 
-Owns the automation workspace: workflows and their runs, the bus triggers that
-start them, recurring schedules, and inbound webhook endpoints.
+É responsável pelo espaço de trabalho de automação: fluxos de trabalho e suas
+execuções, os gatilhos do barramento que os iniciam, agendamentos recorrentes
+e endpoints de webhook de entrada.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Controls the workspace experience. It does not execute workflows, keep
-schedules, or deliver webhooks — it starts a run through the runtime and reads
-the log back from rp-dag.
+Controla a experiência do espaço de trabalho. Não executa fluxos de trabalho,
+não mantém agendamentos nem entrega webhooks — inicia uma execução por meio do
+runtime e lê o log de volta do rp-dag.
 
-## The DAG section
+## A seção DAG
 
-- **Workflows** — the catalogue the active Solution publishes, read-only.
-  Opening one is asking to run it: parameters are typed as JSON and handed to
-  `centimanus.runWorkflow`.
-- **Runs** — every execution, with its status.
-- **Run detail** — the tree of what the run did. One line per node: how deep it
-  sits, whether it finished, how long it took. Unfolding a node shows the
-  service calls it made and what came back. A node that delegated through
-  `rt.sub` is followed by the nodes of the run it delegated to, one level in.
-  A run that is still going refreshes itself.
-- **Triggers** — "when this bus topic appears, run that workflow". Topic,
-  workflow, JSON parameters, on/off.
-- **Variables** — workflow state written by `rt.set`.
+- **Fluxos de trabalho** — o catálogo publicado pela Solution ativa, somente para leitura.
+  Abrir um fluxo significa pedir para executá-lo: os parâmetros são tipados como JSON e
+  enviados para `centimanus.runWorkflow`.
+- **Execuções** — cada execução, com seu status.
+- **Detalhes da execução** — a árvore do que a execução fez. Uma linha por nó: quão
+  profundo ele está, se foi concluído e quanto tempo levou. Expandir um nó mostra as
+  chamadas de serviço que ele fez e o que retornou. Um nó que delegou por meio de
+  `rt.sub` é seguido pelos nós da execução para a qual ele delegou, um nível abaixo.
+  Uma execução que ainda está em andamento é atualizada automaticamente.
+- **Gatilhos** — "quando este tópico do barramento aparecer, execute aquele fluxo de
+  trabalho". Tópico, fluxo de trabalho, parâmetros JSON, ativado/desativado.
+- **Variáveis** — estado do fluxo de trabalho escrito por `rt.set`.
 
-Parameters are typed as JSON everywhere rather than generated into a form: a
-workflow's parameters are its own and change with it, so a text field stays
-correct when they do and what is typed is what the workflow receives.
+Os parâmetros são tipados como JSON em todos os lugares, em vez de serem gerados em
+um formulário: os parâmetros de um fluxo de trabalho pertencem a ele e mudam com ele,
+portanto um campo de texto continua correto quando eles mudam, e o que é digitado é o
+que o fluxo de trabalho recebe.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação em soluções
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Origem
 
 `modules/surfaces/automation/sf-automation`

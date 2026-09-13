@@ -1,21 +1,21 @@
 # wf-file-unpack
 
-## Purpose
+## Scopo
 
-Expands one uploaded archive into a collection of stored files for subsequent analysis.
+Espande un archivio caricato in una raccolta di file archiviati per l'analisi successiva.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-The module boundary is defined by its public contracts and implementation directory.
+Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `requests`
 
-## Source
+## Sorgente
 
 `modules/workflows/wf-file-unpack`

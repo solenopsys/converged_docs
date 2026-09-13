@@ -1,9 +1,9 @@
-## An open platform
+## Eine offene Plattform
 
-Converged is meant to be an open manufacturing platform, not a sealed SaaS box. The core ships under an open-source licence, and integrations, microservices, surfaces, workflows and applied solutions grow around it.
+Converged soll eine offene Fertigungsplattform sein, keine abgeschottete SaaS-Box. Der Kern wird unter einer Open-Source-Lizenz ausgeliefert, und Integrationen, Microservices, Oberflächen, Workflows und anwendungsbezogene Lösungen wachsen darum herum.
 
-On the manufacturing market this is practical rather than ideological. Shops differ in equipment, materials, quality standards and supply chains. A closed system stops at the boundary of what its vendor anticipated. An open one lets you add an adapter for one specific machine, or an integration with one specific carrier, without waiting for somebody else's release.
+Auf dem Fertigungsmarkt ist das praktisch und nicht ideologisch. Betriebe unterscheiden sich bei Ausrüstung, Materialien, Qualitätsstandards und Lieferketten. Ein geschlossenes System endet an der Grenze dessen, was sein Anbieter vorhergesehen hat. Ein offenes System ermöglicht es, einen Adapter für genau eine Maschine oder eine Integration mit genau einem Spediteur hinzuzufügen, ohne auf die Veröffentlichung eines anderen warten zu müssen.
 
-An extension can be small: a machine adapter, an import from an old website, one extra screen, a workflow for an industry-specific process. If it is useful to others, it lands in the shared registry. If it is not, it stays in your deployment and keeps working.
+Eine Erweiterung kann klein sein: ein Maschinenadapter, ein Import von einer alten Website, ein zusätzlicher Bildschirm oder ein Workflow für einen branchenspezifischen Prozess. Wenn sie für andere nützlich ist, landet sie im gemeinsamen Register. Wenn nicht, bleibt sie in deiner Bereitstellung und funktioniert weiter.
 
-Open does not mean uncontrolled. A module must declare its area of responsibility, respect the architectural boundaries, and never obtain wider data access than it needs. Trust in the ecosystem rests on the sources, on reproducible builds and on an explicit permission model — not on promises.
+Offen bedeutet nicht unkontrolliert. Ein Modul muss seinen Verantwortungsbereich deklarieren, die Architekturgrenzen respektieren und niemals einen umfassenderen Datenzugriff erhalten, als es benötigt. Das Vertrauen in das Ökosystem beruht auf den Quellen, reproduzierbaren Builds und einem expliziten Berechtigungsmodell — nicht auf Versprechen.

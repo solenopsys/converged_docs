@@ -1,21 +1,21 @@
 # sf-telemetry
 
-## Purpose
+## Propósito
 
-Owns Telemetry UI: technical signal views, metrics graphs, event timelines, and service-health visual components.
+Es responsable de la interfaz de usuario de Telemetry: vistas de señales técnicas, gráficos de métricas, líneas de tiempo de eventos y componentes visuales del estado de los servicios.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Controls telemetry-specific visualizations and filters; does not own billing/usage reporting UX or shell-level navigation.
+Controla las visualizaciones y los filtros específicos de la telemetría; no es responsable de la experiencia de usuario de los informes de facturación/uso ni de la navegación a nivel del shell.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `analitycs`
 
-## Source
+## Origen
 
 `modules/surfaces/analytics/sf-telemetry`

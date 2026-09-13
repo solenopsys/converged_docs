@@ -1,21 +1,21 @@
 # rp-finance
 
-## Purpose
+## Finalidade
 
-Provides finance operations for transactions, period summaries, cashflow, receivables, and payables.
+Fornece operações financeiras para transações, resumos de períodos, fluxo de caixa, contas a receber e contas a pagar.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-The module boundary is defined by its public contracts and implementation directory.
+O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Origem
 
 `modules/repositories/business/rp-finance`

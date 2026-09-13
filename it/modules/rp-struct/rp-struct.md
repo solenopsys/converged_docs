@@ -1,21 +1,21 @@
 # rp-struct
 
-## Purpose
+## Scopo
 
-Builds and serves structured content representations used by other services.
+Costruisce e fornisce rappresentazioni di contenuti strutturati utilizzate da altri servizi.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns structure modeling and schema-level shaping; does not own final channel-specific rendering.
+Gestisce la modellazione della struttura e la definizione a livello di schema; non gestisce il rendering finale specifico del canale.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `content`
 
-## Source
+## Sorgente
 
 `modules/repositories/content/rp-struct`

@@ -1,21 +1,21 @@
 # rp-counters
 
-## Purpose
+## Назначение
 
-Provides the service contract for collecting and querying analytical counters.
+Предоставляет контракт сервиса для сбора и запросов аналитических счетчиков.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Принадлежность к решению
 
 - `analitycs`
 
-## Source
+## Исходный код
 
 `modules/repositories/analytics/rp-counters`

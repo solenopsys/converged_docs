@@ -1,18 +1,18 @@
 # rp-threads
 
-## Purpose
+## Objectif
 
-Manages threaded conversations and related message context.
+Gère les conversations en fil et le contexte des messages associés.
 
-## Responsibility boundary
+## Limite des responsabilités
 
-Owns thread lifecycle and thread-level metadata; does not own transport gateways for email/SMS/push.
+Possède le cycle de vie des fils et les métadonnées au niveau des fils ; ne possède pas les passerelles de transport pour les e-mails/SMS/notifications push.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `ai`
 

@@ -1,21 +1,21 @@
 # rp-resonus
 
-## Purpose
+## Propósito
 
-Provides communication configuration for managed phone numbers and LLM gate settings.
+Proporciona la configuración de comunicación para números de teléfono administrados y ajustes de puertas de enlace de LLM.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-The module boundary is defined by its public contracts and implementation directory.
+El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
-- Not included in a predefined solution
+- No incluido en una solución predefinida
 
-## Source
+## Origen
 
 `modules/repositories/communications/rp-resonus`

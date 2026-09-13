@@ -1,21 +1,21 @@
 # wf-dialogue-summary
 
-## Purpose
+## Zweck
 
-Summarizes unprocessed chat and call dialogues with an LLM, then stores titles, descriptions, and noise classification.
+Fasst unverarbeitete Chat- und Anrufdialoge mit einem LLM zusammen und speichert anschließend Titel, Beschreibungen und die Klassifizierung von Rauschen.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-The module boundary is defined by its public contracts and implementation directory.
+Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zu einer Lösung
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Lösung enthalten
 
-## Source
+## Quelle
 
 `modules/workflows/wf-dialogue-summary`

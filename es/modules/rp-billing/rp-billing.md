@@ -1,21 +1,21 @@
 # rp-billing
 
-## Purpose
+## Propósito
 
-Handles billing domain operations such as plans, charges, and billing state.
+Gestiona operaciones del dominio de facturación, como planes, cargos y el estado de facturación.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns billing workflows and billing records; does not own external payment gateway internals.
+Es responsable de los flujos de trabajo y los registros de facturación; no es responsable de los componentes internos de las pasarelas de pago externas.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
-- Not included in a predefined solution
+- No está incluido en una solución predefinida
 
-## Source
+## Fuente
 
 `modules/repositories/business/rp-billing`

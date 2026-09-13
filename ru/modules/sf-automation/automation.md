@@ -1,43 +1,45 @@
-# Automation
+# Автоматизация
 
-## Purpose
+## Назначение
 
-Owns the automation workspace: workflows and their runs, the bus triggers that
-start them, recurring schedules, and inbound webhook endpoints.
+Владеет рабочей областью автоматизации: рабочими процессами и их запусками,
+триггерами шины, которые их запускают, повторяющимися расписаниями и входящими
+конечными точками вебхуков.
 
-## Responsibility boundary
+## Граница ответственности
 
-Controls the workspace experience. It does not execute workflows, keep
-schedules, or deliver webhooks — it starts a run through the runtime and reads
-the log back from rp-dag.
+Управляет интерфейсом рабочей области. Она не выполняет рабочие процессы, не
+хранит расписания и не доставляет вебхуки — она запускает выполнение через
+среду выполнения и считывает журнал обратно из rp-dag.
 
-## The DAG section
+## Раздел DAG
 
-- **Workflows** — the catalogue the active Solution publishes, read-only.
-  Opening one is asking to run it: parameters are typed as JSON and handed to
-  `centimanus.runWorkflow`.
-- **Runs** — every execution, with its status.
-- **Run detail** — the tree of what the run did. One line per node: how deep it
-  sits, whether it finished, how long it took. Unfolding a node shows the
-  service calls it made and what came back. A node that delegated through
-  `rt.sub` is followed by the nodes of the run it delegated to, one level in.
-  A run that is still going refreshes itself.
-- **Triggers** — "when this bus topic appears, run that workflow". Topic,
-  workflow, JSON parameters, on/off.
-- **Variables** — workflow state written by `rt.set`.
+- **Рабочие процессы** — каталог, публикуемый активным Solution, доступный только для чтения.
+  Открытие рабочего процесса означает запрос на его запуск: параметры вводятся в формате JSON и
+  передаются в `centimanus.runWorkflow`.
+- **Запуски** — каждое выполнение с его статусом.
+- **Сведения о запуске** — дерево того, что сделал запуск. По одной строке на узел: насколько глубоко он
+  расположен, завершился ли он и сколько времени занял. Раскрытие узла показывает
+  вызовы сервисов, которые он выполнял, и полученный результат. За узлом, который делегировал выполнение через
+  `rt.sub`, следуют узлы запуска, которому он делегировал выполнение, на один уровень ниже.
+  Запуск, который всё ещё выполняется, обновляется автоматически.
+- **Триггеры** — «когда появляется эта тема шины, запустить тот рабочий процесс». Тема,
+  рабочий процесс, параметры JSON, включение/выключение.
+- **Переменные** — состояние рабочего процесса, записанное с помощью `rt.set`.
 
-Parameters are typed as JSON everywhere rather than generated into a form: a
-workflow's parameters are its own and change with it, so a text field stays
-correct when they do and what is typed is what the workflow receives.
+Параметры везде вводятся в формате JSON, а не генерируются в форму: параметры
+рабочего процесса принадлежат ему самому и меняются вместе с ним, поэтому
+текстовое поле остаётся корректным при их изменении, а введённое значение — это
+именно то, что получает рабочий процесс.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Включение в Solution
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/surfaces/automation/sf-automation`

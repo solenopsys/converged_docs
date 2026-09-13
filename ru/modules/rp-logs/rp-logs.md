@@ -1,21 +1,21 @@
 # rp-logs
 
-## Purpose
+## Назначение
 
-Collects and stores operational logs for platform services.
+Собирает и хранит операционные журналы для сервисов платформы.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns log ingestion and retrieval APIs; does not own business metrics or tracing strategy.
+Отвечает за API приёма и получения журналов; не отвечает за бизнес-метрики или стратегию трассировки.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
 - `analitycs`
 
-## Source
+## Исходный код
 
 `modules/repositories/analytics/rp-logs`

@@ -1,20 +1,20 @@
 # wf-sales-import
 
-## Purpose
+## Objectif
 
-wf-sales-import is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-sales-import est un workflow dans le domaine de la plateforme. Son objectif détaillé est documenté avec le code source du module.
 
-## Responsibility boundary
+## Limites de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+Les limites du module sont définies par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

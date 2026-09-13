@@ -1,32 +1,21 @@
 # rp-dag
 
-## Purpose
+## Propósito
 
-Owns the workflow triggers and the execution log. It executes nothing.
+Posee los activadores del flujo de trabajo y el registro de ejecución. No ejecuta nada.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Two things belong here and nothing else:
+Aquí pertenecen dos cosas y nada más:
 
-- **Triggers** — "when this bus topic appears, run that workflow". System
-  configuration: tens of rows an operator maintains, held whole in the
-  runtime's memory rather than queried.
-- **The execution log** — a tree of what a run did. The runtime writes it while
-  the script runs: a node is opened before its body executes and closed when it
-  finishes, so a run in flight shows the node it is sitting on.
+- **Activadores** — «cuando aparezca este tema del bus, ejecuta ese flujo de trabajo». Configuración del sistema: decenas de filas que mantiene un operador, conservadas en su totalidad en la memoria del tiempo de ejecución en lugar de consultarse.
+- **El registro de ejecución** — un árbol de lo que hizo una ejecución. El tiempo de ejecución lo escribe mientras se ejecuta el script: un nodo se abre antes de que se ejecute su cuerpo y se cierra cuando termina, de modo que una ejecución en curso muestra el nodo en el que se encuentra.
 
-The workflow catalogue is not owned here. Ptah puts the active Solution's
-descriptors into this service's environment (`WORKFLOWS`, `WORKFLOW_DIGESTS`,
-`MODULE_PROXY`) and `listAvailableWorkflows` republishes them for the runtime
-and the UI. Source bytes stay behind Ptah-proxy.
+El catálogo de flujos de trabajo no es propiedad de este servicio. Ptah coloca los descriptores de la Solution activa en el entorno de este servicio (`WORKFLOWS`, `WORKFLOW_DIGESTS`, `MODULE_PROXY`) y `listAvailableWorkflows` los vuelve a publicar para el tiempo de ejecución y la interfaz de usuario. Los bytes de origen permanecen detrás de Ptah-proxy.
 
-## The log is written by the runtime, not by this service
+## El registro lo escribe el tiempo de ejecución, no este servicio
 
-Nothing here writes a log entry. The runtime formats it, puts it in Valkey under
-a key it composes itself, and later hands over the keys — never the entries.
-`commitLog` turns each key into a store location and tells storage to pick the
-entry up; storage reads the cache directly, so an entry crosses the transport
-once, as bytes nobody re-encodes.
+Nada de aquí escribe una entrada de registro. El tiempo de ejecución le da formato, lo coloca en Valkey bajo una clave que compone por sí mismo y, posteriormente, entrega las claves —nunca las entradas—. `commitLog` convierte cada clave en una ubicación de almacenamiento e indica al almacenamiento que recoja la entrada; el almacenamiento lee directamente de la caché, por lo que una entrada cruza el transporte una sola vez, como bytes que nadie vuelve a codificar.
 
 ```text
 workflow thread ─► queue ─► log writer ─► valkey
@@ -37,58 +26,40 @@ workflow thread ─► queue ─► log writer ─► valkey
                                  └─ delete the committed keys
 ```
 
-That is what keeps logging off the workflow's critical path: a node costs the
-runtime a queue append and nothing else. It also means the log is best effort by
-construction — an entry may be dropped under backpressure, and a batch may be
-committed twice after a crash. Keys are derived from the run and the node's
-sequence, so the second commit is a rewrite rather than a duplicate.
+Eso es lo que mantiene el registro fuera de la ruta crítica del flujo de trabajo: un nodo le cuesta al tiempo de ejecución un añadido a la cola y nada más. También significa que el registro es, por construcción, de mejor esfuerzo —una entrada puede descartarse bajo presión y un lote puede confirmarse dos veces después de un fallo. Las claves se derivan de la ejecución y de la secuencia del nodo, por lo que la segunda confirmación es una reescritura y no un duplicado.
 
-Keys come from the runtime for that reason: a number handed out by this service
-would cost a round trip per node and would not be reproducible after a restart.
+Las claves proceden del tiempo de ejecución por esa razón: un número asignado por este servicio costaría un viaje de ida y vuelta por nodo y no sería reproducible después de un reinicio.
 
-- `dag:log:<executionId>:exec` — the run
-- `dag:log:<executionId>:n:<seq>` — one of its nodes, zero-padded to six digits
+- `dag:log:<executionId>:exec` — la ejecución
+- `dag:log:<executionId>:n:<seq>` — uno de sus nodos, con relleno de ceros hasta seis dígitos
 
-`commitLog` derives the store location from the key and refuses anything outside
-the `dag:log:` prefix, so a key is the whole of the authority the call carries.
+`commitLog` deriva la ubicación de almacenamiento a partir de la clave y rechaza cualquier cosa fuera del prefijo `dag:log:`, por lo que una clave constituye toda la autoridad que transporta la llamada.
 
-## The log is a tree
+## El registro es un árbol
 
 ```text
-exec:<id>              the run
-node:<id>:<seq>        its nodes, in the order they opened
+exec:<id>              la ejecución
+node:<id>:<seq>        sus nodos, en el orden en que se abrieron
 ```
 
-A node that delegated through `rt.sub` carries the child run's id, and the
-child is an ordinary run with nodes of its own. `executionTree` walks that link
-depth-first and returns the result flat, each row tagged with its `depth` — so
-a client renders the tree by indenting and nothing else. No parent index is
-needed: the link is the node that made it.
+Un nodo que delegó mediante `rt.sub` contiene el id de la ejecución secundaria, y la secundaria es una ejecución ordinaria con sus propios nodos. `executionTree` recorre ese vínculo en profundidad y devuelve el resultado plano, con cada fila etiquetada con su `depth` —de modo que un cliente representa el árbol aplicando sangría y nada más—. No se necesita un índice de padres: el vínculo es el nodo que lo creó.
 
-Sequences are zero-padded in the key, because the KV store returns a prefix
-range in lexicographic order and that order has to be the order the nodes ran.
-The runtime pads to the same width when it composes the cache key; the two
-widths are one contract.
+Las secuencias llevan relleno de ceros en la clave, porque el almacén KV devuelve un rango de prefijo en orden lexicográfico y ese orden debe ser el orden en que se ejecutaron los nodos. El tiempo de ejecución aplica el mismo ancho cuando compone la clave de caché; ambos anchos forman un único contrato.
 
-Retention is a cap on runs (`5000` by default), enforced every hundredth open.
-The log is diagnostics, not an archive.
+La retención es un límite de ejecuciones (`5000` de forma predeterminada), aplicado en cada centésima apertura. El registro sirve para diagnósticos, no es un archivo histórico.
 
-## Trigger changes reach the runtime over the bus
+## Los cambios de activadores llegan al tiempo de ejecución mediante el bus
 
-Creating, changing or deleting a trigger publishes `dag.triggers.changed`. The
-runtime subscribes to that topic alongside the triggers' own, so an edit is live
-for the next event instead of waiting out a polling interval. Publishing is best
-effort — a bus that is down must not fail an operator's edit — and the runtime's
-periodic refresh remains the backstop.
+Crear, cambiar o eliminar un activador publica `dag.triggers.changed`. El tiempo de ejecución se suscribe a ese tema junto con el propio de los activadores, por lo que una edición está activa para el siguiente evento en lugar de tener que esperar a que transcurra un intervalo de sondeo. La publicación es de mejor esfuerzo —un bus caído no debe hacer fallar la edición de un operador— y la actualización periódica del tiempo de ejecución sigue siendo el mecanismo de respaldo.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- g-bus — to announce a trigger change
+- g-bus — para anunciar un cambio de activador
 
-## Solution membership
+## Pertenencia a una Solution
 
-- Not included in a predefined solution
+- No incluido en una solución predefinida
 
-## Source
+## Origen
 
 `modules/repositories/automation/rp-dag`

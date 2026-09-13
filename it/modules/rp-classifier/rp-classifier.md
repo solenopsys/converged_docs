@@ -1,21 +1,21 @@
 # rp-classifier
 
-## Purpose
+## Scopo
 
-Classifies incoming content/items into categories, labels, or intents.
+Classifica i contenuti/gli elementi in ingresso in categorie, etichette o intenti.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns classification logic and label assignment; does not own source content ingestion pipelines.
+Gestisce la logica di classificazione e l'assegnazione delle etichette; non gestisce le pipeline di acquisizione dei contenuti di origine.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Origine
 
 `modules/repositories/content/rp-classifier`

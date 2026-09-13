@@ -1,21 +1,21 @@
 # sf-logs
 
-## Purpose
+## Zweck
 
-Owns Logs UI: log stream/table views, log search/filter controls, and log detail drill-down panels for operators.
+Verantwortet die Logs-Benutzeroberfläche: Ansichten für Log-Streams und -Tabellen, Steuerelemente für die Log-Suche und -Filterung sowie Detailansichten für Logs zur weiteren Untersuchung durch Operatoren.
 
-## Responsibility boundary
+## Verantwortungsbereich
 
-Controls log exploration and troubleshooting UX; does not own product usage dashboards or agent/business domain pages.
+Steuert die Benutzererfahrung für die Erkundung und Fehlerbehebung von Logs; besitzt keine Dashboards zur Produktnutzung oder Agenten-/Geschäftsdomänenseiten.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Lösungszugehörigkeit
 
 - `analitycs`
 
-## Source
+## Quelle
 
 `modules/surfaces/analytics/sf-logs`

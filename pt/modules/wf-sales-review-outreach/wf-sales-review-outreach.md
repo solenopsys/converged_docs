@@ -1,21 +1,21 @@
 # wf-sales-review-outreach
 
-## Purpose
+## Propósito
 
-wf-sales-review-outreach is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-sales-review-outreach é um fluxo de trabalho no domínio da plataforma. Seu propósito detalhado é mantido junto ao código-fonte do módulo.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-The module boundary is defined by its public contracts and implementation directory.
+O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Fonte
 
 `modules/workflows/wf-sales-review-outreach`

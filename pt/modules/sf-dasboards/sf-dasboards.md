@@ -1,21 +1,21 @@
 # sf-dasboards
 
-## Purpose
+## Finalidade
 
-Owns Analytics Dashboard UI: overview dashboards, KPI cards, trend charts, and dashboard-level filters/date ranges.
+É responsável pela interface dos painéis de análise: painéis gerais, cartões de KPI, gráficos de tendências e filtros/intervalos de datas no nível do painel.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Controls dashboard composition and analytics overview interactions; does not own raw log explorer UI or telemetry event-detail tooling.
+Controla a composição dos painéis e as interações da visão geral das análises; não é responsável pela interface do explorador de logs brutos nem pelas ferramentas de detalhes de eventos de telemetria.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Inclusão na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Fonte
 
 `modules/surfaces/analytics/sf-dasboards`

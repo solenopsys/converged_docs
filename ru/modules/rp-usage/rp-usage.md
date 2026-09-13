@@ -1,21 +1,21 @@
 # rp-usage
 
-## Purpose
+## Назначение
 
-Tracks usage counters and consumption metrics for product features.
+Отслеживает счётчики использования и показатели потребления для функций продукта.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns usage measurement and aggregation; does not own invoicing or payment execution.
+Отвечает за измерение и агрегацию использования; не отвечает за выставление счетов или выполнение платежей.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Принадлежность к решению
 
 - `analitycs`
 
-## Source
+## Источник
 
 `modules/repositories/analytics/rp-usage`

@@ -1,47 +1,33 @@
 # rp-community
 
-## Purpose
+## Zweck
 
-Forum structure and ownership: sections, topics, who wrote them and who may see
-them. The discussion under a topic is not here — a topic carries a `threadId`
-and the messages live in `rp-threads`.
+Forumsstruktur und Zuständigkeit: Abschnitte, Themen, wer sie verfasst hat und wer sie sehen darf. Die Diskussion unter einem Thema steht nicht hier — ein Thema enthält eine `threadId`, und die Nachrichten liegen in `rp-threads`.
 
-## Responsibility boundary
+## Zuständigkeitsgrenze
 
-Owns sections and topics. Does not call `rp-threads` or any other repository:
-`createTopic` mints a `threadId` and hands it back, and the caller registers the
-thread and writes the opening post itself.
+Verwaltet Abschnitte und Themen. Ruft `rp-threads` oder ein anderes Repository nicht auf: `createTopic` erzeugt eine `threadId` und gibt sie zurück, und der Aufrufer registriert den Thread und schreibt den Eröffnungsbeitrag selbst.
 
-## Identity and authorship
+## Identität und Urheberschaft
 
-`createdBy` is never accepted from a caller. It is read from the verified token
-through `getCurrentWorkspaceContext()`, which `messaging-backend` prefers over
-anything the envelope claims. Topic and thread ids are minted here for the same
-reason — an id a client can choose is an id it can steal, and the access-tag
-table records no object type to catch the collision.
+`createdBy` wird niemals von einem Aufrufer akzeptiert. Der Wert wird über `getCurrentWorkspaceContext()` aus dem verifizierten Token gelesen, das `messaging-backend` gegenüber allen Angaben im Envelope bevorzugt. Themen- und Thread-IDs werden aus demselben Grund hier erzeugt — eine ID, die ein Client wählen kann, ist eine ID, die er stehlen kann, und die Zugriffstag-Tabelle enthält keinen Objekttyp, um die Kollision zu erkennen.
 
-## Visibility
+## Sichtbarkeit
 
-Sections and topics carry a `visibility` column (`public` | `authenticated` |
-`private` | `tagged`), and a new topic inherits its section's value unless it
-asks for something narrower. The tags behind `tagged` belong in the shared
-`access_tags` relation described in `access-control.md`; that half is not
-implemented yet, so today `visibility` is recorded but not enforced.
+Abschnitte und Themen enthalten eine `visibility`-Spalte (`public` | `authenticated` | `private` | `tagged`), und ein neues Thema übernimmt den Wert seines Abschnitts, sofern es nicht nach etwas Eingeschränkterem fragt. Die Tags hinter `tagged` gehören in die gemeinsame Relation `access_tags`, die in `access-control.md` beschrieben ist; dieser Teil ist noch nicht implementiert, daher wird `visibility` heute erfasst, aber nicht durchgesetzt.
 
-## Locking
+## Sperrung
 
-`touchTopicActivity` is the only place a lock can be enforced: `rp-threads`
-accepts a message without knowing topics exist, so a screen calls this after
-posting and treats a refusal as a failed post.
+`touchTopicActivity` ist die einzige Stelle, an der eine Sperre durchgesetzt werden kann: `rp-threads` akzeptiert eine Nachricht, ohne zu wissen, dass Themen existieren, daher ruft eine Ansicht dies nach dem Posten auf und behandelt eine Ablehnung als fehlgeschlagenen Beitrag.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
 - `back-core`, `nrpc`, `g-community`
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `communications`
 
-## Source
+## Quelle
 
 `modules/repositories/communications/rp-community`

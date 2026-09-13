@@ -1,36 +1,26 @@
 # sf-community
 
-## Purpose
+## Objectif
 
-The forum, as three separate tabs: sections, the topics of one section, and one
-topic's discussion. Opening a row opens a tab beside the current one — there is
-no screen that shows a section tree, a topic table and a thread at once.
+Le forum, sous la forme de trois onglets distincts : les sections, les sujets d'une section et la discussion d'un sujet. L'ouverture d'une ligne ouvre un onglet à côté de l'onglet actuel — aucun écran n'affiche simultanément une arborescence de sections, un tableau de sujets et un fil de discussion.
 
-## Responsibility boundary
+## Limites de responsabilité
 
-Owns forum navigation and the topic screen. Messages themselves belong to
-`rp-threads`, which the browser reads directly; attachments belong to `rp-files`
-through a `link` message. Membership, roles and tickets are not here.
+Gère la navigation du forum et l'écran d'un sujet. Les messages eux-mêmes appartiennent à `rp-threads`, que le navigateur lit directement ; les pièces jointes appartiennent à `rp-files` via un message `link`. Les adhésions, les rôles et les tickets n'en font pas partie.
 
-## How a topic is created
+## Création d'un sujet
 
-`createTopic` on `rp-community` mints the topic id and the thread id and stamps
-the author from the token; this surface then registers the thread and writes the
-opening post against `rp-threads`. The split is deliberate: ids a client can
-choose are ids it can steal, and a repository calling another repository is what
-the architecture forbids.
+`createTopic` sur `rp-community` génère l'identifiant du sujet et celui du fil, puis renseigne l'auteur à partir du jeton ; cette surface enregistre ensuite le fil et écrit le message initial dans `rp-threads`. Cette séparation est intentionnelle : les identifiants qu'un client peut choisir sont des identifiants qu'il peut usurper, et le fait qu'un dépôt en appelle un autre est précisément ce que l'architecture interdit.
 
-## Live updates
+## Mises à jour en temps réel
 
-Replies arrive over Fujin's business channel (`pushrouter`) through the
-`threads-state` library, not by polling. A push carries identifiers only; the
-text is re-read from `rp-threads`, where the read predicate applies.
+Les réponses arrivent via le canal métier de Fujin (`pushrouter`) par l'intermédiaire de la bibliothèque `threads-state`, et non par interrogation périodique. Une notification ne contient que des identifiants ; le texte est relu depuis `rp-threads`, où le prédicat de lecture s'applique.
 
-## Direct module dependencies
+## Dépendances directes du module
 
 - `front-core`, `g-community`, `g-threads`, `signal-channel`, `threads-state`
 
-## Solution membership
+## Appartenance à la solution
 
 - `communications`
 

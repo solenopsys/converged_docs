@@ -1,21 +1,21 @@
 # lm-sms
 
-## Purpose
+## Назначение
 
-Provider adapter for SMS delivery channels.
+Адаптер провайдера для каналов доставки SMS.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns SMS provider connectivity and payload formatting; does not own campaign/business segmentation rules.
+Отвечает за подключение к провайдеру SMS и форматирование полезной нагрузки; не отвечает за правила сегментации кампаний/бизнес-сегментации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/lambdas/providers/lm-sms`

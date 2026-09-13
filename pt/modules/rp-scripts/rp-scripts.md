@@ -1,21 +1,21 @@
 # rp-scripts
 
-## Purpose
+## Finalidade
 
-Provides storage operations for script files, including reading, saving, hashing, and deletion.
+Fornece operações de armazenamento para arquivos de script, incluindo leitura, salvamento, geração de hash e exclusão.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-The module boundary is defined by its public contracts and implementation directory.
+O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
-- Not included in a predefined solution
+- Não incluído em uma solução predefinida
 
-## Source
+## Código-fonte
 
 `modules/repositories/content/rp-scripts`

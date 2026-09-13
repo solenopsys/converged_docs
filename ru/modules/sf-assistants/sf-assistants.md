@@ -1,21 +1,21 @@
 # sf-assistants
 
-## Purpose
+## Назначение
 
-Owns Assistants UI: assistant chat/workspace views, assistant configuration panels, and assistant session interaction components.
+Отвечает за интерфейс ассистентов: представления чата и рабочего пространства ассистента, панели настройки ассистента и компоненты взаимодействия с сеансом ассистента.
 
-## Responsibility boundary
+## Границы ответственности
 
-Controls assistant user experience and assistant-scoped state; does not own shared identity/profile UI or infrastructure telemetry pages.
+Управляет пользовательским интерфейсом ассистента и состоянием в области ассистента; не отвечает за общий интерфейс идентификации и профиля или страницы телеметрии инфраструктуры.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
 - `sf-requests`
 
-## Solution membership
+## Включение в решение
 
 - `ai`
 
-## Source
+## Исходный код
 
 `modules/surfaces/ai/sf-assistants`

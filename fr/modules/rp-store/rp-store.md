@@ -1,18 +1,18 @@
 # rp-store
 
-## Purpose
+## Objectif
 
-Implements generic storage-domain operations for service data.
+Implémente les opérations génériques du domaine de stockage pour les données des services.
 
-## Responsibility boundary
+## Limite des responsabilités
 
-Owns store-facing data access APIs in this domain; does not own business semantics of calling services.
+Prend en charge les API d’accès aux données côté stockage dans ce domaine ; ne prend pas en charge la sémantique métier des services appelants.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `requests`
 

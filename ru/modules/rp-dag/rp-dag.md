@@ -1,94 +1,94 @@
 # rp-dag
 
-## Purpose
+## Назначение
 
-Owns the workflow triggers and the execution log. It executes nothing.
+Владеет триггерами рабочих процессов и журналом выполнения. Ничего не выполняет.
 
-## Responsibility boundary
+## Граница ответственности
 
-Two things belong here and nothing else:
+Здесь находятся только две вещи и ничего больше:
 
-- **Triggers** — "when this bus topic appears, run that workflow". System
-  configuration: tens of rows an operator maintains, held whole in the
-  runtime's memory rather than queried.
-- **The execution log** — a tree of what a run did. The runtime writes it while
-  the script runs: a node is opened before its body executes and closed when it
-  finishes, so a run in flight shows the node it is sitting on.
+- **Триггеры** — «когда появляется эта тема шины, запустить тот рабочий процесс». Системная
+  конфигурация: десятки строк, которые поддерживает оператор и которые целиком хранятся
+  в памяти среды выполнения, а не запрашиваются.
+- **Журнал выполнения** — дерево того, что сделал запуск. Среда выполнения записывает его,
+  пока выполняется скрипт: узел открывается до выполнения его тела и закрывается после
+  завершения, поэтому выполняющийся запуск показывает узел, на котором он находится.
 
-The workflow catalogue is not owned here. Ptah puts the active Solution's
-descriptors into this service's environment (`WORKFLOWS`, `WORKFLOW_DIGESTS`,
-`MODULE_PROXY`) and `listAvailableWorkflows` republishes them for the runtime
-and the UI. Source bytes stay behind Ptah-proxy.
+Каталог рабочих процессов здесь не принадлежит этому сервису. Ptah помещает дескрипторы
+активного Solution в окружение этого сервиса (`WORKFLOWS`, `WORKFLOW_DIGESTS`,
+`MODULE_PROXY`), а `listAvailableWorkflows` повторно публикует их для среды выполнения
+и UI. Исходные байты остаются за Ptah-proxy.
 
-## The log is written by the runtime, not by this service
+## Журнал записывает среда выполнения, а не этот сервис
 
-Nothing here writes a log entry. The runtime formats it, puts it in Valkey under
-a key it composes itself, and later hands over the keys — never the entries.
-`commitLog` turns each key into a store location and tells storage to pick the
-entry up; storage reads the cache directly, so an entry crosses the transport
-once, as bytes nobody re-encodes.
-
-```text
-workflow thread ─► queue ─► log writer ─► valkey
-                                 │
-                                 └─ commitLog([keys]) ─► rp-dag ─► storage reads valkey
-                                                                        │
-                                 ◄──── committed ────────────────────────┘
-                                 └─ delete the committed keys
-```
-
-That is what keeps logging off the workflow's critical path: a node costs the
-runtime a queue append and nothing else. It also means the log is best effort by
-construction — an entry may be dropped under backpressure, and a batch may be
-committed twice after a crash. Keys are derived from the run and the node's
-sequence, so the second commit is a rewrite rather than a duplicate.
-
-Keys come from the runtime for that reason: a number handed out by this service
-would cost a round trip per node and would not be reproducible after a restart.
-
-- `dag:log:<executionId>:exec` — the run
-- `dag:log:<executionId>:n:<seq>` — one of its nodes, zero-padded to six digits
-
-`commitLog` derives the store location from the key and refuses anything outside
-the `dag:log:` prefix, so a key is the whole of the authority the call carries.
-
-## The log is a tree
+Здесь ничего не записывает запись журнала. Среда выполнения форматирует её, помещает в Valkey
+под ключом, который сама составляет, а позже передаёт ключи — никогда сами записи.
+`commitLog` превращает каждый ключ в расположение хранилища и сообщает хранилищу, что нужно
+забрать запись; хранилище читает кэш напрямую, поэтому запись пересекает транспорт один раз —
+как байты, которые никто повторно не кодирует.
 
 ```text
-exec:<id>              the run
-node:<id>:<seq>        its nodes, in the order they opened
+поток рабочего процесса ─► очередь ─► средство записи журнала ─► valkey
+                                                     │
+                                                     └─ commitLog([keys]) ─► rp-dag ─► хранилище читает valkey
+                                                                                              │
+                                                     ◄──── зафиксировано ─────────────────────┘
+                                                     └─ удалить зафиксированные ключи
 ```
 
-A node that delegated through `rt.sub` carries the child run's id, and the
-child is an ordinary run with nodes of its own. `executionTree` walks that link
-depth-first and returns the result flat, each row tagged with its `depth` — so
-a client renders the tree by indenting and nothing else. No parent index is
-needed: the link is the node that made it.
+Именно это убирает журналирование с критического пути рабочего процесса: узел требует от
+среды выполнения только добавления в очередь и ничего больше. Это также означает, что журнал
+по своей природе работает по принципу best effort — при обратном давлении запись может быть
+отброшена, а пакет после сбоя может быть зафиксирован дважды. Ключи производятся из запуска
+и последовательности узла, поэтому вторая фиксация является перезаписью, а не дубликатом.
 
-Sequences are zero-padded in the key, because the KV store returns a prefix
-range in lexicographic order and that order has to be the order the nodes ran.
-The runtime pads to the same width when it composes the cache key; the two
-widths are one contract.
+По этой причине ключи приходят из среды выполнения: номер, выданный этим сервисом, потребовал
+бы обратного обращения для каждого узла и не мог бы быть воспроизведён после перезапуска.
 
-Retention is a cap on runs (`5000` by default), enforced every hundredth open.
-The log is diagnostics, not an archive.
+- `dag:log:<executionId>:exec` — запуск
+- `dag:log:<executionId>:n:<seq>` — один из его узлов, дополненный нулями слева до шести цифр
 
-## Trigger changes reach the runtime over the bus
+`commitLog` выводит расположение хранилища из ключа и отклоняет всё, что находится за пределами
+префикса `dag:log:`, поэтому ключ — это весь объём полномочий, который несёт вызов.
 
-Creating, changing or deleting a trigger publishes `dag.triggers.changed`. The
-runtime subscribes to that topic alongside the triggers' own, so an edit is live
-for the next event instead of waiting out a polling interval. Publishing is best
-effort — a bus that is down must not fail an operator's edit — and the runtime's
-periodic refresh remains the backstop.
+## Журнал является деревом
 
-## Direct module dependencies
+```text
+exec:<id>              запуск
+node:<id>:<seq>        его узлы в порядке их открытия
+```
 
-- g-bus — to announce a trigger change
+Узел, который делегировал выполнение через `rt.sub`, содержит идентификатор дочернего запуска,
+а дочерний запуск является обычным запуском со своими узлами. `executionTree` обходит эту связь
+в глубину и возвращает результат в плоском виде, помечая каждую строку её `depth` — поэтому
+клиент отображает дерево только за счёт отступов. Индекс родителя не нужен: связь хранится в
+узле, который её создал.
 
-## Solution membership
+Последовательности дополняются нулями слева в ключе, поскольку KV-хранилище возвращает диапазон
+по префиксу в лексикографическом порядке, а этот порядок должен совпадать с порядком выполнения
+узлов. Среда выполнения дополняет число до такой же ширины при составлении ключа кэша; эти две
+ширины являются единым контрактом.
 
-- Not included in a predefined solution
+Срок хранения ограничен числом запусков (`5000` по умолчанию) и проверяется при каждом сотом
+открытии. Журнал предназначен для диагностики, а не для архивирования.
 
-## Source
+## Изменения триггеров достигают среды выполнения через шину
+
+Создание, изменение или удаление триггера публикует `dag.triggers.changed`. Среда выполнения
+подписывается на эту тему наряду с собственными темами триггеров, поэтому изменение становится
+активным для следующего события, не дожидаясь окончания интервала опроса. Публикация выполняется
+по принципу best effort — неработающая шина не должна приводить к сбою изменения оператора —
+а периодическое обновление среды выполнения остаётся резервным механизмом.
+
+## Прямые зависимости модулей
+
+- g-bus — для объявления об изменении триггера
+
+## Членство в Solution
+
+- Не включён ни в одно предопределённое решение
+
+## Исходный код
 
 `modules/repositories/automation/rp-dag`

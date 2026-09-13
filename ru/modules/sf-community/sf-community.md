@@ -1,39 +1,41 @@
 # sf-community
 
-## Purpose
+## Назначение
 
-The forum, as three separate tabs: sections, the topics of one section, and one
-topic's discussion. Opening a row opens a tab beside the current one — there is
-no screen that shows a section tree, a topic table and a thread at once.
+Форум в виде трёх отдельных вкладок: разделы, темы одного раздела и обсуждение
+одной темы. Открытие строки открывает вкладку рядом с текущей — нет экрана,
+на котором одновременно отображались бы дерево разделов, таблица тем и ветка.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns forum navigation and the topic screen. Messages themselves belong to
-`rp-threads`, which the browser reads directly; attachments belong to `rp-files`
-through a `link` message. Membership, roles and tickets are not here.
+Отвечает за навигацию по форуму и экран темы. Сами сообщения принадлежат
+`rp-threads`, который браузер читает напрямую; вложения принадлежат `rp-files`
+через сообщение `link`. Участники, роли и тикеты находятся за пределами этого
+модуля.
 
-## How a topic is created
+## Как создаётся тема
 
-`createTopic` on `rp-community` mints the topic id and the thread id and stamps
-the author from the token; this surface then registers the thread and writes the
-opening post against `rp-threads`. The split is deliberate: ids a client can
-choose are ids it can steal, and a repository calling another repository is what
-the architecture forbids.
+`createTopic` в `rp-community` создаёт идентификаторы темы и ветки и фиксирует
+автора из токена; затем эта поверхность регистрирует ветку и записывает
+первый пост в `rp-threads`. Разделение намеренное: идентификаторы, которые
+может выбрать клиент, можно украсть, а вызов одним репозиторием другого — это
+то, что запрещает архитектура.
 
-## Live updates
+## Обновления в реальном времени
 
-Replies arrive over Fujin's business channel (`pushrouter`) through the
-`threads-state` library, not by polling. A push carries identifiers only; the
-text is re-read from `rp-threads`, where the read predicate applies.
+Ответы поступают через бизнес-канал Fujin (`pushrouter`) с помощью библиотеки
+`threads-state`, а не посредством опроса. Push-сообщение содержит только
+идентификаторы; текст перечитывается из `rp-threads`, где применяется предикат
+чтения.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
 - `front-core`, `g-community`, `g-threads`, `signal-channel`, `threads-state`
 
-## Solution membership
+## Членство в решении
 
 - `communications`
 
-## Source
+## Исходный код
 
 `modules/surfaces/communications/sf-community`

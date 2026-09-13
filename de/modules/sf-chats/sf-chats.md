@@ -1,37 +1,37 @@
 # sf-chats
 
-## Purpose
+## Zweck
 
-Chat rooms, as three separate tabs: the room list, one room's conversation, and
-one room's membership. Managing who is in a room and reading what they said are
-two jobs and therefore two tabs.
+Chatrooms als drei separate Tabs: die Raumliste, die Unterhaltung eines Raums und
+die Mitgliedschaft eines Raums. Zu verwalten, wer sich in einem Raum befindet, und zu lesen, was die Mitglieder gesagt haben, sind
+zwei Aufgaben und daher zwei Tabs.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-Owns room navigation, the conversation screen and membership editing. Messages
-belong to `rp-threads`, read directly from the browser; files belong to
-`rp-files` through a `link` message.
+Verantwortet die Raumnavigation, den Unterhaltungsbildschirm und die Bearbeitung der Mitgliedschaft. Nachrichten
+gehören zu `rp-threads` und werden direkt aus dem Browser gelesen; Dateien gehören zu
+`rp-files` über eine `link`-Nachricht.
 
-## How a room is created
+## Erstellung eines Raums
 
-`createRoom` on `rp-chats` mints the room id and the thread id and records the
-creator from the token as `owner`; this surface then registers the thread with
-`rp-threads`. `rp-chats` never calls another repository.
+`createRoom` auf `rp-chats` erzeugt die Raum-ID und die Thread-ID und zeichnet den
+Ersteller aus dem Token als `owner` auf; diese Oberfläche registriert den Thread anschließend bei
+`rp-threads`. `rp-chats` ruft niemals ein anderes Repository auf.
 
-## Live updates
+## Live-Aktualisierungen
 
-A new message is published to each member by name over Fujin's `pushrouter`,
-never to the whole tenant: a private room's existence is not public even when
-its contents stay behind the read predicate. The push carries identifiers only.
+Eine neue Nachricht wird jedem Mitglied namentlich über Fujins `pushrouter` zugestellt,
+niemals an den gesamten Mandanten: Die Existenz eines privaten Raums ist nicht öffentlich, selbst wenn sein
+Inhalt hinter dem Lesepredicate verborgen bleibt. Die Push-Nachricht enthält nur Bezeichner.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
 - `effector`, `front-core`, `g-chats`, `g-threads`, `signal-channel`, `threads-state`
 
-## Solution membership
+## Lösungsmitgliedschaft
 
 - `communications`
 
-## Source
+## Quelle
 
 `modules/surfaces/communications/sf-chats`

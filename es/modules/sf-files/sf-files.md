@@ -1,21 +1,21 @@
 # sf-files
 
-## Purpose
+## Propósito
 
-sf-files is a surface in the data domain. Its detailed purpose is maintained with the module source.
+sf-files es una superficie en el dominio de datos. Su propósito detallado se mantiene junto con el código fuente del módulo.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-The module boundary is defined by its public contracts and implementation directory.
+El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `requests`
 
-## Source
+## Fuente
 
 `modules/surfaces/data/sf-files`

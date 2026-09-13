@@ -1,21 +1,21 @@
 # sf-galery
 
-## Purpose
+## Zweck
 
-Owns Gallery UI: media gallery grids, media preview/detail views, gallery organization controls, and gallery filtering/search.
+Verantwortet die Galerie-UI: Mediengalerieraster, Medienvorschau-/Detailansichten, Steuerelemente zur Galerieorganisation sowie Galeriefilterung/-suche.
 
-## Responsibility boundary
+## Verantwortungsbereich
 
-Controls gallery browsing and media curation interactions; does not own backend transcoding pipelines or storage-provider internals.
+Steuert das Durchsuchen von Galerien und Interaktionen zur Medienkuratierung; besitzt weder Backend-Transkodierungspipelines noch Interna von Speicheranbietern.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `content`
 
-## Source
+## Quelle
 
 `modules/surfaces/content/sf-galery`

@@ -1,32 +1,21 @@
 # rp-dag
 
-## Purpose
+## Objectif
 
-Owns the workflow triggers and the execution log. It executes nothing.
+Gère les déclencheurs de workflow et le journal d’exécution. Il n’exécute rien.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-Two things belong here and nothing else:
+Deux éléments appartiennent ici, et rien d’autre :
 
-- **Triggers** — "when this bus topic appears, run that workflow". System
-  configuration: tens of rows an operator maintains, held whole in the
-  runtime's memory rather than queried.
-- **The execution log** — a tree of what a run did. The runtime writes it while
-  the script runs: a node is opened before its body executes and closed when it
-  finishes, so a run in flight shows the node it is sitting on.
+- **Déclencheurs** — « lorsque ce sujet de bus apparaît, exécuter ce workflow ». Configuration système : des dizaines de lignes gérées par un opérateur, conservées intégralement en mémoire du runtime plutôt que requêtées.
+- **Le journal d’exécution** — un arbre de ce qu’une exécution a fait. Le runtime l’écrit pendant l’exécution du script : un nœud est ouvert avant l’exécution de son corps et fermé lorsqu’il se termine, de sorte qu’une exécution en cours affiche le nœud sur lequel elle se trouve.
 
-The workflow catalogue is not owned here. Ptah puts the active Solution's
-descriptors into this service's environment (`WORKFLOWS`, `WORKFLOW_DIGESTS`,
-`MODULE_PROXY`) and `listAvailableWorkflows` republishes them for the runtime
-and the UI. Source bytes stay behind Ptah-proxy.
+Le catalogue des workflows n’est pas géré ici. Ptah place les descripteurs de la Solution active dans l’environnement de ce service (`WORKFLOWS`, `WORKFLOW_DIGESTS`, `MODULE_PROXY`) et `listAvailableWorkflows` les republie pour le runtime et l’interface utilisateur. Les octets source restent derrière Ptah-proxy.
 
-## The log is written by the runtime, not by this service
+## Le journal est écrit par le runtime, pas par ce service
 
-Nothing here writes a log entry. The runtime formats it, puts it in Valkey under
-a key it composes itself, and later hands over the keys — never the entries.
-`commitLog` turns each key into a store location and tells storage to pick the
-entry up; storage reads the cache directly, so an entry crosses the transport
-once, as bytes nobody re-encodes.
+Rien ici n’écrit d’entrée dans un journal. Le runtime la formate, la place dans Valkey sous une clé qu’il compose lui-même, puis transmet les clés — jamais les entrées. `commitLog` transforme chaque clé en emplacement de stockage et demande au stockage de récupérer l’entrée ; le stockage lit directement le cache, de sorte qu’une entrée ne traverse le transport qu’une seule fois, sous forme d’octets que personne ne réencode.
 
 ```text
 workflow thread ─► queue ─► log writer ─► valkey
@@ -37,57 +26,39 @@ workflow thread ─► queue ─► log writer ─► valkey
                                  └─ delete the committed keys
 ```
 
-That is what keeps logging off the workflow's critical path: a node costs the
-runtime a queue append and nothing else. It also means the log is best effort by
-construction — an entry may be dropped under backpressure, and a batch may be
-committed twice after a crash. Keys are derived from the run and the node's
-sequence, so the second commit is a rewrite rather than a duplicate.
+C’est ce qui maintient la journalisation hors du chemin critique du workflow : un nœud ne coûte au runtime qu’un ajout à la file, et rien d’autre. Cela signifie également que le journal est, par construction, soumis à une garantie de meilleure qualité : une entrée peut être abandonnée sous l’effet de la contre-pression, et un lot peut être validé deux fois après un crash. Les clés sont dérivées de l’exécution et de la séquence du nœud, donc la seconde validation est une réécriture plutôt qu’un doublon.
 
-Keys come from the runtime for that reason: a number handed out by this service
-would cost a round trip per node and would not be reproducible after a restart.
+Les clés proviennent du runtime pour cette raison : un numéro attribué par ce service coûterait un aller-retour par nœud et ne serait pas reproductible après un redémarrage.
 
-- `dag:log:<executionId>:exec` — the run
-- `dag:log:<executionId>:n:<seq>` — one of its nodes, zero-padded to six digits
+- `dag:log:<executionId>:exec` — l’exécution
+- `dag:log:<executionId>:n:<seq>` — l’un de ses nœuds, complété par des zéros jusqu’à six chiffres
 
-`commitLog` derives the store location from the key and refuses anything outside
-the `dag:log:` prefix, so a key is the whole of the authority the call carries.
+`commitLog` déduit l’emplacement de stockage à partir de la clé et refuse tout ce qui se trouve en dehors du préfixe `dag:log:`, de sorte qu’une clé constitue l’intégralité de l’autorité portée par l’appel.
 
-## The log is a tree
+## Le journal est un arbre
 
 ```text
-exec:<id>              the run
-node:<id>:<seq>        its nodes, in the order they opened
+exec:<id>              l’exécution
+node:<id>:<seq>        ses nœuds, dans l’ordre de leur ouverture
 ```
 
-A node that delegated through `rt.sub` carries the child run's id, and the
-child is an ordinary run with nodes of its own. `executionTree` walks that link
-depth-first and returns the result flat, each row tagged with its `depth` — so
-a client renders the tree by indenting and nothing else. No parent index is
-needed: the link is the node that made it.
+Un nœud qui délègue via `rt.sub` contient l’identifiant de l’exécution enfant, et l’enfant est une exécution ordinaire avec ses propres nœuds. `executionTree` parcourt ce lien en profondeur et renvoie le résultat à plat, chaque ligne étant marquée par sa `depth` — ainsi, un client restitue l’arbre en indentant, et rien d’autre. Aucun index parent n’est nécessaire : le lien est le nœud qui l’a créé.
 
-Sequences are zero-padded in the key, because the KV store returns a prefix
-range in lexicographic order and that order has to be the order the nodes ran.
-The runtime pads to the same width when it composes the cache key; the two
-widths are one contract.
+Les séquences sont complétées par des zéros dans la clé, car le magasin KV renvoie une plage de préfixe dans l’ordre lexicographique, et cet ordre doit être celui dans lequel les nœuds se sont exécutés. Le runtime complète jusqu’à la même largeur lorsqu’il compose la clé du cache ; les deux largeurs constituent un seul contrat.
 
-Retention is a cap on runs (`5000` by default), enforced every hundredth open.
-The log is diagnostics, not an archive.
+La rétention est plafonnée en nombre d’exécutions (`5000` par défaut), avec application à chaque centième ouverture. Le journal sert aux diagnostics, pas à l’archivage.
 
-## Trigger changes reach the runtime over the bus
+## Les modifications des déclencheurs atteignent le runtime via le bus
 
-Creating, changing or deleting a trigger publishes `dag.triggers.changed`. The
-runtime subscribes to that topic alongside the triggers' own, so an edit is live
-for the next event instead of waiting out a polling interval. Publishing is best
-effort — a bus that is down must not fail an operator's edit — and the runtime's
-periodic refresh remains the backstop.
+La création, la modification ou la suppression d’un déclencheur publie `dag.triggers.changed`. Le runtime s’abonne à ce sujet en plus de ceux propres aux déclencheurs, de sorte qu’une modification est active pour l’événement suivant au lieu d’attendre la fin d’un intervalle d’interrogation. La publication est soumise à une garantie de meilleure qualité — un bus hors service ne doit pas faire échouer la modification d’un opérateur — et l’actualisation périodique du runtime reste le mécanisme de secours.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- g-bus — to announce a trigger change
+- g-bus — pour annoncer une modification de déclencheur
 
-## Solution membership
+## Appartenance à une Solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

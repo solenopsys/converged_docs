@@ -1,21 +1,21 @@
 # sf-threads
 
-## Purpose
+## Назначение
 
-Owns Threads UI: threaded conversation lists, thread detail panels, reply composers, and thread state indicators.
+Отвечает за интерфейс Threads: списки веток обсуждений, панели подробностей веток, редакторы ответов и индикаторы состояния веток.
 
-## Responsibility boundary
+## Граница ответственности
 
-Controls thread-centric communication experience; does not own push/email transport configuration or external social channel adapters.
+Управляет коммуникацией, ориентированной на ветки; не отвечает за настройку транспорта push-уведомлений/электронной почты или адаптеры внешних социальных каналов.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Принадлежность к решению
 
 - `ai`
 
-## Source
+## Исходный код
 
 `modules/surfaces/communications/sf-threads`

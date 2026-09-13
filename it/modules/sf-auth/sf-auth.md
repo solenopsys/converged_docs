@@ -1,21 +1,21 @@
 # sf-auth
 
-## Purpose
+## Scopo
 
-Owns Auth UI: sign-in/sign-up/reset flows, session/security screens, and authentication guard/redirect UX behavior.
+Gestisce l'interfaccia utente dell'autenticazione: flussi di accesso/registrazione/reimpostazione, schermate di sessione/sicurezza e comportamento UX delle protezioni/reindirizzamenti di autenticazione.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Controls authentication-related frontend flows and auth UI state; does not own identity profile management beyond auth scope or business-domain pages.
+Controlla i flussi frontend relativi all'autenticazione e lo stato dell'interfaccia utente dell'autenticazione; non gestisce la gestione del profilo dell'identità al di fuori dell'ambito dell'autenticazione né le pagine del dominio aziendale.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `security`
 
-## Source
+## Origine
 
 `modules/surfaces/sequrity/sf-auth`

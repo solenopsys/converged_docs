@@ -1,108 +1,78 @@
-# System architecture
+# Архитектура системы
 
-Converged is a modular operating layer for manufacturing businesses. Its user
-interfaces, domain services, workflow engine, storage, media gateway and
-industrial processors form one system without becoming one application.
+Converged — это модульный операционный слой для производственных компаний. Его пользовательские интерфейсы, предметные сервисы, движок рабочих процессов, хранилище, медиашлюз и промышленные процессоры образуют единую систему, не превращаясь в одно приложение.
 
-The architecture separates three kinds of work:
+Архитектура разделяет три вида работы:
 
-- domain modules own business data and user-facing capabilities;
-- native runtime services move messages, execute workflows, store data and
-  handle real-time media;
-- the control plane decides which parts run for each platform and tenant.
+- предметные модули владеют бизнес-данными и пользовательскими возможностями;
+- нативные сервисы среды выполнения передают сообщения, выполняют рабочие процессы, хранят данные и обрабатывают мультимедиа в реальном времени;
+- плоскость управления определяет, какие части запускаются для каждой платформы и каждого арендатора.
 
-## One message bus
+## Одна шина сообщений
 
-Runtime components communicate through Fujin. Every process opens one
-connection, registers a target and sends messages to logical destinations.
-The sender does not need the address or deployment location of the receiver.
+Компоненты среды выполнения взаимодействуют через Fujin. Каждый процесс открывает одно соединение, регистрирует цель и отправляет сообщения логическим адресатам. Отправителю не нужно знать адрес или место развёртывания получателя.
 
 ```text
-browser and mobile clients
+браузерные и мобильные клиенты
           |
           v
-          Fujin message bus
+          шина сообщений Fujin
        /     |      |      \
       ui     ms  Centimanus Resonus
               \      |      /
                \  Behemoth /
 ```
 
-This removes the HTTP call graph and service mesh from the application layer.
-Routing, request correlation and trusted tenant context travel in the common
-message envelope. A receiving process then selects the requested service or
-handler inside its own boundary.
+Это устраняет граф HTTP-вызовов и сервисную mesh-сеть из прикладного слоя. Маршрутизация, корреляция запросов и доверенный контекст арендатора передаются в общем конверте сообщения. Затем принимающий процесс выбирает запрошенный сервис или обработчик внутри собственной границы.
 
-## Core runtime
+## Основная среда выполнения
 
-| Component | Responsibility |
+| Компонент | Ответственность |
 | --- | --- |
-| Fujin | Connects runtime peers and routes messages to the live owner of a target. |
-| Behemoth | Provides isolated SQL, key-value, column, vector, graph and file storage. |
-| Centimanus | Executes multi-step business workflows as replayable graphs. |
-| Resonus | Handles real-time media, calls, transcription and AI sessions. |
-| Ptah | Reconciles the desired platform, solutions and tenants into Kubernetes resources. |
+| Fujin | Соединяет узлы среды выполнения и направляет сообщения к текущему владельцу цели. |
+| Behemoth | Предоставляет изолированные SQL-, ключ-значение-, колоночное, векторное, графовое и файловое хранилища. |
+| Centimanus | Выполняет многошаговые бизнес-процессы как воспроизводимые графы. |
+| Resonus | Обрабатывает мультимедиа в реальном времени, звонки, транскрибацию и сеансы ИИ. |
+| Ptah | Сводит желаемые платформу, решения и арендаторов с ресурсами Kubernetes. |
 
-The components are deliberately narrow. Fujin does not understand business
-services. Behemoth does not orchestrate business operations. Centimanus does
-not own domain data. Resonus does not decide tenant identity. Ptah creates and
-configures workloads but does not participate in runtime messaging.
+Компоненты намеренно узкоспециализированы. Fujin не понимает бизнес-сервисы. Behemoth не оркестрирует бизнес-операции. Centimanus не владеет предметными данными. Resonus не определяет идентичность арендатора. Ptah создаёт и настраивает рабочие нагрузки, но не участвует в обмене сообщениями во время выполнения.
 
-## Modules and solutions
+## Модули и решения
 
-Business capabilities are delivered as microservices, surfaces and
-workflows. A solution is a declarative selection of those modules for a
-particular operating scenario, such as order handling, production planning or
-equipment monitoring.
+Бизнес-возможности поставляются в виде микросервисов, поверхностей и рабочих процессов. Решение — это декларативный выбор этих модулей для определённого операционного сценария, например обработки заказов, планирования производства или мониторинга оборудования.
 
-Microservices own their data and expose typed contracts. They do not call one
-another to coordinate a process. Cross-domain sequences belong to workflows,
-which Centimanus executes one durable step at a time. This keeps domain modules
-small and allows a solution to combine them without creating hidden coupling.
+Микросервисы владеют своими данными и предоставляют типизированные контракты. Они не вызывают друг друга для координации процесса. Последовательности, проходящие через разные предметные области, относятся к рабочим процессам, которые Centimanus выполняет по одному устойчивому шагу за раз. Это позволяет сохранять предметные модули небольшими и объединять их в решение без создания скрытой связанности.
 
-## Data isolation
+## Изоляция данных
 
-Each microservice has its own physical storage root. Behemoth can serve many
-roots from one process, but it preserves their ownership boundaries and refuses
-to create data outside the configured mounts.
+Каждый микросервис имеет собственный физический корень хранения. Behemoth может обслуживать множество корней из одного процесса, но сохраняет границы их владения и отказывается создавать данные за пределами настроенных точек монтирования.
 
-The same model scales across deployment profiles:
+Та же модель масштабируется на разные профили развёртывания:
 
-- an edge installation can run one Behemoth instance for the platform;
-- a larger installation can divide scopes across storage shards;
-- a cloud installation can run an isolated storage instance per tenant.
+- периферийная установка может запускать один экземпляр Behemoth для платформы;
+- более крупная установка может разделять области между сегментами хранения;
+- облачная установка может запускать отдельный экземпляр хранилища для каждого арендатора.
 
-Changing the topology does not change application code because peers continue
-to address logical targets and storage boundaries.
+Изменение топологии не требует изменения кода приложения, поскольку узлы по-прежнему обращаются к логическим целям и границам хранилища.
 
-## Control plane
+## Плоскость управления
 
-Ptah is the control plane and is not connected to Fujin. It observes the
-declared Platform, Solution and Tenant resources, calculates the desired
-workloads and reconciles them with Kubernetes.
+Ptah — это плоскость управления, не подключённая к Fujin. Она наблюдает за объявленными ресурсами Platform, Solution и Tenant, вычисляет желаемые рабочие нагрузки и согласует их с Kubernetes.
 
 ```text
-Platform + Solutions + Tenants
+Платформа + Решения + Арендаторы
               |
               v
              Ptah
               |
               v
-Deployments, Services, volumes, configuration and routes
+Развёртывания, сервисы, тома, конфигурация и маршруты
 ```
 
-This separation lets the runtime stay focused on business traffic while the
-deployment model handles placement, storage topology, tenant routes and
-lifecycle. The same application images can therefore run on a compact edge
-cluster or in a multi-tenant cloud environment.
+Такое разделение позволяет среде выполнения сосредоточиться на бизнес-трафике, тогда как модель развёртывания управляет размещением, топологией хранилища, маршрутами арендаторов и жизненным циклом. Поэтому одни и те же образы приложения могут работать как в компактном периферийном кластере, так и в облачной среде с несколькими арендаторами.
 
-## Trusted context
+## Доверенный контекст
 
-Tenant scope is established at the platform edge and carried in the message
-envelope. Runtime services consume that trusted context instead of deriving a
-tenant from application payloads. Storage placement, service calls and media
-sessions all preserve the same scope boundary.
+Область арендатора устанавливается на границе платформы и передаётся в конверте сообщения. Сервисы среды выполнения используют этот доверенный контекст вместо определения арендатора из полезной нагрузки приложения. Размещение хранилища, вызовы сервисов и медиасеансы сохраняют одну и ту же границу области.
 
-Together, logical messaging, isolated storage, replayable workflows and a
-separate control plane allow Converged to remain modular without pushing
-distributed-system complexity into every business module.
+В совокупности логические сообщения, изолированное хранилище, воспроизводимые рабочие процессы и отдельная плоскость управления позволяют Converged оставаться модульной системой, не перекладывая сложность распределённых систем на каждый бизнес-модуль.

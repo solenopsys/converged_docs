@@ -1,19 +1,19 @@
 # rp-files
 
-## Purpose
+## Objectif
 
-Provides file metadata APIs and file-management workflows.
+Fournit des API de métadonnées de fichiers et des workflows de gestion de fichiers.
 
-## Responsibility boundary
+## Limites de responsabilité
 
-Owns file records and file-level operations; does not own object storage implementation details.
+Gère les enregistrements de fichiers et les opérations au niveau des fichiers ; ne gère pas les détails d’implémentation du stockage des objets.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- `rp-store` — the content-addressed block store every file's bytes live in.
-  rp-files keeps names, collections and the chunk list; it stores no data.
+- `rp-store` — le magasin de blocs adressé par contenu dans lequel sont stockés les octets de chaque fichier.
+  rp-files conserve les noms, les collections et la liste des blocs ; il ne stocke aucune donnée.
 
-## Solution membership
+## Appartenance à la solution
 
 - `requests`
 

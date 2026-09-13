@@ -1,21 +1,21 @@
 # sf-telemetry
 
-## Purpose
+## Назначение
 
-Owns Telemetry UI: technical signal views, metrics graphs, event timelines, and service-health visual components.
+Владеет интерфейсом телеметрии: представлениями технических сигналов, графиками метрик, временными шкалами событий и визуальными компонентами состояния сервисов.
 
-## Responsibility boundary
+## Граница ответственности
 
-Controls telemetry-specific visualizations and filters; does not own billing/usage reporting UX or shell-level navigation.
+Отвечает за визуализации и фильтры, специфичные для телеметрии; не отвечает за UX отчётности по выставлению счетов и использованию или за навигацию на уровне оболочки.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Входит в решение
 
 - `analitycs`
 
-## Source
+## Источник
 
 `modules/surfaces/analytics/sf-telemetry`

@@ -1,21 +1,21 @@
 # sf-calls
 
-## Purpose
+## Finalidade
 
-Owns Calls UI: call session screens, call controls, call participant/status panels, and call history presentation widgets.
+É responsável pela interface do usuário de chamadas: telas de sessões de chamada, controles de chamada, painéis de participantes/status da chamada e widgets de apresentação do histórico de chamadas.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Controls call-related interaction surfaces and call session state in UI; does not own thread messaging UI or provider transport settings.
+Controla as superfícies de interação relacionadas a chamadas e o estado da sessão de chamada na interface do usuário; não é responsável pela interface de mensagens de threads nem pelas configurações de transporte do provedor.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
 - `ai`
 
-## Source
+## Origem
 
 `modules/surfaces/communications/sf-calls`

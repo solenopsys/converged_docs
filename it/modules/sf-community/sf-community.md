@@ -1,39 +1,43 @@
 # sf-community
 
-## Purpose
+## Scopo
 
-The forum, as three separate tabs: sections, the topics of one section, and one
-topic's discussion. Opening a row opens a tab beside the current one — there is
-no screen that shows a section tree, a topic table and a thread at once.
+Il forum, come tre schede separate: sezioni, gli argomenti di una sezione e la
+discussione di un argomento. L'apertura di una riga apre una scheda accanto a
+quella corrente: non esiste una schermata che mostri contemporaneamente un
+albero delle sezioni, una tabella degli argomenti e una discussione.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns forum navigation and the topic screen. Messages themselves belong to
-`rp-threads`, which the browser reads directly; attachments belong to `rp-files`
-through a `link` message. Membership, roles and tickets are not here.
+Gestisce la navigazione del forum e la schermata dell'argomento. I messaggi in sé
+appartengono a `rp-threads`, che il browser legge direttamente; gli allegati
+appartengono a `rp-files` tramite un messaggio `link`. Iscrizioni, ruoli e ticket
+non rientrano in questo ambito.
 
-## How a topic is created
+## Come viene creato un argomento
 
-`createTopic` on `rp-community` mints the topic id and the thread id and stamps
-the author from the token; this surface then registers the thread and writes the
-opening post against `rp-threads`. The split is deliberate: ids a client can
-choose are ids it can steal, and a repository calling another repository is what
-the architecture forbids.
+`createTopic` su `rp-community` genera l'id dell'argomento e quello della
+discussione e assegna l'autore dal token; questa superficie registra quindi la
+discussione e scrive il post di apertura su `rp-threads`. La separazione è
+intenzionale: gli id che un client può scegliere sono id che può sottrarre, e
+un repository che chiama un altro repository è proprio ciò che l'architettura
+vieta.
 
-## Live updates
+## Aggiornamenti in tempo reale
 
-Replies arrive over Fujin's business channel (`pushrouter`) through the
-`threads-state` library, not by polling. A push carries identifiers only; the
-text is re-read from `rp-threads`, where the read predicate applies.
+Le risposte arrivano attraverso il canale aziendale di Fujin (`pushrouter`) per
+mezzo della libreria `threads-state`, non tramite polling. Un push trasporta solo
+gli identificatori; il testo viene riletto da `rp-threads`, dove si applica il
+predicato di lettura.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
 - `front-core`, `g-community`, `g-threads`, `signal-channel`, `threads-state`
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `communications`
 
-## Source
+## Sorgente
 
 `modules/surfaces/communications/sf-community`

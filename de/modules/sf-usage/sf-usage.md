@@ -1,21 +1,21 @@
 # sf-usage
 
-## Purpose
+## Zweck
 
-Owns Usage UI: feature-consumption charts, usage counters, quota/limit displays, and usage period comparison screens.
+Verantwortet die Nutzungsoberfläche: Diagramme zum Funktionsverbrauch, Nutzungszähler, Kontingent-/Limitanzeigen und Bildschirme zum Vergleich von Nutzungszeiträumen.
 
-## Responsibility boundary
+## Zuständigkeitsgrenze
 
-Controls usage analytics presentation and interaction; does not own charge/payment screens or low-level telemetry ingestion tools.
+Steuert die Darstellung und Interaktion der Nutzungsanalysen; ist nicht für Abrechnungs-/Zahlungsbildschirme oder Low-Level-Tools zur Erfassung von Telemetriedaten zuständig.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `analitycs`
 
-## Source
+## Quelle
 
 `modules/surfaces/analytics/sf-usage`

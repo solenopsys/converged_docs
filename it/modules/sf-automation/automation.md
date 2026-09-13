@@ -1,43 +1,37 @@
-# Automation
+# Automazione
 
-## Purpose
+## Scopo
 
-Owns the automation workspace: workflows and their runs, the bus triggers that
-start them, recurring schedules, and inbound webhook endpoints.
+Gestisce l'area di lavoro dell'automazione: i workflow e le relative esecuzioni, i trigger del bus che li avviano, le pianificazioni ricorrenti e gli endpoint webhook in ingresso.
 
-## Responsibility boundary
+## Confine delle responsabilità
 
-Controls the workspace experience. It does not execute workflows, keep
-schedules, or deliver webhooks — it starts a run through the runtime and reads
-the log back from rp-dag.
+Controlla l'esperienza dell'area di lavoro. Non esegue i workflow, non conserva le pianificazioni né consegna i webhook: avvia un'esecuzione tramite il runtime e legge il log da rp-dag.
 
-## The DAG section
+## La sezione DAG
 
-- **Workflows** — the catalogue the active Solution publishes, read-only.
-  Opening one is asking to run it: parameters are typed as JSON and handed to
+- **Workflow** — il catalogo pubblicato dalla Solution attiva, in sola lettura.
+  Aprirne uno significa chiedere di eseguirlo: i parametri sono tipizzati come JSON e passati a
   `centimanus.runWorkflow`.
-- **Runs** — every execution, with its status.
-- **Run detail** — the tree of what the run did. One line per node: how deep it
-  sits, whether it finished, how long it took. Unfolding a node shows the
-  service calls it made and what came back. A node that delegated through
-  `rt.sub` is followed by the nodes of the run it delegated to, one level in.
-  A run that is still going refreshes itself.
-- **Triggers** — "when this bus topic appears, run that workflow". Topic,
-  workflow, JSON parameters, on/off.
-- **Variables** — workflow state written by `rt.set`.
+- **Esecuzioni** — ogni esecuzione, con il relativo stato.
+- **Dettagli dell'esecuzione** — l'albero di ciò che l'esecuzione ha fatto. Una riga per nodo: a quale profondità si trova, se è terminato, quanto tempo ha impiegato. Espandendo un nodo vengono mostrate le
+  chiamate ai servizi effettuate e ciò che è stato restituito. Un nodo che ha delegato tramite
+  `rt.sub` è seguito dai nodi dell'esecuzione a cui ha delegato, un livello più in profondità.
+  Un'esecuzione ancora in corso si aggiorna automaticamente.
+- **Trigger** — "quando compare questo argomento del bus, esegui quel workflow". Argomento,
+  workflow, parametri JSON, attivato/disattivato.
+- **Variabili** — lo stato del workflow scritto da `rt.set`.
 
-Parameters are typed as JSON everywhere rather than generated into a form: a
-workflow's parameters are its own and change with it, so a text field stays
-correct when they do and what is typed is what the workflow receives.
+I parametri sono tipizzati come JSON ovunque anziché essere generati in un modulo: i parametri di un workflow sono propri e cambiano insieme a esso, quindi un campo di testo rimane corretto quando cambiano e ciò che viene digitato è ciò che il workflow riceve.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla Solution
 
-- Not included in a predefined solution
+- Non incluso in una Solution predefinita
 
-## Source
+## Sorgente
 
 `modules/surfaces/automation/sf-automation`

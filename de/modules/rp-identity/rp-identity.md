@@ -1,21 +1,21 @@
 # rp-identity
 
-## Purpose
+## Zweck
 
-Maintains identity profiles and identity-linked core attributes.
+Verwaltet Identitätsprofile und identitätsbezogene Kernattribute.
 
-## Responsibility boundary
+## Verantwortungsbereich
 
-Owns identity records and identity lifecycle state; does not own fine-grained permission policies.
+Verantwortet Identitätsdatensätze und den Status des Identitätslebenszyklus; besitzt jedoch keine fein abgestuften Berechtigungsrichtlinien.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Lösungszugehörigkeit
 
 - `security`
 
-## Source
+## Quelle
 
 `modules/repositories/sequrity/rp-identity`

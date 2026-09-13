@@ -1,18 +1,18 @@
 # rp-assistant
 
-## Purpose
+## Objectif
 
-Provides assistant-style AI interactions for end users and internal tools.
+Fournit des interactions avec une IA de type assistant pour les utilisateurs finaux et les outils internes.
 
-## Responsibility boundary
+## Limites des responsabilités
 
-Owns assistant dialog behavior and request handling; does not own model provider infrastructure or user identity.
+Gère le comportement du dialogue de l’assistant et le traitement des requêtes ; ne gère pas l’infrastructure des fournisseurs de modèles ni l’identité des utilisateurs.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `ai`
 

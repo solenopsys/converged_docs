@@ -204,7 +204,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/lm-scraping",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -409,7 +409,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-audit",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -556,7 +556,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-companies",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -808,7 +808,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-geo",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -850,7 +850,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-install",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -892,7 +892,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-mailing",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -934,7 +934,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-marker",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1018,7 +1018,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-parameters",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1039,7 +1039,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/rp-places",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1375,7 +1375,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/sf-audit",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1522,7 +1522,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/sf-companies",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1627,7 +1627,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/sf-enrichment",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1711,7 +1711,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/sf-geo",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1774,7 +1774,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/sf-mailing",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -1858,7 +1858,7 @@
       "targetRoot": "../../../../club/content/docs-cache",
       "targetPrefix": "modules/sf-sales",
       "targetStripPrefix": "modules",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
@@ -2169,15 +2169,15 @@
     {
       "name": "club-struct",
       "root": "../../../../club/content/struct",
+      "indexContentRoot": "../markdown",
       "targetRoot": "../../../../club/content/docs-cache/struct",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
         "es",
         "fr",
         "it",
-        "pdf",
         "pt",
         "ru"
       ],
@@ -2187,14 +2187,13 @@
       "name": "club-markdown",
       "root": "../../../../club/content/markdown",
       "targetRoot": "../../../../club/content/docs-cache/markdown",
-      "translationIndex": "../../../../club/content/docs-cache/.translation",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
       "sourceLocale": "en",
       "targetLocales": [
         "de",
         "es",
         "fr",
         "it",
-        "pdf",
         "pt",
         "ru"
       ],

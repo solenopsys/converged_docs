@@ -1,21 +1,21 @@
 # rp-access
 
-## Purpose
+## Objetivo
 
-Manages access-control rules and permission checks.
+Gerencia regras de controle de acesso e verificações de permissões.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Owns authorization policy evaluation and access scopes; does not own identity proofing/authentication login.
+É responsável pela avaliação das políticas de autorização e pelos escopos de acesso; não é responsável pela comprovação de identidade/autenticação de login.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Membro da solução
 
 - `security`
 
-## Source
+## Origem
 
 `modules/repositories/sequrity/rp-access`

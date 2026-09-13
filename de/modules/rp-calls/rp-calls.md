@@ -1,21 +1,21 @@
 # rp-calls
 
-## Purpose
+## Zweck
 
-Provides call-related communication workflows and call session handling.
+Bietet kommunikationsbezogene Anruf-Workflows und die Verwaltung von Anrufsitzungen.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-Owns call-session domain logic and call metadata; does not own external telecom provider infrastructure.
+Verantwortet die Domänenlogik für Anrufsitzungen und Anrufmetadaten, jedoch nicht die Infrastruktur externer Telekommunikationsanbieter.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `ai`
 
-## Source
+## Quelle
 
 `modules/repositories/communications/rp-calls`

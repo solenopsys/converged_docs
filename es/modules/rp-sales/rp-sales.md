@@ -1,21 +1,21 @@
 # rp-sales
 
-## Purpose
+## Propósito
 
-Handles sales-domain entities, sales flows, and related metrics preparation.
+Gestiona las entidades del dominio de ventas, los flujos de ventas y la preparación de métricas relacionadas.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns sales lifecycle and sales data logic; does not own payment gateway transaction processing.
+Se encarga del ciclo de vida de las ventas y de la lógica de datos de ventas; no se encarga del procesamiento de transacciones de la pasarela de pagos.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
-- Not included in a predefined solution
+- No está incluido en una solución predefinida
 
-## Source
+## Fuente
 
 `modules/repositories/business/rp-sales`

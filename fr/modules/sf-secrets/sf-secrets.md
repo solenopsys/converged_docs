@@ -1,20 +1,20 @@
 # sf-secrets
 
-## Purpose
+## Objectif
 
-Provides the administration interface for creating, viewing, updating, and deleting named secret records.
+Fournit l’interface d’administration permettant de créer, consulter, mettre à jour et supprimer des enregistrements de secrets nommés.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

@@ -1,21 +1,21 @@
 # rp-requests
 
-## Purpose
+## Propósito
 
-Processes service/business requests submitted by users or organizations.
+Procesa solicitudes de servicio/negocio enviadas por usuarios u organizaciones.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns request lifecycle and status transitions; does not own messaging transport or file storage internals.
+Gestiona el ciclo de vida de las solicitudes y las transiciones de estado; no gestiona el transporte de mensajería ni los aspectos internos del almacenamiento de archivos.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `requests`
 
-## Source
+## Origen
 
 `modules/repositories/business/rp-requests`

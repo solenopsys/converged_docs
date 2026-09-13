@@ -1,21 +1,21 @@
 # rp-sheduller
 
-## Purpose
+## Zweck
 
-Stores and serves automation schedule data and execution history.
+Speichert und stellt Daten zu Automatisierungszeitplänen und Ausführungshistorien bereit.
 
-## Responsibility boundary
+## Zuständigkeitsgrenze
 
-Owns CRUD/list/stats for cron entries and history records; does not execute workflows, timers, retries, or background dispatch.
+Verantwortet CRUD, Listen und Statistiken für Cron-Einträge und Verlaufsdatensätze; führt keine Workflows, Timer, Wiederholungen oder Hintergrundverteilung aus.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Lösung enthalten
 
-## Source
+## Quelle
 
 `modules/repositories/automation/rp-sheduller`

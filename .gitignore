@@ -1,0 +1,6 @@
+
+# Translation index: the database is committed, its journal never is.
+.index/index.sqlite-wal
+.index/index.sqlite-shm
+**/.index/index.sqlite-wal
+**/.index/index.sqlite-shm

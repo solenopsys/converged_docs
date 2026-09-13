@@ -1,21 +1,21 @@
 # rp-equipment
 
-## Purpose
+## Назначение
 
-Manages equipment entities, metadata, and related lifecycle operations.
+Управляет сущностями оборудования, метаданными и связанными операциями жизненного цикла.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns equipment catalog and state transitions; does not own logistics carrier execution.
+Отвечает за каталог оборудования и переходы состояний; не отвечает за выполнение операций перевозчиками.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включен в предопределенное решение
 
-## Source
+## Источник
 
 `modules/repositories/business/rp-equipment`

@@ -1,21 +1,21 @@
 # rp-auth
 
-## Purpose
+## Назначение
 
-Handles authentication workflows and credential/session validation.
+Обрабатывает рабочие процессы аутентификации и проверку учетных данных/сеансов.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns auth flows and token/session issuance logic; does not own third-party OAuth provider adapters outside auth scope.
+Отвечает за потоки аутентификации и логику выдачи токенов/сеансов; не отвечает за адаптеры сторонних OAuth-провайдеров, находящиеся за пределами области аутентификации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Принадлежность к решению
 
 - `security`
 
-## Source
+## Исходный код
 
 `modules/repositories/sequrity/rp-auth`

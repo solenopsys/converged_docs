@@ -1,21 +1,21 @@
 # rp-telemetry
 
-## Purpose
+## Scopo
 
-Captures telemetry events and technical health signals from services.
+Acquisisce eventi di telemetria e segnali sullo stato tecnico dai servizi.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Owns telemetry event intake and normalization; does not own product analytics definitions.
+Gestisce l'acquisizione e la normalizzazione degli eventi di telemetria; non gestisce le definizioni delle analisi del prodotto.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `analitycs`
 
-## Source
+## Origine
 
 `modules/repositories/analytics/rp-telemetry`

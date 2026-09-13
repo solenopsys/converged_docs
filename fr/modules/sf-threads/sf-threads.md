@@ -1,18 +1,18 @@
 # sf-threads
 
-## Purpose
+## Objectif
 
-Owns Threads UI: threaded conversation lists, thread detail panels, reply composers, and thread state indicators.
+Gère l’interface utilisateur de Threads : les listes de conversations organisées en fils, les panneaux de détails des fils, les compositeurs de réponses et les indicateurs d’état des fils.
 
-## Responsibility boundary
+## Limites des responsabilités
 
-Controls thread-centric communication experience; does not own push/email transport configuration or external social channel adapters.
+Contrôle l’expérience de communication centrée sur les fils ; ne gère pas la configuration du transport des notifications push ou des e-mails, ni les adaptateurs de canaux sociaux externes.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `ai`
 

@@ -1,21 +1,21 @@
 # rp-dashboard
 
-## Purpose
+## Zweck
 
-Provides dashboard data and analytical views for platform metrics.
+Stellt Dashboard-Daten und analytische Ansichten für Plattformmetriken bereit.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-The module boundary is defined by its public contracts and implementation directory.
+Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zu einer Lösung
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Lösung enthalten
 
-## Source
+## Quelle
 
 `modules/repositories/analytics/rp-dashboard`

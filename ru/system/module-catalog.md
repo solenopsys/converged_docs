@@ -1,586 +1,586 @@
-# Module catalogue
+# Каталог модулей
 
-This index is generated from the Converged module registry. Every entry links to documentation owned by that module; dependencies are taken from its workspace package manifest, and solution membership comes from `modules/solutions`.
+Этот индекс сгенерирован из реестра модулей Converged. Каждая запись содержит ссылку на документацию, принадлежащую соответствующему модулю; зависимости взяты из манифеста пакета его рабочего пространства, а принадлежность к решениям — из `modules/solutions`.
 
-## Access and security
+## Доступ и безопасность
 
 ### [lm-secrets](/en/docs/modules/lm-secrets)
 
-Provides the service contract for storing, retrieving, and deleting named secret values.
+Предоставляет сервисный контракт для хранения, получения и удаления именованных секретных значений.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-access](/en/docs/modules/rp-access)
 
-rp-access is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-access — это репозиторий в предметной области sequrity. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Прямые зависимости: отсутствуют
+- Решения: `security`
 
 ### [rp-auth](/en/docs/modules/rp-auth)
 
-rp-auth is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-auth — это репозиторий в предметной области sequrity. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Прямые зависимости: отсутствуют
+- Решения: `security`
 
 ### [rp-environment](/en/docs/modules/rp-environment)
 
-Stores and retrieves environment configuration associated with platform users.
+Хранит и извлекает конфигурацию среды, связанную с пользователями платформы.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-identity](/en/docs/modules/rp-identity)
 
-rp-identity is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-identity — это репозиторий в предметной области sequrity. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Прямые зависимости: отсутствуют
+- Решения: `security`
 
 ### [rp-oauth](/en/docs/modules/rp-oauth)
 
-rp-oauth is a repository in the sequrity domain. Its detailed purpose is maintained with the module source.
+rp-oauth — это репозиторий в предметной области sequrity. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-auth](/en/docs/modules/sf-auth)
 
-sf-auth is a surface in the sequrity domain. Its detailed purpose is maintained with the module source.
+sf-auth — это поверхность в предметной области sequrity. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Прямые зависимости: отсутствуют
+- Решения: `security`
 
 ### [sf-secrets](/en/docs/modules/sf-secrets)
 
-Provides the administration interface for creating, viewing, updating, and deleting named secret records.
+Предоставляет интерфейс администрирования для создания, просмотра, обновления и удаления именованных записей секретов.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
-## AI and agents
+## ИИ и агенты
 
 ### [rp-assistant](/en/docs/modules/rp-assistant)
 
-rp-assistant is a repository in the ai domain. Its detailed purpose is maintained with the module source.
+rp-assistant — это репозиторий в предметной области ai. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
 ### [rp-contexts](/en/docs/modules/rp-contexts)
 
-Provides storage and retrieval of named AI contexts, including their language variants.
+Предоставляет хранение и получение именованных контекстов ИИ, включая их языковые варианты.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
 ### [sf-assistants](/en/docs/modules/sf-assistants)
 
-sf-assistants is a surface in the ai domain. Its detailed purpose is maintained with the module source.
+sf-assistants — это поверхность в предметной области ai. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: `sf-requests`
-- Solutions: `ai`
+- Прямые зависимости: `sf-requests`
+- Решения: `ai`
 
 ### [sf-contexts](/en/docs/modules/sf-contexts)
 
-Provides the AI workspace for listing, editing, and saving named contexts in multiple languages.
+Предоставляет рабочее пространство ИИ для просмотра, редактирования и сохранения именованных контекстов на нескольких языках.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
-## Analytics and telemetry
+## Аналитика и телеметрия
 
 ### [rp-counters](/en/docs/modules/rp-counters)
 
-Provides the service contract for collecting and querying analytical counters.
+Предоставляет сервисный контракт для сбора и анализа аналитических счётчиков.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [rp-dashboard](/en/docs/modules/rp-dashboard)
 
-Provides dashboard data and analytical views for platform metrics.
+Предоставляет данные панелей мониторинга и аналитические представления метрик платформы.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [rp-logs](/en/docs/modules/rp-logs)
 
-rp-logs is a repository in the analytics domain. Its detailed purpose is maintained with the module source.
+rp-logs — это репозиторий в предметной области analytics. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [rp-telemetry](/en/docs/modules/rp-telemetry)
 
-rp-telemetry is a repository in the analytics domain. Its detailed purpose is maintained with the module source.
+rp-telemetry — это репозиторий в предметной области analytics. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [rp-usage](/en/docs/modules/rp-usage)
 
-rp-usage is a repository in the analytics domain. Its detailed purpose is maintained with the module source.
+rp-usage — это репозиторий в предметной области analytics. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [sf-dasboards](/en/docs/modules/sf-dasboards)
 
-sf-dasboards is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-dasboards — это поверхность в предметной области analytics. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [sf-logs](/en/docs/modules/sf-logs)
 
-sf-logs is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-logs — это поверхность в предметной области analytics. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [sf-telemetry](/en/docs/modules/sf-telemetry)
 
-sf-telemetry is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-telemetry — это поверхность в предметной области analytics. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
 ### [sf-usage](/en/docs/modules/sf-usage)
 
-sf-usage is a surface in the analytics domain. Its detailed purpose is maintained with the module source.
+sf-usage — это поверхность в предметной области analytics. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `analitycs`
+- Прямые зависимости: отсутствуют
+- Решения: `analitycs`
 
-## Automation and orchestration
+## Автоматизация и оркестрация
 
 ### [lm-kubernetes](/en/docs/modules/lm-kubernetes)
 
-Integrates platform automation with Kubernetes resources through a dedicated client and service contract.
+Интегрирует автоматизацию платформы с ресурсами Kubernetes через выделенный клиент и сервисный контракт.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-dag](/en/docs/modules/rp-dag)
 
-rp-dag is a repository in the automation domain. Its detailed purpose is maintained with the module source.
+rp-dag — это репозиторий в предметной области automation. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [rp-sheduller](/en/docs/modules/rp-sheduller)
 
-rp-sheduller is a repository in the automation domain. Its detailed purpose is maintained with the module source.
+rp-sheduller — это репозиторий в предметной области automation. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-webhooks](/en/docs/modules/rp-webhooks)
 
-rp-webhooks is a repository in the automation domain. Its detailed purpose is maintained with the module source.
+rp-webhooks — это репозиторий в предметной области automation. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-automation](/en/docs/modules/sf-automation)
 
-sf-automation is the surface in the automation domain for workflows, schedules, webhook endpoints, and their execution history.
+sf-automation — это поверхность в предметной области automation для рабочих процессов, расписаний, конечных точек вебхуков и истории их выполнения.
 
-- Direct dependencies: none
-- Solutions: `automation`
+- Прямые зависимости: отсутствуют
+- Решения: `automation`
 
-## Business domain
+## Бизнес-домен
 
 ### [rp-billing](/en/docs/modules/rp-billing)
 
-rp-billing is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-billing — это репозиторий в бизнес-домене. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-equipment](/en/docs/modules/rp-equipment)
 
-rp-equipment is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-equipment — это репозиторий в бизнес-домене. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-events](/en/docs/modules/rp-events)
 
-Provides creation, storage, and retrieval of business events.
+Предоставляет создание, хранение и получение бизнес-событий.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-finance](/en/docs/modules/rp-finance)
 
-Provides finance operations for transactions, period summaries, cashflow, receivables, and payables.
+Предоставляет финансовые операции для транзакций, сводок за периоды, денежных потоков, дебиторской и кредиторской задолженности.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-orders](/en/docs/modules/rp-orders)
 
-Provides the service contract for creating, updating, listing, and tracking business orders.
+Предоставляет сервисный контракт для создания, обновления, перечисления и отслеживания бизнес-заказов.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-requests](/en/docs/modules/rp-requests)
 
-rp-requests is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-requests — это репозиторий в бизнес-домене. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [rp-reviews](/en/docs/modules/rp-reviews)
 
-rp-reviews is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-reviews — это репозиторий в бизнес-домене. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-sales](/en/docs/modules/rp-sales)
 
-rp-sales is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-sales — это репозиторий в бизнес-домене. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-staff](/en/docs/modules/rp-staff)
 
-rp-staff is a repository in the business domain. Its detailed purpose is maintained with the module source.
+rp-staff — это репозиторий в бизнес-домене. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-orders](/en/docs/modules/sf-orders)
 
-Provides the sales interface for order and request lists, order details, status filtering, and operational dashboards.
+Предоставляет интерфейс продаж для списков заказов и запросов, сведений о заказах, фильтрации по статусу и операционных панелей мониторинга.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-requests](/en/docs/modules/sf-requests)
 
-sf-requests is a surface in the business domain. Its detailed purpose is maintained with the module source.
+sf-requests — это поверхность в бизнес-домене. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
-## Communications
+## Коммуникации
 
 ### [rp-calls](/en/docs/modules/rp-calls)
 
-rp-calls is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-calls — это репозиторий в предметной области communications. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
 ### [rp-chats](/en/docs/modules/rp-chats)
 
-rp-chats is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-chats — это репозиторий в предметной области communications. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-community](/en/docs/modules/rp-community)
 
-rp-community is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-community — это репозиторий в предметной области communications. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-notify](/en/docs/modules/rp-notify)
 
-rp-notify is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-notify — это репозиторий в предметной области communications. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-resonus](/en/docs/modules/rp-resonus)
 
-Provides communication configuration for managed phone numbers and LLM gate settings.
+Предоставляет конфигурацию коммуникаций для управляемых телефонных номеров и настроек шлюза LLM.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-threads](/en/docs/modules/rp-threads)
 
-rp-threads is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+rp-threads — это репозиторий в предметной области communications. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
 ### [sf-calls](/en/docs/modules/sf-calls)
 
-sf-calls is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-calls — это поверхность в предметной области communications. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
 ### [sf-chats](/en/docs/modules/sf-chats)
 
-sf-chats is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-chats — это поверхность в предметной области communications. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-community](/en/docs/modules/sf-community)
 
-sf-community is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-community — это поверхность в предметной области communications. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-threads](/en/docs/modules/sf-threads)
 
-sf-threads is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+sf-threads — это поверхность в предметной области communications. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `ai`
+- Прямые зависимости: отсутствуют
+- Решения: `ai`
 
-## Content and documents
+## Контент и документы
 
 ### [rp-classifier](/en/docs/modules/rp-classifier)
 
-rp-classifier is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-classifier — это репозиторий в предметной области content. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-galery](/en/docs/modules/rp-galery)
 
-rp-galery is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-galery — это репозиторий в предметной области content. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `content`
+- Прямые зависимости: отсутствуют
+- Решения: `content`
 
 ### [rp-markdown](/en/docs/modules/rp-markdown)
 
-rp-markdown is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-markdown — это репозиторий в предметной области content. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `content`
+- Прямые зависимости: отсутствуют
+- Решения: `content`
 
 ### [rp-scripts](/en/docs/modules/rp-scripts)
 
-Provides storage operations for script files, including reading, saving, hashing, and deletion.
+Предоставляет операции хранения для файлов скриптов, включая чтение, сохранение, хеширование и удаление.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-static](/en/docs/modules/rp-static)
 
-Provides the service contract for static content and SSR cache metadata.
+Предоставляет сервисный контракт для статического контента и метаданных кэша SSR.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-struct](/en/docs/modules/rp-struct)
 
-rp-struct is a repository in the content domain. Its detailed purpose is maintained with the module source.
+rp-struct — это репозиторий в предметной области content. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `content`
+- Прямые зависимости: отсутствуют
+- Решения: `content`
 
 ### [sf-classifier](/en/docs/modules/sf-classifier)
 
-Provides the classifier interface for navigating entities, mappings, and tree structures.
+Предоставляет интерфейс классификатора для навигации по сущностям, сопоставлениям и древовидным структурам.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-docs](/en/docs/modules/sf-docs)
 
-sf-docs is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-docs — это поверхность в предметной области content. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-galery](/en/docs/modules/sf-galery)
 
-sf-galery is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-galery — это поверхность в предметной области content. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-landing](/en/docs/modules/sf-landing)
 
-sf-landing is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-landing — это поверхность в предметной области content. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-markdown](/en/docs/modules/sf-markdown)
 
-sf-markdown is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-markdown — это поверхность в предметной области content. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-static](/en/docs/modules/sf-static)
 
-Provides the operations interface for inspecting and clearing static SSR cache entries.
+Предоставляет интерфейс операций для просмотра и очистки записей статического кэша SSR.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-struct](/en/docs/modules/sf-struct)
 
-sf-struct is a surface in the content domain. Its detailed purpose is maintained with the module source.
+sf-struct — это поверхность в предметной области content. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
-## Files and storage
+## Файлы и хранилище
 
 ### [lm-compressors](/en/docs/modules/lm-compressors)
 
-lm-compressors is a lambda in the data domain. Its detailed purpose is maintained with the module source.
+lm-compressors — это лямбда-функция в предметной области data. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [rp-dumps](/en/docs/modules/rp-dumps)
 
-rp-dumps is a repository in the data domain. Its detailed purpose is maintained with the module source.
+rp-dumps — это репозиторий в предметной области data. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [rp-files](/en/docs/modules/rp-files)
 
-rp-files is a repository in the data domain. Its detailed purpose is maintained with the module source.
+rp-files — это репозиторий в предметной области data. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [rp-store](/en/docs/modules/rp-store)
 
-rp-store is a repository in the data domain. Its detailed purpose is maintained with the module source.
+rp-store — это репозиторий в предметной области data. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [sf-dumps](/en/docs/modules/sf-dumps)
 
-sf-dumps is a surface in the data domain. Its detailed purpose is maintained with the module source.
+sf-dumps — это поверхность в предметной области data. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [sf-files](/en/docs/modules/sf-files)
 
-sf-files is a surface in the data domain. Its detailed purpose is maintained with the module source.
+sf-files — это поверхность в предметной области data. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
-## Message delivery providers
+## Провайдеры доставки сообщений
 
 ### [lm-push](/en/docs/modules/lm-push)
 
-lm-push is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-push — это лямбда-функция в предметной области providers. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [lm-ses](/en/docs/modules/lm-ses)
 
-lm-ses is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-ses — это лямбда-функция в предметной области providers. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `security`
+- Прямые зависимости: отсутствуют
+- Решения: `security`
 
 ### [lm-sms](/en/docs/modules/lm-sms)
 
-lm-sms is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-sms — это лямбда-функция в предметной области providers. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [lm-smtp](/en/docs/modules/lm-smtp)
 
-lm-smtp is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+lm-smtp — это лямбда-функция в предметной области providers. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
-## Model conversion
+## Конвертация моделей
 
 ### [lm-modelconvertor](/en/docs/modules/lm-modelconvertor)
 
-lm-modelconvertor is a lambda in the convertors domain. Its detailed purpose is maintained with the module source.
+lm-modelconvertor — это лямбда-функция в предметной области convertors. Её подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
-## Workflows
+## Рабочие процессы
 
 ### [wf-dialogue-summary](/en/docs/modules/wf-dialogue-summary)
 
-Summarizes unprocessed chat and call dialogues with an LLM, then stores titles, descriptions, and noise classification.
+Обобщает необработанные диалоги чатов и звонков с помощью LLM, затем сохраняет заголовки, описания и классификацию шума.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [wf-file-analyze](/en/docs/modules/wf-file-analyze)
 
-Analyzes one stored non-archive file, producing model previews and CNC or 3D-print estimates when supported.
+Анализирует один сохранённый файл, не являющийся архивом, создавая предварительные просмотры моделей и оценки для ЧПУ или 3D-печати, если это поддерживается.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [wf-file-unpack](/en/docs/modules/wf-file-unpack)
 
-Expands one uploaded archive into a collection of stored files for subsequent analysis.
+Распаковывает один загруженный архив в набор сохранённых файлов для последующего анализа.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [wf-files-analyze](/en/docs/modules/wf-files-analyze)
 
-wf-files-analyze is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-files-analyze — это рабочий процесс в предметной области platform. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [wf-files-process](/en/docs/modules/wf-files-process)
 
-Processes uploaded files in batches: it expands archives, identifies model files, and creates a manufacturing request from them.
+Обрабатывает загруженные файлы пакетами: распаковывает архивы, идентифицирует файлы моделей и создаёт на их основе производственный запрос.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [wf-request-analyze](/en/docs/modules/wf-request-analyze)
 
-wf-request-analyze is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-request-analyze — это рабочий процесс в предметной области platform. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: `requests`
+- Прямые зависимости: отсутствуют
+- Решения: `requests`
 
 ### [wf-sales-import](/en/docs/modules/wf-sales-import)
 
-wf-sales-import is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-sales-import — это рабочий процесс в предметной области platform. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
 ### [wf-sales-review-outreach](/en/docs/modules/wf-sales-review-outreach)
 
-wf-sales-review-outreach is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+wf-sales-review-outreach — это рабочий процесс в предметной области platform. Его подробное назначение поддерживается вместе с исходным кодом модуля.
 
-- Direct dependencies: none
-- Solutions: none
+- Прямые зависимости: отсутствуют
+- Решения: отсутствуют
 
-## Solution dependencies
+## Зависимости решений
 
 - `ai`: `security`
 - `analitycs`: `security`
 - `content`: `security`
-- `requests`: no solution dependencies
-- `security`: no solution dependencies
+- `requests`: зависимости решений отсутствуют
+- `security`: зависимости решений отсутствуют

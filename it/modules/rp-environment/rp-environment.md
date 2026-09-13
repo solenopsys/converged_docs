@@ -1,21 +1,21 @@
 # rp-environment
 
-## Purpose
+## Scopo
 
-Stores and retrieves environment configuration associated with platform users.
+Archivia e recupera la configurazione dell'ambiente associata agli utenti della piattaforma.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-The module boundary is defined by its public contracts and implementation directory.
+Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Sorgente
 
 `modules/repositories/sequrity/rp-environment`

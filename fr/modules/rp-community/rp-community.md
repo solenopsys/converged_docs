@@ -1,44 +1,30 @@
 # rp-community
 
-## Purpose
+## Objectif
 
-Forum structure and ownership: sections, topics, who wrote them and who may see
-them. The discussion under a topic is not here — a topic carries a `threadId`
-and the messages live in `rp-threads`.
+Structure et gouvernance du forum : sections, sujets, leurs auteurs et les personnes qui peuvent les voir. Les échanges sous un sujet ne se trouvent pas ici — un sujet contient un `threadId` et les messages se trouvent dans `rp-threads`.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-Owns sections and topics. Does not call `rp-threads` or any other repository:
-`createTopic` mints a `threadId` and hands it back, and the caller registers the
-thread and writes the opening post itself.
+Gère les sections et les sujets. N'appelle ni `rp-threads` ni aucun autre dépôt : `createTopic` génère un `threadId` et le renvoie, puis l'appelant enregistre lui-même le fil et rédige le message d'ouverture.
 
-## Identity and authorship
+## Identité et attribution
 
-`createdBy` is never accepted from a caller. It is read from the verified token
-through `getCurrentWorkspaceContext()`, which `messaging-backend` prefers over
-anything the envelope claims. Topic and thread ids are minted here for the same
-reason — an id a client can choose is an id it can steal, and the access-tag
-table records no object type to catch the collision.
+`createdBy` n'est jamais accepté d'un appelant. Il est lu depuis le jeton vérifié via `getCurrentWorkspaceContext()`, que `messaging-backend` privilégie par rapport à toute valeur déclarée dans l'enveloppe. Les identifiants des sujets et des fils sont générés ici pour la même raison — un identifiant qu'un client peut choisir est un identifiant qu'il peut usurper, et la table des balises d'accès n'enregistre aucun type d'objet permettant de détecter la collision.
 
-## Visibility
+## Visibilité
 
-Sections and topics carry a `visibility` column (`public` | `authenticated` |
-`private` | `tagged`), and a new topic inherits its section's value unless it
-asks for something narrower. The tags behind `tagged` belong in the shared
-`access_tags` relation described in `access-control.md`; that half is not
-implemented yet, so today `visibility` is recorded but not enforced.
+Les sections et les sujets possèdent une colonne `visibility` (`public` | `authenticated` | `private` | `tagged`), et un nouveau sujet hérite de la valeur de sa section, sauf s'il demande une valeur plus restrictive. Les balises associées à `tagged` appartiennent à la relation partagée `access_tags` décrite dans `access-control.md` ; cette partie n'est pas encore implémentée, donc aujourd'hui `visibility` est enregistrée mais n'est pas appliquée.
 
-## Locking
+## Verrouillage
 
-`touchTopicActivity` is the only place a lock can be enforced: `rp-threads`
-accepts a message without knowing topics exist, so a screen calls this after
-posting and treats a refusal as a failed post.
+`touchTopicActivity` est le seul endroit où un verrou peut être appliqué : `rp-threads` accepte un message sans savoir que les sujets existent, donc un écran appelle cette fonction après la publication et considère un refus comme un échec de publication.
 
-## Direct module dependencies
+## Dépendances directes du module
 
 - `back-core`, `nrpc`, `g-community`
 
-## Solution membership
+## Appartenance à la solution
 
 - `communications`
 

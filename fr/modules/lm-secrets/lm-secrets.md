@@ -1,20 +1,20 @@
 # lm-secrets
 
-## Purpose
+## Objectif
 
-Provides the service contract for storing, retrieving, and deleting named secret values.
+Fournit le contrat de service pour le stockage, la récupération et la suppression de valeurs secrètes nommées.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

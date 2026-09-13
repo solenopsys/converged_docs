@@ -1,13 +1,13 @@
-## Adding a module
+## Ein Modul hinzufügen
 
-The steps are the same for the base platform and for a product layer.
+Die Schritte sind für die Basisplattform und eine Produktschicht gleich.
 
-1. **Create the directory** by convention: `modules/microservices/<domain>/ms-<name>` for a service, `modules/surfaces/<domain>/sf-<name>` for a screen, `modules/workflows/wf-<name>` for a process.
-2. **Declare the contract** in `modules/types/<domain>/` and generate the clients with `bun run gen`. The client appears as a `g-<name>` package, usable from the browser, from another process on the bus, and from inside a workflow.
-3. **Write the README** with a `## Purpose` section and an ownership-boundary section. The first paragraph of each ends up in the registry on the site — write them for a reader, not for yourself.
-4. **Add the module to a solution** if it does not ship alone: put its short name in `modules/solutions/solutions.json` and declare its dependencies.
-5. **Rebuild the docs**: `bun run build:doc` at the repository root. The module shows up in the registry and the counters on the ecosystem page recount themselves.
+1. **Erstelle das Verzeichnis** nach Konvention: `modules/microservices/<domain>/ms-<name>` für einen Service, `modules/surfaces/<domain>/sf-<name>` für einen Bildschirm, `modules/workflows/wf-<name>` für einen Prozess.
+2. **Deklariere den Vertrag** in `modules/types/<domain>/` und generiere die Clients mit `bun run gen`. Der Client erscheint als Paket `g-<name>` und kann im Browser, von einem anderen Prozess auf dem Bus und innerhalb eines Workflows verwendet werden.
+3. **Schreibe die README** mit einem Abschnitt `## Purpose` und einem Abschnitt zur Verantwortungsgrenze. Der erste Absatz jedes Abschnitts landet im Register der Website — schreibe sie für Leser, nicht für dich selbst.
+4. **Füge das Modul einer Lösung hinzu**, wenn es nicht allein ausgeliefert wird: Trage seinen Kurznamen in `modules/solutions/solutions.json` ein und deklariere seine Abhängigkeiten.
+5. **Baue die Dokumentation neu**: `bun run build:doc` im Repository-Stammverzeichnis. Das Modul erscheint im Register, und die Zähler auf der Ökosystemseite werden neu berechnet.
 
-What you do not have to do: edit module lists in the site data, restate the description in the landing, or register the module anywhere else. Generation runs one way — from sources into data, never back. Anything under `data/` is overwritten by the next build.
+Was du nicht tun musst: Modullisten in den Websitedaten bearbeiten, die Beschreibung auf der Landingpage wiederholen oder das Modul irgendwo anders registrieren. Die Generierung läuft nur in eine Richtung — von den Quellen in die Daten, niemals zurück. Alles unter `data/` wird beim nächsten Build überschrieben.
 
-What review asks of a module: it does not reach into another module's storage, does not bypass the bus with direct calls, declares only the permissions it actually uses, and does not quietly widen its area of responsibility.
+Was das Review von einem Modul verlangt: Es greift nicht auf den Speicher eines anderen Moduls zu, umgeht den Bus nicht durch direkte Aufrufe, deklariert nur die tatsächlich verwendeten Berechtigungen und erweitert seinen Verantwortungsbereich nicht stillschweigend.

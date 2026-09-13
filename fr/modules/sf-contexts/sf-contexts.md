@@ -1,18 +1,18 @@
 # sf-contexts
 
-## Purpose
+## Objectif
 
-Provides the AI workspace for listing, editing, and saving named contexts in multiple languages.
+Fournit l’espace de travail d’IA permettant de répertorier, modifier et enregistrer des contextes nommés dans plusieurs langues.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `ai`
 

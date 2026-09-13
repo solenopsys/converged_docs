@@ -1,94 +1,65 @@
 # rp-dag
 
-## Purpose
+## Objetivo
 
-Owns the workflow triggers and the execution log. It executes nothing.
+É responsável pelos gatilhos do fluxo de trabalho e pelo registro de execução. Não executa nada.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Two things belong here and nothing else:
+Duas coisas pertencem aqui, e nada mais:
 
-- **Triggers** — "when this bus topic appears, run that workflow". System
-  configuration: tens of rows an operator maintains, held whole in the
-  runtime's memory rather than queried.
-- **The execution log** — a tree of what a run did. The runtime writes it while
-  the script runs: a node is opened before its body executes and closed when it
-  finishes, so a run in flight shows the node it is sitting on.
+- **Gatilhos** — "quando este tópico do barramento aparecer, execute aquele fluxo de trabalho". Configuração do sistema: dezenas de linhas mantidas por um operador, mantidas integralmente na memória do runtime em vez de serem consultadas.
+- **O registro de execução** — uma árvore do que uma execução fez. O runtime o escreve enquanto o script é executado: um nó é aberto antes de seu corpo ser executado e fechado quando termina, de modo que uma execução em andamento mostra o nó em que está.
 
-The workflow catalogue is not owned here. Ptah puts the active Solution's
-descriptors into this service's environment (`WORKFLOWS`, `WORKFLOW_DIGESTS`,
-`MODULE_PROXY`) and `listAvailableWorkflows` republishes them for the runtime
-and the UI. Source bytes stay behind Ptah-proxy.
+O catálogo de fluxos de trabalho não pertence aqui. O Ptah coloca os descritores da Solution ativa no ambiente deste serviço (`WORKFLOWS`, `WORKFLOW_DIGESTS`, `MODULE_PROXY`) e `listAvailableWorkflows` os republica para o runtime e a interface do usuário. Os bytes de origem permanecem atrás do Ptah-proxy.
 
-## The log is written by the runtime, not by this service
+## O registro é escrito pelo runtime, não por este serviço
 
-Nothing here writes a log entry. The runtime formats it, puts it in Valkey under
-a key it composes itself, and later hands over the keys — never the entries.
-`commitLog` turns each key into a store location and tells storage to pick the
-entry up; storage reads the cache directly, so an entry crosses the transport
-once, as bytes nobody re-encodes.
+Nada aqui escreve uma entrada de registro. O runtime a formata, coloca-a no Valkey sob uma chave que ele mesmo compõe e depois entrega as chaves — nunca as entradas. `commitLog` transforma cada chave em um local de armazenamento e informa ao storage para buscá-la; o storage lê o cache diretamente, portanto uma entrada atravessa o transporte uma única vez, como bytes que ninguém recodifica.
 
 ```text
-workflow thread ─► queue ─► log writer ─► valkey
-                                 │
-                                 └─ commitLog([keys]) ─► rp-dag ─► storage reads valkey
-                                                                        │
-                                 ◄──── committed ────────────────────────┘
-                                 └─ delete the committed keys
+thread do fluxo ─► fila ─► gravador de registros ─► valkey
+                                             │
+                                             └─ commitLog([keys]) ─► rp-dag ─► storage lê valkey
+                                                                                      │
+                                             ◄──── confirmado ─────────────────────────┘
+                                             └─ excluir as chaves confirmadas
 ```
 
-That is what keeps logging off the workflow's critical path: a node costs the
-runtime a queue append and nothing else. It also means the log is best effort by
-construction — an entry may be dropped under backpressure, and a batch may be
-committed twice after a crash. Keys are derived from the run and the node's
-sequence, so the second commit is a rewrite rather than a duplicate.
+É isso que mantém o registro fora do caminho crítico do fluxo de trabalho: um nó custa ao runtime um acréscimo à fila e nada mais. Isso também significa que o registro é, por construção, de melhor esforço — uma entrada pode ser descartada sob pressão de retorno, e um lote pode ser confirmado duas vezes após uma falha. As chaves são derivadas da execução e da sequência do nó, portanto a segunda confirmação é uma regravação, não uma duplicata.
 
-Keys come from the runtime for that reason: a number handed out by this service
-would cost a round trip per node and would not be reproducible after a restart.
+As chaves vêm do runtime por esse motivo: um número fornecido por este serviço custaria uma ida e volta por nó e não seria reproduzível após uma reinicialização.
 
-- `dag:log:<executionId>:exec` — the run
-- `dag:log:<executionId>:n:<seq>` — one of its nodes, zero-padded to six digits
+- `dag:log:<executionId>:exec` — a execução
+- `dag:log:<executionId>:n:<seq>` — um de seus nós, preenchido com zeros até seis dígitos
 
-`commitLog` derives the store location from the key and refuses anything outside
-the `dag:log:` prefix, so a key is the whole of the authority the call carries.
+`commitLog` deriva o local de armazenamento da chave e recusa qualquer coisa fora do prefixo `dag:log:`, portanto uma chave é toda a autoridade que a chamada carrega.
 
-## The log is a tree
+## O registro é uma árvore
 
 ```text
-exec:<id>              the run
-node:<id>:<seq>        its nodes, in the order they opened
+exec:<id>              a execução
+node:<id>:<seq>        seus nós, na ordem em que foram abertos
 ```
 
-A node that delegated through `rt.sub` carries the child run's id, and the
-child is an ordinary run with nodes of its own. `executionTree` walks that link
-depth-first and returns the result flat, each row tagged with its `depth` — so
-a client renders the tree by indenting and nothing else. No parent index is
-needed: the link is the node that made it.
+Um nó que delegou por meio de `rt.sub` carrega o id da execução filha, e a filha é uma execução comum com seus próprios nós. `executionTree` percorre esse vínculo em profundidade e retorna o resultado de forma plana, com cada linha marcada com seu `depth` — assim, um cliente renderiza a árvore recuando e nada mais. Nenhum índice de pai é necessário: o vínculo é o nó que o criou.
 
-Sequences are zero-padded in the key, because the KV store returns a prefix
-range in lexicographic order and that order has to be the order the nodes ran.
-The runtime pads to the same width when it composes the cache key; the two
-widths are one contract.
+As sequências são preenchidas com zeros na chave, porque o armazenamento KV retorna um intervalo de prefixo em ordem lexicográfica, e essa ordem precisa ser a ordem em que os nós foram executados. O runtime usa a mesma largura ao compor a chave do cache; as duas larguras são um único contrato.
 
-Retention is a cap on runs (`5000` by default), enforced every hundredth open.
-The log is diagnostics, not an archive.
+A retenção é um limite de execuções (`5000` por padrão), aplicado a cada centésima abertura. O registro é diagnóstico, não um arquivo histórico.
 
-## Trigger changes reach the runtime over the bus
+## As alterações nos gatilhos chegam ao runtime pelo barramento
 
-Creating, changing or deleting a trigger publishes `dag.triggers.changed`. The
-runtime subscribes to that topic alongside the triggers' own, so an edit is live
-for the next event instead of waiting out a polling interval. Publishing is best
-effort — a bus that is down must not fail an operator's edit — and the runtime's
-periodic refresh remains the backstop.
+Criar, alterar ou excluir um gatilho publica `dag.triggers.changed`. O runtime se inscreve nesse tópico juntamente com o tópico próprio dos gatilhos, portanto uma edição entra em vigor para o próximo evento em vez de aguardar o fim de um intervalo de consulta. A publicação é de melhor esforço — um barramento indisponível não deve fazer a edição de um operador falhar — e a atualização periódica do runtime continua sendo o mecanismo de segurança.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- g-bus — to announce a trigger change
+- g-bus — para anunciar uma alteração de gatilho
 
-## Solution membership
+## Participação na Solution
 
-- Not included in a predefined solution
+- Não incluído em uma solution predefinida
 
-## Source
+## Código-fonte
 
 `modules/repositories/automation/rp-dag`

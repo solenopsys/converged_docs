@@ -1,20 +1,20 @@
 # rp-environment
 
-## Purpose
+## Objectif
 
-Stores and retrieves environment configuration associated with platform users.
+Stocke et récupère la configuration d’environnement associée aux utilisateurs de la plateforme.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

@@ -1,21 +1,21 @@
 # rp-galery
 
-## Purpose
+## Назначение
 
-Manages gallery-style media collections and related metadata.
+Управляет коллекциями медиа в формате галерей и связанными метаданными.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns gallery entities and organization logic; does not own binary object storage backend.
+Отвечает за сущности галерей и логику их организации; не отвечает за внутреннюю систему хранения двоичных объектов.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Вхождение в решение
 
 - `content`
 
-## Source
+## Исходный код
 
 `modules/repositories/content/rp-galery`

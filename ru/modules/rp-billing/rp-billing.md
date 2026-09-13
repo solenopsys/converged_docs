@@ -1,21 +1,21 @@
 # rp-billing
 
-## Purpose
+## Назначение
 
-Handles billing domain operations such as plans, charges, and billing state.
+Обрабатывает операции предметной области биллинга, такие как тарифные планы, списания и состояние биллинга.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns billing workflows and billing records; does not own external payment gateway internals.
+Отвечает за рабочие процессы биллинга и записи биллинга; не отвечает за внутреннюю реализацию внешних платёжных шлюзов.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Принадлежность к решению
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/repositories/business/rp-billing`

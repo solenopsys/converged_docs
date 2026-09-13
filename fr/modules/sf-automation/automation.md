@@ -1,42 +1,30 @@
-# Automation
+# Automatisation
 
-## Purpose
+## Objectif
 
-Owns the automation workspace: workflows and their runs, the bus triggers that
-start them, recurring schedules, and inbound webhook endpoints.
+Gère l’espace de travail d’automatisation : les workflows et leurs exécutions, les déclencheurs du bus qui les démarrent, les planifications récurrentes et les points de terminaison de webhooks entrants.
 
-## Responsibility boundary
+## Limites de responsabilité
 
-Controls the workspace experience. It does not execute workflows, keep
-schedules, or deliver webhooks — it starts a run through the runtime and reads
-the log back from rp-dag.
+Contrôle l’expérience de l’espace de travail. Il n’exécute pas les workflows, ne conserve pas les planifications et ne distribue pas les webhooks — il démarre une exécution via le runtime et relit le journal depuis rp-dag.
 
-## The DAG section
+## La section DAG
 
-- **Workflows** — the catalogue the active Solution publishes, read-only.
-  Opening one is asking to run it: parameters are typed as JSON and handed to
-  `centimanus.runWorkflow`.
-- **Runs** — every execution, with its status.
-- **Run detail** — the tree of what the run did. One line per node: how deep it
-  sits, whether it finished, how long it took. Unfolding a node shows the
-  service calls it made and what came back. A node that delegated through
-  `rt.sub` is followed by the nodes of the run it delegated to, one level in.
-  A run that is still going refreshes itself.
-- **Triggers** — "when this bus topic appears, run that workflow". Topic,
-  workflow, JSON parameters, on/off.
-- **Variables** — workflow state written by `rt.set`.
+- **Workflows** — le catalogue publié par la Solution active, en lecture seule. Ouvrir un workflow revient à demander son exécution : les paramètres sont typés en JSON et transmis à `centimanus.runWorkflow`.
+- **Exécutions** — chaque exécution, avec son statut.
+- **Détails de l’exécution** — l’arbre de ce que l’exécution a effectué. Une ligne par nœud : sa profondeur, s’il est terminé et la durée de son exécution. Déplier un nœud affiche les appels de service qu’il a effectués et ce qui lui a été renvoyé. Un nœud qui délègue via `rt.sub` est suivi par les nœuds de l’exécution à laquelle il a délégué, sur un niveau. Une exécution toujours en cours s’actualise automatiquement.
+- **Déclencheurs** — « lorsque ce sujet du bus apparaît, exécuter ce workflow ». Sujet, workflow, paramètres JSON, activé/désactivé.
+- **Variables** — état du workflow écrit par `rt.set`.
 
-Parameters are typed as JSON everywhere rather than generated into a form: a
-workflow's parameters are its own and change with it, so a text field stays
-correct when they do and what is typed is what the workflow receives.
+Les paramètres sont typés en JSON partout plutôt que générés dans un formulaire : les paramètres d’un workflow lui sont propres et évoluent avec lui, de sorte qu’un champ texte reste adapté lorsqu’ils changent et que ce qui est saisi correspond à ce que le workflow reçoit.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une Solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

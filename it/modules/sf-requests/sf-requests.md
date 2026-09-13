@@ -1,21 +1,21 @@
 # sf-requests
 
-## Purpose
+## Scopo
 
-Owns Requests UI: request inbox/list screens, request detail/timeline views, and request status/action forms.
+Gestisce l'interfaccia utente delle richieste: schermate della posta in arrivo/elenco delle richieste, viste dei dettagli e della cronologia delle richieste e moduli per lo stato/le azioni delle richieste.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-Controls request lifecycle user interactions in the frontend; does not own chats/threads modules or billing execution pages.
+Gestisce le interazioni dell'utente relative al ciclo di vita delle richieste nel frontend; non gestisce i moduli di chat/thread né le pagine di esecuzione della fatturazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `requests`
 
-## Source
+## Origine
 
 `modules/surfaces/business/sf-requests`

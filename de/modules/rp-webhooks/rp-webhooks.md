@@ -1,21 +1,21 @@
 # rp-webhooks
 
-## Purpose
+## Zweck
 
-Receives and dispatches webhook events for external integrations.
+Empfängt und verteilt Webhook-Ereignisse für externe Integrationen.
 
-## Responsibility boundary
+## Verantwortungsbereich
 
-Owns webhook transport, validation, and delivery attempts; does not own target-system business processing.
+Ist für den Webhook-Transport, die Validierung und Zustellversuche zuständig, nicht jedoch für die fachliche Verarbeitung im Zielsystem.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zu einer Lösung
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Lösung enthalten
 
-## Source
+## Quelle
 
 `modules/repositories/automation/rp-webhooks`

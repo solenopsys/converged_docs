@@ -1,21 +1,21 @@
 # rp-oauth
 
-## Purpose
+## Propósito
 
-Implements OAuth-specific authorization flows and provider handshakes.
+Implementa flujos de autorización específicos de OAuth y protocolos de enlace con proveedores.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns OAuth grant flow handling and token exchange; does not own non-OAuth authentication methods.
+Gestiona el flujo de concesión de OAuth y el intercambio de tokens; no gestiona métodos de autenticación que no sean OAuth.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `security`
 
-## Source
+## Origen
 
 `modules/repositories/sequrity/rp-oauth`

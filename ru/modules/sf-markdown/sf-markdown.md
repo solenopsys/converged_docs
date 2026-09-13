@@ -1,21 +1,21 @@
 # sf-markdown
 
-## Purpose
+## Назначение
 
-Owns Markdown UI: markdown editor surfaces, live preview panels, markdown content formatting controls, and publish-ready views.
+Отвечает за интерфейс Markdown: поверхности редактора Markdown, панели предварительного просмотра в реальном времени, элементы управления форматированием содержимого Markdown и представления, готовые к публикации.
 
-## Responsibility boundary
+## Граница ответственности
 
-Controls markdown authoring/presentation UX; does not own document permissions/auth or media conversion infrastructure.
+Управляет UX создания и представления Markdown; не отвечает за разрешения/аутентификацию документов или инфраструктуру преобразования медиаданных.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Принадлежность решению
 
 - `content`
 
-## Source
+## Источник
 
 `modules/surfaces/content/sf-markdown`

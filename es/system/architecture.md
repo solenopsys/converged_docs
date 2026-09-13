@@ -1,108 +1,81 @@
-# System architecture
+# Arquitectura del sistema
 
-Converged is a modular operating layer for manufacturing businesses. Its user
-interfaces, domain services, workflow engine, storage, media gateway and
-industrial processors form one system without becoming one application.
+Converged es una capa operativa modular para empresas de fabricación. Sus
+interfaces de usuario, servicios de dominio, motor de flujos de trabajo,
+almacenamiento, puerta de enlace multimedia y procesadores industriales forman
+un solo sistema sin convertirse en una sola aplicación.
 
-The architecture separates three kinds of work:
+La arquitectura separa tres tipos de trabajo:
 
-- domain modules own business data and user-facing capabilities;
-- native runtime services move messages, execute workflows, store data and
-  handle real-time media;
-- the control plane decides which parts run for each platform and tenant.
+- los módulos de dominio son propietarios de los datos empresariales y las capacidades orientadas al usuario;
+- los servicios nativos del entorno de ejecución transportan mensajes, ejecutan flujos de trabajo, almacenan datos y gestionan medios en tiempo real;
+- el plano de control decide qué partes se ejecutan para cada plataforma y arrendatario.
 
-## One message bus
+## Un bus de mensajes
 
-Runtime components communicate through Fujin. Every process opens one
-connection, registers a target and sends messages to logical destinations.
-The sender does not need the address or deployment location of the receiver.
+Los componentes del entorno de ejecución se comunican mediante Fujin. Cada proceso abre una conexión, registra un destino y envía mensajes a destinos lógicos. El emisor no necesita conocer la dirección ni la ubicación de despliegue del receptor.
 
 ```text
-browser and mobile clients
+clientes de navegador y móviles
           |
           v
-          Fujin message bus
+          bus de mensajes Fujin
        /     |      |      \
       ui     ms  Centimanus Resonus
               \      |      /
                \  Behemoth /
 ```
 
-This removes the HTTP call graph and service mesh from the application layer.
-Routing, request correlation and trusted tenant context travel in the common
-message envelope. A receiving process then selects the requested service or
-handler inside its own boundary.
+Esto elimina el grafo de llamadas HTTP y la malla de servicios de la capa de aplicación. El enrutamiento, la correlación de solicitudes y el contexto de arrendatario confiable viajan en el sobre de mensajes común. A continuación, el proceso receptor selecciona el servicio o controlador solicitado dentro de su propio límite.
 
-## Core runtime
+## Entorno de ejecución principal
 
-| Component | Responsibility |
+| Componente | Responsabilidad |
 | --- | --- |
-| Fujin | Connects runtime peers and routes messages to the live owner of a target. |
-| Behemoth | Provides isolated SQL, key-value, column, vector, graph and file storage. |
-| Centimanus | Executes multi-step business workflows as replayable graphs. |
-| Resonus | Handles real-time media, calls, transcription and AI sessions. |
-| Ptah | Reconciles the desired platform, solutions and tenants into Kubernetes resources. |
+| Fujin | Conecta a los pares del entorno de ejecución y enruta los mensajes al propietario activo de un destino. |
+| Behemoth | Proporciona almacenamiento SQL, clave-valor, columnar, vectorial, de grafos y de archivos aislado. |
+| Centimanus | Ejecuta flujos de trabajo empresariales de varios pasos como grafos reproducibles. |
+| Resonus | Gestiona medios en tiempo real, llamadas, transcripción y sesiones de IA. |
+| Ptah | Concilia la plataforma, las soluciones y los arrendatarios deseados con los recursos de Kubernetes. |
 
-The components are deliberately narrow. Fujin does not understand business
-services. Behemoth does not orchestrate business operations. Centimanus does
-not own domain data. Resonus does not decide tenant identity. Ptah creates and
-configures workloads but does not participate in runtime messaging.
+Los componentes son deliberadamente limitados. Fujin no entiende los servicios empresariales. Behemoth no orquesta operaciones empresariales. Centimanus no es propietario de los datos de dominio. Resonus no decide la identidad del arrendatario. Ptah crea y configura cargas de trabajo, pero no participa en la mensajería del entorno de ejecución.
 
-## Modules and solutions
+## Módulos y soluciones
 
-Business capabilities are delivered as microservices, surfaces and
-workflows. A solution is a declarative selection of those modules for a
-particular operating scenario, such as order handling, production planning or
-equipment monitoring.
+Las capacidades empresariales se entregan como microservicios, superficies y flujos de trabajo. Una solución es una selección declarativa de esos módulos para un escenario operativo concreto, como la gestión de pedidos, la planificación de la producción o la supervisión de equipos.
 
-Microservices own their data and expose typed contracts. They do not call one
-another to coordinate a process. Cross-domain sequences belong to workflows,
-which Centimanus executes one durable step at a time. This keeps domain modules
-small and allows a solution to combine them without creating hidden coupling.
+Los microservicios son propietarios de sus datos y exponen contratos tipados. No se llaman entre sí para coordinar un proceso. Las secuencias entre dominios pertenecen a los flujos de trabajo, que Centimanus ejecuta un paso duradero cada vez. Esto mantiene pequeños los módulos de dominio y permite que una solución los combine sin crear un acoplamiento oculto.
 
-## Data isolation
+## Aislamiento de datos
 
-Each microservice has its own physical storage root. Behemoth can serve many
-roots from one process, but it preserves their ownership boundaries and refuses
-to create data outside the configured mounts.
+Cada microservicio tiene su propia raíz física de almacenamiento. Behemoth puede servir muchas raíces desde un mismo proceso, pero conserva sus límites de propiedad y se niega a crear datos fuera de los montajes configurados.
 
-The same model scales across deployment profiles:
+El mismo modelo se adapta a distintos perfiles de despliegue:
 
-- an edge installation can run one Behemoth instance for the platform;
-- a larger installation can divide scopes across storage shards;
-- a cloud installation can run an isolated storage instance per tenant.
+- una instalación periférica puede ejecutar una instancia de Behemoth para la plataforma;
+- una instalación más grande puede dividir los ámbitos entre fragmentos de almacenamiento;
+- una instalación en la nube puede ejecutar una instancia de almacenamiento aislada por arrendatario.
 
-Changing the topology does not change application code because peers continue
-to address logical targets and storage boundaries.
+Cambiar la topología no cambia el código de la aplicación, porque los pares siguen dirigiéndose a destinos lógicos y a límites de almacenamiento.
 
-## Control plane
+## Plano de control
 
-Ptah is the control plane and is not connected to Fujin. It observes the
-declared Platform, Solution and Tenant resources, calculates the desired
-workloads and reconciles them with Kubernetes.
+Ptah es el plano de control y no está conectado a Fujin. Observa los recursos declarados de Plataforma, Solución y Arrendatario, calcula las cargas de trabajo deseadas y las concilia con Kubernetes.
 
 ```text
-Platform + Solutions + Tenants
+Plataforma + Soluciones + Arrendatarios
               |
               v
              Ptah
               |
               v
-Deployments, Services, volumes, configuration and routes
+Despliegues, servicios, volúmenes, configuración y rutas
 ```
 
-This separation lets the runtime stay focused on business traffic while the
-deployment model handles placement, storage topology, tenant routes and
-lifecycle. The same application images can therefore run on a compact edge
-cluster or in a multi-tenant cloud environment.
+Esta separación permite que el entorno de ejecución se concentre en el tráfico empresarial mientras el modelo de despliegue gestiona la ubicación, la topología de almacenamiento, las rutas de los arrendatarios y el ciclo de vida. Por tanto, las mismas imágenes de aplicación pueden ejecutarse en un clúster periférico compacto o en un entorno de nube multiarrendatario.
 
-## Trusted context
+## Contexto confiable
 
-Tenant scope is established at the platform edge and carried in the message
-envelope. Runtime services consume that trusted context instead of deriving a
-tenant from application payloads. Storage placement, service calls and media
-sessions all preserve the same scope boundary.
+El ámbito del arrendatario se establece en el extremo de la plataforma y se transporta en el sobre de mensajes. Los servicios del entorno de ejecución consumen ese contexto confiable en lugar de derivar el arrendatario de las cargas útiles de la aplicación. La ubicación del almacenamiento, las llamadas a servicios y las sesiones multimedia conservan el mismo límite de ámbito.
 
-Together, logical messaging, isolated storage, replayable workflows and a
-separate control plane allow Converged to remain modular without pushing
-distributed-system complexity into every business module.
+En conjunto, la mensajería lógica, el almacenamiento aislado, los flujos de trabajo reproducibles y un plano de control separado permiten que Converged siga siendo modular sin trasladar la complejidad de los sistemas distribuidos a cada módulo empresarial.

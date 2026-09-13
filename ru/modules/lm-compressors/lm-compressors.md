@@ -1,21 +1,21 @@
 # lm-compressors
 
-## Purpose
+## Назначение
 
-lm-compressors is a microservice in the data domain. Its detailed purpose is maintained with the module source.
+lm-compressors — это микросервис в области данных. Подробное назначение поддерживается вместе с исходным кодом модуля.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## В составе решения
 
 - `requests`
 
-## Source
+## Исходный код
 
 `modules/lambdas/data/lm-compressors`

@@ -1,21 +1,21 @@
 # rp-scripts
 
-## Purpose
+## Назначение
 
-Provides storage operations for script files, including reading, saving, hashing, and deletion.
+Предоставляет операции хранения для файлов скриптов, включая чтение, сохранение, хеширование и удаление.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Включение в решение
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/repositories/content/rp-scripts`

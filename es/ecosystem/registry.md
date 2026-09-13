@@ -1,18 +1,18 @@
-## The module registry
+## El registro de módulos
 
-The registry is not a separate document and not a database. It is the source tree itself.
+El registro no es un documento independiente ni una base de datos. Es el propio árbol de fuentes.
 
 ```text
 modules/
-├── microservices/<domain>/ms-<name>    a data domain and its API
-├── surfaces/<domain>/sf-<name>   a screen mounted at runtime
-├── workflows/wf-<name>                 a process for the DAG runtime
-├── types/<domain>/                     NRPC contracts
-└── solutions/                          which modules ship together
+├── microservices/<domain>/ms-<name>    un dominio de datos y su API
+├── surfaces/<domain>/sf-<name>   una pantalla montada en tiempo de ejecución
+├── workflows/wf-<name>                 un proceso para el entorno de ejecución DAG
+├── types/<domain>/                     contratos NRPC
+└── solutions/                          qué módulos se distribuyen juntos
 ```
 
-A module exists because its directory exists. It belongs to a domain because it sits in that domain's folder. It belongs to a solution because `solutions/solutions.json` names it. There is no fourth place where any of this has to be repeated — which is why the ecosystem page on the site is produced by walking the tree rather than by editing a list.
+Un módulo existe porque existe su directorio. Pertenece a un dominio porque se encuentra en la carpeta de ese dominio. Pertenece a una solución porque `solutions/solutions.json` lo nombra. No hay un cuarto lugar donde haya que repetir nada de esto; por eso la página del ecosistema del sitio se genera recorriendo el árbol en lugar de editar una lista.
 
-A module's purpose is taken from its `README.md`: the first paragraph under `## Purpose` (for surfaces, `## UI Purpose`) and the paragraph under the ownership-boundary heading. Those two paragraphs are the module's contract in plain language, and every module owes them.
+El propósito de un módulo se toma de su `README.md`: el primer párrafo bajo `## Purpose` (para las superficies, `## UI Purpose`) y el párrafo bajo el encabezado de los límites de responsabilidad. Esos dos párrafos son el contrato del módulo en lenguaje sencillo, y todos los módulos deben proporcionarlos.
 
-A product layer on top of the base — `club`, for instance — is laid out the same way and may drop the domain level: its modules sit directly in `modules/microservices/ms-<name>`. The build understands both layouts.
+Una capa de producto sobre la base —`club`, por ejemplo— se estructura de la misma manera y puede omitir el nivel de dominio: sus módulos se encuentran directamente en `modules/microservices/ms-<name>`. La compilación entiende ambas estructuras.

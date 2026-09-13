@@ -1,21 +1,21 @@
 # sf-orders
 
-## Purpose
+## Scopo
 
-Provides the sales interface for order and request lists, order details, status filtering, and operational dashboards.
+Fornisce l'interfaccia di vendita per gli elenchi di ordini e richieste, i dettagli degli ordini, il filtraggio per stato e i dashboard operativi.
 
-## Responsibility boundary
+## Confini di responsabilità
 
-The module boundary is defined by its public contracts and implementation directory.
+Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Sorgente
 
 `modules/surfaces/business/sf-orders`

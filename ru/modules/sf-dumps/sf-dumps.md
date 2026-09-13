@@ -1,21 +1,21 @@
 # sf-dumps
 
-## Purpose
+## Назначение
 
-Owns Data Dumps UI: export/dump creation forms, dump history tables, download actions, and dump status/progress indicators.
+Отвечает за пользовательский интерфейс дампов данных: формы экспорта/создания дампов, таблицы истории дампов, действия скачивания и индикаторы состояния/хода выполнения дампов.
 
-## Responsibility boundary
+## Граница ответственности
 
-Controls user-facing dump/export workflows and status presentation; does not own storage/archive backend execution internals.
+Управляет пользовательскими сценариями создания дампов/экспорта и отображением состояния; не отвечает за внутреннюю логику выполнения операций хранения/архивирования на серверной стороне.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Источник
 
 `modules/surfaces/data/sf-dumps`

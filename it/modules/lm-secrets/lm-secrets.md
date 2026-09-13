@@ -1,21 +1,21 @@
 # lm-secrets
 
-## Purpose
+## Scopo
 
-Provides the service contract for storing, retrieving, and deleting named secret values.
+Fornisce il contratto di servizio per l'archiviazione, il recupero e l'eliminazione di valori segreti denominati.
 
-## Responsibility boundary
+## Confine di responsabilità
 
-The module boundary is defined by its public contracts and implementation directory.
+Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
-- Not included in a predefined solution
+- Non incluso in una soluzione predefinita
 
-## Source
+## Origine
 
 `modules/lambdas/sequrity/lm-secrets`

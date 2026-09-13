@@ -1,37 +1,38 @@
 # sf-chats
 
-## Purpose
+## Назначение
 
-Chat rooms, as three separate tabs: the room list, one room's conversation, and
-one room's membership. Managing who is in a room and reading what they said are
-two jobs and therefore two tabs.
+Комнаты чата представлены тремя отдельными вкладками: списком комнат, перепиской
+в одной комнате и списком участников одной комнаты. Управление участниками комнаты
+и чтение их сообщений — это две задачи, поэтому для них предусмотрены две вкладки.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns room navigation, the conversation screen and membership editing. Messages
-belong to `rp-threads`, read directly from the browser; files belong to
-`rp-files` through a `link` message.
+Отвечает за навигацию по комнатам, экран переписки и редактирование списка участников.
+Сообщения принадлежат `rp-threads` и считываются непосредственно из браузера; файлы
+принадлежат `rp-files` и передаются через сообщение `link`.
 
-## How a room is created
+## Как создаётся комната
 
-`createRoom` on `rp-chats` mints the room id and the thread id and records the
-creator from the token as `owner`; this surface then registers the thread with
-`rp-threads`. `rp-chats` never calls another repository.
+`createRoom` в `rp-chats` создаёт идентификатор комнаты и идентификатор ветки, а также
+записывает создателя из токена как `owner`; затем этот интерфейс регистрирует ветку в
+`rp-threads`. `rp-chats` никогда не вызывает другой репозиторий.
 
-## Live updates
+## Обновления в реальном времени
 
-A new message is published to each member by name over Fujin's `pushrouter`,
-never to the whole tenant: a private room's existence is not public even when
-its contents stay behind the read predicate. The push carries identifiers only.
+Новое сообщение публикуется для каждого участника по имени через `pushrouter` Fujin,
+а не для всего арендатора: существование приватной комнаты не является публичным,
+даже если её содержимое остаётся защищённым предикатом чтения. Уведомление содержит
+только идентификаторы.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
 - `effector`, `front-core`, `g-chats`, `g-threads`, `signal-channel`, `threads-state`
 
-## Solution membership
+## Членство в решении
 
 - `communications`
 
-## Source
+## Исходный код
 
 `modules/surfaces/communications/sf-chats`

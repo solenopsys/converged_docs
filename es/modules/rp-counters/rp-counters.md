@@ -1,21 +1,21 @@
 # rp-counters
 
-## Purpose
+## Propósito
 
-Provides the service contract for collecting and querying analytical counters.
+Proporciona el contrato de servicio para recopilar y consultar contadores analíticos.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-The module boundary is defined by its public contracts and implementation directory.
+El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `analitycs`
 
-## Source
+## Fuente
 
 `modules/repositories/analytics/rp-counters`

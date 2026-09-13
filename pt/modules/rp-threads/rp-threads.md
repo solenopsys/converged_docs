@@ -1,21 +1,21 @@
 # rp-threads
 
-## Purpose
+## Finalidade
 
-Manages threaded conversations and related message context.
+Gerencia conversas encadeadas e o contexto de mensagens relacionado.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Owns thread lifecycle and thread-level metadata; does not own transport gateways for email/SMS/push.
+É responsável pelo ciclo de vida das threads e pelos metadados no nível da thread; não é responsável pelos gateways de transporte de e-mail/SMS/push.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Participação na solução
 
 - `ai`
 
-## Source
+## Fonte
 
 `modules/repositories/communications/rp-threads`

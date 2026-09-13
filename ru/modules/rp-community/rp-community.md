@@ -1,47 +1,33 @@
 # rp-community
 
-## Purpose
+## Назначение
 
-Forum structure and ownership: sections, topics, who wrote them and who may see
-them. The discussion under a topic is not here — a topic carries a `threadId`
-and the messages live in `rp-threads`.
+Структура форума и владение: разделы, темы, кто их создал и кто может их видеть. Обсуждение внутри темы находится не здесь — тема содержит `threadId`, а сообщения хранятся в `rp-threads`.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns sections and topics. Does not call `rp-threads` or any other repository:
-`createTopic` mints a `threadId` and hands it back, and the caller registers the
-thread and writes the opening post itself.
+Владеет разделами и темами. Не вызывает `rp-threads` или какой-либо другой репозиторий: `createTopic` создаёт `threadId` и возвращает его, а вызывающая сторона сама регистрирует ветку и записывает первое сообщение.
 
-## Identity and authorship
+## Идентификация и авторство
 
-`createdBy` is never accepted from a caller. It is read from the verified token
-through `getCurrentWorkspaceContext()`, which `messaging-backend` prefers over
-anything the envelope claims. Topic and thread ids are minted here for the same
-reason — an id a client can choose is an id it can steal, and the access-tag
-table records no object type to catch the collision.
+`createdBy` никогда не принимается от вызывающей стороны. Он считывается из проверенного токена через `getCurrentWorkspaceContext()`, который `messaging-backend` предпочитает любым данным, заявленным в конверте. Идентификаторы тем и веток по той же причине создаются здесь — идентификатор, который может выбрать клиент, можно украсть, а таблица тегов доступа не хранит тип объекта, чтобы обнаружить такое столкновение.
 
-## Visibility
+## Видимость
 
-Sections and topics carry a `visibility` column (`public` | `authenticated` |
-`private` | `tagged`), and a new topic inherits its section's value unless it
-asks for something narrower. The tags behind `tagged` belong in the shared
-`access_tags` relation described in `access-control.md`; that half is not
-implemented yet, so today `visibility` is recorded but not enforced.
+Разделы и темы содержат столбец `visibility` (`public` | `authenticated` | `private` | `tagged`), и новая тема наследует значение своего раздела, если только не запрашивает более узкое. Теги, лежащие в основе `tagged`, должны находиться в общей связи `access_tags`, описанной в `access-control.md`; эта часть ещё не реализована, поэтому сейчас значение `visibility` сохраняется, но не применяется.
 
-## Locking
+## Блокировка
 
-`touchTopicActivity` is the only place a lock can be enforced: `rp-threads`
-accepts a message without knowing topics exist, so a screen calls this after
-posting and treats a refusal as a failed post.
+`touchTopicActivity` — единственное место, где можно обеспечить блокировку: `rp-threads` принимает сообщение, не зная о существовании тем, поэтому экран вызывает этот метод после публикации и считает отказ неудачной публикацией.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
 - `back-core`, `nrpc`, `g-community`
 
-## Solution membership
+## Принадлежность решению
 
 - `communications`
 
-## Source
+## Исходный код
 
 `modules/repositories/communications/rp-community`

@@ -1,21 +1,21 @@
 # rp-events
 
-## Purpose
+## Zweck
 
-Provides creation, storage, and retrieval of business events.
+Ermöglicht die Erstellung, Speicherung und den Abruf von Geschäftsereignissen.
 
-## Responsibility boundary
+## Zuständigkeitsgrenze
 
-The module boundary is defined by its public contracts and implementation directory.
+Die Modulgrenze wird durch ihre öffentlichen Verträge und ihr Implementierungsverzeichnis definiert.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zu einer Lösung
 
-- Not included in a predefined solution
+- Nicht in einer vordefinierten Lösung enthalten
 
-## Source
+## Quelle
 
 `modules/repositories/business/rp-events`

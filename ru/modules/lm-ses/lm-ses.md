@@ -1,21 +1,21 @@
 # lm-ses
 
-## Purpose
+## Назначение
 
-Provider adapter for AWS SES email delivery.
+Адаптер провайдера для доставки электронной почты через AWS SES.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns SES-specific sending integration and mapping; does not own email template authoring domain.
+Отвечает за интеграцию отправки через SES и сопоставление данных; не отвечает за предметную область создания шаблонов электронной почты.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/lambdas/providers/lm-ses`

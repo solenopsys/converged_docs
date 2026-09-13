@@ -1,21 +1,21 @@
 # wf-files-process
 
-## Purpose
+## Назначение
 
-Intake for uploaded files: it expands archives and classifies everything that came out, reporting which files are production models. It does not create a request and does not analyse anything — that is the assistant's decision followed by `wf-request-analyze`.
+Приём загруженных файлов: модуль распаковывает архивы и классифицирует всё, что из них извлечено, сообщая, какие файлы являются производственными моделями. Он не создаёт запрос и ничего не анализирует — это решение ассистента, за которым следует `wf-request-analyze`.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Вхождение в решение
 
 - `requests`
 
-## Source
+## Исходный код
 
 `modules/workflows/wf-files-process`

@@ -1,21 +1,21 @@
 # rp-auth
 
-## Purpose
+## Objetivo
 
-Handles authentication workflows and credential/session validation.
+Gerencia fluxos de autenticação e validação de credenciais/sessões.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Owns auth flows and token/session issuance logic; does not own third-party OAuth provider adapters outside auth scope.
+É responsável pelos fluxos de autenticação e pela lógica de emissão de tokens/sessões; não é responsável por adaptadores de provedores OAuth de terceiros fora do escopo de autenticação.
 
-## Direct module dependencies
+## Dependências diretas do módulo
 
-- None
+- Nenhuma
 
-## Solution membership
+## Associação à solução
 
 - `security`
 
-## Source
+## Origem
 
 `modules/repositories/sequrity/rp-auth`

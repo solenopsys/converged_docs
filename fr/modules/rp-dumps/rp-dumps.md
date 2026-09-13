@@ -1,20 +1,20 @@
 # rp-dumps
 
-## Purpose
+## Objectif
 
-Creates and manages data dumps/export snapshots.
+Crée et gère les vidages de données et les instantanés d’exportation.
 
-## Responsibility boundary
+## Limites de responsabilité
 
-Owns dump generation, packaging, and retrieval metadata; does not own long-term archival platform.
+Est responsable de la génération des vidages, de leur empaquetage et des métadonnées de récupération ; n’est pas responsable de la plateforme d’archivage à long terme.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à une solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

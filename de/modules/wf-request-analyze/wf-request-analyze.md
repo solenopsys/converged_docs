@@ -1,21 +1,21 @@
 # wf-request-analyze
 
-## Purpose
+## Zweck
 
-Analyses one request: it stages every production model the request carries, builds a GLB preview and a CNC or 3D-print estimate for each of them in the ptah processor containers, and writes the previews and the analysis back onto the request.
+Analysiert eine Anfrage: Das Modul stellt jedes von der Anfrage mitgeführte Produktionsmodell bereit, erstellt für jedes davon eine GLB-Vorschau sowie eine CNC- oder 3D-Druck-Schätzung in den ptah-Prozessorkontainern und schreibt die Vorschauen und die Analyse zurück in die Anfrage.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-The module boundary is defined by its public contracts and implementation directory.
+Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `requests`
 
-## Source
+## Quelle
 
 `modules/workflows/wf-request-analyze`

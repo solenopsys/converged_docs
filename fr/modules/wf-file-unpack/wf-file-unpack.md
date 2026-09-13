@@ -1,18 +1,18 @@
 # wf-file-unpack
 
-## Purpose
+## Objectif
 
-Expands one uploaded archive into a collection of stored files for subsequent analysis.
+Décompresse une archive téléversée en une collection de fichiers stockés pour une analyse ultérieure.
 
-## Responsibility boundary
+## Limite de responsabilité
 
-The module boundary is defined by its public contracts and implementation directory.
+La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
 - `requests`
 

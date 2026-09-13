@@ -1,21 +1,21 @@
 # sf-struct
 
-## Purpose
+## Zweck
 
-Owns Structured Content UI: schema-driven content forms, structured block editors, and structured content preview/validation views.
+Verantwortet die Benutzeroberfläche für strukturierte Inhalte: schemagesteuerte Inhaltsformulare, Editoren für strukturierte Blöcke sowie Ansichten zur Vorschau und Validierung strukturierter Inhalte.
 
-## Responsibility boundary
+## Abgrenzung der Verantwortung
 
-Controls structured content editing experiences and UI validation states; does not own final channel delivery adapters.
+Steuert die Bearbeitungserlebnisse für strukturierte Inhalte und die Validierungszustände der Benutzeroberfläche; besitzt keine Verantwortung für Adapter zur finalen Kanalauslieferung.
 
-## Direct module dependencies
+## Direkte Modulabhängigkeiten
 
-- None
+- Keine
 
-## Solution membership
+## Zugehörigkeit zur Lösung
 
 - `content`
 
-## Source
+## Quelle
 
 `modules/surfaces/content/sf-struct`

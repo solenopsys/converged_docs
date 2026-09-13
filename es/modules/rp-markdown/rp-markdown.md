@@ -1,21 +1,21 @@
 # rp-markdown
 
-## Purpose
+## Propósito
 
-Processes markdown content, rendering/transformation workflows, and related APIs.
+Procesa contenido Markdown, flujos de trabajo de renderizado/transformación y API relacionadas.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns markdown conversion/parsing behavior; does not own rich media transcoding.
+Se encarga del comportamiento de conversión/análisis de Markdown; no se encarga de la transcodificación de medios enriquecidos.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `content`
 
-## Source
+## Código fuente
 
 `modules/repositories/content/rp-markdown`

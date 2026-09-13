@@ -1,20 +1,20 @@
 # lm-modelconvertor
 
-## Purpose
+## Objectif
 
-Converts models/data formats between internal and external representations.
+Convertit les modèles/formats de données entre les représentations internes et externes.
 
-## Responsibility boundary
+## Limite des responsabilités
 
-Owns conversion/transformation routines; does not own upstream model training or downstream serving.
+Gère les routines de conversion/transformation ; ne prend pas en charge l’entraînement des modèles en amont ni le service en aval.
 
-## Direct module dependencies
+## Dépendances directes du module
 
-- None
+- Aucune
 
-## Solution membership
+## Appartenance à la solution
 
-- Not included in a predefined solution
+- Non inclus dans une solution prédéfinie
 
 ## Source
 

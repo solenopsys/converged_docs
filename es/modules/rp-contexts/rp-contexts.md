@@ -1,21 +1,21 @@
 # rp-contexts
 
-## Purpose
+## Propósito
 
-Provides storage and retrieval of named AI contexts, including their language variants.
+Proporciona el almacenamiento y la recuperación de contextos de IA con nombre, incluidas sus variantes lingüísticas.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-The module boundary is defined by its public contracts and implementation directory.
+El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Pertenencia a la solución
 
 - `ai`
 
-## Source
+## Fuente
 
 `modules/repositories/ai/rp-contexts`

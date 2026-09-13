@@ -1,21 +1,21 @@
 # rp-notify
 
-## Purpose
+## Propósito
 
-Coordinates notification workflows across channels.
+Coordina los flujos de trabajo de notificaciones entre canales.
 
-## Responsibility boundary
+## Límite de responsabilidad
 
-Owns notification orchestration and delivery policy; does not own low-level provider-specific sending adapters.
+Gestiona la orquestación de notificaciones y la política de entrega; no gestiona los adaptadores de envío específicos de proveedores de bajo nivel.
 
-## Direct module dependencies
+## Dependencias directas del módulo
 
-- None
+- Ninguna
 
-## Solution membership
+## Inclusión en soluciones
 
-- Not included in a predefined solution
+- No incluido en una solución predefinida
 
-## Source
+## Fuente
 
 `modules/repositories/communications/rp-notify`

@@ -1,21 +1,21 @@
 # rp-contexts
 
-## Purpose
+## Назначение
 
-Provides storage and retrieval of named AI contexts, including their language variants.
+Предоставляет хранение и получение именованных контекстов ИИ, включая их языковые варианты.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Входит в состав решения
 
 - `ai`
 
-## Source
+## Исходный код
 
 `modules/repositories/ai/rp-contexts`

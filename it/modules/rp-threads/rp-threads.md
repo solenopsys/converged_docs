@@ -1,21 +1,21 @@
 # rp-threads
 
-## Purpose
+## Scopo
 
-Manages threaded conversations and related message context.
+Gestisce le conversazioni strutturate in thread e il relativo contesto dei messaggi.
 
-## Responsibility boundary
+## Limiti di responsabilità
 
-Owns thread lifecycle and thread-level metadata; does not own transport gateways for email/SMS/push.
+Gestisce il ciclo di vita dei thread e i metadati a livello di thread; non gestisce i gateway di trasporto per email/SMS/push.
 
-## Direct module dependencies
+## Dipendenze dirette del modulo
 
-- None
+- Nessuna
 
-## Solution membership
+## Appartenenza alla soluzione
 
 - `ai`
 
-## Source
+## Sorgente
 
 `modules/repositories/communications/rp-threads`

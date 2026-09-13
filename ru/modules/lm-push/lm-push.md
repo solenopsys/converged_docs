@@ -1,21 +1,21 @@
 # lm-push
 
-## Purpose
+## Назначение
 
-Provider adapter for push-notification delivery.
+Адаптер провайдера для доставки push-уведомлений.
 
-## Responsibility boundary
+## Граница ответственности
 
-Owns push provider integration details; does not own notification business targeting logic.
+Отвечает за детали интеграции с провайдером push-уведомлений; не отвечает за логику бизнес-таргетинга уведомлений.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Нет
 
-## Solution membership
+## Вхождение в решение
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/lambdas/providers/lm-push`

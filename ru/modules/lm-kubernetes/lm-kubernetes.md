@@ -1,21 +1,21 @@
 # lm-kubernetes
 
-## Purpose
+## Назначение
 
-Integrates platform automation with Kubernetes resources through a dedicated client and service contract.
+Интегрирует автоматизацию платформы с ресурсами Kubernetes посредством специализированного клиента и сервисного контракта.
 
-## Responsibility boundary
+## Граница ответственности
 
-The module boundary is defined by its public contracts and implementation directory.
+Граница модуля определяется его публичными контрактами и каталогом реализации.
 
-## Direct module dependencies
+## Прямые зависимости модуля
 
-- None
+- Отсутствуют
 
-## Solution membership
+## Принадлежность к решению
 
-- Not included in a predefined solution
+- Не включён в предопределённое решение
 
-## Source
+## Исходный код
 
 `modules/lambdas/automation/lm-kubernetes`
