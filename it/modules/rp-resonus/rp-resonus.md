@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce la configurazione delle comunicazioni per i numeri di telefono gestiti e le impostazioni dei gate LLM.
+Configurazione di telefonia: numeri di telefono gestiti e impostazioni del gate LLM per i percorsi vocali. Il comportamento runtime li utilizza; le chiamate stesse si trovano in rp-calls.
 
-## Confini di responsabilità
+## Confine di responsabilità
 
-Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Possiede la configurazione numeri/voice-gate; non possiede sessioni di chiamata, archiviazione audio o inferenza del modello.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Il confine del modulo è definito dai suoi contratti pubblici e dalla directory 
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/repositories/communications/rp-resonus`

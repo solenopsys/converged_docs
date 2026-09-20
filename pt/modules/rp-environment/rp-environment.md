@@ -2,17 +2,17 @@
 
 ## Finalidade
 
-Armazena e recupera a configuração do ambiente associada aos usuários da plataforma.
+Configuração de ambiente por usuário: configurações e estado do espaço de trabalho com escopo de identidade. Consumida pelas superfícies para personalizar sem bifurcar registros de identidade.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Possui CRUD de configuração de ambiente com escopo de usuários; não possui ciclo de vida de identidade, autenticação ou permissões.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Inclusão na solução
+## Participação na solução
 
 - Não incluído em uma solução predefinida
 

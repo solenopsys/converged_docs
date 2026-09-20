@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Bietet kommunikationsbezogene Anruf-Workflows und die Verwaltung von Anrufsitzungen.
+Anrufsitzungen und Metadaten: Einrichtung, Teilnehmer und Verknüpfung mit Aufzeichnungen (Block-Streams in rp-store) und Transkripten/Threads (rp-threads). Zusammenfassungen via wf-dialogue-summary.
 
-## Verantwortungsgrenze
+## Verantwortungsbereich
 
-Verantwortet die Domänenlogik für Anrufsitzungen und Anrufmetadaten, jedoch nicht die Infrastruktur externer Telekommunikationsanbieter.
+Besitzt die Call-Session-Domänenlogik und Anrufmetadaten; besitzt keine Telekommunikationsanbieter-Infrastruktur, keine Audiobytes und keine Nachrichten-Threads.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - `ai`
 

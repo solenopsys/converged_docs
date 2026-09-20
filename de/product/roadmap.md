@@ -1,7 +1,11 @@
 ## Quellcode
 
-Das Projekt wird offen entwickelt. Quellcode, aktuelle Architektur und Arbeitsmaterialien sind im Repository verfügbar:
+Converged wird als vollständig offene Plattform entwickelt. **Der gesamte Quellcode ist unter der AGPL-3.0-Lizenz verfügbar** und wird in einem öffentlichen Repository gehostet:
 
-[https://github.com/solenopsys/converged](https://github.com/solenopsys/converged)
+[GitHub — Converged](https://github.com/solenopsys/converged?utm_source=chatgpt.com)
 
-Das Repository ist nicht nur für Entwickler nützlich. Es zeigt, wie Microservices, Runtime, Micro-Frontends, Vertragsgenerierung, Bereitstellungsprofile und Hardware-Adapter organisiert sind. Für Unternehmen, die Self-hosted oder Private-Deployment prüfen, ist das ein wichtiger Teil der Bewertung: Die Plattform ist keine geschlossene Box.
+Open Source bedeutet, dass Nutzer die Plattform nicht nur ausführen, sondern auch nachvollziehen können, wie sie funktioniert, ihre Sicherheit prüfen, sie an ihre Bedürfnisse anpassen und innerhalb ihrer eigenen Infrastruktur bereitstellen können.
+
+Das Repository enthält die aktuelle Implementierung der Plattform und zeigt, wie ihre **Services, Apps, Laufzeitumgebungen, Surfaces, Workflows, Speicher, Kommunikation, Bereitstellung und Anlagenadapter** organisiert sind. Dadurch können Entwickler und Unternehmen die Plattform vor der Bereitstellung bewerten und bei Bedarf jeden Teil unabhängig prüfen oder ändern.
+
+Eine offene Architektur beseitigt zudem die Abhängigkeit von einem geschlossenen Anbieter. Unternehmen erhalten keine Blackbox: **Der Code kann eingesehen werden, Daten können unter ihrer eigenen Kontrolle bleiben und die Plattform kann innerhalb ihrer eigenen Infrastruktur bereitgestellt werden.**

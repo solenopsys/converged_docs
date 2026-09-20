@@ -2,19 +2,19 @@
 
 ## Propósito
 
-Gestiona las entidades del dominio de ventas, los flujos de ventas y la preparación de métricas relacionadas.
+Pipeline de ventas: clientes potenciales, acuerdos, importación (wf-sales-import) y prospección (wf-sales-review-outreach). Prepara métricas del lado de ventas; el dinero se liquida en facturación/finanzas.
 
 ## Límite de responsabilidad
 
-Se encarga del ciclo de vida de las ventas y de la lógica de datos de ventas; no se encarga del procesamiento de transacciones de la pasarela de pagos.
+Responsable del ciclo de vida de ventas y de la lógica de datos de ventas; no es responsable del procesamiento de pasarelas de pago, la facturación ni el análisis de archivos de importación.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
-## Pertenencia a la solución
+## Pertenencia a soluciones
 
-- No está incluido en una solución predefinida
+- No incluido en una solución predefinida
 
 ## Fuente
 

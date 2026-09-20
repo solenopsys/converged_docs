@@ -2,13 +2,13 @@
 
 ## Objectif
 
-Fournit des opérations financières pour les transactions, les synthèses périodiques, les flux de trésorerie, les créances et les dettes.
+Vue du grand livre financier : transactions, résumés de période, trésorerie, créances et dettes. Agrège l’activité de facturation et de commandes en chiffres prêts pour la finance.
 
 ## Limite de responsabilité
 
-La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
+Responsable de l’agrégation et du reporting financiers ; non responsable de l’exécution des paiements, des plans de facturation ni du cycle de vie des commandes.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

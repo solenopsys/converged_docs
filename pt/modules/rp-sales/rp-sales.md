@@ -2,17 +2,17 @@
 
 ## Objetivo
 
-Lida com entidades do domínio de vendas, fluxos de vendas e preparação de métricas relacionadas.
+Pipeline de vendas: leads, negócios, importação (wf-sales-import) e prospecção (wf-sales-review-outreach). Prepara métricas do lado de vendas; os valores são liquidados em faturamento/finanças.
 
 ## Limite de responsabilidade
 
-É responsável pelo ciclo de vida das vendas e pela lógica de dados de vendas; não é responsável pelo processamento de transações do gateway de pagamento.
+Responsável pelo ciclo de vida de vendas e pela lógica de dados de vendas; não é responsável pelo processamento de gateways de pagamento, faturamento nem análise de arquivos de importação.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Participação na solução
+## Participação em soluções
 
 - Não incluído em uma solução predefinida
 

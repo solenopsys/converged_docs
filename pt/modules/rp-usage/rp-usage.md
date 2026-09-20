@@ -1,18 +1,40 @@
 # rp-usage
 
-## Finalidade
+## Objetivo
 
-Acompanha contadores de uso e métricas de consumo dos recursos do produto.
+O medidor de consumo compartilhado: qualquer funcionalidade informa aqui "quanto foi usado"
+em vez de rastrear cotas localmente. Agregado por consumidor e período —
+a fonte da qual faturamento e limites leem.
 
+## Modelo mental
+
+A funcionalidade registra o consumo (quem, o quê, quanto, período) → o uso
+o agrega por conta/período. O faturamento a jusante transforma agregados em dinheiro;
+as verificações de limite leem os totais atuais. A medição vive aqui, a precificação vive
+a jusante.
+
+## Valor do ecossistema
+
+Um log de eventos de uso:
+
+- Qualquer funcionalidade registra linhas (função, usuário, data) da mesma forma.
+- Links solução-função permitem que qualquer relatório agrupe chamadas por solução sem tabelas de cota por módulo.
+
+## Não objetivos
+
+- Sem faturamento ou execução de pagamento.
+- Sem autenticação ou verificações de permissão.
+- Sem contadores brutos para painéis.
 ## Limite de responsabilidade
 
-É responsável pela medição e agregação do uso; não é responsável pelo faturamento nem pela execução de pagamentos.
+Detém a medição e agregação de uso; não detém faturamento, execução de pagamento
+ou política de preços.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Participação na solução
+## Participação em soluções
 
 - `analitycs`
 

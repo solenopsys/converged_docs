@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Stellt den Servicevertrag zum Erstellen, Aktualisieren, Auflisten und Nachverfolgen von Geschäftsaufträgen bereit.
+Auftragslebenszyklus: Erstellung, Aktualisierungen, Auflistung und Nachverfolgung. Dateien werden per fileId angehängt (rp-files), Diskussionen laufen über eine threadId (rp-threads), der Abschluss kann Einladungen zu Bewertungen auslösen.
 
-## Zuständigkeitsgrenze
+## Verantwortungsgrenze
 
-Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
+Besitzt Bestelldatensätze und Statusübergänge; besitzt keinen Dateispeicher, kein Messaging und keine Bewertungsmechanismen.
 
 ## Direkte Modulabhängigkeiten
 

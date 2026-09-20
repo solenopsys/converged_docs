@@ -1,0 +1,40 @@
+{
+	"subject": "Inicia sesión en {{brand}}",
+	"preheader": "Tu enlace de inicio de sesión para {{brand}}. Ábrelo en el dispositivo en el que quieres mantener la sesión iniciada.",
+	"heading": "Tu enlace de inicio de sesión",
+	"cta": "Inicia sesión en {{brand}}",
+	"blocks": [
+		{
+			"p": "Pulsa el botón de abajo para iniciar sesión en {{brand}}. No necesitas contraseña — este dispositivo te recordará y la próxima vez entrarás directamente."
+		},
+		{
+			"button": "{{url}}"
+		},
+		{
+			"note": "El enlace se abre una vez. Ábrelo en el dispositivo en el que quieres mantener la sesión iniciada."
+		},
+		{
+			"fallback": "{{url}}",
+			"label": "Si el botón no funciona"
+		},
+		{
+			"meta": "Solicitado para {{email}}",
+			"detail": "{{requestInfo}}",
+			"when": "email"
+		},
+		{
+			"note": "¿No pediste iniciar sesión? Elimina este mensaje — no pasará nada a menos que se abra el enlace."
+		}
+	],
+	"footer": [
+		"{{brand}} · un mensaje de servicio sobre el acceso a tu cuenta",
+		{
+			"text": "Preguntas — [{{supportEmail}}](mailto:{{supportEmail}})",
+			"when": "supportEmail"
+		},
+		{
+			"text": "{{address}}",
+			"when": "address"
+		}
+	]
+}

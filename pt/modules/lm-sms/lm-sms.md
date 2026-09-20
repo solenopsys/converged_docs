@@ -1,14 +1,22 @@
 # lm-sms
 
-## Finalidade
+## Propósito
 
-Adaptador de provedor para canais de entrega de SMS.
+Perna SMS da distribuição compartilhada de notificações: transporte do provedor por trás do contrato rp-notify.
+
+## Valor do ecossistema
+
+Pings urgentes (incidentes, códigos de convite, mudanças de status) chegam aos telefones enquanto outros canais carregam a forma longa. Mesma API de intenção que email/push.
+
+## Não objetivos
+
+Sem regras de campanha ou segmentação — o domínio chamador decide.
 
 ## Limite de responsabilidade
 
-É responsável pela conectividade com o provedor de SMS e pela formatação da carga útil; não é responsável pelas regras de segmentação de campanhas/negócios.
+Possui conectividade do provedor SMS e formatação de payload; não possui regras de segmentação comercial/de campanha.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
@@ -16,6 +24,6 @@ Adaptador de provedor para canais de entrega de SMS.
 
 - Não incluído em uma solução predefinida
 
-## Origem
+## Fonte
 
 `modules/lambdas/providers/lm-sms`

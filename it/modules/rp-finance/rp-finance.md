@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce operazioni finanziarie per transazioni, riepiloghi dei periodi, flussi di cassa, crediti e debiti.
+Vista del libro mastro finanziario: transazioni, riepiloghi di periodo, flusso di cassa, crediti e debiti. Aggrega l’attività di fatturazione e degli ordini in numeri pronti per la finanza.
 
 ## Confine di responsabilità
 
-Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Responsabile dell’aggregazione e del reporting finanziario; non responsabile dell’esecuzione dei pagamenti, dei piani di fatturazione o del ciclo di vita degli ordini.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Il confine del modulo è definito dai suoi contratti pubblici e dalla directory 
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/repositories/business/rp-finance`

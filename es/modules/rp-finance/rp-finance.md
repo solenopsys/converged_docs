@@ -2,20 +2,20 @@
 
 ## Propósito
 
-Proporciona operaciones financieras para transacciones, resúmenes de períodos, flujo de caja, cuentas por cobrar y cuentas por pagar.
+Vista del libro mayor financiero: transacciones, resúmenes de períodos, flujo de caja, cuentas por cobrar y cuentas por pagar. Agrega la actividad de facturación y de pedidos en cifras listas para finanzas.
 
 ## Límite de responsabilidad
 
-El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
+Responsable de la agregación e informes financieros; no responsable de la ejecución de pagos, los planes de facturación ni el ciclo de vida de los pedidos.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
-## Inclusión en la solución
+## Pertenencia a la solución
 
 - No incluido en una solución predefinida
 
-## Origen
+## Fuente
 
 `modules/repositories/business/rp-finance`

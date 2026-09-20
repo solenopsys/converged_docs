@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Stellt Speicheroperationen für Skriptdateien bereit, einschließlich des Lesens, Speicherns, Hashens und Löschens.
+Versionierte Skript-/Text-Assets mit Content-Hashing: lesen, speichern, hashen, löschen. Wird von Automatisierungs- und Content-Pipelines verwendet, die stabile Skriptreferenzen benötigen.
 
 ## Verantwortungsbereich
 
-Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
+Verantwortet Speicherung und Hashing von Skript-Assets; verantwortet keine Workflow-Ausführung oder Content-Rendering.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

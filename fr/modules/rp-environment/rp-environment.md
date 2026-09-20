@@ -2,17 +2,17 @@
 
 ## Objectif
 
-Stocke et récupère la configuration d’environnement associée aux utilisateurs de la plateforme.
+Configuration d'environnement par utilisateur : paramètres et état de l'espace de travail limités à l'identité. Consommée par les surfaces pour personnaliser sans dupliquer les enregistrements d'identité.
 
 ## Limite de responsabilité
 
-La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
+Gère le CRUD de configuration d'environnement limité aux utilisateurs ; ne gère pas le cycle de vie des identités, l'authentification ni les autorisations.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 
-## Appartenance à une solution
+## Appartenance à la solution
 
 - Non inclus dans une solution prédéfinie
 

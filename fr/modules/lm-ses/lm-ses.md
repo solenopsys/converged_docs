@@ -2,13 +2,22 @@
 
 ## Objectif
 
-Adaptateur de fournisseur pour la distribution d’e-mails via AWS SES.
+Branche SES de la diffusion partagée des notifications : transport e-mail AWS derrière le contrat rp-notify.
 
-## Limites des responsabilités
+## Valeur pour l'écosystème
 
-Prend en charge l’intégration d’envoi spécifique à SES et le mappage ; ne prend pas en charge le domaine de création des modèles d’e-mails.
+Les e-mails en masse et transactionnels (invitations à évaluer, mises à jour de commandes, invitations d'équipe) transitent par une seule intégration SES. Les identifiants sont résolus via lm-secrets.
 
-## Dépendances directes du module
+## Hors objectifs
+
+Pas de politique de canal ni de modèles — cela relève de rp-notify et du domaine appelant.
+
+
+## Périmètre de responsabilité
+
+Possède l'intégration d'envoi et le mappage spécifiques à SES ; ne possède pas le domaine de création de modèles d'e-mails.
+
+## Dépendances directes de modules
 
 - Aucune
 

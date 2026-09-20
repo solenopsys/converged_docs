@@ -1,9 +1,15 @@
-## Equipos y taller
+# Converged
 
-Converged no sustituye el firmware de la máquina ni intenta controlar la producción a ciegas. Se conecta por encima del equipo, lee telemetría, vincula el estado de las máquinas con los pedidos y muestra lo que realmente ocurre en el taller.
+**Converged es una plataforma de Taller Inteligente, como una casa inteligente, pero para tu taller.**
 
-La plataforma está pensada para distintos tipos de equipo: impresoras 3D Bambu Lab, Marlin y Klipper, máquinas CNC, células robóticas y adaptadores especializados. Cuando es posible, Converged recibe estados, errores, progreso de ejecución, temperatura, colas de tareas y otros datos técnicos. Cuando el control directo es arriesgado o no está disponible, el sistema sigue siendo una capa de observación y coordinación.
+Converged es una plataforma de código abierto que conecta máquinas, pedidos, archivos, llamadas, correo electrónico, servicios externos e IA en un único sistema empresarial. Puede ejecutarse en cualquier lugar, desde una Raspberry Pi hasta un clúster de Kubernetes, sin dependencia de un proveedor.
 
-Para el propietario, esto significa algo simple: el equipo deja de ser un conjunto de ventanas separadas. Se ve qué máquinas están ocupadas, dónde hay inactividad, qué se retrasa, qué pedido está ligado a una operación concreta y dónde debe intervenir un operador. A medida que crece el parque, esta visibilidad se vuelve más importante que cambiar manualmente entre interfaces separadas de impresoras o máquinas.
+Un Taller Inteligente añade una capa de negocio sobre la planta de producción, conectando IA, equipos, personas y servicios externos en un único sistema. Converged funciona con el firmware y los sistemas de control existentes de las máquinas en lugar de sustituirlos. Recopila datos de los equipos, conecta el estado de las máquinas con los pedidos y los flujos de trabajo, y puede interactuar con los equipos cuando corresponde.
 
-Converged también conecta el equipo con el proceso de negocio. Una tarea no solo “se imprime” o “se fresa”: está en el contexto de un pedido, plazo, cliente, material, pago y siguiente paso. El taller se convierte en parte del sistema común, no en una isla separada.
+El objetivo no es simplemente supervisar las máquinas. **Tú haces la producción; Converged se ocupa de todo lo que la rodea.** Las solicitudes, los archivos, los presupuestos, la planificación, las colas, la comunicación con los clientes, el estado de los pedidos, los pagos, la entrega, las notificaciones, los servicios externos y el trabajo operativo rutinario pasan a formar parte del mismo sistema.
+
+Converged admite distintos tipos de equipos, incluidas impresoras 3D Bambu Lab, Marlin y Klipper, máquinas CNC, células robóticas y equipos especializados mediante adaptadores. La IA funciona en el mismo contexto empresarial y puede utilizar datos de los equipos y operaciones de negocio mediante Servicios y Flujos de trabajo.
+
+El resultado es un taller que funciona como un único sistema conectado, en lugar de ser una colección de máquinas, aplicaciones y servicios separados.
+
+**Las máquinas fabrican piezas. Las personas se ocupan de la ingeniería. Converged se encarga de todo lo demás.**

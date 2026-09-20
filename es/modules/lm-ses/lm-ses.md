@@ -2,13 +2,22 @@
 
 ## Propósito
 
-Adaptador de proveedor para el envío de correos electrónicos mediante AWS SES.
+Segmento SES de la distribución compartida de notificaciones: transporte de correo electrónico de AWS tras el contrato rp-notify.
+
+## Valor del ecosistema
+
+El correo masivo y transaccional (invitaciones de revisión, actualizaciones de pedidos, invitaciones de equipo) fluye a través de una integración SES. Las credenciales se resuelven mediante lm-secrets.
+
+## Objetivos excluidos
+
+Sin política de canal ni plantillas — eso corresponde a rp-notify y al dominio llamante.
+
 
 ## Límite de responsabilidad
 
-Se encarga de la integración y el mapeo específicos del envío mediante SES; no se encarga del dominio de creación de plantillas de correo electrónico.
+Posee la integración de envío y el mapeo específicos de SES; no posee el dominio de creación de plantillas de correo electrónico.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 

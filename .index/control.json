@@ -865,6 +865,27 @@
       ]
     },
     {
+      "name": "rp-invoices",
+      "root": "../../../modules/repositories/business/rp-invoices/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-invoices",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-invoices.md"
+      ]
+    },
+    {
       "name": "rp-logs",
       "root": "../../../modules/repositories/analytics/rp-logs/docs",
       "sourcePath": ".",
@@ -946,6 +967,27 @@
       ],
       "include": [
         "rp-marker.md"
+      ]
+    },
+    {
+      "name": "rp-metering",
+      "root": "../../../modules/repositories/business/rp-metering/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-metering",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-metering.md"
       ]
     },
     {
@@ -1051,6 +1093,27 @@
       ],
       "include": [
         "rp-places.md"
+      ]
+    },
+    {
+      "name": "rp-registry",
+      "root": "../../../../club/modules/repositories/rp-registry/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/rp-registry",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-registry.md"
       ]
     },
     {
@@ -1261,6 +1324,27 @@
       ],
       "include": [
         "rp-struct.md"
+      ]
+    },
+    {
+      "name": "rp-support",
+      "root": "../../../modules/repositories/communications/rp-support/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/rp-support",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "rp-support.md"
       ]
     },
     {
@@ -1852,6 +1936,27 @@
       ]
     },
     {
+      "name": "sf-reviews",
+      "root": "../../../modules/surfaces/business/sf-reviews/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-reviews",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-reviews.md"
+      ]
+    },
+    {
       "name": "sf-sales",
       "root": "../../../../club/modules/surfaces/sf-sales/docs",
       "sourcePath": ".",
@@ -1933,6 +2038,48 @@
       ],
       "include": [
         "sf-struct.md"
+      ]
+    },
+    {
+      "name": "sf-support",
+      "root": "../../../modules/surfaces/communications/sf-support/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-support",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-support.md"
+      ]
+    },
+    {
+      "name": "sf-team",
+      "root": "../../../modules/surfaces/sequrity/sf-team/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/sf-team",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "sf-team.md"
       ]
     },
     {
@@ -2020,6 +2167,27 @@
       ]
     },
     {
+      "name": "wf-equipment-incident",
+      "root": "../../../modules/workflows/wf-equipment-incident/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-equipment-incident",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-equipment-incident.md"
+      ]
+    },
+    {
       "name": "wf-file-analyze",
       "root": "../../../modules/workflows/wf-file-analyze/docs",
       "sourcePath": ".",
@@ -2104,6 +2272,69 @@
       ]
     },
     {
+      "name": "wf-order-review-followup",
+      "root": "../../../modules/workflows/wf-order-review-followup/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-order-review-followup",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-order-review-followup.md"
+      ]
+    },
+    {
+      "name": "wf-order-review-request",
+      "root": "../../../modules/workflows/wf-order-review-request/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-order-review-request",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-order-review-request.md"
+      ]
+    },
+    {
+      "name": "wf-payment-settle",
+      "root": "../../../../club/modules/workflows/wf-payment-settle/docs",
+      "sourcePath": ".",
+      "targetRoot": "../../../../club/content/docs-cache",
+      "targetPrefix": "modules/wf-payment-settle",
+      "targetStripPrefix": "modules",
+      "translationIndex": "../../../../club/content/docs-cache/.index",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-payment-settle.md"
+      ]
+    },
+    {
       "name": "wf-request-analyze",
       "root": "../../../modules/workflows/wf-request-analyze/docs",
       "sourcePath": ".",
@@ -2122,6 +2353,27 @@
       ],
       "include": [
         "wf-request-analyze.md"
+      ]
+    },
+    {
+      "name": "wf-request-to-order",
+      "root": "../../../modules/workflows/wf-request-to-order/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-request-to-order",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-request-to-order.md"
       ]
     },
     {
@@ -2164,6 +2416,27 @@
       ],
       "include": [
         "wf-sales-review-outreach.md"
+      ]
+    },
+    {
+      "name": "wf-team-invite",
+      "root": "../../../modules/workflows/wf-team-invite/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "modules/wf-team-invite",
+      "targetStripPrefix": "modules",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "wf-team-invite.md"
       ]
     },
     {

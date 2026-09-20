@@ -2,20 +2,20 @@
 
 ## Objetivo
 
-Integra a automação da plataforma aos recursos do Kubernetes por meio de um cliente dedicado e de um contrato de serviço.
+Ponte de operador Kubernetes sem estado: aplica intenções de automação da plataforma a recursos do cluster (deployments, jobs) por meio de um cliente dedicado. Sem estado persistente; segredos resolvidos via lm-secrets.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Responsável pela tradução da API do cluster e leituras de aplicação/status; não responsável pela orquestração de fluxos de trabalho, agendamento ou armazenamento de segredos.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Inclusão na solução
+## Participação na solução
 
 - Não incluído em uma solução predefinida
 
-## Código-fonte
+## Fonte
 
 `modules/lambdas/automation/lm-kubernetes`

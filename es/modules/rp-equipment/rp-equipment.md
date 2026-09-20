@@ -2,17 +2,17 @@
 
 ## Propósito
 
-Gestiona las entidades de equipos, los metadatos y las operaciones relacionadas con su ciclo de vida.
+Catálogo y ciclo de vida de equipos: entidades, metadatos, transiciones de estado y vinculación de incidentes. Los registros operativos fluyen a rp-logs; los archivos adjuntos se encuentran en rp-files.
 
-## Límite de responsabilidades
+## Límite de responsabilidad
 
-Es responsable del catálogo de equipos y de las transiciones de estado; no es responsable de la ejecución de los transportistas logísticos.
+Posee el catálogo de equipos y las transiciones de estado; no posee la ejecución del transportista logístico, el almacenamiento de registros ni los bytes de archivos.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
-## Pertenencia a soluciones
+## Pertenencia a la solución
 
 - No incluido en una solución predefinida
 

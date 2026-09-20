@@ -2,13 +2,13 @@
 
 ## Objectif
 
-Fournit des opérations de stockage pour les fichiers de scripts, notamment la lecture, l'enregistrement, le hachage et la suppression.
+Ressources de script/texte versionnées avec hachage de contenu : lecture, enregistrement, hachage, suppression. Utilisé par les pipelines d'automatisation et de contenu nécessitant des références de script stables.
 
 ## Limite de responsabilité
 
-La limite du module est définie par ses contrats publics et son répertoire d'implémentation.
+Gère le stockage et le hachage des ressources de script ; ne gère pas l'exécution des workflows ni le rendu du contenu.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

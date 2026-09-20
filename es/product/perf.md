@@ -1,9 +1,11 @@
 ## Rendimiento
 
-Converged está diseñado para plantas de producción que no siempre tienen un gran parque de servidores. Por eso el sistema evita peso innecesario: Bun reduce el overhead de procesos backend, Runtime permanece stateless y los microservicios pueden agruparse por tipo de carga en lugar de ejecutar cientos de contenedores separados.
+Converged está diseñado para sistemas de producción que necesitan funcionar de forma rápida y eficiente, incluso en hardware compacto.
 
-El rendimiento se logra por arquitectura, no por un solo truco. Los datos no pasan por capas innecesarias, los servicios poseen sus almacenes, Runtime paraleliza workflows y tareas cron, y los adaptadores nativos se usan donde HTTP o una capa JS normal añadirían demasiado overhead.
+En el núcleo de los **elementos de infraestructura** del sistema de Converged se encuentra **Zig**, un lenguaje moderno, extremadamente rápido y sencillo para la programación de sistemas. Permite crear software compacto con un alto rendimiento y requisitos mínimos de recursos.
 
-Una instalación compacta puede funcionar en un servidor pequeño o single-board computer si la carga corresponde al tamaño del taller. Al crecer, se pueden separar Runtime, microservicios y grupos de storage para usar más núcleos CPU, aislar tareas pesadas y evitar que un cuello de botella detenga todo el sistema.
+TypeScript se ejecuta mediante **Cruller**, un runtime especializado derivado de Bun y adaptado a la arquitectura de Converged.
 
-La plataforma no promete rendimiento infinito “out of the box”. Los cuellos de botella dependen del equipo, volumen de archivos, número de pedidos, proveedores de IA e integraciones. La arquitectura de Converged permite empezar de forma compacta y escalar solo las partes que realmente se calientan.
+Esto permite que Converged funcione desde pequeños microordenadores hasta clústeres de servidores. A medida que aumenta la carga de trabajo, el sistema puede escalar sin cambiar la propia plataforma: desde una sola máquina hasta una infraestructura distribuida.
+
+**Menos recursos. Más rendimiento. Escalabilidad sin añadir complejidad innecesaria.**

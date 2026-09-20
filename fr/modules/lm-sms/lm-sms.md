@@ -2,18 +2,25 @@
 
 ## Objectif
 
-Adaptateur de fournisseur pour les canaux de diffusion de SMS.
+Branche SMS de la diffusion partagée des notifications : transport fournisseur derrière le contrat rp-notify.
 
-## Limites de responsabilité
+## Valeur écosystémique
 
-Gère la connectivité avec le fournisseur de SMS et le formatage des charges utiles
-; ne gère pas les règles de segmentation des campagnes et de l’activité métier.
+Les pings urgents (incidents, codes d'invitation, changements de statut) atteignent les téléphones tandis que les autres canaux portent la forme longue. Même API d'intention que email/push.
 
-## Dépendances directes du module
+## Non-objectifs
+
+Aucune règle de campagne ou de segmentation — le domaine appelant décide.
+
+## Limite de responsabilité
+
+Possède la connectivité du fournisseur SMS et le formatage de la charge utile ; ne possède pas les règles de segmentation campagne/métier.
+
+## Dépendances directes de modules
 
 - Aucune
 
-## Appartenance à une solution
+## Appartenance à la solution
 
 - Non inclus dans une solution prédéfinie
 

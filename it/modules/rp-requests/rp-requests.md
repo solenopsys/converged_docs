@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Elabora le richieste di servizio/aziendali inviate da utenti o organizzazioni.
+Acquisizione e ciclo di vita delle richieste di servizio: invio, transizioni di stato, allegati di file (tramite fileId) e promozione a ordini tramite wf-request-to-order. L'analisi viene eseguita tramite wf-request-analyze.
 
-## Ambito di responsabilità
+## Limite di responsabilità
 
-Gestisce il ciclo di vita delle richieste e le transizioni di stato; non gestisce il trasporto dei messaggi né le componenti interne di archiviazione dei file.
+Possiede il ciclo di vita delle richieste e le transizioni di stato; non possiede il trasporto di messaggistica, i byte dei file o l'esecuzione dell'analisi.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 

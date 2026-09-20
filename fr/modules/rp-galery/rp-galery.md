@@ -2,13 +2,13 @@
 
 ## Objectif
 
-Gère les collections de médias de type galerie et les métadonnées associées.
+Collections multimédias sur la couche de fichiers partagée : les galeries organisent les fileIds de rp-files ; les octets restent dans rp-store. Aucun stockage binaire propre.
 
-## Limite des responsabilités
+## Limite de responsabilité
 
-Prend en charge les entités de galerie et la logique d’organisation ; ne prend pas en charge le backend de stockage des objets binaires.
+Possède les entités de galerie et la logique d'organisation ; ne possède ni le stockage d'objets binaires ni les enregistrements de fichiers.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

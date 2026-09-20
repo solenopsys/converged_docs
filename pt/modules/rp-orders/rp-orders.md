@@ -1,14 +1,14 @@
 # rp-orders
 
-## Objetivo
+## Finalidade
 
-Fornece o contrato de serviço para criar, atualizar, listar e acompanhar pedidos comerciais.
+Ciclo de vida do pedido: criação, atualizações, listagem e acompanhamento. Os arquivos são anexados por fileId (rp-files), a discussão vincula-se a um threadId (rp-threads), a conclusão pode acionar convites para avaliações.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Possui os registros de pedidos e as transições de status; não possui o armazenamento de arquivos, o sistema de mensagens nem os mecanismos de avaliação.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
@@ -16,6 +16,6 @@ O limite do módulo é definido por seus contratos públicos e pelo diretório d
 
 - Não incluído em uma solução predefinida
 
-## Fonte
+## Origem
 
 `modules/repositories/business/rp-orders`

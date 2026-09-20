@@ -2,17 +2,17 @@
 
 ## Finalidade
 
-Gerencia operações do domínio de faturamento, como planos, cobranças e estado do faturamento.
+Lado financeiro da plataforma: planos, cobranças e estado de faturamento. Lê agregados de consumo de rp-usage; a execução de pagamentos permanece atrás de gateways externos.
 
 ## Limite de responsabilidade
 
-É responsável pelos fluxos de faturamento e pelos registros de faturamento; não é responsável pelos componentes internos de gateways de pagamento externos.
+Possui fluxos de trabalho e registros de faturamento; não possui os mecanismos internos de gateways de pagamento externos nem a medição de uso.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Inclusão na solução
+## Participação na solução
 
 - Não incluído em uma solução predefinida
 

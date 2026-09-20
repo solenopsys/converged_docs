@@ -2,11 +2,14 @@
 
 ## Purpose
 
-Provides dashboard data and analytical views for platform metrics.
+Personal dashboard pin storage: remembers which indicator widgets a user
+pinned, their order and display metadata. No metrics are computed here,
+only the arrangement of the user's own screen.
 
 ## Responsibility boundary
 
-The module boundary is defined by its public contracts and implementation directory.
+Owns pin rows (widget, title, source, position) with per-user visibility;
+does not own metrics, counters, or widget rendering.
 
 ## Direct module dependencies
 

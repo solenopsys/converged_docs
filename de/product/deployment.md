@@ -1,14 +1,19 @@
 ## Bereitstellung
 
-Converged unterstützt mehrere Installationsszenarien: von einer kleinen Werkstatt bis zum Production-Deployment in der Infrastruktur eines Unternehmens. Die Basisplattform läuft auf **k3s**, einer leichtgewichtigen Kubernetes-Distribution für Edge-Geräte, lokale Server und Cloud-Umgebungen.
+Converged unterstützt mehrere Bereitstellungsszenarien — von kompakten Edge-Geräten und lokalen Servern bis hin zu Cloud-Infrastrukturen für viele unabhängige Unternehmen. Die Basisplattform läuft auf **k3s**, einer leichtgewichtigen Kubernetes-Distribution für Mikrocomputer, lokale Infrastruktur und Cloud-Cluster.
 
-Es gibt zwei Hauptprofile:
+Es gibt drei wichtige Bereitstellungsprofile:
 
-- **Mono** — UI, Runtime, Microservices, Storage und Cache sind kompakt gepackt. Dieser Modus ist für Entwicklung, Prototypen, Demos und kleine Installationen gedacht, bei denen einfacher Start wichtiger ist.
-- **Multi** — UI, Runtime-Gruppen, domänenbezogene Microservice-Gruppen, Storage und Cache sind getrennt. Das ist das Standard-Production-Profil, wenn Isolation, Skalierung und präzisere Lastkontrolle nötig sind.
+* **Mono** — UI, Dienste, Speicher und Cache laufen in einer kompakten Konfiguration auf einem einzigen Computer. Dies eignet sich gut für **Mikrocomputer wie Raspberry Pi und Orange Pi**, Edge-Geräte, kleine lokale Server, Entwicklung, Prototypen und Demos.
+* **Multi** — das System ist über mehrere Computer in einem Kubernetes-Cluster verteilt. UI, Dienstgruppen, Speicher und Cache können unabhängig bereitgestellt und skaliert werden. Dieses Profil eignet sich für Produktionsumgebungen, in denen zusätzliche Kapazität, Fehlertoleranz und eine präzisere Ressourcenkontrolle erforderlich sind.
+* **Cloud** — mehrere Unternehmen arbeiten innerhalb **desselben Kubernetes-Clusters** mit einer mandantenfähigen Architektur. Jeder **Mandant** verfügt über eine isolierte Umgebung mit eigenen Daten, eigener Konfiguration und eigenen Ressourcen, während die zugrunde liegende Cluster-Infrastruktur gemeinsam genutzt wird. So können viele Unternehmen effizient bedient werden, ohne für jeden Kunden einen separaten Cluster zu benötigen.
 
-Beide Profile verwenden denselben Code. Nur Container-Topologie und Konfiguration unterscheiden sich. Ein Unternehmen kann mit einer kompakten Installation beginnen und dasselbe System später in ernsthaftere Infrastruktur verschieben, ohne das Produkt neu zu schreiben.
+Alle drei Profile verwenden dieselbe Codebasis. Nur Bereitstellungstopologie und Konfiguration ändern sich. Ein System kann daher als kompakte Mono-Installation auf einem Mikrocomputer beginnen, bei wachsenden Anforderungen in einen Multi-Cluster wechseln oder als Cloud-Dienst für viele unabhängige Unternehmen betrieben werden.
 
-Bei Self-hosted-Szenarien kontrolliert der Kunde Installation, Netzwerk, Backups, Updates und den physischen Speicherort der Daten. Das passt zu Unternehmen mit internen Sicherheitsanforderungen oder dem Wunsch, die Produktion vollständig auf der eigenen Seite zu halten. Die Cloud-Lieferung nimmt operative Aufgaben ab: Die Plattform wird vom Serviceteam bereitgestellt und aktualisiert, während der Kunde eine fertige Arbeitsumgebung erhält.
+Bei einer **Self-Hosted**-Bereitstellung kontrolliert das Unternehmen Installation, Netzwerk, Backups, Aktualisierungen und den physischen Standort seiner Daten. Dies eignet sich für Organisationen, die vollständige Kontrolle über ihre Infrastruktur benötigen.
 
-Eine hybride Variante ist ebenfalls möglich: sensible Daten und Ausrüstung bleiben lokal, während die Cloud für Updates, externen Zugriff, Koordination verteilter Teams oder einzelne KI-Funktionen genutzt wird. Der wichtige Grundsatz ist, den Kunden nicht auf ein einziges Liefermodell festzulegen.
+In der **Cloud** wird die Infrastruktur zentral betrieben. Mehrere Unternehmen teilen denselben Cluster und bleiben dennoch auf Mandantenebene isoliert, einschließlich ihrer Daten, Konfiguration und zugewiesenen Ressourcen.
+
+Auch eine **hybride** Bereitstellung ist möglich: Sensible Daten und Geräte können lokal verbleiben, während die Cloud für Aktualisierungen, externen Zugriff, verteilte Teams oder ausgewählte KI-Funktionen genutzt wird.
+
+Das zentrale Prinzip lautet: **Converged bindet die Plattform nicht an ein einziges Bereitstellungsmodell.** Dasselbe System kann auf einem kleinen Mikrocomputer, über einen Cluster mit mehreren Computern oder als mandantenfähiger Cloud-Dienst laufen.

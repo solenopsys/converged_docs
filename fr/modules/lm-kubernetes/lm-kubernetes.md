@@ -1,14 +1,14 @@
 # lm-kubernetes
 
-## Objectif
+## Objet
 
-Intègre l’automatisation de la plateforme aux ressources Kubernetes via un client dédié et un contrat de service.
+Pont d'opérateur Kubernetes sans état : applique les intentions d'automatisation de la plateforme aux ressources du cluster (déploiements, jobs) via un client dédié. Aucun état persistant ; les secrets sont résolus via lm-secrets.
 
 ## Limite de responsabilité
 
-La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
+Responsable de la traduction de l'API du cluster et des lectures d'application/statut ; ne gère pas l'orchestration des workflows, la planification ni le stockage des secrets.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

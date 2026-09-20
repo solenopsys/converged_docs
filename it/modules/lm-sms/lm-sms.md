@@ -2,13 +2,21 @@
 
 ## Scopo
 
-Adattatore del provider per i canali di invio SMS.
+Ramo SMS del fan-out di notifiche condiviso: trasporto provider dietro il contratto rp-notify.
 
-## Limiti di responsabilità
+## Valore dell'ecosistema
 
-Gestisce la connettività al provider SMS e la formattazione del payload; non gestisce le regole di segmentazione delle campagne e del business.
+Ping urgenti (incidenti, codici di invito, cambi di stato) raggiungono i telefoni mentre altri canali portano la forma estesa. Stessa API di intenti di email/push.
 
-## Dipendenze dirette del modulo
+## Non obiettivi
+
+Nessuna regola di campagna o segmentazione — decide il dominio chiamante.
+
+## Confine di responsabilità
+
+Possiede la connettività del provider SMS e la formattazione del payload; non possiede regole di segmentazione campagna/business.
+
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +24,6 @@ Gestisce la connettività al provider SMS e la formattazione del payload; non ge
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/lambdas/providers/lm-sms`

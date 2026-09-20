@@ -1,14 +1,14 @@
 # rp-oauth
 
-## Objectif
+## Objet
 
-Implémente les flux d’autorisation spécifiques à OAuth et les échanges avec les fournisseurs.
+Flux d'autorisation OAuth et échange de jetons avec des fournisseurs tiers. Se termine dans des sessions rp-auth ; les autorisations restent dans rp-access.
 
-## Limites de responsabilité
+## Limite de responsabilité
 
-Gère les flux d’octroi OAuth et l’échange de jetons; ne prend pas en charge les méthodes d’authentification non liées à OAuth.
+Gère le traitement des autorisations OAuth et l'échange de jetons ; ne gère pas la connexion non OAuth, les sessions ni la politique d'autorisation.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

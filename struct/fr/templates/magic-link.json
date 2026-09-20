@@ -1,0 +1,40 @@
+{
+	"subject": "Connectez-vous à {{brand}}",
+	"preheader": "Votre lien de connexion pour {{brand}}. Ouvrez-le sur l’appareil sur lequel vous souhaitez rester connecté.",
+	"heading": "Votre lien de connexion",
+	"cta": "Se connecter à {{brand}}",
+	"blocks": [
+		{
+			"p": "Appuyez sur le bouton ci-dessous pour vous connecter à {{brand}}. Aucun mot de passe nécessaire — cet appareil vous reconnaîtra et la prochaine fois vous serez connecté directement."
+		},
+		{
+			"button": "{{url}}"
+		},
+		{
+			"note": "Le lien s’ouvre une seule fois. Ouvrez-le sur l’appareil sur lequel vous souhaitez rester connecté."
+		},
+		{
+			"fallback": "{{url}}",
+			"label": "Si le bouton ne fonctionne pas"
+		},
+		{
+			"meta": "Demandé pour {{email}}",
+			"detail": "{{requestInfo}}",
+			"when": "email"
+		},
+		{
+			"note": "Vous n’avez pas demandé à vous connecter ? Supprimez simplement ce message — rien ne se passe tant que le lien n’est pas ouvert."
+		}
+	],
+	"footer": [
+		"{{brand}} · un message de service concernant l’accès à votre compte",
+		{
+			"text": "Questions — [{{supportEmail}}](mailto:{{supportEmail}})",
+			"when": "supportEmail"
+		},
+		{
+			"text": "{{address}}",
+			"when": "address"
+		}
+	]
+}

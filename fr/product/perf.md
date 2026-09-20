@@ -1,9 +1,11 @@
-## Performance
+## Performances
 
-Converged est conçu pour des sites de production qui ne disposent pas toujours d’un grand parc serveur. Le système évite donc le poids inutile : Bun réduit l’overhead des processus backend, Runtime reste stateless, et les microservices peuvent être groupés par type de charge au lieu de lancer des centaines de conteneurs séparés.
+Converged est conçu pour les systèmes de production qui doivent fonctionner rapidement et efficacement, même sur du matériel compact.
 
-La performance vient de l’architecture, pas d’une seule astuce. Les données ne traversent pas de couches inutiles, les services possèdent leurs stores, Runtime parallélise les workflows et tâches cron, et les adaptateurs natifs sont utilisés là où HTTP ou une couche JS classique ajouterait trop d’overhead.
+Au cœur des **éléments d’infrastructure** du système de Converged se trouve **Zig**, un langage moderne, extrêmement rapide et simple de programmation système. Il permet de créer des logiciels compacts offrant de hautes performances et nécessitant un minimum de ressources.
 
-Une installation compacte peut fonctionner sur un petit serveur ou un single-board computer si la charge correspond à l’échelle de l’atelier. En grandissant, on peut séparer Runtime, microservices et groupes de storage pour utiliser plus de cœurs CPU, isoler les tâches lourdes et éviter qu’un goulot d’étranglement arrête tout le système.
+TypeScript s’exécute via **Cruller**, un runtime spécialisé dérivé de Bun et adapté à l’architecture de Converged.
 
-La plateforme ne promet pas une performance infinie « out of the box ». Les goulots dépendent des équipements, du volume de fichiers, du nombre de commandes, des fournisseurs IA et des intégrations. L’architecture de Converged permet de commencer compact et de scaler uniquement les parties qui deviennent réellement chaudes.
+Cela permet à Converged de fonctionner sur des appareils allant de petits micro-ordinateurs à des clusters de serveurs. À mesure que la charge de travail augmente, le système peut évoluer sans modifier la plateforme elle-même, d’une seule machine à une infrastructure distribuée.
+
+**Moins de ressources. Plus de performances. Une mise à l’échelle sans complexité inutile.**

@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Gestisce i record del personale, i ruoli e le operazioni di dominio incentrate sul personale.
+Elenco del personale e ruoli: schede collegate a identità condivise (rp-identity), invitate tramite wf-team-invite. Le autorizzazioni restano in rp-access.
 
 ## Confine di responsabilità
 
-Gestisce i dati e i flussi di lavoro del dominio del personale; non gestisce l'emissione delle credenziali di autenticazione.
+Gestisce i record del personale e le assegnazioni dei ruoli; non gestisce autenticazione, ciclo di vita delle identità o valutazione delle autorizzazioni.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Gestisce i dati e i flussi di lavoro del dominio del personale; non gestisce l'e
 
 - Non incluso in una soluzione predefinita
 
-## Origine
+## Fonte
 
 `modules/repositories/business/rp-staff`

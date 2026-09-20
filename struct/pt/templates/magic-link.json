@@ -1,0 +1,40 @@
+{
+	"subject": "Entrar em {{brand}}",
+	"preheader": "Seu link de entrada para {{brand}}. Abra-o no dispositivo em que deseja continuar conectado.",
+	"heading": "Seu link de entrada",
+	"cta": "Entrar em {{brand}}",
+	"blocks": [
+		{
+			"p": "Pressione o botão abaixo para entrar em {{brand}}. Sem senha — este dispositivo vai se lembrar de você e da próxima vez você entra direto."
+		},
+		{
+			"button": "{{url}}"
+		},
+		{
+			"note": "O link abre uma vez. Abra-o no dispositivo em que deseja continuar conectado."
+		},
+		{
+			"fallback": "{{url}}",
+			"label": "Se o botão não funcionar"
+		},
+		{
+			"meta": "Solicitado para {{email}}",
+			"detail": "{{requestInfo}}",
+			"when": "email"
+		},
+		{
+			"note": "Não pediu para entrar? Apague esta mensagem — nada acontece a menos que o link seja aberto."
+		}
+	],
+	"footer": [
+		"{{brand}} · uma mensagem de serviço sobre o acesso à sua conta",
+		{
+			"text": "Dúvidas — [{{supportEmail}}](mailto:{{supportEmail}})",
+			"when": "supportEmail"
+		},
+		{
+			"text": "{{address}}",
+			"when": "address"
+		}
+	]
+}

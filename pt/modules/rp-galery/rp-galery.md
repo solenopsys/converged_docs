@@ -1,14 +1,14 @@
 # rp-galery
 
-## Finalidade
+## Objetivo
 
-Gerencia coleções de mídia no estilo galeria e metadados relacionados.
+Coleções de mídia sobre a camada de arquivos compartilhada: as galerias organizam fileIds do rp-files; os bytes permanecem no rp-store. Sem armazenamento binário próprio.
 
 ## Limite de responsabilidade
 
-É responsável pelas entidades de galeria e pela lógica de organização; não é responsável pelo backend de armazenamento de objetos binários.
+Possui entidades de galeria e lógica de organização; não possui armazenamento de objetos binários nem registros de arquivos.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
@@ -16,6 +16,6 @@ Gerencia coleções de mídia no estilo galeria e metadados relacionados.
 
 - `content`
 
-## Origem
+## Fonte
 
 `modules/repositories/content/rp-galery`

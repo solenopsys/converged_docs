@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Verwaltet mediale Sammlungen im Galeriestil und zugehörige Metadaten.
+Mediensammlungen über der gemeinsamen Dateiablage: Galerien organisieren fileIds aus rp-files; Bytes verbleiben in rp-store. Kein eigener Binärspeicher.
 
-## Verantwortungsgrenze
+## Verantwortungsbereich
 
-Verantwortet Galerieentitäten und die Organisationslogik, jedoch nicht das Backend für die Speicherung binärer Objekte.
+Besitzt Galerie-Entitäten und Organisationslogik; besitzt weder binären Objektspeicher noch Dateidatensätze.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - `content`
 

@@ -1,14 +1,14 @@
 # rp-requests
 
-## Objetivo
+## Finalidade
 
-Processa solicitações de serviço/negócios enviadas por usuários ou organizações.
+Recepção e ciclo de vida de solicitações de serviço: envio, transições de status, anexos de arquivo (por fileId) e promoção a pedidos via wf-request-to-order. A análise é executada por meio de wf-request-analyze.
 
 ## Limite de responsabilidade
 
-É responsável pelo ciclo de vida das solicitações e pelas transições de status; não é responsável pelo transporte de mensagens nem pelos componentes internos de armazenamento de arquivos.
+Detém o ciclo de vida da solicitação e as transições de status; não detém o transporte de mensagens, os bytes de arquivo nem a execução da análise.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulo
 
 - Nenhuma
 

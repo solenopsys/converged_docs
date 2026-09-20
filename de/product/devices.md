@@ -1,9 +1,15 @@
-## Ausrüstung und Werkstatt
+# Converged
 
-Converged ersetzt keine Maschinenfirmware und versucht nicht, Produktion blind zu steuern. Es verbindet sich oberhalb der Ausrüstung, liest Telemetrie, verknüpft den Maschinenzustand mit Aufträgen und zeigt, was in der Werkstatt tatsächlich passiert.
+**Converged ist eine Smart-Workshop-Plattform — wie ein Smart Home, aber für Ihre Werkstatt.**
 
-Die Plattform ist für unterschiedliche Ausrüstung gedacht: 3D-Drucker von Bambu Lab, Marlin und Klipper, CNC-Maschinen, Roboterzellen und spezialisierte Adapter. Wo möglich, erhält Converged Status, Fehler, Ausführungsfortschritt, Temperatur, Aufgabenwarteschlangen und andere technische Daten. Wo direkte Steuerung riskant oder nicht verfügbar ist, bleibt das System eine Beobachtungs- und Koordinationsschicht.
+Converged ist eine Open-Source-Plattform, die Maschinen, Bestellungen, Dateien, Telefonate, E-Mail, externe Dienste und KI zu einem einzigen Geschäftssystem verbindet. Sie kann überall laufen, von einem Raspberry Pi bis zu einem Kubernetes-Cluster, ohne Vendor Lock-in.
 
-Für den Inhaber bedeutet das eine einfache Sache: Ausrüstung ist nicht mehr eine Sammlung getrennter Fenster. Man sieht, welche Maschinen beschäftigt sind, wo Leerlauf entsteht, was verspätet ist, welcher Auftrag mit einer konkreten Operation verbunden ist und wo ein Operator eingreifen muss. Wenn der Maschinenpark wächst, wird diese Sichtbarkeit wichtiger als das manuelle Wechseln zwischen einzelnen Drucker- oder Maschinenoberflächen.
+Ein Smart Workshop fügt über der Produktionsebene eine Geschäftsschicht hinzu, die KI, Geräte, Menschen und externe Dienste zu einem System verbindet. Converged arbeitet mit bestehender Maschinen-Firmware und vorhandenen Steuerungssystemen, anstatt sie zu ersetzen. Die Plattform sammelt Gerätedaten, verknüpft den Maschinenstatus mit Bestellungen und Workflows und kann bei Bedarf mit Geräten interagieren.
 
-Converged verbindet Ausrüstung auch mit dem Geschäftsprozess. Eine Aufgabe ist nicht nur „im Druck“ oder „beim Fräsen“: Sie steht im Kontext von Auftrag, Termin, Kunde, Material, Zahlung und nächstem Schritt. Die Werkstatt wird Teil des gemeinsamen Systems und keine separate Insel.
+Das Ziel besteht nicht einfach darin, Maschinen zu überwachen. **Sie übernehmen die Produktion — Converged kümmert sich um alles drumherum.** Anfragen, Dateien, Kostenvoranschläge, Planung, Warteschlangen, Kundenkommunikation, Bestellstatus, Zahlungen, Lieferung, Benachrichtigungen, externe Dienste und routinemäßige Betriebsaufgaben werden Teil desselben Systems.
+
+Converged unterstützt verschiedene Gerätetypen, darunter Bambu-Lab-, Marlin- und Klipper-3D-Drucker, CNC-Maschinen, Roboterzellen und spezialisierte Geräte über Adapter. KI arbeitet im selben Geschäftskontext und kann Gerätedaten und Geschäftsvorgänge über Dienste und Workflows nutzen.
+
+Das Ergebnis ist eine Werkstatt, die als ein verbundenes System arbeitet, statt als Sammlung separater Maschinen, Anwendungen und Dienste.
+
+**Maschinen fertigen Teile. Menschen übernehmen die Technik. Converged kümmert sich um alles andere.**

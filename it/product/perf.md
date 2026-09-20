@@ -1,9 +1,11 @@
 ## Prestazioni
 
-Converged è progettato per siti produttivi che non sempre dispongono di un grande parco server. Per questo il sistema evita peso inutile: Bun riduce l’overhead dei processi backend, Runtime resta stateless e i microservizi possono essere raggruppati per tipo di carico invece di eseguire centinaia di container separati.
+Converged è progettato per sistemi di produzione che devono funzionare in modo rapido ed efficiente, anche su hardware compatto.
 
-Le prestazioni derivano dall’architettura, non da un singolo trucco. I dati non attraversano strati inutili, i servizi possiedono i propri store, Runtime parallelizza workflow e attività cron, e gli adattatori nativi vengono usati dove HTTP o un normale strato JS aggiungerebbero troppo overhead.
+Alla base degli **elementi infrastrutturali** del sistema Converged c'è **Zig**, un linguaggio moderno, estremamente veloce e semplice per la programmazione di sistemi. Consente di creare software compatti con prestazioni elevate e requisiti minimi in termini di risorse.
 
-Un’installazione compatta può funzionare su un piccolo server o single-board computer se il carico corrisponde alla scala dell’officina. Con la crescita, Runtime, microservizi e gruppi storage possono essere separati per usare più core CPU, isolare attività pesanti ed evitare che un collo di bottiglia fermi tutto il sistema.
+TypeScript viene eseguito tramite **Cruller**, un runtime specializzato derivato da Bun e adattato all'architettura di Converged.
 
-La piattaforma non promette prestazioni infinite “out of the box”. I colli di bottiglia dipendono da attrezzature, volume dei file, numero di ordini, provider IA e integrazioni. L’architettura di Converged permette di iniziare in modo compatto e scalare solo le parti che diventano realmente calde.
+Questo consente a Converged di funzionare su qualsiasi infrastruttura, dai piccoli microcomputer ai cluster di server. Con l'aumentare del carico di lavoro, il sistema può scalare senza modificare la piattaforma stessa: da una singola macchina a un'infrastruttura distribuita.
+
+**Meno risorse. Più prestazioni. Scalabilità senza aggiungere complessità inutile.**

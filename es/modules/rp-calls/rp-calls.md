@@ -2,13 +2,13 @@
 
 ## Propósito
 
-Proporciona flujos de trabajo de comunicación relacionados con llamadas y gestión de sesiones de llamadas.
+Sesiones de llamadas y metadatos: configuración, participantes y vinculación a grabaciones (flujos de bloques en rp-store) y transcripciones/hilos (rp-threads). Resúmenes mediante wf-dialogue-summary.
 
 ## Límite de responsabilidad
 
-Es responsable de la lógica del dominio de las sesiones de llamadas y los metadatos de las llamadas; no es responsable de la infraestructura de proveedores externos de telecomunicaciones.
+Posee la lógica de dominio de sesión de llamada y los metadatos de llamada; no posee infraestructura de proveedor de telecomunicaciones, bytes de audio ni hilos de mensajes.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
@@ -16,6 +16,6 @@ Es responsable de la lógica del dominio de las sesiones de llamadas y los metad
 
 - `ai`
 
-## Código fuente
+## Fuente
 
 `modules/repositories/communications/rp-calls`

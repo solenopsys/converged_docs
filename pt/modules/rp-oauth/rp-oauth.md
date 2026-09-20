@@ -2,20 +2,20 @@
 
 ## Finalidade
 
-Implementa fluxos de autorização específicos do OAuth e negociações com provedores.
+Fluxos de concessão OAuth e troca de tokens com provedores de terceiros. Termina em sessões rp-auth; as permissões permanecem em rp-access.
 
 ## Limite de responsabilidade
 
-É responsável pelo tratamento do fluxo de concessão do OAuth e pela troca de tokens; não é responsável por métodos de autenticação que não sejam OAuth.
+Responsável pelo tratamento de concessões OAuth e troca de tokens; não é responsável por login não OAuth, sessões ou política de autorização.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Pertencimento à solução
+## Participação na solução
 
 - `security`
 
-## Fonte
+## Origem
 
 `modules/repositories/sequrity/rp-oauth`

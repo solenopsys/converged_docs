@@ -2,19 +2,19 @@
 
 ## Propósito
 
-Gestiona operaciones del dominio de facturación, como planes, cargos y el estado de facturación.
+Lado monetario de la plataforma: planes, cargos y estado de facturación. Lee agregados de consumo de rp-usage; la ejecución de pagos permanece tras pasarelas externas.
 
 ## Límite de responsabilidad
 
-Es responsable de los flujos de trabajo y los registros de facturación; no es responsable de los componentes internos de las pasarelas de pago externas.
+Posee flujos de trabajo y registros de facturación; no posee los detalles internos de pasarelas de pago externas ni la medición de uso.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
 ## Pertenencia a la solución
 
-- No está incluido en una solución predefinida
+- No incluido en una solución predefinida
 
 ## Fuente
 

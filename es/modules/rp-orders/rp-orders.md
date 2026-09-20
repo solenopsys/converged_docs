@@ -2,13 +2,13 @@
 
 ## Propósito
 
-Proporciona el contrato de servicio para crear, actualizar, enumerar y rastrear pedidos comerciales.
+Ciclo de vida del pedido: creación, actualizaciones, listado y seguimiento. Los archivos se adjuntan mediante fileId (rp-files), la discusión depende de un threadId (rp-threads), la finalización puede activar invitaciones a reseñas.
 
 ## Límite de responsabilidad
 
-El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
+Posee los registros de pedidos y las transiciones de estado; no posee el almacenamiento de archivos, la mensajería ni los mecanismos de reseñas.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 

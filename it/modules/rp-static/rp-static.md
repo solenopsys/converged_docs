@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce il contratto del servizio per i contenuti statici e i metadati della cache SSR.
+Metadati per contenuti statici e cache SSR: cosa è pubblicato e cosa può essere servito dalla cache. I byte dei contenuti transitano tramite rp-files/rp-store.
 
-## Ambito di responsabilità
+## Limite di responsabilità
 
-Il perimetro del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Possiede i metadati di pubblicazione statica e i descrittori della cache; non possiede l'archiviazione dei byte né la composizione delle pagine.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Il perimetro del modulo è definito dai suoi contratti pubblici e dalla director
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Origine
 
 `modules/repositories/content/rp-static`

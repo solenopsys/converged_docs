@@ -2,13 +2,16 @@
 
 ## Scopo
 
-Fornisce dati del dashboard e viste analitiche per le metriche della piattaforma.
+Archiviazione personale dei pin della dashboard: ricorda quali widget indicatori un utente
+ha fissato, il loro ordine e i metadati di visualizzazione. Qui non viene calcolata alcuna metrica,
+solo la disposizione della schermata personale dell'utente.
 
-## Confine di responsabilità
+## Limite di responsabilità
 
-Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Possiede le righe dei pin (widget, titolo, origine, posizione) con visibilità per utente;
+non possiede metriche, contatori o rendering dei widget.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +19,6 @@ Il confine del modulo è definito dai suoi contratti pubblici e dalla directory 
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Origine
 
 `modules/repositories/analytics/rp-dashboard`

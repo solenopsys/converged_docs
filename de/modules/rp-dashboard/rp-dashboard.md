@@ -2,17 +2,20 @@
 
 ## Zweck
 
-Stellt Dashboard-Daten und analytische Ansichten für Plattformmetriken bereit.
+Persönlicher Dashboard-Pin-Speicher: merkt sich, welche Indikator-Widgets ein Benutzer
+angeheftet hat, deren Reihenfolge und Anzeigemetadaten. Hier werden keine Metriken berechnet,
+nur die Anordnung des eigenen Bildschirms des Benutzers.
 
-## Verantwortungsgrenze
+## Verantwortungsbereich
 
-Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
+Besitzt Pin-Zeilen (Widget, Titel, Quelle, Position) mit Sichtbarkeit pro Benutzer;
+besitzt keine Metriken, Zähler oder Widget-Rendering.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zu einer Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

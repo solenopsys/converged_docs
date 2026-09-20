@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Verarbeitet von Benutzern oder Organisationen eingereichte Dienstleistungs- und Geschäftsanfragen.
+Service-Request-Erfassung und -Lebenszyklus: Einreichung, Statusübergänge, Dateianhänge (per fileId) und Umwandlung in Aufträge über wf-request-to-order. Die Analyse erfolgt über wf-request-analyze.
 
-## Verantwortungsbereich
+## Verantwortungsabgrenzung
 
-Verantwortet den Lebenszyklus von Anfragen und Statusübergänge; ist nicht für die Nachrichtenübertragung oder die internen Details der Dateispeicherung zuständig.
+Besitzt den Request-Lebenszyklus und Statusübergänge; besitzt nicht den Messaging-Transport, Datei-Bytes oder die Analyseausführung.
 
 ## Direkte Modulabhängigkeiten
 

@@ -1,14 +1,23 @@
 # lm-smtp
 
-## Objectif
+## Objet
 
-Adaptateur de fournisseur pour la livraison d’e-mails basée sur SMTP.
+Branche SMTP de la diffusion partagée des notifications : transport fournisseur simple derrière le contrat rp-notify.
 
-## Limites des responsabilités
+## Valeur pour l’écosystème
 
-Gère le transport SMTP et le traitement de la livraison au niveau du protocole ; ne prend pas en charge l’orchestration des notifications de haut niveau.
+Le domaine émet une intention de notification unique via rp-notify → cet adaptateur la distribue via SMTP. Remplacer ou ajouter des fournisseurs d’e-mails ne touche jamais les domaines.
 
-## Dépendances directes du module
+## Non-objectifs
+
+Pas de politique de canal, de nouvelles tentatives ni de modèles — cela relève de rp-notify et du domaine appelant.
+
+
+## Limite de responsabilité
+
+Possède le transport SMTP et la gestion de la distribution au niveau protocole ; ne possède pas l’orchestration des notifications de haut niveau.
+
+## Dépendances directes de modules
 
 - Aucune
 

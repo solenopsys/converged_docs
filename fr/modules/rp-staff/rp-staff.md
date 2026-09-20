@@ -1,18 +1,18 @@
 # rp-staff
 
-## Objectif
+## Objet
 
-Gère les dossiers du personnel, les rôles et les opérations du domaine centrées sur le personnel.
+Annuaire du personnel et rôles : fiches liées à des identités partagées (rp-identity), invitées via wf-team-invite. Les autorisations restent dans rp-access.
 
-## Limite des responsabilités
+## Limite de responsabilité
 
-Gère les données et les flux de travail du domaine du personnel ; ne gère pas l’émission des identifiants d’authentification.
+Gère les dossiers du personnel et les attributions de rôles ; ne gère pas l’authentification, le cycle de vie des identités ni l’évaluation des autorisations.
 
-## Dépendances directes du module
+## Dépendances directes des modules
 
 - Aucune
 
-## Appartenance à une solution
+## Appartenance aux solutions
 
 - Non inclus dans une solution prédéfinie
 

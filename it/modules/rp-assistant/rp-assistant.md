@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce interazioni con l'IA in stile assistente per gli utenti finali e gli strumenti interni.
+Front conversazionale di IA per utenti finali e strumenti interni: gestione dei dialoghi, acquisizione di richieste con consapevolezza dei file e passaggio ai flussi di lavoro di analisi. Legge i prompt denominati da rp-contexts e i thread da rp-threads.
 
-## Limiti di responsabilità
+## Limite di responsabilità
 
-Gestisce il comportamento del dialogo dell'assistente e la gestione delle richieste; non gestisce l'infrastruttura dei provider del modello né l'identità dell'utente.
+Responsabile del comportamento di dialogo dell’assistente e della gestione delle richieste; non è responsabile dell’infrastruttura del provider di modelli, dell’archiviazione dei thread o dell’identità utente.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Gestisce il comportamento del dialogo dell'assistente e la gestione delle richie
 
 - `ai`
 
-## Sorgente
+## Fonte
 
 `modules/repositories/ai/rp-assistant`

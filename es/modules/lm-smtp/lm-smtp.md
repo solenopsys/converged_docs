@@ -2,13 +2,22 @@
 
 ## Propósito
 
-Adaptador de proveedor para la entrega de correo electrónico basada en SMTP.
+Rama SMTP de la distribución compartida de notificaciones: transporte de proveedor simple detrás del contrato rp-notify.
+
+## Valor del ecosistema
+
+El dominio emite una intención de notificación una vez a través de rp-notify → este adaptador la entrega por SMTP. Cambiar o añadir proveedores de correo electrónico nunca afecta a los dominios.
+
+## No objetivos
+
+Sin política de canal, reintentos ni plantillas — esto corresponde a rp-notify y al dominio invocador.
+
 
 ## Límite de responsabilidad
 
-Se encarga del transporte SMTP y de la gestión de la entrega a nivel de protocolo; no se encarga de la orquestación de notificaciones de alto nivel.
+Posee el transporte SMTP y la gestión de entrega a nivel de protocolo; no posee la orquestación de notificaciones de alto nivel.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
@@ -16,6 +25,6 @@ Se encarga del transporte SMTP y de la gestión de la entrega a nivel de protoco
 
 - No incluido en una solución predefinida
 
-## Código fuente
+## Fuente
 
 `modules/lambdas/providers/lm-smtp`

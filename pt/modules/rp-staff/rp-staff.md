@@ -1,21 +1,21 @@
 # rp-staff
 
-## Propósito
+## Finalidade
 
-Gerencia registros de funcionários, funções e operações de domínio centradas em funcionários.
+Diretório de funcionários e funções: cartões vinculados a identidades compartilhadas (rp-identity), convidados via wf-team-invite. As permissões permanecem em rp-access.
 
 ## Limite de responsabilidade
 
-É responsável pelos dados e fluxos de trabalho do domínio de funcionários; não é responsável pela emissão de credenciais de autenticação.
+Gerencia registros de funcionários e atribuições de funções; não gerencia autenticação, ciclo de vida de identidade ou avaliação de permissões.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Associação à solução
+## Participação na solução
 
 - Não incluído em uma solução predefinida
 
-## Origem
+## Fonte
 
 `modules/repositories/business/rp-staff`

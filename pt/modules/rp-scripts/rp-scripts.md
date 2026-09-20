@@ -2,13 +2,13 @@
 
 ## Finalidade
 
-Fornece operações de armazenamento para arquivos de script, incluindo leitura, salvamento, geração de hash e exclusão.
+Ativos de script/texto versionados com hash de conteúdo: ler, salvar, gerar hash, excluir. Usado por automações e pipelines de conteúdo que precisam de referências estáveis de script.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Possui o armazenamento e o hash de ativos de script; não possui a execução de fluxos de trabalho nem a renderização de conteúdo.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
@@ -16,6 +16,6 @@ O limite do módulo é definido por seus contratos públicos e pelo diretório d
 
 - Não incluído em uma solução predefinida
 
-## Código-fonte
+## Fonte
 
 `modules/repositories/content/rp-scripts`

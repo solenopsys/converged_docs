@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Verwaltet Mitarbeiterdatensätze, Rollen und mitarbeiterbezogene Domänenoperationen.
+Mitarbeiterverzeichnis und Rollen: Karten, die mit gemeinsamen Identitäten (rp-identity) verknüpft sind, eingeladen via wf-team-invite. Berechtigungen verbleiben in rp-access.
 
 ## Verantwortungsbereich
 
-Ist für Mitarbeiterdomänendaten und -workflows zuständig; ist nicht für die Ausstellung von Authentifizierungsanmeldedaten zuständig.
+Verwaltet Mitarbeitereinträge und Rollenzuweisungen; ist nicht zuständig für Authentifizierung, Identitätslebenszyklus oder Berechtigungsauswertung.
 
 ## Direkte Modulabhängigkeiten
 

@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Implementiert OAuth-spezifische Autorisierungsabläufe und Anbieter-Handshakes.
+OAuth-Grant-Flows und Token-Austausch mit Drittanbietern. Mündet in rp-auth-Sitzungen; Berechtigungen verbleiben in rp-access.
 
-## Zuständigkeitsgrenze
+## Verantwortungsabgrenzung
 
-Verantwortet die Verarbeitung des OAuth-Grant-Ablaufs und den Token-Austausch; ist nicht für Nicht-OAuth-Authentifizierungsmethoden zuständig.
+Verantwortlich für OAuth-Grant-Behandlung und Token-Austausch; nicht verantwortlich für Nicht-OAuth-Login, Sitzungen oder Autorisierungsrichtlinien.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - `security`
 

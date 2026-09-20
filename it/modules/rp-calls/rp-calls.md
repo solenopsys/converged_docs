@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce flussi di lavoro per le comunicazioni relative alle chiamate e la gestione delle sessioni di chiamata.
+Sessioni di chiamata e metadati: configurazione, partecipanti e collegamento a registrazioni (flussi di blocchi in rp-store) e trascrizioni/thread (rp-threads). Riepiloghi tramite wf-dialogue-summary.
 
 ## Confine di responsabilità
 
-Gestisce la logica del dominio delle sessioni di chiamata e i metadati delle chiamate; non gestisce l'infrastruttura dei provider di telecomunicazioni esterni.
+Possiede la logica di dominio della sessione di chiamata e i metadati di chiamata; non possiede l'infrastruttura del provider di telecomunicazioni, i byte audio né i thread di messaggi.
 
-## Dipendenze dirette dal modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 

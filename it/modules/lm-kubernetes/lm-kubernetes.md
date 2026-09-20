@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Integra l'automazione della piattaforma con le risorse Kubernetes tramite un client dedicato e un contratto di servizio.
+Bridge di operatori Kubernetes stateless: applica gli intenti di automazione della piattaforma alle risorse del cluster (deployment, job) tramite un client dedicato. Nessuno stato persistente; i segreti vengono risolti tramite lm-secrets.
 
 ## Confine di responsabilità
 
-Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Responsabile della traduzione dell'API del cluster e delle letture di apply/stato; non responsabile dell'orchestrazione dei flussi di lavoro, della pianificazione o dell'archiviazione dei segreti.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Il confine del modulo è definito dai suoi contratti pubblici e dalla directory 
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/lambdas/automation/lm-kubernetes`

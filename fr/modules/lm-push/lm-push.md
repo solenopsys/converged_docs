@@ -2,17 +2,25 @@
 
 ## Objectif
 
-Adaptateur de fournisseur pour la diffusion de notifications push.
+Branche push du fan-out de notification partagé : transport push web/mobile derrière le contrat rp-notify.
 
-## Limite de responsabilité
+## Valeur pour l'écosystème
 
-Prend en charge les détails de l’intégration avec le fournisseur de notifications push ; ne prend pas en charge la logique métier de ciblage des notifications.
+Notifications en temps réel pour les chats, commandes, demandes — livrées avec les e-mails/SMS à partir d'une seule intention de notification.
 
-## Dépendances directes du module
+## Non-objectifs
+
+Pas de ciblage ni de logique métier — cela relève de rp-notify et du domaine appelant.
+
+## Périmètre de responsabilité
+
+Prend en charge les détails d'intégration du fournisseur push ; ne prend pas en charge la logique métier de ciblage des notifications.
+
+## Dépendances directes de modules
 
 - Aucune
 
-## Appartenance à la solution
+## Appartenance aux solutions
 
 - Non inclus dans une solution prédéfinie
 

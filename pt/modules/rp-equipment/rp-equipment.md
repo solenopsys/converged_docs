@@ -1,14 +1,14 @@
 # rp-equipment
 
-## Objetivo
+## Finalidade
 
-Gerencia entidades de equipamentos, metadados e operações relacionadas ao ciclo de vida.
+Catálogo e ciclo de vida de equipamentos: entidades, metadados, transições de estado e vinculação de incidentes. Os logs operacionais fluem para rp-logs; os anexos de arquivo ficam em rp-files.
 
 ## Limite de responsabilidade
 
-É responsável pelo catálogo de equipamentos e pelas transições de estado; não é responsável pela execução das transportadoras logísticas.
+Possui o catálogo de equipamentos e as transições de estado; não possui a execução da transportadora logística, o armazenamento de logs ou os bytes de arquivo.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 

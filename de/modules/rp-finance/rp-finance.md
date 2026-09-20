@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Stellt Finanzoperationen für Transaktionen, Periodenzusammenfassungen, Cashflow sowie Forderungen und Verbindlichkeiten bereit.
+Finanzielle Ledger-Ansicht: Transaktionen, Periodenzusammenfassungen, Cashflow, Forderungen und Verbindlichkeiten. Aggregiert Abrechnungs- und Bestellaktivitäten zu finanzfertigen Zahlen.
 
 ## Verantwortungsbereich
 
-Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
+Verantwortlich für Finanzaggregation und Berichterstattung; nicht verantwortlich für Zahlungsausführung, Abrechnungspläne oder Auftragslebenszyklus.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

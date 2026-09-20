@@ -1,0 +1,40 @@
+{
+	"subject": "Bei {{brand}} anmelden",
+	"preheader": "Dein Anmelde-Link für {{brand}}. Öffne ihn auf dem Gerät, auf dem du angemeldet bleiben möchtest.",
+	"heading": "Dein Anmelde-Link",
+	"cta": "Bei {{brand}} anmelden",
+	"blocks": [
+		{
+			"p": "Drücke auf die Schaltfläche unten, um dich bei {{brand}} anzumelden. Kein Passwort nötig — dieses Gerät merkt sich dich, und beim nächsten Mal bist du direkt drin."
+		},
+		{
+			"button": "{{url}}"
+		},
+		{
+			"note": "Der Link lässt sich einmal öffnen. Öffne ihn auf dem Gerät, auf dem du angemeldet bleiben möchtest."
+		},
+		{
+			"fallback": "{{url}}",
+			"label": "Wenn die Schaltfläche nicht funktioniert"
+		},
+		{
+			"meta": "Angefordert für {{email}}",
+			"detail": "{{requestInfo}}",
+			"when": "email"
+		},
+		{
+			"note": "Du hast keine Anmeldung angefordert? Lösche diese Nachricht einfach — es passiert nichts, solange der Link nicht geöffnet wird."
+		}
+	],
+	"footer": [
+		"{{brand}} · eine Service-Nachricht zum Zugriff auf dein Konto",
+		{
+			"text": "Fragen — [{{supportEmail}}](mailto:{{supportEmail}})",
+			"when": "supportEmail"
+		},
+		{
+			"text": "{{address}}",
+			"when": "address"
+		}
+	]
+}

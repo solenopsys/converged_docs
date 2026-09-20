@@ -1,9 +1,15 @@
-## Attrezzature e officina
+# Converged
 
-Converged non sostituisce il firmware delle macchine e non tenta di controllare la produzione alla cieca. Si collega sopra le attrezzature, legge la telemetria, collega lo stato delle macchine agli ordini e mostra cosa sta realmente accadendo in officina.
+**Converged è una piattaforma per Smart Workshop — come una smart home, ma per la tua officina.**
 
-La piattaforma è pensata per diversi tipi di attrezzature: stampanti 3D Bambu Lab, Marlin e Klipper, macchine CNC, celle robotiche e adattatori specializzati. Dove possibile, Converged riceve stati, errori, avanzamento dell’esecuzione, temperatura, code di attività e altri dati tecnici. Dove il controllo diretto è rischioso o non disponibile, il sistema resta uno strato di osservazione e coordinamento.
+Converged è una piattaforma open-source che collega macchine, ordini, file, chiamate, email, servizi esterni e AI in un unico sistema aziendale. Può funzionare ovunque, da un Raspberry Pi a un cluster Kubernetes, senza vincoli verso un fornitore.
 
-Per il proprietario significa una cosa semplice: le attrezzature smettono di essere un insieme di finestre separate. Si vede quali macchine sono occupate, dove c’è inattività, cosa è in ritardo, quale ordine è legato a una specifica operazione e dove deve intervenire un operatore. Quando il parco cresce, questa visibilità diventa più importante del passaggio manuale tra interfacce separate di stampanti o macchine.
+Uno Smart Workshop aggiunge un livello di business al di sopra dell'area produttiva, collegando AI, apparecchiature, persone e servizi esterni in un unico sistema. Converged funziona con firmware e sistemi di controllo delle macchine esistenti, invece di sostituirli. Raccoglie i dati delle apparecchiature, collega lo stato delle macchine agli ordini e ai Workflow e può interagire con le apparecchiature quando appropriato.
 
-Converged collega anche le attrezzature al processo aziendale. Un’attività non è semplicemente “in stampa” o “in fresatura”: si trova nel contesto di un ordine, una scadenza, un cliente, un materiale, un pagamento e un passo successivo. L’officina diventa parte del sistema comune, non un’isola separata.
+L'obiettivo non è semplicemente monitorare le macchine. **Tu fai la produzione — Converged si occupa di tutto ciò che la circonda.** Richieste, file, preventivi, programmazione, code, comunicazioni con i clienti, stato degli ordini, pagamenti, consegne, notifiche, servizi esterni e attività operative di routine diventano parte dello stesso sistema.
+
+Converged supporta diversi tipi di apparecchiature, incluse stampanti 3D Bambu Lab, Marlin e Klipper, macchine CNC, celle robotiche e apparecchiature specializzate tramite adattatori. L'AI opera nello stesso contesto aziendale e può utilizzare i dati delle apparecchiature e le operazioni aziendali tramite Servizi e Workflow.
+
+Il risultato è un'officina che opera come un unico sistema connesso invece che come una raccolta di macchine, applicazioni e servizi separati.
+
+**Le macchine realizzano i pezzi. Le persone gestiscono l'ingegneria. Converged si occupa di tutto il resto.**

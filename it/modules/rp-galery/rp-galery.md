@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Gestisce raccolte di contenuti multimediali in stile galleria e i relativi metadati.
+Raccolte multimediali sul livello di file condiviso: le gallerie organizzano i fileIds da rp-files; i byte restano in rp-store. Nessuno storage binario proprio.
 
-## Limiti di responsabilità
+## Limite di responsabilità
 
-È responsabile delle entità della galleria e della logica di organizzazione; non è responsabile del backend di archiviazione degli oggetti binari.
+Possiede le entità galleria e la logica di organizzazione; non possiede lo storage di oggetti binari né i record dei file.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Gestisce raccolte di contenuti multimediali in stile galleria e i relativi metad
 
 - `content`
 
-## Sorgente
+## Origine
 
 `modules/repositories/content/rp-galery`

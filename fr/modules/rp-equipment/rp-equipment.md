@@ -2,17 +2,17 @@
 
 ## Objectif
 
-Gère les entités d’équipement, les métadonnées et les opérations connexes du cycle de vie.
+Catalogue et cycle de vie des équipements : entités, métadonnées, transitions d'état et liaison des incidents. Les journaux opérationnels vont vers rp-logs ; les pièces jointes se trouvent dans rp-files.
 
-## Limites de responsabilité
+## Limite de responsabilité
 
-Est responsable du catalogue des équipements et des transitions d’état ; n’est pas responsable de l’exécution des opérations des transporteurs logistiques.
+Possède le catalogue d'équipements et les transitions d'état ; ne possède pas l'exécution des transporteurs logistiques, le stockage des journaux ni les octets de fichiers.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 
-## Appartenance à une solution
+## Appartenance à la solution
 
 - Non inclus dans une solution prédéfinie
 

@@ -2,17 +2,25 @@
 
 ## Zweck
 
-Provider-Adapter für SMS-Zustellungskanäle.
+SMS-Zweig des gemeinsamen Benachrichtigungs-Fan-outs: Provider-Transport hinter dem rp-notify-Vertrag.
+
+## Ökosystemwert
+
+Dringende Pings (Incidents, Einladungscodes, Statusänderungen) erreichen Telefone, während andere Kanäle die Langform übernehmen. Gleiche Intent-API wie E-Mail/Push.
+
+## Nicht-Ziele
+
+Keine Kampagnen- oder Segmentierungsregeln — die aufrufende Domäne entscheidet.
 
 ## Verantwortungsbereich
 
-Verantwortet die Anbindung an SMS-Provider und die Formatierung der Nutzdaten; ist nicht für Kampagnen- bzw. Geschäftssegmentierungsregeln zuständig.
+Besitzt SMS-Provider-Konnektivität und Payload-Formatierung; besitzt keine Kampagnen-/Business-Segmentierungsregeln.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zu einer Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

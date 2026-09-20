@@ -30,7 +30,7 @@ rp-auth is a repository in the sequrity domain. Its detailed purpose is maintain
 Stores and retrieves environment configuration associated with platform users.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `security`
 
 ### [rp-identity](/en/docs/modules/rp-identity)
 
@@ -59,6 +59,13 @@ Provides the administration interface for creating, viewing, updating, and delet
 
 - Direct dependencies: none
 - Solutions: none
+
+### [sf-team](/en/docs/modules/sf-team)
+
+sf-team is a surface in the sequrity domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
 
 ## AI and agents
 
@@ -94,14 +101,14 @@ Provides the AI workspace for listing, editing, and saving named contexts in mul
 
 ### [rp-counters](/en/docs/modules/rp-counters)
 
-Provides the service contract for collecting and querying analytical counters.
+Stores per-tenant external analytics counter configs (tracking ids, head snippets) for SSR injection.
 
 - Direct dependencies: none
 - Solutions: `analitycs`
 
 ### [rp-dashboard](/en/docs/modules/rp-dashboard)
 
-Provides dashboard data and analytical views for platform metrics.
+Stores personal dashboard indicator pins: which widgets a user pinned, their order and display metadata.
 
 - Direct dependencies: none
 - Solutions: `analitycs`
@@ -169,25 +176,25 @@ Integrates platform automation with Kubernetes resources through a dedicated cli
 rp-dag is a repository in the automation domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: `requests`
+- Solutions: `automation`, `requests`
 
 ### [rp-sheduller](/en/docs/modules/rp-sheduller)
 
 rp-sheduller is a repository in the automation domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `automation`
 
 ### [rp-webhooks](/en/docs/modules/rp-webhooks)
 
 rp-webhooks is a repository in the automation domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `automation`
 
 ### [sf-automation](/en/docs/modules/sf-automation)
 
-sf-automation is the surface in the automation domain for workflows, schedules, webhook endpoints, and their execution history.
+sf-automation is a surface in the automation domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
 - Solutions: `automation`
@@ -199,21 +206,21 @@ sf-automation is the surface in the automation domain for workflows, schedules, 
 rp-billing is a repository in the business domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `billing`
 
 ### [rp-equipment](/en/docs/modules/rp-equipment)
 
 rp-equipment is a repository in the business domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `production`
 
 ### [rp-events](/en/docs/modules/rp-events)
 
 Provides creation, storage, and retrieval of business events.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `production`
 
 ### [rp-finance](/en/docs/modules/rp-finance)
 
@@ -222,12 +229,26 @@ Provides finance operations for transactions, period summaries, cashflow, receiv
 - Direct dependencies: none
 - Solutions: none
 
+### [rp-invoices](/en/docs/modules/rp-invoices)
+
+rp-invoices is a repository in the business domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `billing`
+
+### [rp-metering](/en/docs/modules/rp-metering)
+
+rp-metering is a repository in the business domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `billing`
+
 ### [rp-orders](/en/docs/modules/rp-orders)
 
 Provides the service contract for creating, updating, listing, and tracking business orders.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `production`
 
 ### [rp-requests](/en/docs/modules/rp-requests)
 
@@ -241,7 +262,7 @@ rp-requests is a repository in the business domain. Its detailed purpose is main
 rp-reviews is a repository in the business domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `production`
 
 ### [rp-sales](/en/docs/modules/rp-sales)
 
@@ -255,14 +276,21 @@ rp-sales is a repository in the business domain. Its detailed purpose is maintai
 rp-staff is a repository in the business domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `production`
+
+### [sf-equipment](/en/docs/modules/sf-equipment)
+
+sf-equipment is a surface in the business domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
 
 ### [sf-orders](/en/docs/modules/sf-orders)
 
 Provides the sales interface for order and request lists, order details, status filtering, and operational dashboards.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `production`
 
 ### [sf-requests](/en/docs/modules/sf-requests)
 
@@ -270,6 +298,13 @@ sf-requests is a surface in the business domain. Its detailed purpose is maintai
 
 - Direct dependencies: none
 - Solutions: `requests`
+
+### [sf-reviews](/en/docs/modules/sf-reviews)
+
+sf-reviews is a surface in the business domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
 
 ## Communications
 
@@ -285,21 +320,21 @@ rp-calls is a repository in the communications domain. Its detailed purpose is m
 rp-chats is a repository in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `communications`
 
 ### [rp-community](/en/docs/modules/rp-community)
 
 rp-community is a repository in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `communications`
 
 ### [rp-notify](/en/docs/modules/rp-notify)
 
 rp-notify is a repository in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `security`
 
 ### [rp-resonus](/en/docs/modules/rp-resonus)
 
@@ -308,12 +343,19 @@ Provides communication configuration for managed phone numbers and LLM gate sett
 - Direct dependencies: none
 - Solutions: none
 
+### [rp-support](/en/docs/modules/rp-support)
+
+rp-support is a repository in the communications domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `communications`
+
 ### [rp-threads](/en/docs/modules/rp-threads)
 
 rp-threads is a repository in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: `ai`
+- Solutions: `ai`, `communications`
 
 ### [sf-calls](/en/docs/modules/sf-calls)
 
@@ -327,21 +369,28 @@ sf-calls is a surface in the communications domain. Its detailed purpose is main
 sf-chats is a surface in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `communications`
 
 ### [sf-community](/en/docs/modules/sf-community)
 
 sf-community is a surface in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: none
+- Solutions: `communications`
+
+### [sf-support](/en/docs/modules/sf-support)
+
+sf-support is a surface in the communications domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `communications`
 
 ### [sf-threads](/en/docs/modules/sf-threads)
 
 sf-threads is a surface in the communications domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: `ai`
+- Solutions: `ai`, `communications`
 
 ## Content and documents
 
@@ -457,7 +506,7 @@ rp-dumps is a repository in the data domain. Its detailed purpose is maintained 
 rp-files is a repository in the data domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
-- Solutions: `requests`
+- Solutions: `communications`, `requests`
 
 ### [rp-store](/en/docs/modules/rp-store)
 
@@ -481,6 +530,13 @@ sf-files is a surface in the data domain. Its detailed purpose is maintained wit
 - Solutions: `requests`
 
 ## Message delivery providers
+
+### [lm-lemonsqueezy](/en/docs/modules/lm-lemonsqueezy)
+
+lm-lemonsqueezy is a lambda in the providers domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `billing`
 
 ### [lm-push](/en/docs/modules/lm-push)
 
@@ -528,6 +584,13 @@ Summarizes unprocessed chat and call dialogues with an LLM, then stores titles, 
 - Direct dependencies: none
 - Solutions: none
 
+### [wf-equipment-incident](/en/docs/modules/wf-equipment-incident)
+
+wf-equipment-incident is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
+
 ### [wf-file-analyze](/en/docs/modules/wf-file-analyze)
 
 Analyzes one stored non-archive file, producing model previews and CNC or 3D-print estimates when supported.
@@ -556,12 +619,40 @@ Processes uploaded files in batches: it expands archives, identifies model files
 - Direct dependencies: none
 - Solutions: `requests`
 
+### [wf-order-review-followup](/en/docs/modules/wf-order-review-followup)
+
+wf-order-review-followup is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
+
+### [wf-order-review-request](/en/docs/modules/wf-order-review-request)
+
+wf-order-review-request is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
+
+### [wf-payment-settle](/en/docs/modules/wf-payment-settle)
+
+wf-payment-settle is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `billing`
+
 ### [wf-request-analyze](/en/docs/modules/wf-request-analyze)
 
 wf-request-analyze is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
 
 - Direct dependencies: none
 - Solutions: `requests`
+
+### [wf-request-to-order](/en/docs/modules/wf-request-to-order)
+
+wf-request-to-order is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
 
 ### [wf-sales-import](/en/docs/modules/wf-sales-import)
 
@@ -577,10 +668,21 @@ wf-sales-review-outreach is a workflow in the platform domain. Its detailed purp
 - Direct dependencies: none
 - Solutions: none
 
+### [wf-team-invite](/en/docs/modules/wf-team-invite)
+
+wf-team-invite is a workflow in the platform domain. Its detailed purpose is maintained with the module source.
+
+- Direct dependencies: none
+- Solutions: `production`
+
 ## Solution dependencies
 
 - `ai`: `security`
 - `analitycs`: `security`
+- `automation`: `security`
+- `billing`: `security`
+- `communications`: `security`
 - `content`: `security`
+- `production`: `security`, `analitycs`, `requests`
 - `requests`: no solution dependencies
 - `security`: no solution dependencies

@@ -2,13 +2,16 @@
 
 ## Finalidade
 
-Fornece dados de dashboard e visualizações analíticas para métricas da plataforma.
+Armazenamento pessoal de fixações do painel: lembra quais widgets de indicadores um usuário
+fixou, sua ordem e metadados de exibição. Nenhuma métrica é calculada aqui,
+apenas a organização da própria tela do usuário.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Possui linhas de fixação (widget, título, fonte, posição) com visibilidade por usuário;
+não possui métricas, contadores ou renderização de widgets.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
@@ -16,6 +19,6 @@ O limite do módulo é definido por seus contratos públicos e pelo diretório d
 
 - Não incluído em uma solução predefinida
 
-## Origem
+## Fonte
 
 `modules/repositories/analytics/rp-dashboard`

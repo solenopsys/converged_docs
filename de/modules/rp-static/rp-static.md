@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Stellt den Servicevertrag für statische Inhalte und SSR-Cache-Metadaten bereit.
+Statische Inhalte und SSR-Cache-Metadaten: was veröffentlicht ist und was aus dem Cache bereitgestellt werden kann. Inhaltsbytes fließen durch rp-files/rp-store.
 
-## Verantwortungsgrenze
+## Verantwortungsbereich
 
-Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
+Besitzt Metadaten zur statischen Veröffentlichung und Cache-Deskriptoren; besitzt keinen Byte-Speicher und keine Seitenkomposition.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

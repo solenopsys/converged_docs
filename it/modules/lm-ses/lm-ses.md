@@ -2,13 +2,22 @@
 
 ## Scopo
 
-Adattatore del provider per la distribuzione di email tramite AWS SES.
+Ramo SES del fan-out di notifiche condiviso: trasporto e-mail AWS dietro il contratto rp-notify.
 
-## Confini di responsabilità
+## Valore per l'ecosistema
 
-Gestisce l'integrazione e la mappatura specifiche per l'invio tramite SES; non gestisce il dominio di creazione dei template email.
+Le e-mail bulk e transazionali (inviti a recensioni, aggiornamenti ordini, inviti al team) passano attraverso un'unica integrazione SES. Le credenziali vengono risolte tramite lm-secrets.
 
-## Dipendenze dirette del modulo
+## Non obiettivi
+
+Nessuna policy di canale o modelli — competenza di rp-notify e del dominio chiamante.
+
+
+## Confine di responsabilità
+
+Possiede l'integrazione di invio e la mappatura specifiche di SES; non possiede il dominio di creazione dei modelli e-mail.
+
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +25,6 @@ Gestisce l'integrazione e la mappatura specifiche per l'invio tramite SES; non g
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/lambdas/providers/lm-ses`

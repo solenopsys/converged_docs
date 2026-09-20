@@ -2,13 +2,13 @@
 
 ## Propósito
 
-Proporciona operaciones de almacenamiento para archivos de scripts, incluidas la lectura, el guardado, la generación de hashes y la eliminación.
+Recursos de script/texto versionados con hash de contenido: leer, guardar, calcular hash, eliminar. Utilizado por pipelines de automatización y contenido que necesitan referencias estables a scripts.
 
 ## Límite de responsabilidad
 
-El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
+Posee el almacenamiento y el hash de recursos de scripts; no posee la ejecución de flujos de trabajo ni la representación de contenido.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
@@ -16,6 +16,6 @@ El límite del módulo está definido por sus contratos públicos y su directori
 
 - No incluido en una solución predefinida
 
-## Fuente
+## Origen
 
 `modules/repositories/content/rp-scripts`

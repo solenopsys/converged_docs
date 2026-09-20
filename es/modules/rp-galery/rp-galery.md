@@ -2,13 +2,13 @@
 
 ## Propósito
 
-Gestiona colecciones de medios al estilo de galerías y sus metadatos relacionados.
+Colecciones multimedia sobre la capa de archivos compartida: las galerías organizan fileIds de rp-files; los bytes permanecen en rp-store. Sin almacenamiento binario propio.
 
 ## Límite de responsabilidad
 
-Se encarga de las entidades de galería y de la lógica de organización; no se encarga del backend de almacenamiento de objetos binarios.
+Posee las entidades de galería y la lógica de organización; no posee el almacenamiento de objetos binarios ni los registros de archivos.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
@@ -16,6 +16,6 @@ Se encarga de las entidades de galería y de la lógica de organización; no se 
 
 - `content`
 
-## Fuente
+## Origen
 
 `modules/repositories/content/rp-galery`

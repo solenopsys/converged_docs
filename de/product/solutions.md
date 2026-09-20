@@ -1,14 +1,18 @@
 ## Lösungssystem
 
-Converged wird nicht als leere Plattform verkauft, bei der der Kunde zuerst selbst Architektur erfinden und Module zusammenbauen muss. Die grundlegende Werteinheit ist eine **Lösung**: ein fertiges Arbeitsszenario, das ein klares Geschäftsproblem löst.
+Converged strukturiert seine Funktionen in **Lösungen** — vollständige Anwendungsszenarien, die die erforderliche Funktionalität zur Lösung eines bestimmten Geschäftsproblems kombinieren.
 
-Die Plattform umfasst **17 Lösungen**, gruppiert in vier Bereiche:
+Lösungen sind in vier Bereiche gruppiert:
 
-- **Aufträge und Kunden** — eingehende Anfragen, Leistungspräsentation, Kundenhistorie, Status, Kommunikation und Wiederverkäufe.
-- **Produktion und Bestand** — Auslastung der Ausrüstung, Warteschlangen, Materialien, Qualitätskontrolle, Störungen und Versand.
-- **Geld und Gewinn** — Kosten, Marge, Zahlungen, Forderungen, Preisbildung und Wachstumsszenarien.
-- **Team und Verantwortung** — Verantwortungsbereiche, Schichten, Standards, Wissensbasis und Onboarding.
+* **Aufträge und Kunden** — eingehende Anfragen, Leistungspräsentation, Kundenhistorie, Status, Kommunikation und Folgeaufträge.
+* **Produktion und Lagerbestand** — Anlagenauslastung, Warteschlangen, Materialien, Qualitätskontrolle, Ausfälle und Lieferungen.
+* **Geld und Gewinn** — Kosten, Margen, Zahlungen, Forderungen, Preisgestaltung und Wachstumsszenarien.
+* **Team und Verantwortlichkeit** — Verantwortungsbereiche, Schichten, Standards, Wissensdatenbank und Onboarding.
 
-Eine Lösung in Converged ist nicht nur ein Bildschirm in der Oberfläche. Sie enthält in der Regel Datenmodell, Workflow, Rollen, Benachrichtigungen, KI-Agentenaktionen und Integrationen mit Ausrüstung oder externen Diensten. Der Inhaber wählt keine „Funktion“, sondern ein Problem: Anfragen schneller bearbeiten, die Maschinenwarteschlange sehen, Auftragsrentabilität verstehen oder Schichten ordnen.
+Eine Lösung wird aus **Services, Oberflächen und Workflows** aufgebaut. Sie kann eigene Datenmodelle, Rollen, Benachrichtigungen, Aktionen von KI-Agenten, Geräteanbindungen und Integrationen mit externen Services umfassen. Dieselben Bausteine können daher zu verschiedenen Lösungen kombiniert werden, ohne für jede Geschäftsaufgabe isolierte Anwendungen zu erstellen.
 
-Die detaillierte Beschreibung aller Lösungen gehört in einen separaten Abschnitt. In der Produktdokumentation ist der Grundsatz wichtig: Converged AI ist die Plattform, und Lösungen sind Anwendungsszenarien, die in ihr laufen und nach und nach verschiedene Bereiche eines Fertigungsunternehmens schließen.
+Der Benutzer arbeitet mit der Lösung als vollständiger Geschäftsfunktion und nicht mit ihrer zugrunde liegenden technischen Struktur. Beispielsweise kann eine Lösung alles bereitstellen, was erforderlich ist, um eingehende Anfragen zu bearbeiten, die Produktionswarteschlange zu verwalten, die Rentabilität von Aufträgen zu verfolgen oder Teamabläufe zu organisieren.
+
+Lösungen können konfiguriert, erweitert und mit anderen Lösungen kombiniert werden. Neue Services, Oberflächen und Workflows können ebenfalls hinzugefügt werden, wenn ein Unternehmen Funktionen benötigt, die nicht Teil der bestehenden Grundlage sind.
+
+**Converged ist die Plattform; Lösungen sind darauf aufbauende vollständige Geschäftsfunktionen.**

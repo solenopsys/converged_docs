@@ -2,13 +2,16 @@
 
 ## Propósito
 
-Proporciona datos de panel y vistas analíticas para las métricas de la plataforma.
+Almacenamiento personal de fijados del panel: recuerda qué widgets de indicadores ha fijado
+un usuario, su orden y metadatos de visualización. Aquí no se calcula ninguna métrica,
+solo la disposición de la propia pantalla del usuario.
 
 ## Límite de responsabilidad
 
-El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
+Posee filas de fijados (widget, título, fuente, posición) con visibilidad por usuario;
+no posee métricas, contadores ni renderizado de widgets.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 

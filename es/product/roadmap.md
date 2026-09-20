@@ -1,7 +1,11 @@
 ## Código fuente
 
-El proyecto se desarrolla abiertamente. El código fuente, la arquitectura actual y los materiales de trabajo están disponibles en el repositorio:
+Converged se desarrolla como una plataforma totalmente abierta. **Todo el código fuente está disponible bajo la licencia AGPL-3.0** y se aloja en un repositorio público:
 
-[https://github.com/solenopsys/converged](https://github.com/solenopsys/converged)
+[GitHub — Converged](https://github.com/solenopsys/converged?utm_source=chatgpt.com)
 
-El repositorio no es útil solo para desarrolladores. Permite entender cómo están organizados los microservicios, Runtime, micro-frontends, generación de contratos, perfiles de despliegue y adaptadores de hardware. Para empresas que evalúan self-hosted o despliegue privado, esto es parte importante de la revisión: la plataforma no es una caja cerrada.
+El código abierto significa que los usuarios no solo pueden ejecutar la plataforma, sino también inspeccionar cómo funciona, auditar su seguridad, adaptarla a sus necesidades e implementarla dentro de su propia infraestructura.
+
+El repositorio contiene la implementación actual de la plataforma y muestra cómo están organizados sus **Services, Apps, runtimes, Surfaces, Workflows, el almacenamiento, las comunicaciones, la implementación y los adaptadores de equipos**. Esto permite a los desarrolladores y las empresas evaluar la plataforma antes de implementarla y, cuando sea necesario, inspeccionar o modificar de forma independiente cualquier parte de ella.
+
+Una arquitectura abierta también elimina la dependencia de un proveedor cerrado. Las empresas no reciben una caja negra: **el código está disponible para su inspección, los datos pueden permanecer bajo su propio control y la plataforma puede implementarse dentro de su propia infraestructura.**

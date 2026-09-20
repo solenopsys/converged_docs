@@ -2,17 +2,17 @@
 
 ## Propósito
 
-Almacena y recupera la configuración del entorno asociada a los usuarios de la plataforma.
+Configuración de entorno por usuario: ajustes y estado del espacio de trabajo delimitados a la identidad. Consumida por las superficies para personalizar sin bifurcar los registros de identidad.
 
 ## Límite de responsabilidad
 
-El límite del módulo está definido por sus contratos públicos y su directorio de implementación.
+Posee CRUD de configuración de entorno delimitado a usuarios; no posee ciclo de vida de identidad, autenticación ni permisos.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 
-## Inclusión en soluciones
+## Pertenencia a la solución
 
 - No incluido en una solución predefinida
 

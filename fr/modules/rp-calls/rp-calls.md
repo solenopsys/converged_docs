@@ -2,13 +2,13 @@
 
 ## Objet
 
-Fournit des flux de communication liés aux appels et la gestion des sessions d’appel.
+Sessions d'appel et métadonnées : configuration, participants et liaison aux enregistrements (flux de blocs dans rp-store) et aux transcriptions/fils (rp-threads). Résumés via wf-dialogue-summary.
 
-## Limite des responsabilités
+## Périmètre de responsabilité
 
-Gère la logique métier des sessions d’appel et les métadonnées des appels; ne gère pas l’infrastructure des fournisseurs de télécommunications externes.
+Possède la logique métier de session d'appel et les métadonnées d'appel ; ne possède pas l'infrastructure de l'opérateur télécom, les octets audio ni les fils de messages.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

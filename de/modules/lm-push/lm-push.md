@@ -2,17 +2,25 @@
 
 ## Zweck
 
-Anbieteradapter für die Zustellung von Push-Benachrichtigungen.
+Push-Zweig des gemeinsamen Notification-Fan-outs: Web-/Mobile-Push-Transport hinter dem rp-notify-Vertrag.
+
+## Nutzen im Ökosystem
+
+Echtzeit-Hinweise für Chats, Bestellungen, Anfragen – zusammen mit E-Mail/SMS aus einer einzigen Notify-Absicht zugestellt.
+
+## Nicht-Ziele
+
+Kein Targeting und keine Geschäftslogik – das liegt bei rp-notify und der aufrufenden Domäne.
 
 ## Verantwortungsgrenze
 
-Verantwortet die Details der Push-Anbieterintegration; ist nicht für die geschäftliche Logik der Benachrichtigungszielbestimmung verantwortlich.
+Besitzt die Push-Provider-Integrationsdetails; besitzt keine geschäftliche Targeting-Logik für Benachrichtigungen.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zu einer Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

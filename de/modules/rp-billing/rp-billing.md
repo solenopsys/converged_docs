@@ -2,17 +2,17 @@
 
 ## Zweck
 
-Verarbeitet Vorgänge der Abrechnungsdomäne wie Pläne, Gebühren und den Abrechnungsstatus.
+Geldseite der Plattform: Pläne, Gebühren und Abrechnungsstatus. Liest Verbrauchsaggregate aus rp-usage; die Zahlungsausführung bleibt hinter externen Gateways.
 
 ## Verantwortungsbereich
 
-Verantwortet Abrechnungsabläufe und Abrechnungsdatensätze, jedoch nicht die Interna externer Zahlungs-Gateways.
+Besitzt Abrechnungsabläufe und Abrechnungsdatensätze; besitzt weder interne Details externer Zahlungs-Gateways noch die Verbrauchsmessung.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zur Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

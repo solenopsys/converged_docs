@@ -2,13 +2,13 @@
 
 ## Objectif
 
-Gère les opérations du domaine de la facturation, telles que les forfaits, les frais et l’état de la facturation.
+Volet financier de la plateforme : plans, frais et état de facturation. Lit les agrégats de consommation depuis rp-usage ; l’exécution des paiements reste derrière des passerelles externes.
 
-## Limites de responsabilité
+## Limite de responsabilité
 
-Prend en charge les workflows de facturation et les enregistrements de facturation, mais pas les composants internes des passerelles de paiement externes.
+Possède les flux de facturation et les enregistrements de facturation ; ne possède pas les rouages internes des passerelles de paiement externes ni la mesure d’usage.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

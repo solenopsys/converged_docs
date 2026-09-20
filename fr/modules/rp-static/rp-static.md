@@ -1,14 +1,14 @@
 # rp-static
 
-## Objectif
+## Objet
 
-Fournit le contrat de service pour le contenu statique et les métadonnées du cache SSR.
+Métadonnées de contenu statique et de cache SSR : ce qui est publié et ce qui peut être servi depuis le cache. Les octets de contenu transitent via rp-files/rp-store.
 
 ## Limite de responsabilité
 
-La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
+Détient les métadonnées de publication statique et les descripteurs de cache ; ne détient ni le stockage des octets ni la composition des pages.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

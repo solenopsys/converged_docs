@@ -2,17 +2,26 @@
 
 ## Zweck
 
-Provider-Adapter für den E-Mail-Versand über AWS SES.
+SES-Zweig des gemeinsamen Notification-Fan-outs: AWS-E-Mail-Transport hinter dem rp-notify-Vertrag.
 
-## Verantwortungsgrenze
+## Wert im Ökosystem
 
-Verantwortlich für die SES-spezifische Versandintegration und Zuordnung; nicht verantwortlich für die Domäne zur Erstellung von E-Mail-Vorlagen.
+Massen- und Transaktionsmails (Review-Einladungen, Bestellaktualisierungen, Teameinladungen) laufen über eine SES-Integration. Anmeldeinformationen werden über lm-secrets aufgelöst.
+
+## Nicht-Ziele
+
+Keine Kanalrichtlinie oder Vorlagen — das liegt bei rp-notify und der aufrufenden Domäne.
+
+
+## Verantwortungsbereich
+
+Besitzt die SES-spezifische Sendeintegration und Zuordnung; besitzt nicht die Domäne zur Erstellung von E-Mail-Vorlagen.
 
 ## Direkte Modulabhängigkeiten
 
 - Keine
 
-## Zugehörigkeit zu einer Lösung
+## Lösungszugehörigkeit
 
 - Nicht in einer vordefinierten Lösung enthalten
 

@@ -1,0 +1,40 @@
+{
+	"subject": "Accedi a {{brand}}",
+	"preheader": "Il tuo link di accesso per {{brand}}. Aprilo sul dispositivo su cui vuoi restare connesso.",
+	"heading": "Il tuo link di accesso",
+	"cta": "Accedi a {{brand}}",
+	"blocks": [
+		{
+			"p": "Premi il pulsante qui sotto per accedere a {{brand}}. Nessuna password necessaria — questo dispositivo ti ricorderà e la prossima volta entrerai direttamente."
+		},
+		{
+			"button": "{{url}}"
+		},
+		{
+			"note": "Il link si apre una sola volta. Aprilo sul dispositivo su cui vuoi restare connesso."
+		},
+		{
+			"fallback": "{{url}}",
+			"label": "Se il pulsante non funziona"
+		},
+		{
+			"meta": "Richiesto per {{email}}",
+			"detail": "{{requestInfo}}",
+			"when": "email"
+		},
+		{
+			"note": "Non hai richiesto l’accesso? Elimina pure questo messaggio — non succede nulla a meno che il link venga aperto."
+		}
+	],
+	"footer": [
+		"{{brand}} · un messaggio di servizio sull’accesso al tuo account",
+		{
+			"text": "Domande — [{{supportEmail}}](mailto:{{supportEmail}})",
+			"when": "supportEmail"
+		},
+		{
+			"text": "{{address}}",
+			"when": "address"
+		}
+	]
+}

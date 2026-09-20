@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce il contratto di servizio per la creazione, l'aggiornamento, l'elenco e il monitoraggio degli ordini aziendali.
+Ciclo di vita dell'ordine: creazione, aggiornamenti, elenco e tracciamento. I file si collegano tramite fileId (rp-files), la discussione fa riferimento a un threadId (rp-threads), il completamento può attivare inviti a recensioni.
 
-## Confine di responsabilità
+## Limite di responsabilità
 
-Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Possiede i record degli ordini e le transizioni di stato; non possiede l'archiviazione dei file, la messaggistica né i meccanismi di recensione.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 

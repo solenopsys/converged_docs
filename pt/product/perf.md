@@ -1,9 +1,11 @@
 ## Desempenho
 
-O Converged é projetado para locais de produção que nem sempre têm um grande parque de servidores. Por isso o sistema evita peso desnecessário: Bun reduz o overhead dos processos backend, Runtime permanece stateless, e microserviços podem ser agrupados por tipo de carga em vez de executar centenas de contêineres separados.
+O Converged foi projetado para sistemas de produção que precisam funcionar de forma rápida e eficiente, mesmo em hardware compacto.
 
-O desempenho vem da arquitetura, não de um único truque. Os dados não passam por camadas desnecessárias, os serviços possuem seus stores, Runtime paraleliza workflows e tarefas cron, e adaptadores nativos são usados onde HTTP ou uma camada JS comum adicionariam overhead demais.
+No núcleo dos **elementos de infraestrutura** do sistema do Converged está o **Zig** — uma linguagem de programação de sistemas moderna, extremamente rápida e simples. Ela possibilita softwares compactos com alto desempenho e requisitos mínimos de recursos.
 
-Uma instalação compacta pode rodar em um servidor pequeno ou single-board computer se a carga combinar com a escala da oficina. Com o crescimento, Runtime, microserviços e grupos de storage podem ser separados para usar mais núcleos de CPU, isolar tarefas pesadas e evitar que um gargalo pare todo o sistema.
+O TypeScript é executado por meio do **Cruller** — um runtime especializado derivado do Bun e adaptado à arquitetura do Converged.
 
-A plataforma não promete desempenho infinito “out of the box”. Gargalos dependem de equipamentos, volume de arquivos, número de pedidos, provedores de IA e integrações. A arquitetura do Converged permite começar de forma compacta e escalar apenas as partes que realmente ficam quentes.
+Isso permite que o Converged seja executado desde pequenos microcomputadores até clusters de servidores. À medida que a carga de trabalho cresce, o sistema pode escalar sem alterar a própria plataforma — de uma única máquina a uma infraestrutura distribuída.
+
+**Menos recursos. Mais desempenho. Escalabilidade sem adicionar complexidade desnecessária.**

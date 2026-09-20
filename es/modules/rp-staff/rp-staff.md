@@ -2,13 +2,13 @@
 
 ## Propósito
 
-Gestiona los registros del personal, los roles y las operaciones del dominio centradas en el personal.
+Directorio de personal y roles: tarjetas vinculadas a identidades compartidas (rp-identity), invitadas mediante wf-team-invite. Los permisos permanecen en rp-access.
 
 ## Límite de responsabilidad
 
-Es responsable de los datos y los flujos de trabajo del dominio del personal; no es responsable de la emisión de credenciales de autenticación.
+Gestiona los registros de personal y las asignaciones de roles; no gestiona la autenticación, el ciclo de vida de las identidades ni la evaluación de permisos.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 

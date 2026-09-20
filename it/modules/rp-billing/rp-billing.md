@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Gestisce le operazioni del dominio della fatturazione, come piani, addebiti e stato della fatturazione.
+Lato monetario della piattaforma: piani, addebiti e stato di fatturazione. Legge gli aggregati di consumo da rp-usage; l’esecuzione dei pagamenti resta dietro gateway esterni.
 
 ## Confine di responsabilità
 
-È responsabile dei flussi di lavoro e dei record della fatturazione; non è responsabile degli aspetti interni dei gateway di pagamento esterni.
+Possiede flussi di lavoro e record di fatturazione; non possiede i meccanismi interni dei gateway di pagamento esterni né la misurazione dell’utilizzo.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Gestisce le operazioni del dominio della fatturazione, come piani, addebiti e st
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/repositories/business/rp-billing`

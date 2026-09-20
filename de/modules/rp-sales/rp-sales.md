@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Verarbeitet Entitäten der Vertriebsdomäne, Vertriebsabläufe und die Vorbereitung zugehöriger Metriken.
+Sales-Pipeline: Leads, Deals, Import (wf-sales-import) und Outreach (wf-sales-review-outreach). Bereitet vertriebsseitige Kennzahlen vor; die Geldabwicklung erfolgt in Billing/Finanzen.
 
 ## Verantwortungsbereich
 
-Verantwortet den Vertriebslebenszyklus und die Vertriebsdatenlogik; die Verarbeitung von Transaktionen des Zahlungsgateways gehört nicht dazu.
+Verantwortlich für den Sales-Lifecycle und die Vertriebsdatenlogik; nicht verantwortlich für Payment-Gateway-Verarbeitung, Rechnungsstellung oder Import-Dateiparsing.
 
 ## Direkte Modulabhängigkeiten
 

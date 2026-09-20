@@ -1,9 +1,17 @@
-## Licenze
+## Licenza
 
-Converged è distribuito sotto **AGPL-3.0**. È una licenza copyleft per software di rete: se modifichi la piattaforma e ne fornisci accesso tramite rete, le modifiche devono essere pubblicate secondo i termini della licenza.
+Converged è distribuito interamente secondo la licenza **AGPL-3.0**. Il codice sorgente dell'intera piattaforma, inclusi Servizi, Superfici, Workflow e altri moduli, è aperto e disponibile per l'ispezione, l'uso e la modifica secondo i termini della licenza.
 
-Per gli utenti questo significa che la versione self-hosted può essere distribuita senza acquistare una licenza per il codice stesso. Questo percorso è adatto ad aziende che hanno bisogno di controllo, installazione locale, auditabilità o esperimenti sul proprio hardware. La responsabilità operativa resta al proprietario dell’installazione: aggiornamenti, backup, monitoraggio, sicurezza e disponibilità.
+La piattaforma ha tre livelli: **Free, Pro e Business**. Questi livelli non dividono il codice in parti open e closed — **tutti i livelli rimangono open source**. La differenza consiste nelle funzionalità e nei moduli disponibili per ciascun tipo di utente.
 
-La consegna cloud non è vendita di codice chiuso, ma un servizio intorno a una piattaforma open-source. Il cliente paga per avvio rapido, supporto, aggiornamenti, backup, monitoraggio, infrastruttura e funzionamento prevedibile. Per molte officine è più economico che costruire internamente competenze DevOps.
+* **Free** — il set fondamentale di funzionalità, disponibile a tutti.
+* **Pro** — un set esteso di funzionalità per i clienti **Club**.
+* **Business** — funzionalità professionali e aziendali per i clienti **Enterprise**.
 
-Questo equilibrio è importante per la fiducia: il core resta aperto, la community può verificare e migliorare la piattaforma, e il modello commerciale si costruisce intorno a implementazione, supporto e consegna controllata del valore.
+I livelli a pagamento non trasformano alcuna parte della piattaforma in software closed-source. Le funzionalità aggiuntive rimangono open source, ma vengono distribuite come parte del livello di piattaforma corrispondente e sono destinate al relativo tipo di cliente.
+
+In un deployment **self-hosted**, gli utenti possono eseguire il livello di Converged a loro disposizione e mantenere il controllo sulla propria infrastruttura, sui dati, sugli aggiornamenti e sulle operazioni.
+
+Il modello commerciale di Converged non si basa sulla vendita di software chiuso. È costruito attorno a **infrastruttura, ambiente pronto all'uso, supporto, aggiornamenti, implementazione e accesso alle funzionalità fornite a ciascun livello**.
+
+Questo approccio preserva il principale vantaggio dell'open source: il codice rimane trasparente, ispezionabile e disponibile alla community, mentre il modello commerciale definisce il livello di servizio e le funzionalità fornite a ciascun tipo di cliente.

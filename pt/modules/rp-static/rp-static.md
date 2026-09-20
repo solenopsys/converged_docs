@@ -2,13 +2,13 @@
 
 ## Finalidade
 
-Fornece o contrato de serviço para conteúdo estático e metadados de cache de SSR.
+Metadados de conteúdo estático e cache SSR: o que está publicado e o que pode ser servido a partir do cache. Os bytes de conteúdo fluem por rp-files/rp-store.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Detém os metadados de publicação estática e os descritores de cache; não detém o armazenamento de bytes nem a composição de páginas.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 

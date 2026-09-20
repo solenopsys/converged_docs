@@ -2,13 +2,13 @@
 
 ## Finalidade
 
-Fornece operações financeiras para transações, resumos de períodos, fluxo de caixa, contas a receber e contas a pagar.
+Visão do razão financeiro: transações, resumos de período, fluxo de caixa, contas a receber e contas a pagar. Agrega a atividade de faturamento e de pedidos em números prontos para finanças.
 
 ## Limite de responsabilidade
 
-O limite do módulo é definido por seus contratos públicos e pelo diretório de implementação.
+Responsável pela agregação e relatórios financeiros; não responsável pela execução de pagamentos, planos de faturamento ou ciclo de vida de pedidos.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
@@ -16,6 +16,6 @@ O limite do módulo é definido por seus contratos públicos e pelo diretório d
 
 - Não incluído em uma solução predefinida
 
-## Origem
+## Fonte
 
 `modules/repositories/business/rp-finance`

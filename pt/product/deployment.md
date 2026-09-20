@@ -1,14 +1,19 @@
 ## Implantação
 
-O Converged atende a vários cenários de instalação: de uma pequena oficina a uma implantação de produção na infraestrutura da empresa. A plataforma base roda sobre **k3s**, uma distribuição leve de Kubernetes adequada para dispositivos edge, servidores locais e ambientes cloud.
+O Converged oferece suporte a vários cenários de implantação — de dispositivos edge compactos e servidores locais a uma infraestrutura em nuvem que atende muitas empresas independentes. A plataforma base é executada no **k3s**, uma distribuição leve do Kubernetes adequada para microcomputadores, infraestrutura local e clusters em nuvem.
 
-Há dois perfis principais:
+Há três perfis principais de implantação:
 
-- **Mono** — UI, Runtime, microserviços, storage e cache são empacotados de forma compacta. Esse modo serve para desenvolvimento, protótipos, demonstrações e instalações pequenas em que a simplicidade de partida é mais importante.
-- **Multi** — UI, grupos de Runtime, grupos de microserviços por domínio, storage e cache são separados. Esse é o perfil padrão de produção quando são necessários isolamento, escala e controle mais preciso de carga.
+* **Mono** — UI, Serviços, armazenamento e cache são executados em uma configuração compacta em uma única máquina. É adequada para **microcomputadores como Raspberry Pi e Orange Pi**, dispositivos edge, pequenos servidores locais, desenvolvimento, protótipos e demonstrações.
+* **Multi** — o sistema é distribuído entre várias máquinas em um cluster Kubernetes. A UI, grupos de Serviços, armazenamento e cache podem ser implantados e escalados de forma independente. Esse perfil é adequado para ambientes de produção que exigem capacidade adicional, tolerância a falhas e controle mais preciso dos recursos.
+* **Cloud** — várias empresas operam dentro do **mesmo cluster Kubernetes**, usando uma arquitetura multi-tenant. Cada **tenant** possui um ambiente isolado com seus próprios dados, configuração e recursos, enquanto a infraestrutura subjacente do cluster é compartilhada. Isso permite atender muitas empresas de forma eficiente sem exigir um cluster separado para cada cliente.
 
-Os dois perfis usam o mesmo código. O que muda é a topologia dos contêineres e a configuração. Uma empresa pode começar com uma instalação compacta e depois mover o mesmo sistema para uma infraestrutura mais séria sem reescrever o produto.
+Os três perfis usam a mesma base de código. Apenas a topologia e a configuração da implantação mudam. Assim, um sistema pode começar como uma instalação Mono compacta em um microcomputador, migrar para um cluster Multi conforme os requisitos crescem ou funcionar como um serviço Cloud compartilhado por muitas empresas independentes.
 
-Em cenários self-hosted, o cliente controla instalação, rede, backups, atualizações e localização física dos dados. Isso atende empresas com requisitos internos de segurança ou desejo de manter a produção totalmente do seu lado. A entrega cloud remove o trabalho operacional: a plataforma é implantada e atualizada pela equipe do serviço, enquanto o cliente recebe um ambiente pronto.
+Em uma implantação **self-hosted**, a empresa controla a instalação, a rede, os backups, as atualizações e a localização física de seus dados. Isso é adequado para organizações que precisam de controle total sobre sua infraestrutura.
 
-Também é possível uma opção híbrida: dados sensíveis e equipamentos ficam localmente, enquanto a nuvem é usada para atualizações, acesso externo, coordenação de equipes distribuídas ou funções específicas de IA. O princípio importante é não prender o cliente a um único modelo de entrega.
+Na **Cloud**, a infraestrutura é operada centralmente. Várias empresas compartilham o mesmo cluster, permanecendo isoladas no nível do tenant, incluindo seus dados, configuração e recursos alocados.
+
+Também é possível uma implantação **híbrida**: dados sensíveis e equipamentos podem permanecer locais, enquanto a nuvem é usada para atualizações, acesso externo, equipes distribuídas ou determinados recursos de IA.
+
+O princípio fundamental é que o **Converged não prende a plataforma a um único modelo de implantação**. O mesmo sistema pode ser executado em um pequeno microcomputador, em um cluster com várias máquinas ou como um serviço Cloud multi-tenant.

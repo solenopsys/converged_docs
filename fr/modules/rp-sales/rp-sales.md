@@ -1,18 +1,18 @@
 # rp-sales
 
-## Objectif
+## Objet
 
-Gère les entités du domaine des ventes, les flux de vente et la préparation des métriques associées.
+Pipeline de ventes : prospects, affaires, import (wf-sales-import) et prospection (wf-sales-review-outreach). Prépare les indicateurs côté ventes ; les fonds sont réglés dans la facturation/finance.
 
 ## Limite de responsabilité
 
-Est responsable du cycle de vie des ventes et de la logique des données de vente ; n'est pas responsable du traitement des transactions de la passerelle de paiement.
+Gère le cycle de vie des ventes et la logique des données de vente ; ne gère pas le traitement des passerelles de paiement, la facturation ni l'analyse des fichiers d'import.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 
-## Appartenance à la solution
+## Appartenance aux solutions
 
 - Non inclus dans une solution prédéfinie
 

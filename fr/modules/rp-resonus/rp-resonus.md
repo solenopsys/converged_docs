@@ -2,17 +2,17 @@
 
 ## Objectif
 
-Fournit la configuration de communication pour les numéros de téléphone gérés et les paramètres de passerelle LLM.
+Configuration de téléphonie : numéros de téléphone gérés et paramètres de passerelle LLM pour les chemins vocaux. Le comportement d'exécution les consomme ; les appels eux-mêmes se trouvent dans rp-calls.
 
-## Limites de responsabilité
+## Limite de responsabilité
 
-La limite du module est définie par ses contrats publics et son répertoire d’implémentation.
+Possède la configuration des numéros/passerelle vocale ; ne possède pas les sessions d'appel, le stockage audio ni l'inférence de modèle.
 
-## Dépendances directes du module
+## Dépendances directes des modules
 
 - Aucune
 
-## Appartenance à une solution
+## Appartenance à la solution
 
 - Non inclus dans une solution prédéfinie
 

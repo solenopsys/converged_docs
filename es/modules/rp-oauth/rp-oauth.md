@@ -2,13 +2,13 @@
 
 ## Propósito
 
-Implementa flujos de autorización específicos de OAuth y protocolos de enlace con proveedores.
+Flujos de concesión OAuth e intercambio de tokens con proveedores externos. Termina en sesiones de rp-auth; los permisos permanecen en rp-access.
 
 ## Límite de responsabilidad
 
-Gestiona el flujo de concesión de OAuth y el intercambio de tokens; no gestiona métodos de autenticación que no sean OAuth.
+Gestiona el manejo de concesiones OAuth y el intercambio de tokens; no gestiona el inicio de sesión no OAuth, las sesiones ni la política de autorización.
 
-## Dependencias directas del módulo
+## Dependencias directas de módulos
 
 - Ninguna
 

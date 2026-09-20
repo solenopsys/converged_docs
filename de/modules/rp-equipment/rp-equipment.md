@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Verwaltet Ausrüstungseinheiten, Metadaten und zugehörige Lebenszyklusoperationen.
+Ausrüstungskatalog und Lebenszyklus: Entitäten, Metadaten, Zustandsübergänge und Vorfallverknüpfung. Betriebsprotokolle fließen an rp-logs; Dateianhänge befinden sich in rp-files.
 
-## Zuständigkeitsgrenze
+## Verantwortungsbereich
 
-Verantwortet den Ausrüstungskatalog und Zustandsübergänge; verantwortet nicht die Ausführung durch Logistikfrachtführer.
+Besitzt den Ausrüstungskatalog und Zustandsübergänge; besitzt nicht die Logistikträger-Ausführung, Protokollspeicherung oder Dateibytes.
 
 ## Direkte Modulabhängigkeiten
 

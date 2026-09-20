@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Stellt die Kommunikationskonfiguration für verwaltete Telefonnummern und LLM-Gate-Einstellungen bereit.
+Telefoniekonfiguration: verwaltete Rufnummern und LLM-Gate-Einstellungen für Sprachpfade. Das Laufzeitverhalten verwendet diese; Anrufe selbst befinden sich in rp-calls.
 
-## Abgrenzung der Verantwortlichkeiten
+## Verantwortungsabgrenzung
 
-Die Modulgrenze wird durch die öffentlichen Verträge und das Implementierungsverzeichnis definiert.
+Besitzt die Nummern-/Voice-Gate-Konfiguration; besitzt keine Anrufsitzungen, Audiospeicherung oder Modellinferenz.
 
 ## Direkte Modulabhängigkeiten
 

@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Fornisce operazioni di archiviazione per i file di script, inclusa la lettura, il salvataggio, il calcolo dell'hash e l'eliminazione.
+Asset di script/testo versionati con hashing del contenuto: lettura, salvataggio, hashing, eliminazione. Utilizzato da automazioni e pipeline di contenuti che necessitano di riferimenti stabili agli script.
 
-## Limiti di responsabilità
+## Limite di responsabilità
 
-Il limite del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Possiede l'archiviazione e l'hashing degli asset di script; non possiede l'esecuzione dei flussi di lavoro né il rendering dei contenuti.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Il limite del modulo è definito dai suoi contratti pubblici e dalla directory d
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Origine
 
 `modules/repositories/content/rp-scripts`

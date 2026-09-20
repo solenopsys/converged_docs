@@ -1,14 +1,18 @@
 ## Système de solutions
 
-Converged n’est pas vendu comme une plateforme vide où le client doit d’abord inventer l’architecture et assembler des modules. L’unité de valeur de base est une **solution** : un scénario de travail prêt à l’emploi qui ferme un problème métier clair.
+Converged organise ses capacités en **Solutions** — des scénarios applicatifs complets qui combinent les fonctionnalités nécessaires pour résoudre un problème métier spécifique.
 
-La plateforme prévoit **17 solutions** regroupées en quatre domaines :
+Les Solutions sont regroupées en quatre domaines :
 
-- **Commandes et clients** — demandes entrantes, vitrine de services, historique client, statuts, communication et ventes récurrentes.
-- **Production et stocks** — charge des équipements, files d’attente, matériaux, contrôle qualité, pannes et expéditions.
-- **Argent et rentabilité** — coûts, marge, paiements, créances, tarification et scénarios de croissance.
-- **Équipe et responsabilité** — zones de responsabilité, équipes, standards, base de connaissances et onboarding.
+* **Commandes et clients** — demandes entrantes, présentation des services, historique client, statuts, communication et ventes récurrentes.
+* **Production et stocks** — charge des équipements, files d’attente, matériaux, contrôle qualité, pannes et expéditions.
+* **Finances et rentabilité** — coûts, marges, paiements, créances, tarification et scénarios de croissance.
+* **Équipe et responsabilité** — zones de responsabilité, équipes, normes, base de connaissances et intégration des nouveaux arrivants.
 
-Une solution dans Converged n’est pas seulement un écran d’interface. Elle inclut généralement un modèle de données, un workflow, des rôles, des notifications, des actions d’agent IA et des intégrations avec des équipements ou des services externes. Le dirigeant ne choisit pas une « fonctionnalité », mais un problème : accélérer le traitement des demandes, voir la file des machines, comprendre la rentabilité des commandes ou structurer les équipes.
+Une Solution est composée de **Services, Surfaces et Workflows**. Elle peut inclure ses propres modèles de données, rôles, notifications, actions d’agents IA, connexions aux équipements et intégrations avec des services externes. Les mêmes éléments constitutifs peuvent ainsi être combinés dans différentes Solutions sans créer des applications isolées pour chaque tâche métier.
 
-La description détaillée de toutes les solutions doit vivre dans une section séparée. Dans la documentation produit, l’essentiel est le principe : Converged AI est la plateforme, et les solutions sont des scénarios applicatifs qui fonctionnent à l’intérieur et couvrent progressivement différentes zones de l’entreprise de production.
+L’utilisateur travaille avec la Solution comme avec une capacité métier complète plutôt qu’avec sa structure technique sous-jacente. Par exemple, une Solution peut fournir tout ce qui est nécessaire pour traiter les demandes entrantes, gérer la file de production, suivre la rentabilité des commandes ou organiser les opérations de l’équipe.
+
+Les Solutions peuvent être configurées, étendues et combinées avec d’autres Solutions. De nouveaux Services, Surfaces et Workflows peuvent également être ajoutés lorsqu’une entreprise a besoin de capacités qui ne font pas partie de la base existante.
+
+**Converged est la plateforme ; les Solutions sont des capacités métier complètes construites au-dessus.**

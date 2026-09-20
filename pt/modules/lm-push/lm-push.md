@@ -2,17 +2,25 @@
 
 ## Finalidade
 
-Adaptador de provedor para entrega de notificações push.
+Etapa push do fan-out de notificação compartilhado: transporte push web/móvel por trás do contrato rp-notify.
+
+## Valor para o ecossistema
+
+Notificações em tempo real para chats, pedidos, solicitações — entregues junto com e-mail/SMS a partir de uma única intenção de notificação.
+
+## Não objetivos
+
+Sem direcionamento ou lógica de negócios — isso é do rp-notify e do domínio chamador.
 
 ## Limite de responsabilidade
 
-É responsável pelos detalhes de integração com o provedor de push; não é responsável pela lógica de direcionamento de negócios das notificações.
+Detém os detalhes de integração do provedor push; não detém a lógica de direcionamento comercial das notificações.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 
-## Inclusão na solução
+## Participação em soluções
 
 - Não incluído em uma solução predefinida
 

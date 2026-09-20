@@ -2,13 +2,13 @@
 
 ## Finalidade
 
-Fornece interações de IA no estilo de assistente para usuários finais e ferramentas internas.
+Front conversacional de IA para usuários finais e ferramentas internas: tratamento de diálogos, recepção de solicitações com reconhecimento de arquivos e encaminhamento para fluxos de trabalho de análise. Lê prompts nomeados de rp-contexts e threads de rp-threads.
 
 ## Limite de responsabilidade
 
-É responsável pelo comportamento do diálogo do assistente e pelo tratamento de solicitações; não é responsável pela infraestrutura dos provedores de modelos nem pela identidade dos usuários.
+Responsável pelo comportamento de diálogo do assistente e pelo tratamento de solicitações; não é responsável pela infraestrutura do provedor de modelos, pelo armazenamento de threads ou pela identidade do usuário.
 
-## Dependências diretas do módulo
+## Dependências diretas de módulos
 
 - Nenhuma
 

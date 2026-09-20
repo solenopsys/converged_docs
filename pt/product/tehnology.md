@@ -1,11 +1,15 @@
 ## Tecnologias
 
-A parte servidor do Converged é construída sobre **Bun** e **Elysia**. Bun inicia JavaScript e TypeScript rapidamente, usa memória de forma eficiente e combina com implantações edge compactas. Elysia é usado como camada HTTP para plugins backend e microserviços.
+O Converged é construído sobre uma base de sistemas compacta, projetada para alto desempenho e uso eficiente de recursos em ambientes Kubernetes de qualquer escala — de um único microcomputador a um cluster distribuído.
 
-Os contratos entre serviços são descritos com tipos. NRPC conecta interfaces TypeScript a implementações e gera pacotes cliente, para que frontend, Runtime e backend trabalhem com os mesmos contratos em vez de APIs textuais desconectadas.
+No núcleo da infraestrutura está o **Zig** — uma linguagem de programação de sistemas moderna, extremamente rápida e simples. O Zig é usado em elementos de infraestrutura nos quais desempenho, eficiência de recursos, acesso ao hardware e controle de baixo nível são importantes.
 
-O armazenamento de dados usa um conjunto de stores leves para diferentes tarefas: SQL, key-value, arquivos, dados colunares, índices vetoriais e relações de grafo. A camada nativa Behemoth e os adaptadores Zig cobrem tarefas em que baixo overhead, acesso a equipamentos, Unix sockets ou FFI importam.
+O **Cruller** fornece o ambiente de execução para TypeScript e JavaScript. É um runtime especializado derivado do Bun e adaptado à arquitetura e aos requisitos do Converged.
 
-O frontend é uma plataforma React com micro-frontends. A shell comum carrega módulos de UI separados, e os cenários de produto podem evoluir de forma independente. Isso é importante para uma plataforma com muitas soluções: a interface não deve se transformar em um monólito pesado.
+O **Behemoth** fornece uma camada de dados unificada compatível com diferentes modelos de armazenamento, incluindo SQL, dados de chave-valor, arquivos, vetores e outras estruturas de dados especializadas. O armazenamento pode ser distribuído e escalado de acordo com os requisitos de cada implantação.
 
-Orquestração e entrega são construídas em torno de k3s, Helm e perfis de configuração. O mesmo conjunto de componentes pode ser montado em um perfil mono compacto ou separado em grupos para produção.
+O **Fujin** fornece a camada de comunicação, conectando Services, interfaces, eventos e equipamentos por meio de uma malha unificada de comunicação em tempo real. O **Centimanus** executa Workflows e gerencia suas dependências, execução paralela, eventos, novas tentativas e operações de longa duração.
+
+O Converged sempre é executado no **Kubernetes**. O ambiente-base é o **k3s**, uma distribuição leve do Kubernetes que torna o mesmo modelo de implantação prático até mesmo em pequenos dispositivos de borda, como o Raspberry Pi. Em uma única máquina, o Converged é executado como um cluster compacto de nó único; quando necessário, o mesmo cluster pode ser distribuído entre várias máquinas.
+
+Isso fornece uma base tecnológica consistente em toda a infraestrutura — de um pequeno dispositivo de borda a um cluster de nuvem distribuído.

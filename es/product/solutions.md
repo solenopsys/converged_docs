@@ -1,14 +1,18 @@
 ## Sistema de soluciones
 
-Converged no se vende como una plataforma vacía donde el cliente primero debe inventar la arquitectura y ensamblar módulos. La unidad básica de valor es una **solución**: un escenario de trabajo listo que cierra un problema claro del negocio.
+Converged organiza sus capacidades en **Soluciones** — escenarios completos de aplicación que combinan la funcionalidad necesaria para resolver un problema empresarial específico.
 
-La plataforma incluye **17 soluciones** agrupadas en cuatro áreas:
+Las Soluciones se agrupan en cuatro áreas:
 
-- **Pedidos y clientes** — solicitudes entrantes, vitrina de servicios, historial del cliente, estados, comunicación y ventas recurrentes.
-- **Producción e inventario** — carga de equipos, colas, materiales, control de calidad, fallos y envíos.
-- **Dinero y rentabilidad** — coste, margen, pagos, cuentas por cobrar, precios y escenarios de crecimiento.
-- **Equipo y responsabilidad** — zonas de responsabilidad, turnos, estándares, base de conocimiento e incorporación.
+* **Pedidos y clientes** — solicitudes entrantes, presentación de servicios, historial de clientes, estados, comunicación y ventas recurrentes.
+* **Producción e inventario** — carga de equipos, colas, materiales, control de calidad, fallos y envíos.
+* **Dinero y ganancias** — costes, márgenes, pagos, cuentas por cobrar, precios y escenarios de crecimiento.
+* **Equipo y responsabilidad** — zonas de responsabilidad, turnos, estándares, base de conocimientos e incorporación.
 
-Una solución dentro de Converged no es solo una pantalla de interfaz. Normalmente incluye un modelo de datos, workflow, roles, notificaciones, acciones de agente de IA e integraciones con equipos o servicios externos. El propietario no elige una “función”, sino un problema: acelerar la atención de solicitudes, ver la cola de máquinas, entender la rentabilidad de pedidos o ordenar los turnos.
+Una Solución se construye a partir de **Servicios, Superficies y Flujos de trabajo**. Puede incluir sus propios modelos de datos, roles, notificaciones, acciones de agentes de IA, conexiones con equipos e integraciones con servicios externos. Por lo tanto, los mismos bloques de construcción pueden combinarse en diferentes Soluciones sin crear aplicaciones aisladas para cada tarea empresarial.
 
-La descripción detallada de todas las soluciones debe vivir en una sección separada. En la documentación del producto, lo importante es fijar el principio: Converged AI es la plataforma, y las soluciones son escenarios aplicados que funcionan dentro de ella y van cerrando distintas zonas del negocio manufacturero.
+El usuario trabaja con la Solución como una capacidad empresarial completa, en lugar de hacerlo con su estructura técnica subyacente. Por ejemplo, una Solución puede proporcionar todo lo necesario para procesar solicitudes entrantes, gestionar la cola de producción, realizar un seguimiento de la rentabilidad de los pedidos u organizar las operaciones del equipo.
+
+Las Soluciones se pueden configurar, ampliar y combinar con otras Soluciones. También se pueden añadir nuevos Servicios, Superficies y Flujos de trabajo cuando una empresa necesite capacidades que no formen parte de la base existente.
+
+**Converged es la plataforma; las Soluciones son capacidades empresariales completas construidas sobre ella.**

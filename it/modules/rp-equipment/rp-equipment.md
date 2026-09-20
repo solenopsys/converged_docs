@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Gestisce le entità delle apparecchiature, i metadati e le relative operazioni del ciclo di vita.
+Catalogo e ciclo di vita delle attrezzature: entità, metadati, transizioni di stato e collegamento degli incidenti. I log operativi confluiscono in rp-logs; gli allegati risiedono in rp-files.
 
-## Confine di responsabilità
+## Limite di responsabilità
 
-È responsabile del catalogo delle apparecchiature e delle transizioni di stato; non è responsabile dell'esecuzione da parte dei vettori logistici.
+Possiede il catalogo delle attrezzature e le transizioni di stato; non possiede l'esecuzione dei vettori logistici, l'archiviazione dei log o i byte dei file.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Gestisce le entità delle apparecchiature, i metadati e le relative operazioni d
 
 - Non incluso in una soluzione predefinita
 
-## Origine
+## Fonte
 
 `modules/repositories/business/rp-equipment`

@@ -1,14 +1,14 @@
 # rp-assistant
 
-## Objectif
+## Objet
 
-Fournit des interactions avec une IA de type assistant pour les utilisateurs finaux et les outils internes.
+Front conversationnel d’IA pour les utilisateurs finaux et les outils internes : gestion des dialogues, réception des demandes prenant en compte les fichiers et transfert vers les flux d’analyse. Lit les prompts nommés de rp-contexts et les threads de rp-threads.
 
-## Limites des responsabilités
+## Limite de responsabilité
 
-Gère le comportement du dialogue de l’assistant et le traitement des requêtes ; ne gère pas l’infrastructure des fournisseurs de modèles ni l’identité des utilisateurs.
+Responsable du comportement dialogué de l’assistant et du traitement des demandes ; n’est pas responsable de l’infrastructure du fournisseur de modèles, du stockage des threads ni de l’identité utilisateur.
 
-## Dépendances directes du module
+## Dépendances directes de modules
 
 - Aucune
 

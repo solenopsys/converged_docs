@@ -2,13 +2,13 @@
 
 ## Scopo
 
-Archivia e recupera la configurazione dell'ambiente associata agli utenti della piattaforma.
+Configurazione dell'ambiente per utente: impostazioni e stato dell'area di lavoro con ambito identità. Utilizzata dalle superfici per personalizzare senza duplicare i record di identità.
 
-## Confine di responsabilità
+## Limite di responsabilità
 
-Il confine del modulo è definito dai suoi contratti pubblici e dalla directory di implementazione.
+Possiede CRUD di configurazione dell'ambiente con ambito utenti; non possiede ciclo di vita dell'identità, autenticazione o autorizzazioni.
 
-## Dipendenze dirette del modulo
+## Dipendenze dirette dei moduli
 
 - Nessuna
 
@@ -16,6 +16,6 @@ Il confine del modulo è definito dai suoi contratti pubblici e dalla directory 
 
 - Non incluso in una soluzione predefinita
 
-## Sorgente
+## Fonte
 
 `modules/repositories/sequrity/rp-environment`
