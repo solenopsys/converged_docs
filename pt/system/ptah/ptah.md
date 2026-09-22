@@ -1,78 +1,68 @@
-# Ptah control plane
+# Plano de controle do Ptah
 
-Ptah turns a Converged platform description into running Kubernetes resources.
-It is the system's control plane: it decides what should exist for a platform,
-which solutions are active and how tenant workloads and storage are placed.
+O Ptah transforma uma descrição de plataforma Converged em recursos Kubernetes em execução.
+Ele é o plano de controle do sistema: decide o que deve existir para uma plataforma,
+quais soluções estão ativas e como as cargas de trabalho e o armazenamento dos tenants são posicionados.
 
-## Desired platform model
+## Modelo de plataforma desejado
 
-The deployment model has three layers:
+O modelo de implantação tem três camadas:
 
-| Resource | Meaning |
+| Recurso | Significado |
 | --- | --- |
-| Platform | Shared runtime, routing, storage profile, applications and module map. |
-| Solution | A set of business modules, workflows and processors added to a platform. |
-| Tenant | An isolated site with its own scope, routes and, when required, storage shard. |
+| Plataforma | Runtime compartilhado, roteamento, perfil de armazenamento, aplicações e mapa de módulos. |
+| Solução | Um conjunto de módulos de negócio, fluxos de trabalho e processadores adicionados a uma plataforma. |
+| Tenant | Um site isolado com seu próprio escopo, rotas e, quando necessário, fragmento de armazenamento. |
 
-Ptah observes these resources and produces the complete desired set of
-deployments, services, volumes, configuration and routes. Kubernetes then
-converges the cluster on that description.
+O Ptah observa esses recursos e produz o conjunto completo desejado de
+implantações, serviços, volumes, configurações e rotas. O Kubernetes então
+converge o cluster de acordo com essa descrição.
 
 ```text
-Platform + Solution + Tenant
+Plataforma + Solução + Tenant
               |
               v
              Ptah
               |
               v
-Kubernetes workloads, storage and routes
+Cargas de trabalho, armazenamento e rotas do Kubernetes
 ```
 
-## Policy and mechanism
+## Política e mecanismo
 
-Ptah separates cluster mechanics from product policy. The native controller
-observes Kubernetes, applies resources, records status and removes obsolete
-objects. A pure policy layer converts observed platform data into a desired
-result without making network calls or modifying the cluster itself.
+O Ptah separa os mecanismos do cluster da política do produto. O controlador nativo
+observa o Kubernetes, aplica recursos, registra o status e remove objetos obsoletos. Uma camada de política pura converte os dados observados da plataforma em um resultado desejado, sem fazer chamadas de rede ou modificar o próprio cluster.
 
-The same policy can therefore be evaluated before deployment. This makes
-placement and lifecycle decisions inspectable without reproducing them in a
-second configuration generator.
+A mesma política pode, portanto, ser avaliada antes da implantação. Isso torna
+as decisões de posicionamento e ciclo de vida inspecionáveis sem reproduzi-las em
+um segundo gerador de configuração.
 
-## Deployment profiles
+## Perfis de implantação
 
-Profiles change storage placement without changing application images:
+Os perfis alteram o posicionamento do armazenamento sem alterar as imagens das aplicações:
 
-- `mono` runs one storage instance for a compact platform;
-- `multi` divides scopes between storage shards;
-- `cloud` gives each tenant an isolated storage instance and route boundary.
+- `mono` executa uma instância de armazenamento para uma plataforma compacta;
+- `multi` divide os escopos entre fragmentos de armazenamento;
+- `cloud` fornece a cada tenant uma instância de armazenamento isolada e um limite de rota.
 
-The volume ownership rule remains the same in every profile: each microservice
-has its own storage volume. Ptah decides which Behemoth instance mounts those
-volumes and publishes the scope-to-storage mapping used by stateless workloads.
+A regra de propriedade dos volumes permanece a mesma em todos os perfis: cada microsserviço
+tem seu próprio volume de armazenamento. O Ptah decide qual instância do Behemoth monta esses
+volumes e publica o mapeamento de escopo para armazenamento usado pelas cargas de trabalho sem estado.
 
-## Modules and rollout
+## Módulos e rollout
 
-Solutions name modules rather than embedding their bytes. Ptah distributes a
-content-addressed module map and serves immutable module content through a
-shared cache. Consumers receive the exact digest they should load.
+As soluções nomeiam módulos em vez de incorporar seus bytes. O Ptah distribui um
+mapa de módulos endereçado por conteúdo e disponibiliza conteúdo imutável dos módulos por meio de um
+cache compartilhado. Os consumidores recebem o digest exato que devem carregar.
 
-When the selected digest changes, the workload description changes with it and
-Kubernetes performs the rollout. A running pod therefore records the precise
-module content it started with, and rollback means selecting the previous
-digest again.
+Quando o digest selecionado muda, a descrição da carga de trabalho muda com ele e
+o Kubernetes executa o rollout. Assim, um pod em execução registra o conteúdo preciso
+do módulo com o qual foi iniciado, e o rollback significa selecionar novamente o digest anterior.
 
-## Safe reconciliation
+## Reconciliação segura
 
-Ptah applies a complete desired set and prunes resources that no longer belong
-to it. Data-bearing resources are retained unless deletion is explicitly
-requested. Incomplete input or a policy failure suppresses pruning, preventing
-a temporary dependency problem from being interpreted as a request to remove
-the platform.
+O Ptah aplica um conjunto completo desejado e remove por limpeza os recursos que não pertencem mais a ele. Os recursos que contêm dados são mantidos, a menos que a exclusão seja solicitada explicitamente. Entradas incompletas ou uma falha de política suprimem a limpeza, impedindo que um problema temporário de dependência seja interpretado como uma solicitação para remover a plataforma.
 
-## Place in the system
+## Papel no sistema
 
-Ptah is not a peer on the Fujin message bus and does not process business
-traffic. It creates and configures the peers, storage and routes that make up
-the runtime. Once they are running, Fujin, Behemoth, Centimanus and Resonus
-perform their work independently of the control plane.
+O Ptah não é um par no barramento de mensagens Fujin e não processa tráfego de negócio. Ele cria e configura os pares, o armazenamento e as rotas que compõem o runtime. Depois que estão em execução, Fujin, Behemoth, Centimanus e Resonus realizam seu trabalho independentemente do plano de controle.

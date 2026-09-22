@@ -1,60 +1,66 @@
-# Centimanus workflow runtime
+# Entorno de ejecución de flujos de trabajo de Centimanus
 
-Centimanus executes the multi-step processes that connect otherwise independent
-Converged modules. Order routing, notifications, approvals, AI-assisted work
-and production sequences can evolve as workflows without moving orchestration
-into domain services.
+Centimanus ejecuta los procesos de varios pasos que conectan módulos de
+Converged que, de otro modo, serían independientes. El enrutamiento de pedidos,
+las notificaciones, las aprobaciones, el trabajo asistido por IA y las
+secuencias de producción pueden evolucionar como flujos de trabajo sin trasladar
+la orquestación a los servicios de dominio.
 
-## Replayable execution
+## Ejecución reproducible
 
-A workflow is a program whose meaningful operations are divided into named
-nodes. Centimanus executes one unfinished node, records its outcome and then
-evaluates the workflow again. Completed nodes return their stored results
-instead of repeating their side effects.
+Un flujo de trabajo es un programa cuyas operaciones relevantes se dividen en
+nodos con nombre. Centimanus ejecuta un nodo sin terminar, registra su resultado
+y después vuelve a evaluar el flujo de trabajo. Los nodos completados devuelven
+sus resultados almacenados en lugar de repetir sus efectos secundarios.
 
 ```text
-first pass:   find order -> store result
-second pass:  replay order -> reserve machine -> store result
-third pass:   replay both -> notify operator -> complete
+primera pasada:   buscar pedido -> almacenar resultado
+segunda pasada:   reproducir pedido -> reservar máquina -> almacenar resultado
+tercera pasada:   reproducir ambos -> notificar al operador -> completar
 ```
 
-Branches and loops can depend on earlier results, so the graph emerges from the
-process itself rather than from a separate static diagram. The recorded node
-outcomes make progress explicit and allow execution to continue from the first
-unfinished step.
+Las ramas y los bucles pueden depender de resultados anteriores, por lo que el
+grafo surge del propio proceso en lugar de un diagrama estático independiente.
+Los resultados registrados de los nodos hacen explícito el progreso y permiten
+que la ejecución continúe desde el primer paso sin terminar.
 
-## Why workflows are separate
+## Por qué los flujos de trabajo están separados
 
-Domain microservices in Converged own data and small business capabilities.
-They do not call one another to implement an end-to-end process. This avoids
-hidden chains in which a change or failure in one service unexpectedly affects
-many others.
+Los microservicios de dominio de Converged son propietarios de los datos y de
+pequeñas capacidades empresariales. No se llaman entre sí para implementar un
+proceso de extremo a extremo. Esto evita cadenas ocultas en las que un cambio o
+un fallo en un servicio afecta inesperadamente a muchos otros.
 
-Centimanus is the place where cross-domain coordination is visible. A workflow
-can call services, request AI work and choose the next step while each service
-remains focused on its own boundary.
+Centimanus es el lugar donde la coordinación entre dominios es visible. Un flujo
+de trabajo puede llamar a servicios, solicitar trabajo de IA y elegir el
+siguiente paso, mientras cada servicio sigue centrado en su propio límite.
 
-## Workflow delivery
+## Entrega de flujos de trabajo
 
-Solutions determine which workflows are active. Ptah publishes that selection,
-the DAG service exposes the selected descriptors, and Centimanus loads the
-corresponding content through Ptah's content-addressed proxy. A workflow that
-is not part of the active solution is not available for execution.
+Las soluciones determinan qué flujos de trabajo están activos. Ptah publica esa
+selección, el servicio DAG expone los descriptores seleccionados y Centimanus
+carga el contenido correspondiente a través del proxy direccionado por contenido
+de Ptah. Un flujo de trabajo que no forme parte de la solución activa no está
+disponible para su ejecución.
 
-This separates four concerns: product selection, content delivery, execution
-and observability. Each can change without turning the workflow runtime into a
-module registry or deployment controller.
+Esto separa cuatro responsabilidades: selección del producto, entrega de
+contenido, ejecución y observabilidad. Cada una puede cambiar sin convertir el
+entorno de ejecución de flujos de trabajo en un registro de módulos o un
+controlador de despliegues.
 
-## Reliability boundary
+## Límite de fiabilidad
 
-Centimanus records completed node outcomes, but external operations must still
-respect their own idempotency rules. Workflow telemetry is used for visibility;
-it does not decide execution state. Business data remains in the services that
-own it rather than becoming workflow-engine state.
+Centimanus registra los resultados de los nodos completados, pero las
+operaciones externas aún deben respetar sus propias reglas de idempotencia. La
+telemetría del flujo de trabajo se utiliza para obtener visibilidad; no decide
+el estado de ejecución. Los datos empresariales permanecen en los servicios que
+son sus propietarios, en lugar de convertirse en estado del motor de flujos de
+trabajo.
 
-## Place in the system
+## Lugar en el sistema
 
-Centimanus receives work and calls services through Fujin. It uses platform
-storage for workflow progress and reports lifecycle events for monitoring. It
-does not own domain records, select active solutions or route messages between
-other peers.
+Centimanus recibe trabajo y llama a los servicios a través de Fujin. Utiliza el
+almacenamiento de la plataforma para el progreso de los flujos de trabajo e
+informa de eventos del ciclo de vida para la monitorización. No es propietario
+de registros de dominio, no selecciona soluciones activas ni enruta mensajes
+entre otros pares.

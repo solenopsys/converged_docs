@@ -1,10 +1,33 @@
 {
   "projects": [
     {
+      "name": "bambu-local",
+      "root": "../../../core/native/wrappers/adapters/bambu-local/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "adapters/bambu-local",
+      "targetStripPrefix": "adapters",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "adapters/bambu-local.md"
+      ]
+    },
+    {
       "name": "behemoth",
       "root": "../../../core/native/apps/behemoth/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/behemoth",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -20,10 +43,33 @@
       ]
     },
     {
+      "name": "case",
+      "root": "../../../core/native/ai/case/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "ai/case",
+      "targetStripPrefix": "ai",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "ai/case.md"
+      ]
+    },
+    {
       "name": "centimanus",
       "root": "../../../core/native/apps/centimanus/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/centimanus",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -43,6 +89,8 @@
       "root": "../../../tools/cli/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/cli",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -55,6 +103,28 @@
       ],
       "include": [
         "system/cli.md"
+      ]
+    },
+    {
+      "name": "column",
+      "root": "../../../core/native/wrappers/dbs/column/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "dbs/column",
+      "targetStripPrefix": "dbs",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "dbs/column.md",
+        "dbs/sqlite.md"
       ]
     },
     {
@@ -95,10 +165,54 @@
       ]
     },
     {
+      "name": "cppagent",
+      "root": "../../../core/native/wrappers/adapters/cppagent/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "adapters/cppagent",
+      "targetStripPrefix": "adapters",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "adapters/cppagent.md"
+      ]
+    },
+    {
+      "name": "curaengine",
+      "root": "../../../core/native/wrappers/slicers/curaengine/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "slicers/curaengine",
+      "targetStripPrefix": "slicers",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "slicers/curaengine.md"
+      ]
+    },
+    {
       "name": "fujin",
       "root": "../../../core/native/apps/fujin/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/fujin",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -303,10 +417,54 @@
       ]
     },
     {
+      "name": "lmdbx",
+      "root": "../../../core/native/wrappers/dbs/lmdbx/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "dbs/lmdbx",
+      "targetStripPrefix": "dbs",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "dbs/lmdbx.md"
+      ]
+    },
+    {
+      "name": "marlin-octoprint",
+      "root": "../../../core/native/wrappers/adapters/marlin-octoprint/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "adapters/marlin-octoprint",
+      "targetStripPrefix": "adapters",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "adapters/marlin-octoprint.md"
+      ]
+    },
+    {
       "name": "nrpc",
       "root": "../../../tools/nrpc/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/nrpc",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -322,10 +480,54 @@
       ]
     },
     {
+      "name": "opencamlib",
+      "root": "../../../core/native/wrappers/slicers/opencamlib/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "slicers/opencamlib",
+      "targetStripPrefix": "slicers",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "slicers/opencamlib.md"
+      ]
+    },
+    {
+      "name": "params",
+      "root": "../../../core/native/ai/params/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "ai/params",
+      "targetStripPrefix": "ai",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "ai/params.md"
+      ]
+    },
+    {
       "name": "ptah",
       "root": "../../../core/native/apps/ptah/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/ptah",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -345,6 +547,8 @@
       "root": "../../../core/native/apps/resonus/docs",
       "sourcePath": ".",
       "targetRoot": "..",
+      "targetPrefix": "system/resonus",
+      "targetStripPrefix": "system",
       "translationIndex": "./",
       "sourceLocale": "en",
       "targetLocales": [
@@ -1432,6 +1636,27 @@
       ]
     },
     {
+      "name": "ryugraph",
+      "root": "../../../core/native/wrappers/dbs/ryugraph/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "dbs/ryugraph",
+      "targetStripPrefix": "dbs",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "dbs/ryugraph.md"
+      ]
+    },
+    {
       "name": "sf-assistants",
       "root": "../../../modules/surfaces/ai/sf-assistants/docs",
       "sourcePath": ".",
@@ -2143,6 +2368,90 @@
       ],
       "include": [
         "sf-usage.md"
+      ]
+    },
+    {
+      "name": "speach",
+      "root": "../../../core/native/ai/speach/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "ai/speach",
+      "targetStripPrefix": "ai",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "ai/speach.md"
+      ]
+    },
+    {
+      "name": "sqlite-vec",
+      "root": "../../../core/native/wrappers/dbs/sqlite-vec/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "dbs/sqlite-vec",
+      "targetStripPrefix": "dbs",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "dbs/sqlite-vec.md"
+      ]
+    },
+    {
+      "name": "uvtools-direct",
+      "root": "../../../core/native/wrappers/adapters/uvtools-direct/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "adapters/uvtools-direct",
+      "targetStripPrefix": "adapters",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "adapters/uvtools-direct.md"
+      ]
+    },
+    {
+      "name": "valkey",
+      "root": "../../../core/native/wrappers/dbs/valkey/docs",
+      "sourcePath": ".",
+      "targetRoot": "..",
+      "targetPrefix": "dbs/valkey",
+      "targetStripPrefix": "dbs",
+      "translationIndex": "./",
+      "sourceLocale": "en",
+      "targetLocales": [
+        "de",
+        "es",
+        "fr",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "include": [
+        "dbs/valkey.md"
       ]
     },
     {

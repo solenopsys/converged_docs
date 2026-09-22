@@ -1,65 +1,72 @@
-# Resonus media and AI gateway
+# Gateway multimediale e AI di Resonus
 
-Resonus connects real-time conversations to the Converged platform. It handles
-browser audio, phone calls, transcription and AI sessions while keeping the
-resulting business actions inside the same permissions and workflow model used
-by the rest of the system.
+Resonus collega le conversazioni in tempo reale alla piattaforma Converged. Gestisce
+audio del browser, chiamate telefoniche, trascrizione e sessioni AI, mantenendo
+le azioni aziendali risultanti all'interno dello stesso modello di autorizzazioni
+e flussi di lavoro utilizzato dal resto del sistema.
 
-## One session boundary
+## Un unico confine di sessione
 
-Media transport and AI interaction share call state, timing and context.
-Keeping them in one native process avoids passing a live conversation through
-several independent gateways before it can reach a model or a human operator.
+Il trasporto multimediale e l'interazione con l'AI condividono lo stato della
+chiamata, la temporizzazione e il contesto. Mantenerli in un unico processo
+nativo evita di far passare una conversazione in corso attraverso diversi
+gateway indipendenti prima che possa raggiungere un modello o un operatore umano.
 
 ```text
-browser or phone
+browser o telefono
        |
        v
-    Resonus ---- AI session
+    Resonus ---- sessione AI
        |
-       +-------- human transfer
+       +-------- trasferimento a un operatore umano
        |
-       +-------- platform services and workflows
+       +-------- servizi e flussi di lavoro della piattaforma
 ```
 
-A deployment policy chooses how an incoming call is handled: by an AI session,
-by a human destination, by a transfer path or by rejection. Transport and media
-execution stay native, while the policy remains a small replaceable decision
-layer.
+Una policy di deployment sceglie come gestire una chiamata in arrivo: tramite una
+sessione AI, una destinazione umana, un percorso di trasferimento o un rifiuto.
+L'esecuzione del trasporto e dei contenuti multimediali rimane nativa, mentre la
+policy resta un piccolo livello decisionale sostituibile.
 
-## Platform integration
+## Integrazione con la piattaforma
 
-Resonus uses platform services for call context and business records. Audio
-fragments can pass through the runtime cache before the owning service stores
-them. Calls can trigger workflows or service operations without giving the
-gateway ownership of those domains.
+Resonus utilizza i servizi della piattaforma per il contesto delle chiamate e i
+record aziendali. I frammenti audio possono passare attraverso la cache di
+runtime prima che il servizio proprietario li memorizzi. Le chiamate possono
+attivare flussi di lavoro o operazioni dei servizi senza assegnare al gateway la
+proprietà di tali domini.
 
-Transcription turns voice into the same kind of structured input available to
-other interfaces. This lets an operator or customer interact naturally while
-the resulting action still follows normal service contracts and audit paths.
+La trascrizione trasforma la voce nello stesso tipo di input strutturato
+disponibile per le altre interfacce. Questo consente a un operatore o a un
+cliente di interagire naturalmente, mentre l'azione risultante segue comunque i
+normali contratti dei servizi e i percorsi di audit.
 
-## Trusted tenant context
+## Contesto affidabile del tenant
 
-For traffic arriving through Fujin, Resonus accepts the tenant scope from the
-trusted message envelope. It does not infer a scope from a phone number, user
-label or model payload. The scope is retained for the session and forwarded to
-the platform services used by that session.
+Per il traffico che arriva tramite Fujin, Resonus accetta l'ambito del tenant
+dall'envelope di messaggio affidabile. Non deduce l'ambito da un numero di
+telefono, da un'etichetta utente o dal payload del modello. L'ambito viene
+mantenuto per la sessione e inoltrato ai servizi della piattaforma utilizzati da
+quella sessione.
 
-Ingress paths that cannot establish a trusted scope must be isolated until the
-deployment binds them to one. This prevents a convenient media identifier from
-silently becoming an authorization decision.
+I percorsi di ingresso che non possono stabilire un ambito affidabile devono
+essere isolati finché il deployment non li associa a uno. Questo impedisce che
+un identificatore multimediale comodo diventi silenziosamente una decisione di
+autorizzazione.
 
-## Provider boundary
+## Confine del provider
 
-AI providers sit behind a common session and policy boundary. Provider choice,
-model selection, voice and transfer behavior are deployment decisions rather
-than assumptions embedded throughout business modules. The gateway can evolve
-its provider adapters without changing how the rest of Converged addresses an
-AI-assisted call.
+I provider AI risiedono dietro un confine comune di sessione e policy. La scelta
+del provider, la selezione del modello, la voce e il comportamento di
+trasferimento sono decisioni di deployment, non presupposti incorporati nei
+moduli aziendali. Il gateway può far evolvere i propri adapter dei provider
+senza modificare il modo in cui il resto di Converged gestisce una chiamata
+assistita dall'AI.
 
-## Place in the system
+## Collocazione nel sistema
 
-Resonus owns real-time media and AI-session execution. It does not own customer
-records, call history, workflow definitions, tenant selection or general
-message routing. Those responsibilities remain with domain services,
-Centimanus, the trusted edge and Fujin.
+Resonus gestisce i contenuti multimediali in tempo reale e l'esecuzione delle
+sessioni AI. Non gestisce i record dei clienti, la cronologia delle chiamate, le
+definizioni dei flussi di lavoro, la selezione del tenant o l'instradamento
+generale dei messaggi. Tali responsabilità restano ai servizi di dominio,
+a Centimanus, all'edge affidabile e a Fujin.

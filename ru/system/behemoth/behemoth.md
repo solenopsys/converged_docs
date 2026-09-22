@@ -1,15 +1,15 @@
-# Behemoth storage
+# Хранилище Behemoth
 
-Behemoth is the native storage foundation of Converged. It provides several
-data models through one compact runtime while preserving a separate physical
-storage boundary for every microservice.
+Behemoth — это нативная основа хранения данных Converged. Он предоставляет несколько
+моделей данных в рамках одной компактной среды выполнения, сохраняя при этом отдельную
+физическую границу хранения для каждого микросервиса.
 
-## Storage for modular services
+## Хранилище для модульных сервисов
 
-Each domain service owns its data. It does not share tables or indexes with
-unrelated services, and it does not need to operate a separate database stack.
-Behemoth serves the isolated roots from a common native process and routes each
-request to the correct store.
+Каждый доменный сервис владеет своими данными. Он не использует общие таблицы или индексы
+с несвязанными сервисами и не нуждается в отдельном стеке баз данных. Behemoth обслуживает
+изолированные корни из общего нативного процесса и направляет каждый запрос в правильное
+хранилище.
 
 ```text
 orders service  -> orders volume  -> SQL and files
@@ -17,43 +17,43 @@ calls service   -> calls volume   -> key-value and audio fragments
 search service  -> search volume  -> vector index
 ```
 
-The separation is physical rather than a naming convention. If a service root
-is not mounted and declared, Behemoth refuses to create its store. A deployment
-mistake therefore becomes visible immediately instead of writing data into a
-temporary container filesystem.
+Разделение является физическим, а не соглашением об именовании. Если корень сервиса
+не смонтирован и не объявлен, Behemoth отказывается создавать его хранилище. Поэтому
+ошибка развёртывания становится сразу видимой, вместо того чтобы данные записывались
+во временную файловую систему контейнера.
 
-## Multiple data models
+## Несколько моделей данных
 
-Different workloads need different structures. Behemoth combines relational,
-key-value, column, vector, graph and file storage behind the same runtime
-boundary. A service chooses the store that fits its data without adding a new
-external database product to the platform.
+Для разных рабочих нагрузок нужны разные структуры. Behemoth объединяет реляционное,
+ключ-значение, колоночное, векторное, графовое и файловое хранилища в рамках одной
+границы среды выполнения. Сервис выбирает хранилище, соответствующее его данным,
+не добавляя на платформу новый внешний продукт базы данных.
 
-The engines remain specialized internally. The unified layer is responsible
-for lifecycle, isolation, transport and metadata, not for pretending that all
-data models behave the same way.
+Внутри механизмы остаются специализированными. Унифицированный слой отвечает за
+жизненный цикл, изоляцию, транспорт и метаданные, а не пытается представить, будто
+все модели данных работают одинаково.
 
-## Placement and scaling
+## Размещение и масштабирование
 
-Storage placement is independent from application code. One edge installation
-may use a single Behemoth process. Larger deployments can divide scopes between
-several instances, while a cloud profile can give every tenant its own storage
-instance.
+Размещение хранилища не зависит от кода приложения. Одна периферийная установка
+может использовать один процесс Behemoth. Более крупные развёртывания могут разделять
+области между несколькими экземплярами, а облачный профиль может предоставлять каждому
+арендатору собственный экземпляр хранилища.
 
-Each microservice keeps its own volume in every profile. Moving a scope or a
-service to another Behemoth instance changes deployment configuration, while
-callers continue to use the same logical storage identity.
+Каждый микросервис сохраняет собственный том в каждом профиле. Перемещение области
+или сервиса в другой экземпляр Behemoth изменяет конфигурацию развёртывания, при этом
+вызывающие стороны продолжают использовать тот же логический идентификатор хранилища.
 
-## Failure and recovery boundaries
+## Границы сбоев и восстановления
 
-Small service-owned stores reduce the impact of corruption, migration and
-backup operations. A problem in one store does not require restoring a shared
-database for the whole platform. Dumps and recovery can be handled for the
-affected service boundary, and unrelated services continue to operate.
+Небольшие хранилища, принадлежащие сервисам, уменьшают последствия повреждения,
+миграции и операций резервного копирования. Проблема в одном хранилище не требует
+восстановления общей базы данных для всей платформы. Дамп и восстановление можно
+выполнять для границы затронутого сервиса, а несвязанные сервисы продолжают работу.
 
-## Place in the system
+## Место в системе
 
-Storage requests reach Behemoth through Fujin like requests to any other
-runtime peer. Ptah provides the volume layout and mount configuration.
-Behemoth executes storage operations but does not coordinate business
-workflows, select tenants or define which services a solution contains.
+Запросы к хранилищу достигают Behemoth через Fujin, как запросы к любому другому
+пиру среды выполнения. Ptah предоставляет структуру томов и конфигурацию монтирования.
+Behemoth выполняет операции хранения, но не координирует бизнес-процессы, не выбирает
+арендаторов и не определяет, какие сервисы входят в состав решения.

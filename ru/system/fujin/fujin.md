@@ -1,79 +1,76 @@
-# Fujin message bus
+# Шина сообщений Fujin
 
-Fujin is the communication center of the Converged runtime. It gives browsers,
-domain services, storage, workflows, media services and processors one shared
-way to exchange messages.
+Fujin — коммуникационный центр среды выполнения Converged. Он предоставляет браузерам,
+доменным сервисам, хранилищам, рабочим процессам, медиасервисам и процессорам единый
+способ обмена сообщениями.
 
-## Why it exists
+## Зачем он нужен
 
-A modular platform needs components to move independently. Direct HTTP links
-would make every service aware of addresses, replicas and deployment topology.
-Fujin replaces those links with logical targets: a sender states which runtime
-peer should receive a message, and Fujin forwards it to the live connection
-that currently owns that target.
+Модульной платформе необходимо, чтобы компоненты могли работать независимо. Прямые HTTP-связи
+заставили бы каждый сервис знать об адресах, репликах и топологии развертывания.
+Fujin заменяет эти связи логическими целями: отправитель указывает, какой узел среды выполнения
+должен получить сообщение, а Fujin пересылает его активному соединению,
+которое в данный момент владеет этой целью.
 
 ```text
-sender -> logical target -> Fujin -> live connection -> local service
+отправитель -> логическая цель -> Fujin -> активное соединение -> локальный сервис
 ```
 
-The sender does not know where the receiver runs. A process can restart or move
-to another node and reclaim the same target without changing its callers.
+Отправитель не знает, где работает получатель. Процесс может перезапуститься или переместиться
+на другой узел и снова занять ту же цель без изменения вызывающих его компонентов.
 
-## Routing model
+## Модель маршрутизации
 
-Fujin makes one routing decision: it maps a target to a connection. The target
-selects a process such as the UI runtime, domain services or Centimanus. The
-service name inside the message is interpreted only after the receiving process
-gets it.
+Fujin принимает одно решение о маршрутизации: сопоставляет цель с соединением. Цель
+выбирает процесс, такой как среда выполнения пользовательского интерфейса, доменные сервисы
+или Centimanus. Имя сервиса внутри сообщения интерпретируется только после того, как
+получивший его процесс примет сообщение.
 
-Keeping those decisions separate is important. Fujin remains a small message
-broker rather than becoming a registry of every business service, storage unit
-or workflow.
+Важно разделять эти решения. Fujin остается небольшим брокером сообщений,
+а не превращается в реестр каждого бизнес-сервиса, хранилища или рабочего процесса.
 
-## Three streams
+## Три потока
 
-Fujin carries three kinds of traffic that share a transport but nothing else.
-Service messaging moves requests between peers. Log ingest receives whatever
-the deployment's collectors emit, groups it and hands whole blocks to the
-analytics repositories, so storage sees batches rather than a stream of single
-rows. User notifications are business messages addressed at a person: an order
-arrived, a job finished, a letter is waiting.
+Fujin передает три вида трафика, которые используют общий транспорт, но больше ничего не разделяют.
+Обмен сервисными сообщениями передает запросы между узлами. Прием логов получает все,
+что отправляют сборщики развертывания, группирует это и передает целыми блоками
+в репозитории аналитики, поэтому хранилище видит пакеты, а не поток отдельных строк.
+Уведомления пользователей — это бизнес-сообщения, адресованные человеку: заказ
+прибыл, задание завершено, письмо ожидает.
 
-The third is the one that needs a name of its own. `pushrouter` is a service
-Fujin hosts rather than routes to, because delivery is a property of the live
-sessions Fujin already owns — no other process knows which of a person's
-browsers are currently connected. It answers with how many sessions a message
-reached, which is what lets a caller decide whether a durable channel is also
-needed, and it keeps a bounded replay window so a browser that reconnects sees
-what it missed. Anything that has to survive a restart belongs in a repository,
-not here.
+Именно третьему потоку требуется отдельное имя. `pushrouter` — это сервис,
+который размещает Fujin, а не маршрутизирует к нему, поскольку доставка является свойством
+активных сеансов, которыми Fujin уже владеет: никакой другой процесс не знает,
+какие браузеры пользователя подключены в данный момент. В ответ он сообщает,
+сколько сеансов получили сообщение, что позволяет вызывающей стороне решить,
+нужен ли также надежный канал, и хранит ограниченное окно повторной выдачи,
+чтобы переподключившийся браузер увидел пропущенное. Все, что должно пережить перезапуск,
+относится к репозиторию, а не сюда.
 
-Notifications carry translation keys rather than sentences. The service that
-publishes one does not know the reader's language, so a rendered string could
-only ever be right for one of them.
+Уведомления содержат ключи перевода, а не предложения. Сервис, публикующий уведомление,
+не знает язык читателя, поэтому отрендеренная строка могла бы быть правильной только для одного из них.
 
-## Browser and cluster traffic
+## Трафик браузеров и кластера
 
-Native peers connect through the cluster transport. Browsers and mobile clients
-enter through WebSocket and participate in the same messaging model. This gives
-interactive interfaces live events without introducing a second application
-routing system.
+Нативные узлы подключаются через кластерный транспорт. Браузеры и мобильные клиенты
+входят через WebSocket и участвуют в той же модели обмена сообщениями. Это дает
+интерактивным интерфейсам события в реальном времени без внедрения второй системы
+маршрутизации приложений.
 
-Large payloads stay outside the browser control channel. Clients receive an
-availability event and retrieve the data through the appropriate content path,
-which keeps real-time signaling responsive.
+Крупные полезные нагрузки не передаются по управляющему каналу браузера. Клиенты получают
+событие доступности и извлекают данные через соответствующий путь к содержимому,
+что сохраняет отзывчивость сигнализации в реальном времени.
 
-## Context and trust
+## Контекст и доверие
 
-The common message envelope carries correlation data, deadlines, errors and
-the trusted tenant scope. Fujin transports that context without deriving it
-from a business payload or changing its meaning. Receiving services can apply
-authorization and storage rules against the same context established at the
-edge.
+Общая оболочка сообщения содержит данные корреляции, крайние сроки, ошибки и
+доверенную область арендатора. Fujin передает этот контекст, не выводя его
+из бизнес-полезной нагрузки и не изменяя его смысл. Получающие сервисы могут применять
+правила авторизации и хранения к тому же контексту, который был установлен на границе.
 
-## Responsibility boundary
+## Граница ответственности
 
-Fujin owns connectivity and target routing. It does not execute business logic,
-select a handler inside another process, store domain data or decide deployment
-placement. Those responsibilities stay with the runtime peer that receives the
-message and with Ptah as the control plane.
+Fujin отвечает за подключение и маршрутизацию целей. Он не выполняет бизнес-логику,
+не выбирает обработчик внутри другого процесса, не хранит данные предметной области
+и не определяет размещение компонентов. Эти обязанности остаются за узлом среды выполнения,
+получающим сообщение, и за Ptah как плоскостью управления.

@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "sqlite",
+    "title": "SQLite embedded SQL engine",
+    "order": 0
+  },
+  {
+    "slug": "column",
+    "title": "Stanchion columnar SQLite extension",
+    "order": 1
+  }
+]

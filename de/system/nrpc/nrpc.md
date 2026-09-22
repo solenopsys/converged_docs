@@ -1,28 +1,31 @@
-# NRPC contract runtime
+# NRPC-Laufzeit für Verträge
 
-NRPC is Converged's typed remote-call layer. It turns a TypeScript service
-contract into matching clients and service metadata, so a browser,
-microservice, workflow, or native runtime can call the same capability without
-maintaining separate string-based API definitions.
+NRPC ist Convergeds typisierte Schicht für Remote-Aufrufe. Sie wandelt einen
+getypten TypeScript-Servicevertrag in passende Clients und Servicemetadaten um,
+sodass ein Browser, Microservice, Workflow oder eine native Laufzeit dieselbe
+Funktion aufrufen kann, ohne separate zeichenfolgenbasierte API-Definitionen
+pflegen zu müssen.
 
-## Why it exists
+## Warum es existiert
 
-The platform is composed of independently deployed modules. Calling one module
-directly through an address would make its callers depend on where it runs and
-which transport it uses. NRPC separates those concerns: a contract names the
-service and its methods, while the runtime delivers a call to the process that
-currently owns the requested target.
+Die Plattform besteht aus unabhängig bereitgestellten Modulen. Würde ein Modul
+direkt über eine Adresse aufgerufen, wären seine Aufrufer davon abhängig, wo es
+läuft und welchen Transport es verwendet. NRPC trennt diese Aspekte: Ein
+Vertrag benennt den Service und seine Methoden, während die Laufzeit einen
+Aufruf an den Prozess zustellt, der derzeit das angeforderte Ziel besitzt.
 
-This keeps the agreement between callers and implementations in one place. A
-method's parameters, return type, streaming behavior, and access level are
-known to code generation and are available to every supported client.
+So bleibt die Vereinbarung zwischen Aufrufern und Implementierungen an einer
+Stelle. Die Parameter, der Rückgabetyp, das Streaming-Verhalten und die
+Zugriffsebene einer Methode sind der Codegenerierung bekannt und stehen jedem
+unterstützten Client zur Verfügung.
 
-## From contract to call
+## Vom Vertrag zum Aufruf
 
-Contracts are TypeScript interfaces under `modules/types/<domain>`. Running
-`bun run gen` in `core/tools/nrpc` parses those interfaces and creates a
-`modules/generated/g-<service>` package. The package contains the contract
-metadata, a server interface, and type-safe client factories for each runtime.
+Verträge sind TypeScript-Schnittstellen unter `modules/types/<domain>`. Das
+Ausführen von `bun run gen` in `core/tools/nrpc` analysiert diese Schnittstellen
+und erstellt ein Paket `modules/generated/g-<service>`. Das Paket enthält die
+Vertragsmetadaten, eine Serverschnittstelle und typsichere Client-Fabriken für
+jede Laufzeit.
 
 ```text
 TypeScript interface
@@ -37,46 +40,52 @@ NRPC generator -> g-<service> package
 service implementation -> messaging backend
 ```
 
-A service registers its implementation with `createMessagingBackend`. NRPC
-uses the generated metadata to find the requested method, validates the call
-shape at the client boundary, restores typed values, and invokes the matching
-implementation method. A method returning `AsyncIterable` is delivered as a
-stream; ordinary methods produce one response.
+Ein Service registriert seine Implementierung mit `createMessagingBackend`. NRPC
+verwendet die generierten Metadaten, um die angeforderte Methode zu finden,
+validiert die Aufrufstruktur an der Client-Grenze, stellt typisierte Werte
+wieder her und ruft die passende Implementierungsmethode auf. Eine Methode, die
+`AsyncIterable` zurückgibt, wird als Stream zugestellt; gewöhnliche Methoden
+erzeugen eine einzelne Antwort.
 
-## Delivery paths
+## Zustellungswege
 
-NRPC preserves the same contract across several execution environments:
+NRPC bewahrt denselben Vertrag über mehrere Ausführungsumgebungen hinweg:
 
-- Browser clients use a shared WebSocket channel to send requests to Fujin.
-- Service and native clients use the cluster transport through Fujin, addressed
-  to a logical process target rather than a host address.
-- Workflow clients use the RT entry point, which calls through the QuickJS/Zig
-  host transport and remains synchronous for a single workflow evaluation.
+- Browser-Clients verwenden einen gemeinsam genutzten WebSocket-Kanal, um
+  Anfragen an Fujin zu senden.
+- Service- und native Clients verwenden den Cluster-Transport über Fujin und
+  adressieren dabei ein logisches Prozessziel statt einer Hostadresse.
+- Workflow-Clients verwenden den RT-Einstiegspunkt, der über den QuickJS/Zig-
+  Host-Transport aufruft und für eine einzelne Workflow-Auswertung synchron
+  bleibt.
 
-Fujin routes a request to the target connection. The receiving process chooses
-the NRPC service and method from the request metadata; Fujin does not need to
-understand the platform's domain services. `createHttpBackend` is available
-where an HTTP edge is required and can register the same service implementation
-on the messaging runtime, keeping HTTP and internal calls aligned.
+Fujin leitet eine Anfrage an die Zielverbindung weiter. Der empfangende Prozess
+wählt den NRPC-Service und die Methode anhand der Anfragemetadaten aus; Fujin
+muss die Domänendienste der Plattform nicht verstehen. `createHttpBackend` ist
+verfügbar, wenn ein HTTP-Edge erforderlich ist, und kann dieselbe
+Serviceimplementierung in der Messaging-Laufzeit registrieren, sodass
+HTTP-Aufrufe und interne Aufrufe aufeinander abgestimmt bleiben.
 
-## Context and access
+## Kontext und Zugriff
 
-Calls carry correlation data, deadlines, and a trusted workspace or scope
-context in their envelope. The receiving service runs with that context, which
-allows storage and authorization code to use the same tenant boundary that was
-established at the edge. Services must not derive workspace identity from a
-business payload.
+Aufrufe enthalten in ihrem Envelope Korrelationsdaten, Deadlines und einen
+vertrauenswürdigen Workspace- oder Scope-Kontext. Der empfangende Service wird
+mit diesem Kontext ausgeführt, sodass Speicher- und Autorisierungscode dieselbe
+Mandantengrenze verwenden kann, die am Edge festgelegt wurde. Services dürfen
+die Workspace-Identität nicht aus einer Geschäftsnutzlast ableiten.
 
-The `@Access` decorator declares a class or method as `public`, `user`, or
-`internal`. NRPC resolves the most specific declared level and applies the
-configured permission rules before invoking the implementation. This makes
-access policy part of the service boundary rather than an inconsistent client
-convention.
+Der `@Access`-Decorator deklariert eine Klasse oder Methode als `public`, `user`
+oder `internal`. NRPC ermittelt die spezifischste deklarierte Ebene und wendet
+die konfigurierten Berechtigungsregeln an, bevor die Implementierung aufgerufen
+wird. Dadurch wird die Zugriffsrichtlinie zu einem Bestandteil der
+Servicegrenze statt zu einer uneinheitlichen Konvention der Clients.
 
-## Responsibility boundary
+## Verantwortungsgrenze
 
-NRPC owns contract metadata, generated typed clients, value serialization,
-call dispatch, and the transport adapters used by those calls. It does not own
-business rules, service discovery, deployment placement, domain persistence, or
-message-bus routing. Those responsibilities remain with the service,
-deployment control plane, storage layer, and Fujin respectively.
+NRPC ist für Vertragsmetadaten, generierte typisierte Clients,
+Werteserialisierung, Aufrufverteilung und die von diesen Aufrufen verwendeten
+Transportadapter zuständig. NRPC ist nicht für Geschäftsregeln,
+Service-Erkennung, Bereitstellungsplatzierung, Domänenpersistenz oder das
+Routing über den Nachrichtenbus zuständig. Diese Verantwortlichkeiten verbleiben
+beim Service, bei der Bereitstellungssteuerung, bei der Speicherschicht
+beziehungsweise bei Fujin.

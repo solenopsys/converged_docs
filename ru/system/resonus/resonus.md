@@ -1,65 +1,68 @@
-# Resonus media and AI gateway
+# Медиа-шлюз и шлюз ИИ Resonus
 
-Resonus connects real-time conversations to the Converged platform. It handles
-browser audio, phone calls, transcription and AI sessions while keeping the
-resulting business actions inside the same permissions and workflow model used
-by the rest of the system.
+Resonus подключает разговоры в реальном времени к платформе Converged. Он обрабатывает
+аудио из браузера, телефонные вызовы, транскрипцию и сеансы ИИ, сохраняя
+результирующие бизнес-действия в рамках той же модели разрешений и рабочих процессов,
+которая используется остальной системой.
 
-## One session boundary
+## Единая граница сеанса
 
-Media transport and AI interaction share call state, timing and context.
-Keeping them in one native process avoids passing a live conversation through
-several independent gateways before it can reach a model or a human operator.
+Передача медиа и взаимодействие с ИИ используют общее состояние вызова, временные
+метки и контекст. Их выполнение в одном нативном процессе позволяет не передавать
+текущий разговор через несколько независимых шлюзов, прежде чем он достигнет модели
+или человека-оператора.
 
 ```text
-browser or phone
+браузер или телефон
        |
        v
-    Resonus ---- AI session
+    Resonus ---- сеанс ИИ
        |
-       +-------- human transfer
+       +-------- перевод на человека
        |
-       +-------- platform services and workflows
+       +-------- сервисы и рабочие процессы платформы
 ```
 
-A deployment policy chooses how an incoming call is handled: by an AI session,
-by a human destination, by a transfer path or by rejection. Transport and media
-execution stay native, while the policy remains a small replaceable decision
-layer.
+Политика развертывания определяет, как обрабатывается входящий вызов: сеансом ИИ,
+человеческим получателем, по пути перевода или посредством отклонения. Передача и
+обработка медиа остаются нативными, а политика представляет собой небольшой
+заменяемый слой принятия решений.
 
-## Platform integration
+## Интеграция с платформой
 
-Resonus uses platform services for call context and business records. Audio
-fragments can pass through the runtime cache before the owning service stores
-them. Calls can trigger workflows or service operations without giving the
-gateway ownership of those domains.
+Resonus использует сервисы платформы для контекста вызова и бизнес-записей. Фрагменты
+аудио могут проходить через кэш среды выполнения, прежде чем владеющий ими сервис
+сохранит их. Вызовы могут запускать рабочие процессы или операции сервисов, не
+передавая шлюзу владение этими доменами.
 
-Transcription turns voice into the same kind of structured input available to
-other interfaces. This lets an operator or customer interact naturally while
-the resulting action still follows normal service contracts and audit paths.
+Транскрипция преобразует речь в такой же структурированный ввод, который доступен
+другим интерфейсам. Это позволяет оператору или клиенту естественно взаимодействовать
+с системой, при этом результирующее действие по-прежнему соответствует обычным
+контрактам сервисов и путям аудита.
 
-## Trusted tenant context
+## Доверенный контекст арендатора
 
-For traffic arriving through Fujin, Resonus accepts the tenant scope from the
-trusted message envelope. It does not infer a scope from a phone number, user
-label or model payload. The scope is retained for the session and forwarded to
-the platform services used by that session.
+Для трафика, поступающего через Fujin, Resonus принимает область арендатора из
+доверенного конверта сообщения. Он не выводит область из номера телефона, метки
+пользователя или полезной нагрузки модели. Область сохраняется для сеанса и
+передаётся сервисам платформы, используемым этим сеансом.
 
-Ingress paths that cannot establish a trusted scope must be isolated until the
-deployment binds them to one. This prevents a convenient media identifier from
-silently becoming an authorization decision.
+Входящие пути, для которых невозможно установить доверенную область, должны быть
+изолированы до тех пор, пока развертывание не привяжет их к одной области. Это
+предотвращает незаметное превращение удобного идентификатора медиа в решение об
+авторизации.
 
-## Provider boundary
+## Граница провайдера
 
-AI providers sit behind a common session and policy boundary. Provider choice,
-model selection, voice and transfer behavior are deployment decisions rather
-than assumptions embedded throughout business modules. The gateway can evolve
-its provider adapters without changing how the rest of Converged addresses an
-AI-assisted call.
+Провайдеры ИИ находятся за общей границей сеанса и политики. Выбор провайдера,
+модели, голоса и поведения при переводе являются решениями развертывания, а не
+предположениями, встроенными в бизнес-модули. Шлюз может развивать свои адаптеры
+провайдеров, не изменяя способ, которым остальная часть Converged обрабатывает
+вызов с поддержкой ИИ.
 
-## Place in the system
+## Место в системе
 
-Resonus owns real-time media and AI-session execution. It does not own customer
-records, call history, workflow definitions, tenant selection or general
-message routing. Those responsibilities remain with domain services,
-Centimanus, the trusted edge and Fujin.
+Resonus отвечает за выполнение операций с медиа в реальном времени и сеансов ИИ. Он
+не владеет записями клиентов, историей вызовов, определениями рабочих процессов,
+выбором арендатора или общей маршрутизацией сообщений. Эти обязанности остаются за
+доменными сервисами, Centimanus, доверенным периферийным узлом и Fujin.

@@ -1,73 +1,80 @@
-# Converged command-line interface
+# Interface de ligne de commande Converged
 
-The Converged CLI is an operator-facing command engine. It provides one
-consistent command surface for platform diagnostics, automation, storage, and
-domain operations while allowing each capability to remain in its own command
-module.
+La CLI Converged est un moteur de commandes destiné aux opérateurs. Elle fournit
+une interface de commandes cohérente pour les diagnostics de plateforme,
+l'automatisation, le stockage et les opérations de domaine, tout en permettant à
+chaque fonctionnalité de rester dans son propre module de commandes.
 
-## Modular command surface
+## Interface de commandes modulaire
 
-The CLI core does not contain a fixed registry of business commands. At startup
-it reads one or more directories passed through `--commands` and loads the
-selected TypeScript module for each command section. A module exports a factory
-that returns a processor; the processor declares its commands and routes each
-command name to a handler.
+Le cœur de la CLI ne contient pas de registre fixe de commandes métier. Au démarrage,
+il lit un ou plusieurs répertoires passés via `--commands` et charge le module
+TypeScript sélectionné pour chaque section de commandes. Un module exporte une
+fabrique qui renvoie un processeur ; le processeur déclare ses commandes et
+redirige chaque nom de commande vers un gestionnaire.
 
 ```text
 bun cli <section> <command> [param]
           |          |
-          |          +-> command handler
+          |          +-> gestionnaire de commande
           v
-  command module -> processor -> generated NRPC client
+  module de commandes -> processeur -> client NRPC généré
 ```
 
-This makes the CLI extensible without changing its runtime. A solution or
-product can add a command directory, and a new `<section>.ts` module becomes a
-new CLI section. The core loads only the requested section for execution, so an
-optional or broken module cannot prevent unrelated commands from running.
+Cela rend la CLI extensible sans modifier son environnement d'exécution. Une
+solution ou un produit peut ajouter un répertoire de commandes, et un nouveau
+module `<section>.ts` devient une nouvelle section de la CLI. Le cœur ne charge
+que la section demandée pour l'exécution, de sorte qu'un module facultatif ou
+défectueux ne puisse pas empêcher l'exécution de commandes sans rapport.
 
-`BaseCommandProcessor` supplies the common command map, help output, error
-propagation, and consistent listing behavior. Modules focus on their own
-arguments and domain actions; the runner owns connection setup, lifecycle
-reporting, timing, exit status, and channel shutdown.
+`BaseCommandProcessor` fournit la table commune des commandes, l'affichage de
+l'aide, la propagation des erreurs et un comportement cohérent pour les listes.
+Les modules se concentrent sur leurs propres arguments et actions métier ; le
+lanceur prend en charge l'établissement de la connexion, les rapports de cycle
+de vie, le chronométrage, le statut de sortie et l'arrêt du canal.
 
-## One authorization model
+## Un seul modèle d'autorisation
 
-All NRPC-enabled command modules use the same CLI session and authorization
-path. The CLI first reads the user JWT from the local session file, then falls
-back to `SERVICE_TOKEN` when no session is available. The user session takes
-precedence because operator actions may require the caller's identity.
+Tous les modules de commandes utilisant NRPC empruntent le même chemin de
+session et d'autorisation de la CLI. La CLI lit d'abord le JWT de l'utilisateur
+dans le fichier de session local, puis utilise `SERVICE_TOKEN` si aucune session
+n'est disponible. La session utilisateur est prioritaire, car les actions de
+l'opérateur peuvent nécessiter l'identité de l'appelant.
 
-The token is sent during the shared Fujin WebSocket handshake and is also
-provided to NRPC client configuration. If a stored session is rejected, the
-runner removes it from the active connection and retries once with the service
-token when one is configured. Authentication errors are reported uniformly,
-with guidance to sign in again rather than leaving individual command modules
-to handle token state themselves.
+Le jeton est envoyé lors de la poignée de main WebSocket partagée de Fujin et
+est également fourni à la configuration du client NRPC. Si une session stockée
+est rejetée, le lanceur la supprime de la connexion active et réessaie une fois
+avec le jeton de service lorsqu'il est configuré. Les erreurs d'authentification
+sont signalées uniformément, avec une indication invitant à se reconnecter,
+plutôt que de laisser chaque module de commandes gérer lui-même l'état du jeton.
 
-Authorization remains enforced by the receiving service. The CLI transports
-the caller's credentials and workspace scope; it does not interpret permissions
-or grant access locally. A command may opt out of the WebSocket channel only
-when it deliberately talks to a non-NRPC endpoint, such as a direct diagnostic
-operation.
+L'autorisation continue d'être appliquée par le service destinataire. La CLI
+transporte les identifiants de l'appelant et la portée de l'espace de travail ;
+elle n'interprète pas les autorisations et n'accorde pas d'accès localement. Une
+commande peut ne pas utiliser le canal WebSocket uniquement lorsqu'elle
+communique délibérément avec un point de terminaison non NRPC, comme une
+opération de diagnostic directe.
 
-## NRPC integration
+## Intégration NRPC
 
-Command modules create clients from generated `g-<service>` packages and pass
-them the shared `createCliNrpcClientConfig` configuration. NRPC serializes the
-typed method call into a WebSocket request, addressed to a logical Fujin target
-and service. Fujin forwards it to the live runtime peer, and the service
-applies its normal access policy before executing the method.
+Les modules de commandes créent des clients à partir des packages `g-<service>`
+générés et leur transmettent la configuration partagée
+`createCliNrpcClientConfig`. NRPC sérialise l'appel de méthode typé en une
+requête WebSocket, adressée à une cible et à un service Fujin logiques. Fujin la
+transmet au pair d'exécution actif, et le service applique sa politique d'accès
+normale avant d'exécuter la méthode.
 
-The same channel supports ordinary request-response methods and streaming
-methods. Request identifiers, deadlines, response ordering, and connection
-failure handling are centralised in the CLI channel, so every module gets the
-same behavior without reimplementing protocol code.
+Le même canal prend en charge les méthodes ordinaires de requête-réponse ainsi
+que les méthodes de diffusion en continu. Les identifiants de requête, les
+échéances, l'ordre des réponses et la gestion des défaillances de connexion sont
+centralisés dans le canal de la CLI ; chaque module bénéficie donc du même
+comportement sans réimplémenter le code du protocole.
 
-## Responsibility boundary
+## Limites des responsabilités
 
-The CLI owns command discovery, command execution lifecycle, local session
-selection, and the common NRPC/WebSocket client channel. It does not own domain
-business logic, permission decisions, service implementation, or Fujin routing.
-Those responsibilities remain with command modules, backend services, and the
-runtime infrastructure that receives the call.
+La CLI prend en charge la découverte des commandes, le cycle de vie de
+l'exécution des commandes, la sélection de la session locale et le canal client
+NRPC/WebSocket commun. Elle ne prend pas en charge la logique métier du domaine,
+les décisions d'autorisation, l'implémentation des services ni le routage Fujin.
+Ces responsabilités restent du ressort des modules de commandes, des services
+backend et de l'infrastructure d'exécution qui reçoit l'appel.

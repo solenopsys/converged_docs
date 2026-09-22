@@ -1,79 +1,79 @@
-# Fujin message bus
+# Barramento de mensagens Fujin
 
-Fujin is the communication center of the Converged runtime. It gives browsers,
-domain services, storage, workflows, media services and processors one shared
-way to exchange messages.
+Fujin é o centro de comunicação do runtime Converged. Ele oferece a navegadores,
+serviços de domínio, armazenamento, fluxos de trabalho, serviços de mídia e
+processadores uma forma compartilhada de trocar mensagens.
 
-## Why it exists
+## Por que ele existe
 
-A modular platform needs components to move independently. Direct HTTP links
-would make every service aware of addresses, replicas and deployment topology.
-Fujin replaces those links with logical targets: a sender states which runtime
-peer should receive a message, and Fujin forwards it to the live connection
-that currently owns that target.
+Uma plataforma modular precisa que os componentes se movam de forma independente. Links HTTP diretos
+fariam com que cada serviço conhecesse endereços, réplicas e a topologia de implantação.
+Fujin substitui esses links por destinos lógicos: um remetente informa qual par do runtime
+deveria receber uma mensagem, e Fujin a encaminha para a conexão ativa
+que atualmente possui esse destino.
 
 ```text
 sender -> logical target -> Fujin -> live connection -> local service
 ```
 
-The sender does not know where the receiver runs. A process can restart or move
-to another node and reclaim the same target without changing its callers.
+O remetente não sabe onde o receptor está sendo executado. Um processo pode ser reiniciado ou movido
+para outro nó e reivindicar o mesmo destino sem alterar seus chamadores.
 
-## Routing model
+## Modelo de roteamento
 
-Fujin makes one routing decision: it maps a target to a connection. The target
-selects a process such as the UI runtime, domain services or Centimanus. The
-service name inside the message is interpreted only after the receiving process
-gets it.
+Fujin toma uma decisão de roteamento: mapeia um destino para uma conexão. O destino
+seleciona um processo, como o runtime da interface, os serviços de domínio ou o Centimanus. O
+nome do serviço dentro da mensagem só é interpretado depois que o processo receptor
+a recebe.
 
-Keeping those decisions separate is important. Fujin remains a small message
-broker rather than becoming a registry of every business service, storage unit
-or workflow.
+Manter essas decisões separadas é importante. Fujin continua sendo um pequeno
+broker de mensagens, em vez de se tornar um registro de cada serviço de negócio,
+unidade de armazenamento ou fluxo de trabalho.
 
-## Three streams
+## Três fluxos
 
-Fujin carries three kinds of traffic that share a transport but nothing else.
-Service messaging moves requests between peers. Log ingest receives whatever
-the deployment's collectors emit, groups it and hands whole blocks to the
-analytics repositories, so storage sees batches rather than a stream of single
-rows. User notifications are business messages addressed at a person: an order
-arrived, a job finished, a letter is waiting.
+Fujin transporta três tipos de tráfego que compartilham um transporte, mas nada mais.
+A comunicação entre serviços move solicitações entre pares. A ingestão de logs recebe tudo o que
+os coletores da implantação emitem, agrupa e entrega blocos inteiros aos
+repositórios de análise, para que o armazenamento receba lotes em vez de um fluxo de
+linhas individuais. As notificações de usuários são mensagens de negócio endereçadas a uma pessoa: um pedido
+chegou, um trabalho terminou, uma carta está esperando.
 
-The third is the one that needs a name of its own. `pushrouter` is a service
-Fujin hosts rather than routes to, because delivery is a property of the live
-sessions Fujin already owns — no other process knows which of a person's
-browsers are currently connected. It answers with how many sessions a message
-reached, which is what lets a caller decide whether a durable channel is also
-needed, and it keeps a bounded replay window so a browser that reconnects sees
-what it missed. Anything that has to survive a restart belongs in a repository,
-not here.
+O terceiro é o que precisa de um nome próprio. `pushrouter` é um serviço
+hospedado pelo Fujin, em vez de ser roteado para ele, porque a entrega é uma propriedade das sessões
+ativas que o Fujin já possui — nenhum outro processo sabe quais dos navegadores de uma pessoa
+estão conectados no momento. Ele responde com quantas sessões uma mensagem
+alcançou, o que permite ao chamador decidir se um canal durável também é
+necessário, e mantém uma janela de reprodução limitada para que um navegador que se
+reconecta veja o que perdeu. Tudo o que precisa sobreviver a uma reinicialização pertence a um repositório,
+não aqui.
 
-Notifications carry translation keys rather than sentences. The service that
-publishes one does not know the reader's language, so a rendered string could
-only ever be right for one of them.
+As notificações carregam chaves de tradução em vez de frases. O serviço que
+publica uma não conhece o idioma do leitor, portanto uma string renderizada só
+poderia estar correta para um deles.
 
-## Browser and cluster traffic
+## Tráfego do navegador e do cluster
 
-Native peers connect through the cluster transport. Browsers and mobile clients
-enter through WebSocket and participate in the same messaging model. This gives
-interactive interfaces live events without introducing a second application
-routing system.
+Os pares nativos se conectam por meio do transporte do cluster. Navegadores e clientes móveis
+entram por WebSocket e participam do mesmo modelo de mensagens. Isso oferece
+eventos ao vivo para interfaces interativas sem introduzir um segundo sistema de
+roteamento de aplicações.
 
-Large payloads stay outside the browser control channel. Clients receive an
-availability event and retrieve the data through the appropriate content path,
-which keeps real-time signaling responsive.
+Cargas grandes permanecem fora do canal de controle do navegador. Os clientes recebem um
+evento de disponibilidade e recuperam os dados pelo caminho de conteúdo apropriado,
+o que mantém a sinalização em tempo real responsiva.
 
-## Context and trust
+## Contexto e confiança
 
-The common message envelope carries correlation data, deadlines, errors and
-the trusted tenant scope. Fujin transports that context without deriving it
-from a business payload or changing its meaning. Receiving services can apply
-authorization and storage rules against the same context established at the
-edge.
+O envelope comum de mensagens transporta dados de correlação, prazos, erros e
+o escopo confiável do tenant. Fujin transporta esse contexto sem derivá-lo
+de um payload de negócio ou alterar seu significado. Os serviços receptores podem aplicar
+regras de autorização e armazenamento com base no mesmo contexto estabelecido na
+borda.
 
-## Responsibility boundary
+## Limite de responsabilidade
 
-Fujin owns connectivity and target routing. It does not execute business logic,
-select a handler inside another process, store domain data or decide deployment
-placement. Those responsibilities stay with the runtime peer that receives the
-message and with Ptah as the control plane.
+Fujin é responsável pela conectividade e pelo roteamento de destinos. Ele não executa lógica de negócio,
+não seleciona um manipulador dentro de outro processo, não armazena dados de domínio nem decide a
+alocação da implantação. Essas responsabilidades permanecem com o par do runtime que recebe a
+mensagem e com Ptah como plano de controle.

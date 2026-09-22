@@ -1,60 +1,35 @@
-# Centimanus workflow runtime
+# Среда выполнения рабочих процессов Centimanus
 
-Centimanus executes the multi-step processes that connect otherwise independent
-Converged modules. Order routing, notifications, approvals, AI-assisted work
-and production sequences can evolve as workflows without moving orchestration
-into domain services.
+Centimanus выполняет многошаговые процессы, которые связывают в иных случаях независимые модули Converged. Маршрутизация заказов, уведомления, согласования, работа с поддержкой ИИ и производственные последовательности могут развиваться как рабочие процессы, не перенося оркестрацию в предметные сервисы.
 
-## Replayable execution
+## Исполняемое повторно выполнение
 
-A workflow is a program whose meaningful operations are divided into named
-nodes. Centimanus executes one unfinished node, records its outcome and then
-evaluates the workflow again. Completed nodes return their stored results
-instead of repeating their side effects.
+Рабочий процесс — это программа, значимые операции которой разделены на именованные узлы. Centimanus выполняет один незавершённый узел, записывает его результат, а затем повторно оценивает рабочий процесс. Завершённые узлы возвращают сохранённые результаты вместо повторного выполнения побочных эффектов.
 
 ```text
-first pass:   find order -> store result
-second pass:  replay order -> reserve machine -> store result
-third pass:   replay both -> notify operator -> complete
+первый проход:   найти заказ -> сохранить результат
+второй проход:  повторно воспроизвести заказ -> зарезервировать станок -> сохранить результат
+третий проход:  повторно воспроизвести оба -> уведомить оператора -> завершить
 ```
 
-Branches and loops can depend on earlier results, so the graph emerges from the
-process itself rather than from a separate static diagram. The recorded node
-outcomes make progress explicit and allow execution to continue from the first
-unfinished step.
+Ветвления и циклы могут зависеть от предыдущих результатов, поэтому граф возникает из самого процесса, а не из отдельной статической диаграммы. Записанные результаты узлов явно показывают прогресс и позволяют продолжить выполнение с первого незавершённого шага.
 
-## Why workflows are separate
+## Почему рабочие процессы отделены
 
-Domain microservices in Converged own data and small business capabilities.
-They do not call one another to implement an end-to-end process. This avoids
-hidden chains in which a change or failure in one service unexpectedly affects
-many others.
+Доменные микросервисы в Converged владеют данными и небольшими бизнес-возможностями. Они не вызывают друг друга для реализации сквозного процесса. Это предотвращает скрытые цепочки, в которых изменение или сбой одного сервиса неожиданно затрагивает множество других.
 
-Centimanus is the place where cross-domain coordination is visible. A workflow
-can call services, request AI work and choose the next step while each service
-remains focused on its own boundary.
+Centimanus — это место, где видна координация между доменами. Рабочий процесс может вызывать сервисы, запрашивать работу ИИ и выбирать следующий шаг, пока каждый сервис остаётся сосредоточенным на собственной границе.
 
-## Workflow delivery
+## Доставка рабочих процессов
 
-Solutions determine which workflows are active. Ptah publishes that selection,
-the DAG service exposes the selected descriptors, and Centimanus loads the
-corresponding content through Ptah's content-addressed proxy. A workflow that
-is not part of the active solution is not available for execution.
+Решения определяют, какие рабочие процессы активны. Ptah публикует этот выбор, сервис DAG предоставляет выбранные дескрипторы, а Centimanus загружает соответствующее содержимое через прокси Ptah с адресацией по содержимому. Рабочий процесс, не входящий в активное решение, недоступен для выполнения.
 
-This separates four concerns: product selection, content delivery, execution
-and observability. Each can change without turning the workflow runtime into a
-module registry or deployment controller.
+Это разделяет четыре задачи: выбор продукта, доставку содержимого, выполнение и наблюдаемость. Каждая из них может изменяться, не превращая среду выполнения рабочих процессов в реестр модулей или контроллер развёртывания.
 
-## Reliability boundary
+## Граница надёжности
 
-Centimanus records completed node outcomes, but external operations must still
-respect their own idempotency rules. Workflow telemetry is used for visibility;
-it does not decide execution state. Business data remains in the services that
-own it rather than becoming workflow-engine state.
+Centimanus записывает результаты завершённых узлов, но внешние операции по-прежнему должны соблюдать собственные правила идемпотентности. Телеметрия рабочих процессов используется для видимости; она не определяет состояние выполнения. Бизнес-данные остаются в сервисах, которые ими владеют, а не превращаются в состояние движка рабочих процессов.
 
-## Place in the system
+## Место в системе
 
-Centimanus receives work and calls services through Fujin. It uses platform
-storage for workflow progress and reports lifecycle events for monitoring. It
-does not own domain records, select active solutions or route messages between
-other peers.
+Centimanus получает задания и вызывает сервисы через Fujin. Он использует платформенное хранилище для прогресса рабочих процессов и сообщает события жизненного цикла для мониторинга. Он не владеет доменными записями, не выбирает активные решения и не маршрутизирует сообщения между другими равноправными узлами.

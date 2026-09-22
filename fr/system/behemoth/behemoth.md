@@ -1,15 +1,15 @@
-# Behemoth storage
+# Stockage Behemoth
 
-Behemoth is the native storage foundation of Converged. It provides several
-data models through one compact runtime while preserving a separate physical
-storage boundary for every microservice.
+Behemoth est le socle de stockage natif de Converged. Il fournit plusieurs
+modèles de données au moyen d’un même runtime compact, tout en préservant une
+frontière de stockage physique distincte pour chaque microservice.
 
-## Storage for modular services
+## Stockage pour les services modulaires
 
-Each domain service owns its data. It does not share tables or indexes with
-unrelated services, and it does not need to operate a separate database stack.
-Behemoth serves the isolated roots from a common native process and routes each
-request to the correct store.
+Chaque service de domaine possède ses données. Il ne partage ni tables ni
+index avec des services sans lien, et n’a pas besoin d’exploiter une pile de
+bases de données distincte. Behemoth sert les racines isolées depuis un
+processus natif commun et achemine chaque requête vers le magasin approprié.
 
 ```text
 orders service  -> orders volume  -> SQL and files
@@ -17,43 +17,49 @@ calls service   -> calls volume   -> key-value and audio fragments
 search service  -> search volume  -> vector index
 ```
 
-The separation is physical rather than a naming convention. If a service root
-is not mounted and declared, Behemoth refuses to create its store. A deployment
-mistake therefore becomes visible immediately instead of writing data into a
-temporary container filesystem.
+La séparation est physique plutôt qu’une simple convention de nommage. Si la
+racine d’un service n’est pas montée et déclarée, Behemoth refuse de créer son
+magasin. Une erreur de déploiement devient ainsi immédiatement visible au lieu
+d’écrire les données dans le système de fichiers temporaire d’un conteneur.
 
-## Multiple data models
+## Plusieurs modèles de données
 
-Different workloads need different structures. Behemoth combines relational,
-key-value, column, vector, graph and file storage behind the same runtime
-boundary. A service chooses the store that fits its data without adding a new
-external database product to the platform.
+Les différentes charges de travail nécessitent des structures différentes.
+Behemoth combine le stockage relationnel, clé-valeur, en colonnes, vectoriel,
+graphe et fichiers derrière la même frontière de runtime. Un service choisit
+le magasin adapté à ses données sans ajouter un nouveau produit de base de
+données externe à la plateforme.
 
-The engines remain specialized internally. The unified layer is responsible
-for lifecycle, isolation, transport and metadata, not for pretending that all
-data models behave the same way.
+Les moteurs restent spécialisés en interne. La couche unifiée est responsable
+du cycle de vie, de l’isolation, du transport et des métadonnées, et non de
+faire semblant que tous les modèles de données se comportent de la même
+manière.
 
-## Placement and scaling
+## Placement et mise à l’échelle
 
-Storage placement is independent from application code. One edge installation
-may use a single Behemoth process. Larger deployments can divide scopes between
-several instances, while a cloud profile can give every tenant its own storage
-instance.
+Le placement du stockage est indépendant du code applicatif. Une installation
+edge peut utiliser un seul processus Behemoth. Les déploiements plus importants
+peuvent répartir les périmètres entre plusieurs instances, tandis qu’un profil
+cloud peut attribuer à chaque tenant sa propre instance de stockage.
 
-Each microservice keeps its own volume in every profile. Moving a scope or a
-service to another Behemoth instance changes deployment configuration, while
-callers continue to use the same logical storage identity.
+Chaque microservice conserve son propre volume dans chaque profil. Déplacer un
+périmètre ou un service vers une autre instance Behemoth modifie la
+configuration du déploiement, tandis que les appelants continuent d’utiliser
+la même identité logique de stockage.
 
-## Failure and recovery boundaries
+## Limites de défaillance et de récupération
 
-Small service-owned stores reduce the impact of corruption, migration and
-backup operations. A problem in one store does not require restoring a shared
-database for the whole platform. Dumps and recovery can be handled for the
-affected service boundary, and unrelated services continue to operate.
+Les petits magasins appartenant aux services réduisent l’impact de la
+corruption, des migrations et des opérations de sauvegarde. Un problème dans
+un magasin ne nécessite pas de restaurer une base de données partagée pour
+l’ensemble de la plateforme. Les vidages et la récupération peuvent être
+traités pour la limite du service concerné, tandis que les services sans lien
+continuent de fonctionner.
 
-## Place in the system
+## Rôle dans le système
 
-Storage requests reach Behemoth through Fujin like requests to any other
-runtime peer. Ptah provides the volume layout and mount configuration.
-Behemoth executes storage operations but does not coordinate business
-workflows, select tenants or define which services a solution contains.
+Les requêtes de stockage atteignent Behemoth via Fujin, comme les requêtes
+destinées à n’importe quel autre pair du runtime. Ptah fournit la disposition
+des volumes et la configuration des montages. Behemoth exécute les opérations
+de stockage, mais ne coordonne pas les workflows métier, ne sélectionne pas
+les tenants et ne définit pas les services qui composent une solution.

@@ -1,82 +1,81 @@
-# NRPC contract runtime
+# Entorno de ejecución del contrato NRPC
 
-NRPC is Converged's typed remote-call layer. It turns a TypeScript service
-contract into matching clients and service metadata, so a browser,
-microservice, workflow, or native runtime can call the same capability without
-maintaining separate string-based API definitions.
+NRPC es la capa de llamadas remotas tipadas de Converged. Convierte un contrato de
+servicio de TypeScript en clientes compatibles y metadatos del servicio, de modo que un
+navegador, microservicio, flujo de trabajo o entorno de ejecución nativo pueda llamar a
+la misma capacidad sin mantener definiciones de API independientes basadas en cadenas.
 
-## Why it exists
+## Por qué existe
 
-The platform is composed of independently deployed modules. Calling one module
-directly through an address would make its callers depend on where it runs and
-which transport it uses. NRPC separates those concerns: a contract names the
-service and its methods, while the runtime delivers a call to the process that
-currently owns the requested target.
+La plataforma está compuesta por módulos desplegados de forma independiente. Llamar a un módulo
+directamente mediante una dirección haría que sus clientes dependieran de dónde se ejecuta y
+del transporte que utiliza. NRPC separa esas preocupaciones: un contrato nombra el
+servicio y sus métodos, mientras que el entorno de ejecución entrega una llamada al proceso
+que actualmente posee el destino solicitado.
 
-This keeps the agreement between callers and implementations in one place. A
-method's parameters, return type, streaming behavior, and access level are
-known to code generation and are available to every supported client.
+Esto mantiene en un solo lugar el acuerdo entre los clientes y las implementaciones. Los
+parámetros de un método, el tipo de retorno, el comportamiento de transmisión y el nivel de
+acceso son conocidos por la generación de código y están disponibles para todos los clientes compatibles.
 
-## From contract to call
+## Del contrato a la llamada
 
-Contracts are TypeScript interfaces under `modules/types/<domain>`. Running
-`bun run gen` in `core/tools/nrpc` parses those interfaces and creates a
-`modules/generated/g-<service>` package. The package contains the contract
-metadata, a server interface, and type-safe client factories for each runtime.
+Los contratos son interfaces de TypeScript ubicadas en `modules/types/<domain>`. Ejecutar
+`bun run gen` en `core/tools/nrpc` analiza esas interfaces y crea un paquete
+`modules/generated/g-<service>`. El paquete contiene los metadatos del contrato,
+una interfaz de servidor y fábricas de clientes con seguridad de tipos para cada entorno de ejecución.
 
 ```text
-TypeScript interface
+Interfaz de TypeScript
         |
         v
-NRPC generator -> g-<service> package
+Generador NRPC -> paquete g-<service>
         |                    |
-        |                    +-> browser client
-        |                    +-> cluster client
-        |                    +-> workflow RT client
+        |                    +-> cliente de navegador
+        |                    +-> cliente de clúster
+        |                    +-> cliente de RT de flujo de trabajo
         v
-service implementation -> messaging backend
+implementación del servicio -> backend de mensajería
 ```
 
-A service registers its implementation with `createMessagingBackend`. NRPC
-uses the generated metadata to find the requested method, validates the call
-shape at the client boundary, restores typed values, and invokes the matching
-implementation method. A method returning `AsyncIterable` is delivered as a
-stream; ordinary methods produce one response.
+Un servicio registra su implementación con `createMessagingBackend`. NRPC
+utiliza los metadatos generados para encontrar el método solicitado, valida la forma de la llamada
+en el límite del cliente, restaura los valores tipados e invoca el método de implementación
+correspondiente. Un método que devuelve `AsyncIterable` se entrega como un flujo; los métodos
+ordinarios producen una única respuesta.
 
-## Delivery paths
+## Rutas de entrega
 
-NRPC preserves the same contract across several execution environments:
+NRPC conserva el mismo contrato en varios entornos de ejecución:
 
-- Browser clients use a shared WebSocket channel to send requests to Fujin.
-- Service and native clients use the cluster transport through Fujin, addressed
-  to a logical process target rather than a host address.
-- Workflow clients use the RT entry point, which calls through the QuickJS/Zig
-  host transport and remains synchronous for a single workflow evaluation.
+- Los clientes de navegador utilizan un canal WebSocket compartido para enviar solicitudes a Fujin.
+- Los clientes de servicio y nativos utilizan el transporte del clúster a través de Fujin, direccionados
+  a un destino de proceso lógico en lugar de a una dirección de host.
+- Los clientes de flujos de trabajo utilizan el punto de entrada de RT, que realiza llamadas mediante el transporte
+  de host QuickJS/Zig y permanece síncrono para una única evaluación del flujo de trabajo.
 
-Fujin routes a request to the target connection. The receiving process chooses
-the NRPC service and method from the request metadata; Fujin does not need to
-understand the platform's domain services. `createHttpBackend` is available
-where an HTTP edge is required and can register the same service implementation
-on the messaging runtime, keeping HTTP and internal calls aligned.
+Fujin enruta una solicitud a la conexión de destino. El proceso receptor elige
+el servicio y el método NRPC a partir de los metadatos de la solicitud; Fujin no necesita
+entender los servicios de dominio de la plataforma. `createHttpBackend` está disponible
+cuando se requiere un perímetro HTTP y puede registrar la misma implementación del servicio
+en el entorno de ejecución de mensajería, manteniendo alineadas las llamadas HTTP e internas.
 
-## Context and access
+## Contexto y acceso
 
-Calls carry correlation data, deadlines, and a trusted workspace or scope
-context in their envelope. The receiving service runs with that context, which
-allows storage and authorization code to use the same tenant boundary that was
-established at the edge. Services must not derive workspace identity from a
-business payload.
+Las llamadas transportan datos de correlación, plazos y un contexto de espacio de trabajo o ámbito
+confiable en su envoltorio. El servicio receptor se ejecuta con ese contexto, lo que
+permite que el código de almacenamiento y autorización utilice el mismo límite de inquilino que se
+estableció en el perímetro. Los servicios no deben derivar la identidad del espacio de trabajo a partir de una
+carga útil de negocio.
 
-The `@Access` decorator declares a class or method as `public`, `user`, or
-`internal`. NRPC resolves the most specific declared level and applies the
-configured permission rules before invoking the implementation. This makes
-access policy part of the service boundary rather than an inconsistent client
-convention.
+El decorador `@Access` declara una clase o método como `public`, `user` o
+`internal`. NRPC resuelve el nivel declarado más específico y aplica las reglas de permisos
+configuradas antes de invocar la implementación. Esto convierte la política de acceso en
+parte del límite del servicio, en lugar de dejarla como una convención incoherente del cliente.
 
-## Responsibility boundary
+## Límite de responsabilidades
 
-NRPC owns contract metadata, generated typed clients, value serialization,
-call dispatch, and the transport adapters used by those calls. It does not own
-business rules, service discovery, deployment placement, domain persistence, or
-message-bus routing. Those responsibilities remain with the service,
-deployment control plane, storage layer, and Fujin respectively.
+NRPC se encarga de los metadatos del contrato, los clientes tipados generados, la serialización
+de valores, el despacho de llamadas y los adaptadores de transporte utilizados por esas llamadas. No se encarga de
+las reglas de negocio, el descubrimiento de servicios, la ubicación de despliegues, la persistencia de dominio ni
+el enrutamiento del bus de mensajes. Esas responsabilidades permanecen, respectivamente, en el servicio,
+el plano de control de despliegue, la capa de almacenamiento y Fujin.
