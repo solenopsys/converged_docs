@@ -3,5 +3,9 @@
     "slug": "ryugraph",
     "title": "RyuGraph embedded graph engine",
     "order": 2
+  },{
+    "slug": "motivation",
+    "title": "Why Graph Storage Fits AI Agents",
+    "order": 3
   }
 ]

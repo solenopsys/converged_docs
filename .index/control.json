@@ -1653,6 +1653,7 @@
         "ru"
       ],
       "include": [
+        "dbs/motivation.md",
         "dbs/ryugraph.md"
       ]
     },
